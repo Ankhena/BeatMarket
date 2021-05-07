@@ -11,107 +11,72 @@
 
 @import "header";
 @import "footer";
+@import "createPortfolio";
 
 // === main ===
 
 .section-main {
-    margin-top: var(--fixed_header_margin);
-    padding: var(--section_padding) 0;
-
-    .section-inner {
-    
-    }
     
     .main {
-        &-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 2rem;
-    
-            svg {
-                width: 100px;
-                height: 100px;
-                fill: $color_primary;
-            }
+        display: flex;
+        min-height: calc(100vh - var(--header_height) - 1px);
 
-            img {
-                max-width: 100%;
-            }
+        &-menu {
+            flex-basis: 22rem;
+            background: $color_menu_bg;
+            padding: 3rem 1.4rem 3rem $section_padding;
+            border-right: 2px solid #D3E3FF;
 
-            &-buttons {
-                display: flex;
-                align-items: center;
+            .nav {
+                ul {
+                    li {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
 
-                @media ($media_sm) {
-                    flex-direction: column;
-                }
+                        &.border-bottom {
+                            padding-bottom: 2rem;
+                            border-bottom: 1px solid #D3E3FF;
+                        }
 
-                button:not(:last-child) {
-                    margin-right: 1rem;
+                        svg {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            stroke: $color_black_main;
+                            margin-right: 0.8rem;
+                        }
 
-                    @media ($media_sm) {
-                        margin: 0 0 1rem 0;
+                        a {
+                            color: $color_black_main;
+                            font-weight: 500;
+                            font-size: 1rem;
+                            text-decoration: none;
+                        }
+
+                        &:not(:last-child) {
+                            margin-bottom: 2rem;
+                        }
+
+                        &:hover, &:focus {
+                            svg {
+                                stroke: $color_blue;
+                                fill: $color_blue;
+                            }
+
+                            a {
+                                color: $color_blue;
+                            }
+                        }
                     }
                 }
-            }
-
-            > *:not(:last-child) {
-                margin-bottom: 2rem;
             }
         }
 
-        &-slider {
-            display: flex;
-
-            &-item {
-                display: flex;
-                padding: 0.8rem;
-
-                .card {
-                    background-color: $color_primary;
-                    color: $color_white;
-                    text-align: center;
-                    font-size: 1.2rem;
-                    padding: 1rem;
-                    box-shadow: 0.4rem 0.4rem 0.4rem 0.1rem rgba(34, 34, 34, 0.3);
-
-                    img {
-                        max-width: 100%;
-                        margin-top: 1rem;
-                    }
-                }
-            }
+        &-content {
+            flex-grow: 1;
         }
     }
     
 }
 
 // === / main ===
-
-// === scroll ===
-
-.section-scroll {
-    padding: var(--section_padding) 0;
-
-    .section-inner {
-    
-    }
-    
-    .scroll {
-        &-block {
-            background-color: $color_primary;
-            color: $color_white;
-            font-size: 1.2rem;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 7rem 0;
-        }
-    }
-    
-}
-
-// === / scroll ===

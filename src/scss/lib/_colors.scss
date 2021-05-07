@@ -1,9 +1,19 @@
 // [[ Цвета, используемые в проекте. Должны начинаться с $color_ ]]
 
+$color_body_bg: #EAF1FE;
+$color_header_bg: linear-gradient(180deg, #FFFFFF -70.87%, rgba(255, 255, 255, 0) 100%);
+$color_menu_bg: linear-gradient(180deg, #EEF3FE 0%, #F5F9FF 100%);
+$color_menu_bg_mobile: #F0F5FE;
+
+$color_black_main: #373943;
+$color_black_title: #24252E;
+$color_green: #199F27;
+$color_blue: #3E54D8;
+$color_red: #DE4355;
+
+
+
 $color_white: #fff;
-$color_black_main: #222;
-$color_body_bg: #E5E5E5;
-$color_header: #fff;
 $color_primary: tomato;
 
 $color_burger_show: #222222;

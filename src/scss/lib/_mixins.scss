@@ -2,19 +2,15 @@
 
 // используется для одинаковых отступов внутри секций
 :root {
-    --section_padding: 3rem;
-    --fixed_header_margin: 5rem;
-
-    @media ($media_xs) {
-        --section_padding: 2rem;
-    }
+    --header_height: 6rem;
 }
 
 html, body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.2;
     background-color: $color_body_bg;
+    color: $color_black_main;
 
     &.hideScroll {
         overflow-y: hidden;
@@ -76,6 +72,60 @@ html, body {
 .section_header {
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.page_title {
+    font-size: 2.5rem;
+    opacity: 0.9;
+    line-height: 1.2;
+    color: $color_black_title;
+}
+
+input[type="text"] {
+    background: $color_white;
+    border: 1px solid #D3E3FF;
+    border-radius: 10px;
+    outline: none;
+    padding: 16px 25px;
+    font-weight: 500;
+    width: 100%;
+
+    &::placeholder {
+        color: #929398;
+    }
+
+    &:hover, &:focus {
+        border: 1px solid darken(#D3E3FF, 10%);
+    }
+}
+
+.btn {
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    color: $color_white;
+    font-weight: 600;
+    padding: 1.2rem 6.4rem;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &_blue {
+        background-color: $color_blue;
+        box-shadow: 0px 18px 22px -13px rgba(62, 84, 216, 0.51);
+
+        &:hover {
+            background-color: darken($color_blue, 15%);
+        }
+    }
+
+    &_red {
+        background-color: $color_red;
+        box-shadow: 0px 18px 22px -13px rgba(222, 67, 85, 0.51);
+
+        &:hover {
+            background-color: darken($color_red, 15%);
+        }
+    }
 }
 
 // === / Mixins ===

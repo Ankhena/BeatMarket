@@ -1,17 +1,17 @@
-$selectric-border-color: tomato !default; // Color used in border
-$selectric-secondary-color: #fff !default; // Color used in button
-$selectric-text-color: #fff !default; // Color used in label
-$selectric-bg-color: tomato !default; // Background color
-$selectric-btn-bg-color: tomato !default; // Button background color
-$selectric-height: 40px !default; // Outer height
-$selectric-spacing: 10px !default; // Label left padding
+$selectric-border-color: #D3E3FF !default; // Color used in border
+$selectric-secondary-color: #8C9BEA !default; // Color used in button
+$selectric-text-color: $color_blue !default; // Color used in label
+$selectric-bg-color: #FCFDFF !default; // Background color
+$selectric-btn-bg-color: #FCFDFF !default; // Button background color
+$selectric-height: 56px !default; // Outer height
+$selectric-spacing: 24px !default; // Label left padding
 $selectric-border-width: 1px !default; // Outer border width
-$selectric-border-radius: 0px !default; // Border radius
+$selectric-border-radius: 10px !default; // Border radius
 $selectric-inner-height: $selectric-height - ($selectric-border-width * 2) !default; // Inner height
-$selectric-font-size: 12px !default; // Font size
+$selectric-font-size: 1rem !default; // Font size
 
-$selectric-label-color: #fff; // цвет текста в пунктах option
-$selectric-label-active-color: #fff; // цвет активного текста в пунктах option
+$selectric-label-color: $color_black_main; // цвет текста в пунктах option
+$selectric-label-active-color: $color_blue; // цвет активного текста в пунктах option
 $selectric-min-width: 12rem;
 
 
@@ -26,7 +26,7 @@ $selectric-min-width: 12rem;
 }
 
 .selectric {
-    // border: $selectric-border-width solid $selectric-border-color;
+    border: $selectric-border-width solid $selectric-border-color;
     border-radius: $selectric-border-radius;
     background: $selectric-bg-color;
     position: relative;
@@ -43,6 +43,7 @@ $selectric-min-width: 12rem;
         color: $selectric-text-color;
         height: $selectric-inner-height;
         user-select: none;
+        font-weight: 500;
     }
 
     .button {
@@ -70,7 +71,7 @@ $selectric-min-width: 12rem;
             margin: auto;
             width: 0;
             height: 0;
-            border: 4px solid transparent;
+            border: 8px solid transparent;
             border-top-color: $selectric-secondary-color;
             border-bottom: none;
             
@@ -78,12 +79,12 @@ $selectric-min-width: 12rem;
     }
 }
 
-// .selectric-focus .selectric {
-//     border-color: darken($selectric-border-color, 20%);
-// }
+.selectric-focus .selectric {
+    border-color: darken($selectric-border-color, 20%);
+}
 
 .selectric-hover .selectric {
-    // border-color: darken($selectric-border-color, 10%);
+    border-color: darken($selectric-border-color, 10%);
 
     .button {
         color: darken($selectric-secondary-color, 10%);
@@ -97,9 +98,9 @@ $selectric-min-width: 12rem;
 .selectric-open {
     z-index: 9999;
 
-    // .selectric {
-    //     border-color: darken($selectric-border-color, 10%);
-    // }
+    .selectric {
+        border-color: darken($selectric-border-color, 10%);
+    }
 
     .selectric-items {
         display: block;
@@ -174,9 +175,14 @@ $selectric-min-width: 12rem;
     top: 100%;
     left: 0;
     background: $selectric-bg-color;
-    // border: 1px solid darken($selectric-border-color, 10%);
+    border: 1px solid darken($selectric-border-color, 10%);
     z-index: -1;
     box-shadow: 0 0 10px -6px;
+
+    border-radius: $selectric-border-radius;
+    margin-top: 6px;
+    overflow: hidden;
+    box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
 
     .selectric-scroll {
         height: 100%;
@@ -200,25 +206,26 @@ $selectric-min-width: 12rem;
 
     li {
         display: block;
-        padding: 10px;
+        padding: 15px 25px;
         color: $selectric-label-color;
         cursor: pointer;
+        font-weight: 500;
 
         &.selected {
             //background: rgb(224, 224, 224);
-            background-color: darken($selectric-bg-color, 5);
+            //background-color: darken($selectric-bg-color, 5);
             color: $selectric-label-active-color;
         }
 
         &.highlighted {
             //background: rgb(209, 209, 209);
-            background-color: darken($selectric-bg-color, 25);
+            //background-color: darken($selectric-bg-color, 25);
             color: $selectric-label-active-color;
         }
 
         &:hover {
             //background: rgb(214, 214, 214);
-            background-color: darken($selectric-bg-color, 15);
+            //background-color: darken($selectric-bg-color, 15);
             color: $selectric-label-active-color;
         }
     }
@@ -251,4 +258,8 @@ $selectric-min-width: 12rem;
             padding-left: 25px;
         }
     }
+}
+
+.selectric-open b.button::after {
+    transform: rotate(180deg);
 }

@@ -1,23 +1,22 @@
 // === header === [ Стили для навбара, используемые на всех страницах ] ===
 
 .section-header {
-    background-color: $color_header;
-    padding: 0.8rem 0;
-    box-shadow: 0 0 1.25rem 0 rgba(0,0,0,0.1);
-
-    position: fixed;
-    width: 100%;
-    top: 0;
+    background: $color_header_bg;
+    //padding: 1.3rem 0;
+    border-bottom: 1px solid rgba(235, 241, 254, 0.3);
+    box-shadow: 0px 10px 20px -13px rgba(62, 84, 216, 0.21);
+    position: relative;
     z-index: 11;
 
-    .section-inner {
-    
+    .section-full {
+        
     }
     
     .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: var(--header_height);
 
         @media ($media_sm) {
             flex-direction: column;
@@ -49,59 +48,53 @@
         &-controls {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            width: 100%;
 
-            @media ($media_sm) {
-                flex-direction: column;
-                align-items: flex-start;
+            // @media ($media_sm) {
+            //     flex-direction: column;
+            //     align-items: flex-start;
 
-                &[data-burger='menu'] {
-                    display: none; // если бургер меню активно
-                    width: 100%;
-                }
+            //     &[data-burger='menu'] {
+            //         display: none; // если бургер меню активно
+            //         width: 100%;
+            //     }
+            // }
+
+            &-title {
+                margin-left: 3rem;
             }
 
             &-links {
-    
-                .menu {
-                    display: flex;
-    
-                    @media ($media_sm) {
-                        flex-direction: column;
-                    }
-    
-                    &-item {
-                        position: relative;
-                        padding: 0.5rem 0;
-    
-                        a {
-                            color: $color_black_main;
-                            text-decoration: none;
-                        }
-    
-                        &:not(:last-child) {
-                            margin-right: 1.5rem;
-                        }
-    
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 0.1rem;
-                            background-color: $color_black_main;
-                            transform: scaleX(0);
-                            transition: 0.3s ease-in-out;
+                display: flex;
+                align-items: center;
 
-                            @media ($media_sm) {
-                                content: none;
-                            }
-                        }
-    
-                        &:hover {
-                            &::after {
-                                transform: scaleX(1);
-                            }
+                &-link {
+                    display: flex;
+                    align-items: center;
+
+                    picture {
+                        display: inline-flex;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 1.5rem;
+                    }
+
+                    &.active {
+                        position: relative;
+
+                        &::before {
+                            position: absolute;
+                            top: -20%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            content: "";
+                            min-width: 0.3rem;
+                            min-height: 0.3rem;
+                            border-radius: 50%;
+                            background-color: $color_green;
+
                         }
                     }
                 }

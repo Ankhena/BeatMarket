@@ -12,55 +12,42 @@
 		@@include("_header.html")
 
 		<section class="section-outer section-main">
-			<div class="section-inner main">
-				<div class="main-header">
-					<h1 class="section_header">Привет, это StarterGulp v1.1!</h1>
+			<div class="main">
+				<div class="main-menu">
+					<nav class="main-menu-nav nav">
+						<ul>
+							<li>
+								<svg><use xlink:href="img/main.svg#icon-portfel"></use></svg>
+								<a href="#">Мой портфель</a>
+							</li>
+							<li>
+								<svg><use xlink:href="img/main.svg#icon-rocket"></use></svg>
+								<a href="#">Советник</a>
+							</li>
+							<li class="border-bottom">
+								<svg><use xlink:href="img/main.svg#icon-sticker"></use></svg>
+								<a href="#">Подписка</a>
+							</li>
+							<li>
+								<svg><use xlink:href="img/main.svg#icon-info"></use></svg>
+								<a href="#">FAQ</a>
+							</li>
+							<li>
+								<svg><use xlink:href="img/main.svg#icon-headset"></use></svg>
+								<a href="#">Поддержка</a>
+							</li>
+							<li>
+								<svg><use xlink:href="img/main.svg#icon-gearSix"></use></svg>
+								<a href="#">Настройки</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
 				<div class="main-content">
-					<svg><use xlink:href="img/main.svg#icon_calendar"></use></svg>
-					<img src="img/gulp-demo.png" alt="test">
-					<div class="main-content-buttons">
-						<button data-modal="modal_success" class="btn_primary">Открыть модалку 1</button>
-						<button data-modal="modal_second" class="btn_primary">Открыть модалку 2</button>
-					</div>
-				</div>
-				<div class="main-slider" data-slider="4,2,1">
-					<!-- .main-slider-item*8>.card>span{Привет, это слайд №$}+img[src="./img/cat.jpg" alt="Кот"] -->
-					<div class="main-slider-item">
-						<div class="card"><span>Привет, это слайд №1</span><img src="./img/cat.jpg" alt="Кот"></div>
-					</div>
-					<div class="main-slider-item">
-						<div class="card"><span>Привет, это слайд №2</span><img src="./img/cat.jpg" alt="Кот"></div>
-					</div>
-					<div class="main-slider-item">
-						<div class="card"><span>Привет, это слайд №3</span><img src="./img/cat.jpg" alt="Кот"></div>
-					</div>
-					<div class="main-slider-item">
-						<div class="card"><span>Привет, это слайд №4</span><img src="./img/cat.jpg" alt="Кот"></div>
-					</div>
-					<div class="main-slider-item">
-						<div class="card"><span>Привет, это слайд №5</span><img src="./img/cat.jpg" alt="Кот"></div>
-					</div>
-					<div class="main-slider-item">
-						<div class="card"><span>Привет, это слайд №6</span><img src="./img/cat.jpg" alt="Кот"></div>
-					</div>
-					<div class="main-slider-item">
-						<div class="card"><span>Привет, это слайд №7</span><img src="./img/cat.jpg" alt="Кот"></div>
-					</div>
-					<div class="main-slider-item">
-						<div class="card"><span>Привет, это слайд №8</span><img src="./img/cat.jpg" alt="Кот"></div>
-					</div>
+
 				</div>
 			</div>
 		</section>
-
-		<section class="section-outer section-scroll">
-			<div class="section-inner scroll">
-				<div class="scroll-block">Это блок скролла</div>
-			</div>
-		</section>
-
-		@@include("_footer.html")
 
 	</body>
 </html>
