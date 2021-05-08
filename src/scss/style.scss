@@ -13,6 +13,8 @@
 @import "footer";
 @import "createPortfolio";
 @import "404";
+@import "emptyPortfolio";
+@import "strategyPromo";
 
 // === main ===
 
@@ -43,7 +45,7 @@
             border-right: 2px solid #D3E3FF;
 
             @media ($media_xl) {
-                flex-basis: 16rem;
+                flex-basis: 15rem;
             }
 
             @media ($media_sm) {

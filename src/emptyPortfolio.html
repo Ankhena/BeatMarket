@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Пустой портфель"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html")
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html")
+
+				<h1 class="main-title">Мой портфель</h1>
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        @@include("_strategyPromo.html")
+
+                    </div>
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

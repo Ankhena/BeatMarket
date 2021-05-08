@@ -54,21 +54,6 @@ html, body {
     margin: -1px;
 }
 
-.btn_primary {
-    background-color: $color_primary;
-    border: none;
-    outline: none;
-    border-radius: 0.5rem;
-    color: $color_white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    padding: 1rem 2rem;
-
-    &:hover, &:focus {
-        box-shadow: 0.4rem 0.4rem 0.4rem 0.1rem rgba(34, 34, 34, 0.3);
-    }
-}
-
 .section_header {
     text-align: center;
     margin-bottom: 1rem;
@@ -108,10 +93,22 @@ input[type="text"] {
     padding: 1.2rem 6.4rem;
     white-space: nowrap;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 
     @media ($media_sm) {
         padding: 1.2rem 0;
         width: 100%;
+    }
+
+    &_primary {
+        background-color: $color_white;
+        border: 2px solid $color_block_border;
+        box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+        color: $color_black_main;
+
+        &:hover {
+            border: 2px solid darken($color_block_border, 15%);
+        }
     }
 
     &_blue {
@@ -131,6 +128,77 @@ input[type="text"] {
             background-color: darken($color_red, 15%);
         }
     }
+
+    &_mainCash {
+        border: 2px solid $color_blue;
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        min-width: 12rem;
+
+        @media ($media_sm) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        > span {
+            font-weight: 600;
+            color: $color_blue;
+            opacity: 0.9;
+        }
+
+        > svg {
+            height: 10px;
+            width: 10px;
+            margin-left: 0.5rem;
+        }
+    }
 }
 
+.main-contentPadding {
+    padding: 2.8rem var(--section_padding) 2.8rem 1.8rem;
+
+    @media ($media_sm) {
+        padding: var(--section_padding);
+    }
+}
+
+.checkbox_custom {
+    position: relative;
+    width: 0px;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        display: block;
+    }
+
+    &::before {
+        width: 1.33rem;
+        height: 1.33rem;
+        border-radius: 0.3rem;
+        background-color: $color_white;
+        border: 2px solid lighten($color_grey, 20%);
+    }
+
+    &:checked {
+
+        &::before {
+            border-radius: 0.3rem;
+            background-color: $color_blue;
+            border: 2px solid $color_blue;
+        }
+
+        &::after {
+            background-color: $color_white;
+            border-radius: 2px;
+            width: 0.5rem;
+            height: 0.5rem;
+            transform: translate(85%, 80%)
+        }
+    }
+    
+}
 // === / Mixins ===
