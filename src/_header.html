@@ -20,19 +20,22 @@
                     <img src="./img/header_bell.svg" alt="Иконка колокольчика">
                 </div>
                 <div class="header-controls-links-link">
-                    <img src="./img/header_user.svg" alt="Иконка пользователя">
+                    <label class="dropdown">
+                        <input type="checkbox" class="visually_hidden">
+                        <ul class="dropdown-content">
+                            <li class="border-bottom">
+                                <svg><use xlink:href="img/main.svg#icon-gearSix"></use></svg>
+                                <a href="#">Настройки</a>
+                            </li>
+                            <li class="border-bottom">
+                                <svg><use xlink:href="img/main.svg#icon-signOut"></use></svg>
+                                <a href="#">Выход</a>
+                            </li>
+                        </ul>
+                        <img src="./img/header_user.svg" alt="Иконка пользователя">
+                    </label>
                 </div>
             </div>
-
-            <!-- <div class="header-controls-select">
-                <select name="mySelect">
-                    <option disabled>Выберите героя</option>
-                    <option value="Чебурашка">Чебурашка</option>
-                    <option selected value="Крокодил Гена">Крокодил Гена</option>
-                    <option value="Шапокляк">Шапокляк</option>
-                    <option value="Крыса Лариса">Крыса Лариса</option>
-                </select>
-            </div> -->
 
         </div>
 

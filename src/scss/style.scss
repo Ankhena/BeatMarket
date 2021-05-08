@@ -12,6 +12,7 @@
 @import "header";
 @import "footer";
 @import "createPortfolio";
+@import "404";
 
 // === main ===
 
@@ -21,11 +22,42 @@
         display: flex;
         min-height: calc(100vh - var(--header_height) - 1px);
 
+        @media ($media_sm) {
+            flex-direction: column;
+        }
+
+        &-title {
+            display: none;
+
+            @media ($media_sm) {
+                display: block;
+                padding: 2rem calc(var(--section_padding)) 1rem;
+                font-size: 2.2rem;
+            }
+        }
+
         &-menu {
             flex-basis: 22rem;
             background: $color_menu_bg;
-            padding: 3rem 1.4rem 3rem $section_padding;
+            padding: 3rem 1.4rem 3rem var(--section_padding);
             border-right: 2px solid #D3E3FF;
+
+            @media ($media_xl) {
+                flex-basis: 16rem;
+            }
+
+            @media ($media_sm) {
+                position: absolute;
+                width: 19rem;
+                height: 100%;
+                padding: 3rem 1.4rem 3rem calc(var(--section_padding) + 0.8rem);
+                transform: translateX(-100%);
+                z-index: 1;
+
+                &.active {
+                    transform: translateX(0);
+                }
+            }
 
             .nav {
                 ul {
@@ -44,6 +76,11 @@
                             height: 1.5rem;
                             stroke: $color_black_main;
                             margin-right: 0.8rem;
+
+                            @media ($media_sm) {
+                                width: 1.8rem;
+                                height: 1.8rem;
+                            }
                         }
 
                         a {
@@ -51,6 +88,10 @@
                             font-weight: 500;
                             font-size: 1rem;
                             text-decoration: none;
+
+                            @media ($media_sm) {
+                                font-size: 1.25rem;
+                            }
                         }
 
                         &:not(:last-child) {
@@ -74,6 +115,10 @@
 
         &-content {
             flex-grow: 1;
+
+            @media ($media_sm) {
+                
+            }
         }
     }
     

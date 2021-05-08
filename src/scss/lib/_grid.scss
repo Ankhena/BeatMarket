@@ -26,10 +26,20 @@ $media_sm: "max-width: " + $screen_sm;
 $media_xs: "max-width: " + $screen_xs;
 //  АДАПТИВ БЕЗ ПРОМЕЖУТКОВ  \\
 
-$section_padding: 7rem;
+:root {
+    --section_padding: 7rem;
+
+    @media ($media_xl) {
+        --section_padding: 3rem;
+    }
+
+    @media ($media_sm) {
+        --section_padding: 1rem;
+    }
+}
 
 .section-full {
-    padding: 0 $section_padding;
+    padding: 0 var(--section_padding);
 }
 
 .section-inner {

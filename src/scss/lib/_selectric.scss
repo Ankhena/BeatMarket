@@ -44,6 +44,11 @@ $selectric-min-width: 12rem;
         height: $selectric-inner-height;
         user-select: none;
         font-weight: 500;
+
+        @media ($media_sm) {
+            line-height: 50px;
+            height: 50px;
+        }
     }
 
     .button {
