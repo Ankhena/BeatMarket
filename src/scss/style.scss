@@ -1,8 +1,8 @@
 @import "./lib/normalize";
 @import "./lib/colors";
 @import "./lib/grid";
-@import "./lib/fonts";
-@import "./lib/lightslider";
+//@import "./lib/fonts";
+//@import "./lib/lightslider";
 @import "./lib/selectric";
 //@import "./lib/animate";
 @import "./lib/mixins";
@@ -16,6 +16,8 @@
 @import "emptyPortfolio";
 @import "strategyPromo";
 @import "myStrategyHeader";
+@import "news";
+@import "history";
 
 // === main ===
 
@@ -41,12 +43,14 @@
 
         &-menu {
             flex-basis: 22rem;
+            min-width: 22rem;
             background: $color_menu_bg;
             padding: 3rem 1.4rem 3rem var(--section_padding);
             border-right: 2px solid #D3E3FF;
 
             @media ($media_xl) {
                 flex-basis: 15rem;
+                min-width: 15rem;
             }
 
             @media ($media_sm) {
@@ -195,6 +199,18 @@
             padding: 1.5rem;
             overflow: hidden;
 
+            &.open {
+                .myStrategy-items-item-header-toggle {
+                    background-color: $color_blue;
+                    border-color: $color_blue;
+        
+                    svg {
+                        fill: $color_white;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
             &:not(:last-child) {
                 margin-bottom: 1.2rem;
             }
@@ -202,7 +218,7 @@
             &-content {
 
                 .nav {
-                    margin-top: 3rem;
+                    margin: 3rem -1.5rem 0 -1.5rem;
 
                     @media ($media_sm) {
                         margin-top: 0.5rem;
@@ -213,6 +229,7 @@
                         width: 100%;
                         justify-content: space-between;
                         border-bottom: 2px solid $color_block_border;
+                        padding: 0 1.5rem; 
 
                         @media ($media_sm) {
                             flex-wrap: wrap;

@@ -205,5 +205,11 @@ initScroll();
 }
 
 initSearchInput()
+
+    document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
+        item.addEventListener("click", (e) => {
+            item.classList.toggle("shown")
+        });
+    });
     
 });

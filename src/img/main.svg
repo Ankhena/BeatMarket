@@ -198,6 +198,23 @@
             <path d="M16.4414 16.4434L20.9977 20.9997" stroke="#3E54D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
 
+        <symbol id="icon-pencil" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.68934 20.2499H4.5C4.30109 20.2499 4.11032 20.1709 3.96967 20.0302C3.82902 19.8896 3.75 19.6988 3.75 19.4999V15.3105C3.75 15.2121 3.7694 15.1145 3.80709 15.0235C3.84478 14.9325 3.90003 14.8499 3.96967 14.7802L15.2197 3.53022C15.3603 3.38956 15.5511 3.31055 15.75 3.31055C15.9489 3.31055 16.1397 3.38956 16.2803 3.53022L20.4697 7.71956C20.6103 7.86021 20.6893 8.05097 20.6893 8.24989C20.6893 8.4488 20.6103 8.63956 20.4697 8.78022L9.21967 20.0302C9.15003 20.0999 9.06735 20.1551 8.97635 20.1928C8.88536 20.2305 8.78783 20.2499 8.68934 20.2499Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.75 6L18 11.25"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8.95321 20.2013L3.79883 15.0469"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+        <symbol id="icon-trash" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.25 5.25L3.75 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.75 9.75V15.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.25 9.75V15.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.75 5.25V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H6C5.80109 20.25 5.61032 20.171 5.46967 20.0303C5.32902 19.8897 5.25 19.6989 5.25 19.5V5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+        <symbol id="icon-caret-pagination" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 13L11 8L6 3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
 
 
     </defs>
