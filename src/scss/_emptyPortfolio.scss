@@ -1,0 +1,95 @@
+.myStrategy-emptyPortfolio-container {
+    padding: 4.2rem 0 11rem 0;
+    position: relative;
+
+    &.dummy {
+        padding: 4rem 0;
+    }
+
+    @media ($media_sm) {
+        padding: 3rem 0;
+    }
+
+    .info {
+        width: 60%;
+        margin: 0 auto;
+
+        picture {
+            display: flex;
+            justify-content: center;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        @media ($media_xl) {
+            width: 70%;
+        }
+
+        @media ($media_sm) {
+            width: 100%;
+        }
+
+        &-title, &-subtitle {
+            text-align: center;
+            color: $color_black_title;
+        }
+
+        &-title {
+            margin-bottom: 2.8rem;
+            font-size: 1.8rem;
+            line-height: 1.5;
+
+            @media ($media_sm) {
+                font-size: 1.5rem;
+            }
+        }
+
+        &-text {
+            margin: 1.5rem 0;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+    }
+
+    .sprites {
+
+        svg {
+            position: absolute;
+        }
+
+        &-left {
+            width: 130px;
+            height: 260px;
+            left: -1.5rem;
+            top: 10%;
+            transform-origin: top left;
+
+            @media ($media_xl) {
+                transform: scale(0.75);
+            }
+
+            @media ($media_sm) {
+                transform: scale(0.2);
+                top: 10%;
+            }
+        }
+
+        &-right {
+            width: 126px;
+            height: 126px;
+            bottom: -1.5rem;
+            right: -1.5rem;
+            transform-origin: bottom right;
+
+            @media ($media_xl) {
+                transform: scale(0.75);
+            }
+
+            @media ($media_sm) {
+                transform: scale(0.35);
+            }
+        }
+    }
+}

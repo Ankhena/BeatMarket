@@ -15,6 +15,7 @@
 @import "404";
 @import "emptyPortfolio";
 @import "strategyPromo";
+@import "myStrategyHeader";
 
 // === main ===
 
@@ -127,3 +128,125 @@
 }
 
 // === / main ===
+
+.myStrategy {
+    margin-top: 4rem;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            font-size: 1.8rem;
+            color: $color_black_title;
+            opacity: 0.9;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1.2rem;
+
+            @media ($media_sm) {
+                width: auto;
+                padding: 0.8rem;
+            }
+
+            svg {
+                stroke: $color_blue;
+                width: 32px;
+                height: 32px;
+            }
+
+            span {
+                color: $color_blue;
+                margin-left: 0.5rem;
+
+                @media ($media_sm) {
+                    display: none;
+                }
+            }
+
+            &:hover, &:focus {
+                background-color: $color_blue;
+                border-color: $color_blue;
+
+                svg {
+                    stroke: $color_white;
+                }
+
+                span {
+                    color: $color_white;
+                }
+
+            }
+        }
+    }
+
+    &-items {
+        margin-top: 1.8rem;
+
+        &-item {
+            background-color: $color_white;
+            border: 1px solid $color_block_border;
+            box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.22);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            overflow: hidden;
+
+            &:not(:last-child) {
+                margin-bottom: 1.2rem;
+            }
+
+            &-content {
+
+                .nav {
+                    margin-top: 3rem;
+
+                    @media ($media_sm) {
+                        margin-top: 0.5rem;
+                    }
+
+                    ul {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        border-bottom: 2px solid $color_block_border;
+
+                        @media ($media_sm) {
+                            flex-wrap: wrap;
+                        }
+
+                        li {
+
+                            a {
+                                display: flex;
+                                text-decoration: none;
+                                padding: 1rem 0;
+                                font-weight: 500;
+                                font-size: 0.9rem;
+                                color: $color_black_main;
+                                border-bottom: 3px solid transparent;
+                                transform: translateY(2px);
+
+                                @media ($media_sm) {
+                                    padding: 0.8rem 0;
+                                }
+
+                                &:hover {
+                                    color: $color_blue;
+                                }
+
+                                &.active {
+                                    color: $color_blue;
+                                    border-color: $color_blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

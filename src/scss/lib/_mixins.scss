@@ -5,8 +5,9 @@
     --header_height: 6rem;
 }
 
-html, body {
-    font-family: 'Montserrat', sans-serif;
+html,
+body {
+    font-family: "Montserrat", sans-serif;
     font-size: 18px;
     line-height: 1.2;
     background-color: $color_body_bg;
@@ -68,7 +69,7 @@ html, body {
 
 input[type="text"] {
     background: $color_white;
-    border: 1px solid #D3E3FF;
+    border: 1px solid #d3e3ff;
     border-radius: 10px;
     outline: none;
     padding: 16px 25px;
@@ -79,8 +80,9 @@ input[type="text"] {
         color: #929398;
     }
 
-    &:hover, &:focus {
-        border: 1px solid darken(#D3E3FF, 10%);
+    &:hover,
+    &:focus {
+        border: 1px solid darken(#d3e3ff, 10%);
     }
 }
 
@@ -153,6 +155,7 @@ input[type="text"] {
             height: 10px;
             width: 10px;
             margin-left: 0.5rem;
+            fill: $color_blue;
         }
     }
 }
@@ -169,7 +172,8 @@ input[type="text"] {
     position: relative;
     width: 0px;
 
-    &::before, &::after {
+    &::before,
+    &::after {
         content: "";
         position: absolute;
         display: block;
@@ -184,7 +188,6 @@ input[type="text"] {
     }
 
     &:checked {
-
         &::before {
             border-radius: 0.3rem;
             background-color: $color_blue;
@@ -196,9 +199,80 @@ input[type="text"] {
             border-radius: 2px;
             width: 0.5rem;
             height: 0.5rem;
-            transform: translate(85%, 80%)
+            transform: translate(85%, 80%);
         }
     }
-    
 }
+
+.input_search {
+    position: relative;
+
+    > svg {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    &-container {
+        position: absolute;
+        width: 100%;
+        bottom: -0.5rem;
+        transform: translateY(100%);
+        padding: 10px 25px;
+        z-index: 1;
+
+        @media ($media_sm) {
+            top: -0.5rem;
+            transform: translateY(-100%);
+            bottom: auto;
+        }
+
+        background: $color_block_bg;
+        border: 1px solid $color_block_border;
+        box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        visibility: hidden;
+
+        &.visible {
+            visibility: visible;
+        }
+
+        div {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            font-weight: 500;
+            cursor: pointer;
+
+            svg {
+                width: 1.2rem;
+                height: 1.2rem;
+                stroke: lighten($color_blue, 15%);
+                margin-right: 0.8rem;
+            }
+
+            span {
+                font-size: 0.8rem;
+                color: $color_grey;
+                margin-left: 0.8rem;
+            }
+
+            &:hover {
+                color: $color_blue;
+
+                svg {
+                    stroke: $color_blue;
+                }
+            }
+        }
+    }
+}
+
+
 // === / Mixins ===

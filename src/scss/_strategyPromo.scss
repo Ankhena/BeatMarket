@@ -61,7 +61,9 @@ $strategy-btn-margin: 0.8rem;
         &-buttons {
 
             &-top {
-
+                svg {
+                    stroke: $color_white;
+                }
             }
 
             &-bottom {
@@ -92,6 +94,7 @@ $strategy-btn-margin: 0.8rem;
                         box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
                         border-radius: 10px;
                         padding: 1.8rem 1rem;
+                        z-index: 1;
 
                         &-social {
                             display: flex;

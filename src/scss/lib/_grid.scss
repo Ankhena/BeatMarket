@@ -30,7 +30,7 @@ $media_xs: "max-width: " + $screen_xs;
     --section_padding: 7rem;
 
     @media ($media_xl) {
-        --section_padding: 3rem;
+        --section_padding: 2.5rem;
     }
 
     @media ($media_sm) {

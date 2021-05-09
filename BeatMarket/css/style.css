@@ -1229,7 +1229,7 @@ button {
 
 html,
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   line-height: 1.2;
   background-color: #EAF1FE;
@@ -1282,7 +1282,7 @@ body.hideScroll {
 
 input[type="text"] {
   background: #fff;
-  border: 1px solid #D3E3FF;
+  border: 1px solid #d3e3ff;
   border-radius: 10px;
   outline: none;
   padding: 16px 25px;
@@ -1381,6 +1381,7 @@ input[type="text"]:focus {
   height: 10px;
   width: 10px;
   margin-left: 0.5rem;
+  fill: #3E54D8;
 }
 
 .main-contentPadding {
@@ -1421,6 +1422,77 @@ input[type="text"]:focus {
   -webkit-transform: translate(85%, 80%);
       -ms-transform: translate(85%, 80%);
           transform: translate(85%, 80%);
+}
+
+.input_search {
+  position: relative;
+}
+
+.input_search > svg {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.input_search-container {
+  position: absolute;
+  width: 100%;
+  bottom: -0.5rem;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  padding: 10px 25px;
+  z-index: 1;
+  background: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+          box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.input_search-container.visible {
+  visibility: visible;
+}
+
+.input_search-container div {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.input_search-container div svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  stroke: #7e8ce5;
+  margin-right: 0.8rem;
+}
+
+.input_search-container div span {
+  font-size: 0.8rem;
+  color: #929398;
+  margin-left: 0.8rem;
+}
+
+.input_search-container div:hover {
+  color: #3E54D8;
+}
+
+.input_search-container div:hover svg {
+  stroke: #3E54D8;
 }
 
 .overlay_burger {
@@ -1869,6 +1941,75 @@ input[type="text"]:focus {
   display: none;
 }
 
+.myStrategy-emptyPortfolio-container {
+  padding: 4.2rem 0 11rem 0;
+  position: relative;
+}
+
+.myStrategy-emptyPortfolio-container.dummy {
+  padding: 4rem 0;
+}
+
+.myStrategy-emptyPortfolio-container .info {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.myStrategy-emptyPortfolio-container .info picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.myStrategy-emptyPortfolio-container .info picture img {
+  max-width: 100%;
+}
+
+.myStrategy-emptyPortfolio-container .info-title,
+.myStrategy-emptyPortfolio-container .info-subtitle {
+  text-align: center;
+  color: #24252E;
+}
+
+.myStrategy-emptyPortfolio-container .info-title {
+  margin-bottom: 2.8rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.myStrategy-emptyPortfolio-container .info-text {
+  margin: 1.5rem 0;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.myStrategy-emptyPortfolio-container .sprites svg {
+  position: absolute;
+}
+
+.myStrategy-emptyPortfolio-container .sprites-left {
+  width: 130px;
+  height: 260px;
+  left: -1.5rem;
+  top: 10%;
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.myStrategy-emptyPortfolio-container .sprites-right {
+  width: 126px;
+  height: 126px;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  -webkit-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
 .stategyPromo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1919,6 +2060,10 @@ input[type="text"]:focus {
   margin-bottom: 1.35rem;
 }
 
+.stategyPromo-info-buttons-top svg {
+  stroke: #fff;
+}
+
 .stategyPromo-info-buttons-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1952,6 +2097,7 @@ input[type="text"]:focus {
           box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
   border-radius: 10px;
   padding: 1.8rem 1rem;
+  z-index: 1;
 }
 
 .stategyPromo-info-buttons-bottom .btn-label .dropdown-social {
@@ -2379,6 +2525,176 @@ input[type="text"]:focus {
   content: "$";
 }
 
+.myStrategy-items-item-header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.myStrategy-items-item-header-info {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+  border-right: 1px solid #D3E3FF;
+  padding-right: 1rem;
+}
+
+.myStrategy-items-item-header-info-title {
+  margin-bottom: 1.2rem;
+}
+
+.myStrategy-items-item-header-info-title h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #3E54D8;
+  opacity: 0.9;
+}
+
+.myStrategy-items-item-header-info-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.myStrategy-items-item-header-info-content-cash h5 {
+  font-weight: 500;
+  font-size: 0.77rem;
+  color: #24252E;
+  margin-bottom: 0.5rem;
+}
+
+.myStrategy-items-item-header-info-content-cash span {
+  display: inline-block;
+  background-color: #F5F5F5;
+  font-size: 1.35rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.myStrategy-items-item-header-info-content-cash span.success {
+  background-color: #199F27;
+  color: #fff;
+}
+
+.myStrategy-items-item-header-info-content-cash span.error {
+  background-color: #DE4355;
+  color: #fff;
+}
+
+.myStrategy-items-item-header-info-content-settings button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myStrategy-items-item-header-info-content-settings button svg {
+  stroke: #929398;
+  width: 24px;
+  height: 24px;
+}
+
+.myStrategy-items-item-header-info-content-settings button span {
+  color: #929398;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.myStrategy-items-item-header-info-content-settings button:hover svg {
+  stroke: #3E54D8;
+}
+
+.myStrategy-items-item-header-info-content-settings button:hover span {
+  color: #3E54D8;
+}
+
+.myStrategy-items-item-header-stat {
+  -ms-flex-preferred-size: 68%;
+      flex-basis: 68%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 8rem 0 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myStrategy-items-item-header-stat-block h5 {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.myStrategy-items-item-header-stat-block span {
+  font-weight: bold;
+  font-size: 1.55rem;
+  color: #24252E;
+}
+
+.myStrategy-items-item-header-stat-block span.success {
+  color: #199F27;
+}
+
+.myStrategy-items-item-header-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: none;
+  outline: none;
+  border: 2px solid #3E54D8;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.myStrategy-items-item-header-toggle svg {
+  width: 0.8rem;
+  height: 0.8rem;
+  fill: #3E54D8;
+  margin: 1px 0 0 1px;
+}
+
+.myStrategy-items-item-header-toggle.active {
+  background-color: #3E54D8;
+  border-color: #3E54D8;
+}
+
+.myStrategy-items-item-header-toggle.active svg {
+  fill: #fff;
+}
+
 .section-main .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2450,9 +2766,125 @@ input[type="text"]:focus {
           flex-grow: 1;
 }
 
+.myStrategy {
+  margin-top: 4rem;
+}
+
+.myStrategy-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.myStrategy-header h2 {
+  font-size: 1.8rem;
+  color: #24252E;
+  opacity: 0.9;
+}
+
+.myStrategy-header button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.8rem 1.2rem;
+}
+
+.myStrategy-header button svg {
+  stroke: #3E54D8;
+  width: 32px;
+  height: 32px;
+}
+
+.myStrategy-header button span {
+  color: #3E54D8;
+  margin-left: 0.5rem;
+}
+
+.myStrategy-header button:hover,
+.myStrategy-header button:focus {
+  background-color: #3E54D8;
+  border-color: #3E54D8;
+}
+
+.myStrategy-header button:hover svg,
+.myStrategy-header button:focus svg {
+  stroke: #fff;
+}
+
+.myStrategy-header button:hover span,
+.myStrategy-header button:focus span {
+  color: #fff;
+}
+
+.myStrategy-items {
+  margin-top: 1.8rem;
+}
+
+.myStrategy-items-item {
+  background-color: #fff;
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.22);
+          box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.22);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.myStrategy-items-item:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.myStrategy-items-item-content .nav {
+  margin-top: 3rem;
+}
+
+.myStrategy-items-item-content .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #D3E3FF;
+}
+
+.myStrategy-items-item-content .nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  padding: 1rem 0;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #373943;
+  border-bottom: 3px solid transparent;
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.myStrategy-items-item-content .nav ul li a:hover {
+  color: #3E54D8;
+}
+
+.myStrategy-items-item-content .nav ul li a.active {
+  color: #3E54D8;
+  border-color: #3E54D8;
+}
+
 @media (max-width: 1720px) {
   :root {
-    --section_padding: 3rem;
+    --section_padding: 2.5rem;
   }
 
   .section-inner {
@@ -2475,6 +2907,22 @@ input[type="text"]:focus {
 
   .notfound-item.img img {
     max-width: 80%;
+  }
+
+  .myStrategy-emptyPortfolio-container .info {
+    width: 70%;
+  }
+
+  .myStrategy-emptyPortfolio-container .sprites-left {
+    -webkit-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+
+  .myStrategy-emptyPortfolio-container .sprites-right {
+    -webkit-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+            transform: scale(0.75);
   }
 
   .section-main .main-menu {
@@ -2550,6 +2998,14 @@ input[type="text"]:focus {
 
   .main-contentPadding {
     padding: var(--section_padding);
+  }
+
+  .input_search-container {
+    top: -0.5rem;
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+    bottom: auto;
   }
 
   .burger {
@@ -2663,6 +3119,31 @@ input[type="text"]:focus {
             justify-content: flex-end;
   }
 
+  .myStrategy-emptyPortfolio-container {
+    padding: 3rem 0;
+  }
+
+  .myStrategy-emptyPortfolio-container .info {
+    width: 100%;
+  }
+
+  .myStrategy-emptyPortfolio-container .info-title {
+    font-size: 1.5rem;
+  }
+
+  .myStrategy-emptyPortfolio-container .sprites-left {
+    -webkit-transform: scale(0.2);
+        -ms-transform: scale(0.2);
+            transform: scale(0.2);
+    top: 10%;
+  }
+
+  .myStrategy-emptyPortfolio-container .sprites-right {
+    -webkit-transform: scale(0.35);
+        -ms-transform: scale(0.35);
+            transform: scale(0.35);
+  }
+
   .stategyPromo {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2732,6 +3213,42 @@ input[type="text"]:focus {
     height: 250px;
   }
 
+  .myStrategy-items-item-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .myStrategy-items-item-header-info {
+    width: auto;
+    border-right: unset;
+    border-bottom: 1px solid #D3E3FF;
+    padding: 0 0 1rem 0;
+  }
+
+  .myStrategy-items-item-header-info-title {
+    width: 70%;
+  }
+
+  .myStrategy-items-item-header-stat {
+    padding: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .myStrategy-items-item-header-stat-block {
+    margin-bottom: 1rem;
+  }
+
+  .myStrategy-items-item-header-toggle {
+    top: 0;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+  }
+
   .section-main .main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2769,6 +3286,28 @@ input[type="text"]:focus {
 
   .section-main .main-menu .nav ul li a {
     font-size: 1.25rem;
+  }
+
+  .myStrategy-header button {
+    width: auto;
+    padding: 0.8rem;
+  }
+
+  .myStrategy-header button span {
+    display: none;
+  }
+
+  .myStrategy-items-item-content .nav {
+    margin-top: 0.5rem;
+  }
+
+  .myStrategy-items-item-content .nav ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .myStrategy-items-item-content .nav ul li a {
+    padding: 0.8rem 0;
   }
 }
 

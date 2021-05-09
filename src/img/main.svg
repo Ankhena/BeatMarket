@@ -109,9 +109,9 @@
         </symbol>
 
         <symbol id="icon-PlusCircle" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
-            <path d="M11 16H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M16 11V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" stroke-width="2" stroke-miterlimit="10"/>
+            <path d="M11 16H21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 11V21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
 
         <symbol id="icon-ShareNetwork" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,8 +164,8 @@
             <path d="M16.7076 23.0708L14.2327 25.5457C13.7221 26.0568 13.1157 26.4623 12.4483 26.739C11.7809 27.0158 11.0656 27.1583 10.3431 27.1584C9.62059 27.1586 8.90515 27.0164 8.23763 26.74C7.57011 26.4636 6.96358 26.0584 6.45271 25.5475C5.94183 25.0367 5.53662 24.4301 5.26021 23.7626C4.98381 23.0951 4.84163 22.3796 4.8418 21.6572C4.84197 20.9347 4.98448 20.2193 5.26119 19.5519C5.53791 18.8845 5.94341 18.2782 6.45452 17.7675L9.99005 14.232C10.5008 13.7213 11.1071 13.3162 11.7744 13.0398C12.4417 12.7634 13.1569 12.6211 13.8791 12.6211C14.6014 12.6211 15.3166 12.7634 15.9839 13.0398C16.6512 13.3162 17.2575 13.7213 17.7682 14.232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
 
-        <symbol id="icon-arrow-down" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4.63975 7.338C4.67989 7.38796 4.7336 7.42881 4.79626 7.45703C4.85891 7.48525 4.92863 7.5 4.99941 7.5C5.07019 7.5 5.13991 7.48525 5.20256 7.45703C5.26521 7.42881 5.31892 7.38796 5.35906 7.338L9.29687 2.46333C9.34245 2.40711 9.36918 2.34125 9.37415 2.27292C9.37913 2.20459 9.36215 2.1364 9.32508 2.07576C9.28801 2.01511 9.23225 1.96434 9.16387 1.92894C9.09549 1.89355 9.0171 1.87489 8.93721 1.875H1.0616C0.981899 1.87528 0.903797 1.89418 0.835691 1.92966C0.767586 1.96514 0.712054 2.01585 0.675067 2.07636C0.638081 2.13686 0.621039 2.20486 0.625775 2.27305C0.630511 2.34123 0.656845 2.40702 0.701945 2.46333L4.63975 7.338Z" fill="#3E54D8"/>
+        <symbol id="icon-arrow-down" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.63975 7.338C4.67989 7.38796 4.7336 7.42881 4.79626 7.45703C4.85891 7.48525 4.92863 7.5 4.99941 7.5C5.07019 7.5 5.13991 7.48525 5.20256 7.45703C5.26521 7.42881 5.31892 7.38796 5.35906 7.338L9.29687 2.46333C9.34245 2.40711 9.36918 2.34125 9.37415 2.27292C9.37913 2.20459 9.36215 2.1364 9.32508 2.07576C9.28801 2.01511 9.23225 1.96434 9.16387 1.92894C9.09549 1.89355 9.0171 1.87489 8.93721 1.875H1.0616C0.981899 1.87528 0.903797 1.89418 0.835691 1.92966C0.767586 1.96514 0.712054 2.01585 0.675067 2.07636C0.638081 2.13686 0.621039 2.20486 0.625775 2.27305C0.630511 2.34123 0.656845 2.40702 0.701945 2.46333L4.63975 7.338Z"/>
         </symbol>
 
         <symbol id="icon-dottes" width="25" height="5" viewBox="0 0 25 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -173,6 +173,31 @@
             <circle cx="12.5" cy="2.5" r="2.5" fill="#3E54D8"/>
             <circle cx="22.5" cy="2.5" r="2.5" fill="#3E54D8"/>
         </symbol>
+
+        <symbol id="icon-ArrowsOutCardinal" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.5358 25.4648L16.0003 29.0003L12.4648 25.4648"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 20V29"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.4648 6.5355L16.0003 3L19.5358 6.5355"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 12V3"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.5355 19.5358L3 16.0003L6.5355 12.4648"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 16H3"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M25.4648 12.4648L29.0003 16.0003L25.4648 19.5358"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 16H29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+        <symbol id="icon-strategy-sprite-red" width="130" height="260" viewBox="0 0 130 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-130 130C-130 58.203 -71.797 0 0 0C71.797 0 130 58.203 130 130C130 201.797 71.797 260 0 260H-130L-130 130Z" fill="#ED6373"/>
+        </symbol>
+
+        <symbol id="icon-strategy-sprite-green" width="126" height="126" viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 124C0 55.5167 55.5167 0 124 0L252 0L252 252H124C55.5167 252 0 196.483 0 128L0 124Z" fill="#199F27"/>
+        </symbol>
+        
+        <symbol id="icon-search" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z" stroke="#3E54D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.4414 16.4434L20.9977 20.9997" stroke="#3E54D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
 
 
     </defs>

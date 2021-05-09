@@ -7,5 +7,6 @@ $(document).ready(function() {
     --include("_selectric.js")
     --include("_scroll.js")
     --include("_strategyPromoGraph.js")
+    --include("_searchInput.js")
     
 });
