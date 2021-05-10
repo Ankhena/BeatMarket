@@ -59,6 +59,7 @@ initModal();
     
     $(button_burger).click(() => {
         menu_burger.toggleClass("active")
+        body.classList.toggle("hideScroll");
     });
 
     overlay.addEventListener("click", () => {
@@ -205,11 +206,84 @@ initScroll();
 }
 
 initSearchInput()
+    function initMoveStrategy() {
+    let moveActive = false;
+    let strategies = document.querySelectorAll(".myStrategy-items-item");
+
+    $(".myStrategy-items").sortable();
+    $(".myStrategy-items").disableSelection();
+    $(".myStrategy-items").sortable("disable");
+
+    document.querySelectorAll(".myStrategy-header button").forEach(item => {
+        item.addEventListener("click", (e) => {
+            item.classList.toggle("active");
+            moveActive = !moveActive;
+
+            if (moveActive) {
+                $(".myStrategy-items").sortable("enable");
+            }
+            else {
+                $(".myStrategy-items").sortable("disable");
+            }
+
+            strategies.forEach(item => {
+                item.classList.toggle("move");
+            });
+
+        });
+    });
+}
+
+initMoveStrategy();
+    Highcharts.chart('dividendsGraph', {
+    chart: {
+      type: 'variablepie',
+      backgroundColor: 'transparent'
+    },
+    title: {
+      text: ''
+    },
+    tooltip: {
+      enabled: false
+    },
+    series: [{
+      innerSize: '60%',
+      zMin: 1,
+      name: 'countries',
+      data: [{
+        name: 'AMAT',
+        y: 1000,
+        z: 100,
+        color: "red"
+      }, {
+        name: 'AMGN',
+        y: 1000,
+        z: 100
+      }, {
+        name: 'BFB',
+        y: 1000,
+        z: 100
+      }, {
+        name: 'Other',
+        y: 2000,
+        z: 100
+      }]
+    }]
+  });
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
             item.classList.toggle("shown")
         });
     });
+
+    document.querySelectorAll(".myStrategy-header").forEach(item => {
+        let indicatorTable = document.querySelector(".myStrategy-indicators-container .table-scroll");
+        if (indicatorTable != null) {
+            indicatorTable.style.width = `${item.offsetWidth-2}px`
+        }
+    });
+
+    $(".strategyCards-card-range").slider();
     
 });

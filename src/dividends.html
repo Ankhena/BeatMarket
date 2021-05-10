@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Дивиденды"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html")
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html")
+
+				<h1 class="main-title">Мой портфель</h1>
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        @@include("_strategyPromo.html")
+
+						<div class="myStrategy">
+							<div class="myStrategy-header">
+								<h2>Мои стратегии</h2>
+								<button class="btn btn_primary">
+									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
+									<span>Изменить порядок</span>
+								</button>
+							</div>
+							<div class="myStrategy-items">
+
+								<div class="myStrategy-items-item open">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Удачливая стратегия",
+										"cashStatus": "error",
+										"cashValue": "-66%"
+									})
+
+									<div class="myStrategy-items-item-content">
+										<nav class="nav">
+											<ul>
+												<li><a href="#">Мои бумаги</a></li>
+												<li><a href="#">+Компанию</a></li>
+												<li><a href="#">Показатели</a></li>
+												<li><a href="#">Эффективность</a></li>
+												<li><a class="active" href="#">Дивиденды</a></li>
+												<li><a href="#">Новости</a></li>
+												<li><a href="#">История</a></li>
+											</ul>
+										</nav>
+										<div class="myStrategy-indicators-container dividends the_table">
+
+                                            <div class="period">
+                                                <div class="period-info">
+                                                    <h4>Период</h4>
+                                                    <div class="period-info-date">
+                                                        <span>21.11.2020 - 21.11.2021</span>
+                                                        <svg><use xlink:href="img/main.svg#icon-CalendarBlank"></use></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="period-status">
+                                                    <span class="success">Выплачено</span>
+                                                    <span class="error">Прогноз</span>
+                                                    <span>Подтверждено</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="table">
+                                                <div class="table-fixed">
+                                                    <div class="table-fixed-title">
+                                                        <h5>Тикер</h5>
+                                                    </div>
+                                                    <div class="table-fixed-item">
+                                                        <h5>AMAT</h5>
+                                                    </div>
+                                                    <div class="table-fixed-item">
+                                                        <h5>AMGN</h5>
+                                                    </div>
+                                                    <div class="table-fixed-item">
+                                                        <h5>BFС</h5>
+                                                    </div>
+                                                    <div class="table-fixed-item">
+                                                        <h5>TSCO</h5>
+                                                    </div>
+                                                    <div class="table-fixed-item">
+                                                        <h5>TXN</h5>
+                                                    </div>
+                                                    <div class="table-fixed-item bottom">
+                                                        <h5>Всего</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="table-scroll">
+                                                    <div class="table-header">
+                                                        <h5>Дек 2020</h5>
+                                                        <h5>Ноя 2020</h5>
+                                                        <h5>Окт 2020</h5>
+                                                        <h5>Сен 2020</h5>
+                                                        <h5>Авг 2020</h5>
+                                                        <h5>Июл 2020</h5>
+                                                        <h5>Июн 2020</h5>
+                                                        <h5>Май 2020</h5>
+                                                        <h5>Апр 2020</h5>
+                                                        <h5>Мар 2020</h5>
+                                                        <h5>Фев 2020</h5>
+                                                        <h5>Янв 2020</h5>
+                                                        <h5>Итого</h5>
+                                                    </div>
+                                                    <div class="table-content">
+                                                        <div class="table-content-item">
+                                                            <div class="table-content-item-info">
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span class="success">1.44$</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span class="primary">6.1$</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-content-item">
+                                                            <div class="table-content-item-info">
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-content-item">
+                                                            <div class="table-content-item-info">
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span class="error">1.54$</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-content-item">
+                                                            <div class="table-content-item-info">
+                                                                <span>-</span>
+                                                                <span class="primary">3.5$</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span class="error">6.44$</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-content-item">
+                                                            <div class="table-content-item-info">
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span>-</span>
+                                                                <span class="primary">5.44$</span>
+                                                                <span>-</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-content-item bottom">
+                                                            <div class="table-content-item-info">
+                                                                <span>4.42$</span>
+                                                                <span>6.47$</span>
+                                                                <span>2.47$</span>
+                                                                <span>5.41$</span>
+                                                                <span>5.44$</span>
+                                                                <span>3.42$</span>
+                                                                <span>2.44$</span>
+                                                                <span>5.14$</span>
+                                                                <span>5.47$</span>
+                                                                <span>5.44$</span>
+                                                                <span>3.42$</span>
+                                                                <span>2.44$</span>
+                                                                <span>5.14$</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="strategyCards">
+
+                                                <div class="strategyCards-card">
+                                                    <div class="strategyCards-card-header">
+                                                        <h3>Годовой дивидендный доход</h3>
+                                                    </div>
+                                                    <div class="strategyCards-card-coef">
+                                                        <span>3 621 $</span>
+                                                    </div>
+                                                    <div class="strategyCards-card-cash">
+                                                        <div class="strategyCards-card-cash-item">
+                                                            <h5>Месяц</h5>
+                                                            <span>81.06 $</span>
+                                                        </div>
+                                                        <div class="strategyCards-card-cash-item">
+                                                            <h5>День</h5>
+                                                            <span>5.34 $</span>
+                                                        </div>
+                                                        <div class="strategyCards-card-cash-item">
+                                                            <h5>Доходность</h5>
+                                                            <span class="success">8.3 %</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="strategyCards-card">
+                                                    <div class="strategyCards-card-header">
+                                                        <h3>Топ 3 платежных дивидентов</h3>
+                                                    </div>
+                                                    <div class="strategyCards-card-content">
+                                                        <div class="strategyCards-card-content-graph" id="dividendsGraph"></div>
+                                                        <div class="strategyCards-card-content-info">
+                                                            <div class="strategyCards-card-content-info-item">
+                                                                <h5 class="success">AMAT</h5>
+                                                                <span>432.21$</span>
+                                                            </div>
+                                                            <div class="strategyCards-card-content-info-item">
+                                                                <h5 class="error">AMGN</h5>
+                                                                <span>1232.21$</span>
+                                                            </div>
+                                                            <div class="strategyCards-card-content-info-item">
+                                                                <h5 class="primary">BFB</h5>
+                                                                <span>551.21 $</span>
+                                                            </div>
+                                                            <div class="strategyCards-card-content-info-item">
+                                                                <h5>Остальное</h5>
+                                                                <span>3292.21 $</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

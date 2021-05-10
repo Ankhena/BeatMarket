@@ -18,6 +18,8 @@
 @import "myStrategyHeader";
 @import "news";
 @import "history";
+@import "indicators";
+@import "dividents";
 
 // === main ===
 
@@ -56,7 +58,7 @@
             @media ($media_sm) {
                 position: absolute;
                 width: 19rem;
-                height: 100%;
+                height: 100vh;
                 padding: 3rem 1.4rem 3rem calc(var(--section_padding) + 0.8rem);
                 transform: translateX(-100%);
                 z-index: 1;
@@ -172,7 +174,7 @@
                 }
             }
 
-            &:hover, &:focus {
+            &.active {
                 background-color: $color_blue;
                 border-color: $color_blue;
 
@@ -183,7 +185,6 @@
                 span {
                     color: $color_white;
                 }
-
             }
         }
     }
@@ -199,6 +200,11 @@
             padding: 1.5rem;
             overflow: hidden;
 
+            &.move {
+                box-shadow: 0 0 0 0.5rem $color_strategy_item_outline, 0 0 0 calc(0.5rem + 1px) $color_block_border;
+                cursor: grab;
+            }
+
             &.open {
                 .myStrategy-items-item-header-toggle {
                     background-color: $color_blue;
@@ -212,7 +218,7 @@
             }
 
             &:not(:last-child) {
-                margin-bottom: 1.2rem;
+                margin-bottom: 1.3rem;
             }
 
             &-content {
@@ -262,6 +268,166 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+.strategyCards {
+    display: flex;
+    margin-top: 3rem;
+
+    @media ($media_sm) {
+        flex-direction: column;
+    }
+
+    &-card {
+        background: $color_white;
+        border: 1px solid $color_block_border;
+        border-radius: 1rem;
+        padding: 1.35rem;
+        flex-basis: 33.3%;
+
+        @media ($media_xl) {
+            padding: 1.2rem;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+
+            @media ($media_xl) {
+                margin-right: 0.8rem;
+            }
+
+            @media ($media_sm) {
+                margin: 0 0 1rem 0;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+            background-color: $color_block_bg;
+        }
+
+        &-header {
+            display: flex;
+            align-items: center;
+
+            @media ($media_sm) {
+                justify-content: space-between;
+            }
+
+
+            h3 {
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-right: 0.8rem;
+
+                @media ($media_xl) {
+                    font-size: 1rem;
+                    margin-right: 0.5rem;
+                }
+            }
+
+            &-icon {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    stroke: lighten($color_blue, 15%);
+                    cursor: pointer;
+    
+                    &:hover {
+                        stroke: $color_blue;
+                    }
+                }
+
+                input[type='checkbox']:checked ~ .dropdown {
+                    display: block;
+                }
+
+                .dropdown {
+                    display: none;
+                    position: absolute;
+                    padding: 1.1rem;
+                    background-color: $color_block_bg;
+                    border: 1px solid $color_block_border;
+                    box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+                    border-radius: 0.5rem;
+                    z-index: 1;
+                    font-size: 0.9rem;
+                    width: 20rem;
+                    line-height: 1.4;
+
+                    bottom: 0;
+                    right: 0;
+                    transform: translate(50%, 100%);
+
+                    @media ($media_sm) {
+                        transform: translate(0, 100%);
+                    }
+                }
+            }
+        }
+
+        &-coef {
+            margin: 1.6rem 0;
+
+            span {
+                font-size: 2.2rem;
+                font-weight: bold;
+                color: $color_blue;
+            }
+        }
+
+        &-range {
+            position: relative;
+            height: 0.5rem;
+            background-color: lighten($color_blue, 20%);
+            border-radius: 0.25rem;
+
+            &.multicolor {
+                background: linear-gradient(270deg, $color_red 26.43%, rgba(255, 255, 255, 0.1) 59.64%), 
+                            linear-gradient(90deg, $color_green 25.13%, rgba(255, 255, 255, 0.1) 72.4%);
+            }
+
+            span {
+                position: absolute;
+                display: inline-block;
+                width: 0.8rem;
+                height: 0.8rem;
+                box-shadow:
+                    0 0 0 0.25rem lighten($color_blue, 20%),
+                    0 0 0 calc(0.25rem + 1px) $color_blue;
+                background-color: $color_blue;
+                border-radius: 50%;
+                outline: none;
+                cursor: pointer;
+                transform: translate(-50%, -10%)
+            }
+        }
+
+        &-text {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.7rem;
+
+            span {
+                color: $color_grey;
+                font-size: 0.9rem;
+                line-height: 1.4;
+
+                strong {
+                    font-weight: 600;
+                    color: $color_blue;
+                }
+
+                b {
+                    color: $color_black_title;
                 }
             }
         }

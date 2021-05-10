@@ -6,6 +6,7 @@ function initBurgerMenu() {
     
     $(button_burger).click(() => {
         menu_burger.toggleClass("active")
+        body.classList.toggle("hideScroll");
     });
 
     overlay.addEventListener("click", () => {

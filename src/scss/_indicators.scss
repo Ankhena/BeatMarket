@@ -1,0 +1,134 @@
+$indicator_item_width: 8rem;
+$indicator_item_margin-right: 1rem;
+
+.table-scroll::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.table-scroll::-webkit-scrollbar {
+	height: 6px;
+	background-color: #F5F5F5;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+	background-color: lighten($color_blue, 25%);
+}
+
+.myStrategy-indicators-container {
+
+    .table {
+        position: relative;
+        border-top: 1px solid $color_border_dop;
+
+        margin: 2.2rem -1.5rem 0 -1.5rem;
+
+        &-scroll {
+            overflow-x: auto;
+            width: 15rem;
+        }
+
+        &-fixed {
+            position: absolute;
+            background-color: $color_white;
+            box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
+            z-index: 1;
+            padding-left: 1.5rem;
+            margin-top: -1px;
+
+            h5 {
+                font-size: inherit;
+                font-weight: inherit;
+                padding: 0.5rem 0;
+                color: $color_blue;
+            }
+
+            &-title, &-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+
+            &-title {
+                height: 4.6rem;
+
+                h5 {
+                    color: $color_black_title;
+                    font-weight: 600;
+                }
+            }
+
+            &-item {
+                height: 3.35rem;
+                width: 9rem;
+                border-top: 1px solid $color_border_dop;
+                margin-right: 1rem;
+
+                span {
+                    font-size: 0.7rem;
+                    color: $color_grey;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+                h5 {
+                    padding: 0;
+                    font-weight: 600;
+                }
+            }
+
+        }
+
+        &-header {
+            height: 4.6rem;
+            padding-left: 14.5rem;
+            margin-right: 0;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            border-right: 2px solid $color_table_header;
+
+            @media ($media_sm) {
+                display: flex;
+            }
+
+            h5 {
+                min-width: $indicator_item_width;
+                margin-right: $indicator_item_margin-right;
+                color: $color_black_title;
+                font-weight: 600;
+            }
+        }
+
+        &-content {
+            padding-left: 12rem;
+
+            &-item {
+                height: 3.35rem;
+                padding: 0 1.5rem 0 2.5rem;
+                align-items: center;
+                border-bottom: 1px solid $color_block_border;
+                margin-right: 0;
+                width: fit-content;
+
+                &-info {
+                    display: flex;
+                    
+                    span {
+                        min-width: $indicator_item_width;
+                        margin-right: $indicator_item_margin-right;
+
+                        &.success {
+                            color: $color_green;
+                        }
+
+                        &.error {
+                            color: $color_red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

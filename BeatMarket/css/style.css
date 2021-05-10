@@ -2419,6 +2419,475 @@ input[type="text"]:focus {
   font-size: 0.9rem;
 }
 
+.table-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.table-scroll::-webkit-scrollbar {
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background-color: #a8b2ed;
+}
+
+.myStrategy-indicators-container .table {
+  position: relative;
+  border-top: 1px solid #E6EEFF;
+  margin: 2.2rem -1.5rem 0 -1.5rem;
+}
+
+.myStrategy-indicators-container .table-scroll {
+  overflow-x: auto;
+  width: 15rem;
+}
+
+.myStrategy-indicators-container .table-fixed {
+  position: absolute;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
+          box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
+  z-index: 1;
+  padding-left: 1.5rem;
+  margin-top: -1px;
+}
+
+.myStrategy-indicators-container .table-fixed h5 {
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0.5rem 0;
+  color: #3E54D8;
+}
+
+.myStrategy-indicators-container .table-fixed-title,
+.myStrategy-indicators-container .table-fixed-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.myStrategy-indicators-container .table-fixed-title {
+  height: 4.6rem;
+}
+
+.myStrategy-indicators-container .table-fixed-title h5 {
+  color: #24252E;
+  font-weight: 600;
+}
+
+.myStrategy-indicators-container .table-fixed-item {
+  height: 3.35rem;
+  width: 9rem;
+  border-top: 1px solid #E6EEFF;
+  margin-right: 1rem;
+}
+
+.myStrategy-indicators-container .table-fixed-item span {
+  font-size: 0.7rem;
+  color: #929398;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.myStrategy-indicators-container .table-fixed-item h5 {
+  padding: 0;
+  font-weight: 600;
+}
+
+.myStrategy-indicators-container .table-header {
+  height: 4.6rem;
+  padding-left: 14.5rem;
+  margin-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-right: 2px solid #F5F6FD;
+}
+
+.myStrategy-indicators-container .table-header h5 {
+  min-width: 8rem;
+  margin-right: 1rem;
+  color: #24252E;
+  font-weight: 600;
+}
+
+.myStrategy-indicators-container .table-content {
+  padding-left: 12rem;
+}
+
+.myStrategy-indicators-container .table-content-item {
+  height: 3.35rem;
+  padding: 0 1.5rem 0 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #D3E3FF;
+  margin-right: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.myStrategy-indicators-container .table-content-item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.myStrategy-indicators-container .table-content-item-info span {
+  min-width: 8rem;
+  margin-right: 1rem;
+}
+
+.myStrategy-indicators-container .table-content-item-info span.success {
+  color: #199F27;
+}
+
+.myStrategy-indicators-container .table-content-item-info span.error {
+  color: #DE4355;
+}
+
+.dividends .period {
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dividends .period-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dividends .period-info h4 {
+  font-weight: 600;
+  color: #24252E;
+  margin-right: 0.9rem;
+}
+
+.dividends .period-info-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.2rem 0;
+  border-bottom: 1px dashed #687ae1;
+}
+
+.dividends .period-info-date span {
+  font-weight: 600;
+  color: #3E54D8;
+  line-height: 1.4;
+}
+
+.dividends .period-info-date svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+}
+
+.dividends .period-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dividends .period-status span {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.dividends .period-status span:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.dividends .period-status span.success::before {
+  background-color: rgba(25, 159, 39, 0.5);
+}
+
+.dividends .period-status span.error::before {
+  background-color: #e98490;
+}
+
+.dividends .period-status span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #7e8ce5;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.dividends .table-fixed-title h5 {
+  font-weight: 500;
+}
+
+.dividends .table-fixed-item {
+  width: 5rem;
+}
+
+.dividends .table-fixed-item.bottom h5 {
+  color: #24252E;
+}
+
+.dividends .table-header {
+  padding-left: 10.5rem;
+  padding-right: 0;
+}
+
+.dividends .table-header h5 {
+  min-width: 5rem;
+  margin-right: 0.5rem;
+  font-weight: 500;
+  color: #606371;
+}
+
+.dividends .table-content {
+  padding-left: 8rem;
+}
+
+.dividends .table-content-item {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding-right: 0;
+}
+
+.dividends .table-content-item.bottom {
+  background-color: #F5F5F5;
+}
+
+.dividends .table-content-item-info span {
+  min-width: 5rem;
+  margin-right: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dividends .table-content-item-info span.success {
+  background-color: rgba(25, 159, 39, 0.5);
+  color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dividends .table-content-item-info span.error {
+  background-color: #e98490;
+  color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dividends .table-content-item-info span.primary {
+  background-color: #7e8ce5;
+  color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dividends .strategyCards-card {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dividends .strategyCards-card-coef {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dividends .strategyCards-card-coef span {
+  color: #fff;
+  background-color: #3E54D8;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.dividends .strategyCards-card-cash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dividends .strategyCards-card-cash-item h5 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #929398;
+}
+
+.dividends .strategyCards-card-cash-item span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #24252E;
+}
+
+.dividends .strategyCards-card-cash-item span.success {
+  color: #199F27;
+}
+
+.dividends .strategyCards-card-cash-item span.error {
+  color: #DE4355;
+}
+
+.dividends .strategyCards-card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1.6rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.dividends .strategyCards-card-content-graph {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  margin-right: 2rem;
+  height: 125px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+}
+
+.dividends .strategyCards-card-content-graph .highcharts-data-label,
+.dividends .strategyCards-card-content-graph .highcharts-data-label-connector,
+.dividends .strategyCards-card-content-graph .highcharts-credits {
+  display: none;
+}
+
+.dividends .strategyCards-card-content-graph .highcharts-series-group {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+}
+
+.dividends .strategyCards-card-content-info {
+  -ms-flex-preferred-size: 67%;
+      flex-basis: 67%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dividends .strategyCards-card-content-info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dividends .strategyCards-card-content-info-item h5 {
+  font-weight: 500;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.dividends .strategyCards-card-content-info-item h5::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #929398;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.dividends .strategyCards-card-content-info-item h5.primary::before {
+  background-color: #3E54D8;
+}
+
+.dividends .strategyCards-card-content-info-item h5.success::before {
+  background-color: #199F27;
+}
+
+.dividends .strategyCards-card-content-info-item h5.error::before {
+  background-color: #DE4355;
+}
+
+.dividends .strategyCards-card-content-info-item span {
+  font-weight: 600;
+  color: #24252E;
+}
+
 .section-main .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2534,19 +3003,16 @@ input[type="text"]:focus {
   margin-left: 0.5rem;
 }
 
-.myStrategy-header button:hover,
-.myStrategy-header button:focus {
+.myStrategy-header button.active {
   background-color: #3E54D8;
   border-color: #3E54D8;
 }
 
-.myStrategy-header button:hover svg,
-.myStrategy-header button:focus svg {
+.myStrategy-header button.active svg {
   stroke: #fff;
 }
 
-.myStrategy-header button:hover span,
-.myStrategy-header button:focus span {
+.myStrategy-header button.active span {
   color: #fff;
 }
 
@@ -2564,6 +3030,13 @@ input[type="text"]:focus {
   overflow: hidden;
 }
 
+.myStrategy-items-item.move {
+  -webkit-box-shadow: 0 0 0 0.5rem #f7f9ff, 0 0 0 calc(0.5rem + 1px) #D3E3FF;
+          box-shadow: 0 0 0 0.5rem #f7f9ff, 0 0 0 calc(0.5rem + 1px) #D3E3FF;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
 .myStrategy-items-item.open .myStrategy-items-item-header-toggle {
   background-color: #3E54D8;
   border-color: #3E54D8;
@@ -2577,7 +3050,7 @@ input[type="text"]:focus {
 }
 
 .myStrategy-items-item:not(:last-child) {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.3rem;
 }
 
 .myStrategy-items-item-content .nav {
@@ -2618,6 +3091,156 @@ input[type="text"]:focus {
 .myStrategy-items-item-content .nav ul li a.active {
   color: #3E54D8;
   border-color: #3E54D8;
+}
+
+.strategyCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3rem;
+}
+
+.strategyCards-card {
+  background: #fff;
+  border: 1px solid #D3E3FF;
+  border-radius: 1rem;
+  padding: 1.35rem;
+  -ms-flex-preferred-size: 33.3%;
+      flex-basis: 33.3%;
+}
+
+.strategyCards-card:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.strategyCards-card:hover {
+  -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+          box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+  background-color: #FCFDFF;
+}
+
+.strategyCards-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.strategyCards-card-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-right: 0.8rem;
+}
+
+.strategyCards-card-header-icon {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.strategyCards-card-header-icon svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  stroke: #7e8ce5;
+  cursor: pointer;
+}
+
+.strategyCards-card-header-icon svg:hover {
+  stroke: #3E54D8;
+}
+
+.strategyCards-card-header-icon input[type='checkbox']:checked ~ .dropdown {
+  display: block;
+}
+
+.strategyCards-card-header-icon .dropdown {
+  display: none;
+  position: absolute;
+  padding: 1.1rem;
+  background-color: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+          box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+  border-radius: 0.5rem;
+  z-index: 1;
+  font-size: 0.9rem;
+  width: 20rem;
+  line-height: 1.4;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(50%, 100%);
+      -ms-transform: translate(50%, 100%);
+          transform: translate(50%, 100%);
+}
+
+.strategyCards-card-coef {
+  margin: 1.6rem 0;
+}
+
+.strategyCards-card-coef span {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #3E54D8;
+}
+
+.strategyCards-card-range {
+  position: relative;
+  height: 0.5rem;
+  background-color: #939fe9;
+  border-radius: 0.25rem;
+}
+
+.strategyCards-card-range.multicolor {
+  background: -webkit-gradient(linear, right top, left top, color-stop(26.43%, #DE4355), color-stop(59.64%, rgba(255, 255, 255, 0.1))), -webkit-gradient(linear, left top, right top, color-stop(25.13%, #199F27), color-stop(72.4%, rgba(255, 255, 255, 0.1)));
+  background: -o-linear-gradient(right, #DE4355 26.43%, rgba(255, 255, 255, 0.1) 59.64%), -o-linear-gradient(left, #199F27 25.13%, rgba(255, 255, 255, 0.1) 72.4%);
+  background: linear-gradient(270deg, #DE4355 26.43%, rgba(255, 255, 255, 0.1) 59.64%), linear-gradient(90deg, #199F27 25.13%, rgba(255, 255, 255, 0.1) 72.4%);
+}
+
+.strategyCards-card-range span {
+  position: absolute;
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  -webkit-box-shadow: 0 0 0 0.25rem #939fe9, 0 0 0 calc(0.25rem + 1px) #3E54D8;
+          box-shadow: 0 0 0 0.25rem #939fe9, 0 0 0 calc(0.25rem + 1px) #3E54D8;
+  background-color: #3E54D8;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  -webkit-transform: translate(-50%, -10%);
+      -ms-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+}
+
+.strategyCards-card-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0.7rem;
+}
+
+.strategyCards-card-text span {
+  color: #929398;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.strategyCards-card-text span strong {
+  font-weight: 600;
+  color: #3E54D8;
+}
+
+.strategyCards-card-text span b {
+  color: #24252E;
 }
 
 @media (max-width: 1720px) {
@@ -2663,10 +3286,29 @@ input[type="text"]:focus {
             transform: scale(0.75);
   }
 
+  .dividends .strategyCards-card-content-graph {
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+
   .section-main .main-menu {
     -ms-flex-preferred-size: 15rem;
         flex-basis: 15rem;
     min-width: 15rem;
+  }
+
+  .strategyCards-card {
+    padding: 1.2rem;
+  }
+
+  .strategyCards-card:not(:last-child) {
+    margin-right: 0.8rem;
+  }
+
+  .strategyCards-card-header h3 {
+    font-size: 1rem;
+    margin-right: 0.5rem;
   }
 }
 
@@ -2749,6 +3391,10 @@ input[type="text"]:focus {
     display: flex;
   }
 
+  .section-header .header {
+    position: relative;
+  }
+
   .section-header .header-logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2763,12 +3409,27 @@ input[type="text"]:focus {
   }
 
   .section-header .header-logo .logo {
-    width: 15rem;
-    padding: 0 2rem;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    padding: 0;
+    width: 11rem;
+  }
+
+  .section-header .header-controls {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 
   .section-header .header-controls-title {
     display: none;
+  }
+
+  .section-header .header-controls-links-link:not(:last-child) {
+    margin-right: 1rem;
   }
 
   .section-header .header-controls-links-link .dropdown-content li svg {
@@ -3126,6 +3787,47 @@ input[type="text"]:focus {
     margin: 0 0 1rem 0;
   }
 
+  .myStrategy-indicators-container .table-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .dividends .period {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .dividends .period-status {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .dividends .period-status span {
+    margin-top: 1rem;
+  }
+
+  .dividends .strategyCards-card-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .dividends .strategyCards-card-content-graph,
+  .dividends .strategyCards-card-content-info {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .dividends .strategyCards-card-content-graph {
+    margin: 0 0 2rem 0;
+  }
+
+  .dividends .strategyCards-card-content-info-item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
   .section-main .main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3142,7 +3844,7 @@ input[type="text"]:focus {
   .section-main .main-menu {
     position: absolute;
     width: 19rem;
-    height: 100%;
+    height: 100vh;
     padding: 3rem 1.4rem 3rem calc(var(--section_padding) + 0.8rem);
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
@@ -3185,6 +3887,29 @@ input[type="text"]:focus {
 
   .myStrategy-items-item-content .nav ul li a {
     padding: 0.8rem 0;
+  }
+
+  .strategyCards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .strategyCards-card:not(:last-child) {
+    margin: 0 0 1rem 0;
+  }
+
+  .strategyCards-card-header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .strategyCards-card-header-icon .dropdown {
+    -webkit-transform: translate(0, 100%);
+        -ms-transform: translate(0, 100%);
+            transform: translate(0, 100%);
   }
 }
 
