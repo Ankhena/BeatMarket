@@ -433,3 +433,135 @@
         }
     }
 }
+
+body.topNav {
+
+    @media ($media_full) {
+        .page_title {
+            display: none;
+        }
+    
+        .section-main {
+            position: relative;
+        }
+    
+        .main-menu {
+            position: absolute;
+            z-index: 12;
+            top: calc(-1 * var(--header_height));
+            left: 0;
+            width: 100%;
+    
+            background: unset;
+            border: none;
+            padding: 0;
+    
+            nav.nav {
+    
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    height: var(--header_height);
+    
+                    li {
+                        cursor: pointer;
+                        border-bottom: 3px solid transparent !important;
+    
+                        &.border-bottom {
+                            padding: 0;
+                            border-bottom: none;
+                        }
+    
+                        &:not(:last-child) {
+                            margin: 0 2rem 0 0;
+                        }
+    
+                        svg {
+                            display: none;
+                        }
+
+                        a {
+                            font-weight: 600;
+                            color: lighten($color_black_title, 15%);
+                        }
+
+                        &:hover {
+                            border-color: $color_blue !important;
+                        }
+                    }
+    
+                }
+            }
+        }
+    
+        .main-contentPadding {
+            padding: 2.8rem var(--section_padding);
+        }
+    }
+
+}
+
+body.viewProfile {
+
+    .page_title {
+        display: none;
+    }
+
+    .main-contentPadding {
+        padding: 2.8rem var(--section_padding);
+    }
+
+    .header-logo {
+
+        @media ($media_sm) {
+            .burger {
+                display: none;
+            }
+
+            .logo {
+                left: 0;
+                transform: translateX(1.5rem);
+            }
+        }
+
+    }
+
+    .header-controls-links-link {
+
+        &.active, &.person {
+            display: none;
+        }
+
+        &.registration {
+            display: block;
+
+            @media ($media_sm) {
+                display: none;
+            }
+
+            .btn {
+                color: $color_blue;
+                padding: 1rem 1.5rem;
+                border: none;
+                font-size: 0.9rem;
+            }
+        }
+
+        &.auth {
+            cursor: pointer;
+
+            span {
+                margin-left: 0.5rem;
+                font-weight: 600;
+                font-size: 0.9rem;
+                color: $color_blue;
+
+                @media ($media_sm) {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+}

@@ -1301,6 +1301,10 @@ input[type="text"]:focus {
   background-color: #199F27;
 }
 
+.section-header .header-controls-links-link.registration {
+  display: none;
+}
+
 .section-header .header-controls-links-link .dropdown {
   position: relative;
   cursor: pointer;
@@ -2523,7 +2527,8 @@ input[type="text"]:focus {
 
 .myStrategy-indicators-container .table-header h5 {
   min-width: 8rem;
-  margin-right: 1rem;
+  max-width: 8rem;
+  margin-right: 2rem;
   color: #24252E;
   font-weight: 600;
 }
@@ -2553,7 +2558,7 @@ input[type="text"]:focus {
 
 .myStrategy-indicators-container .table-content-item-info span {
   min-width: 8rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .myStrategy-indicators-container .table-content-item-info span.success {
@@ -2797,9 +2802,33 @@ input[type="text"]:focus {
   -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
   margin-right: 2rem;
-  height: 125px;
   -ms-flex-item-align: center;
       align-self: center;
+  position: relative;
+}
+
+.dividends .strategyCards-card-content-graph-info {
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+      -ms-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
+  margin-top: -0.25rem;
+}
+
+.dividends .strategyCards-card-content-graph-info h5 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.dividends .strategyCards-card-content-graph-info span {
+  font-weight: 600;
+  color: #24252E;
+}
+
+.dividends .strategyCards-card-content-graph #dividendsGraph {
+  height: 125px;
   -webkit-transform: scale(1.5);
       -ms-transform: scale(1.5);
           transform: scale(1.5);
@@ -2808,19 +2837,50 @@ input[type="text"]:focus {
           transform-origin: center;
 }
 
-.dividends .strategyCards-card-content-graph .highcharts-data-label,
-.dividends .strategyCards-card-content-graph .highcharts-data-label-connector,
-.dividends .strategyCards-card-content-graph .highcharts-credits {
+.dividends .strategyCards-card-content-graph #dividendsGraph g.highcharts-label {
+  opacity: 0;
+}
+
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-data-label,
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-data-label-connector,
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-credits {
   display: none;
 }
 
-.dividends .strategyCards-card-content-graph .highcharts-series-group {
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-series-group {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
+}
+
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-tooltip {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+  height: 100%;
+}
+
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-tooltip span {
+  font-family: "Montserrat", sans-serif !important;
+  top: 50% !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+      -ms-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
+  margin-top: -0.2rem !important;
+}
+
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-tooltip span h5 {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-tooltip span span {
+  font-weight: 600;
+  color: #24252E;
 }
 
 .dividends .strategyCards-card-content-info {
@@ -3243,6 +3303,103 @@ input[type="text"]:focus {
   color: #24252E;
 }
 
+body.viewProfile .page_title {
+  display: none;
+}
+
+body.viewProfile .main-contentPadding {
+  padding: 2.8rem var(--section_padding);
+}
+
+body.viewProfile .header-controls-links-link.active,
+body.viewProfile .header-controls-links-link.person {
+  display: none;
+}
+
+body.viewProfile .header-controls-links-link.registration {
+  display: block;
+}
+
+body.viewProfile .header-controls-links-link.registration .btn {
+  color: #3E54D8;
+  padding: 1rem 1.5rem;
+  border: none;
+  font-size: 0.9rem;
+}
+
+body.viewProfile .header-controls-links-link.auth {
+  cursor: pointer;
+}
+
+body.viewProfile .header-controls-links-link.auth span {
+  margin-left: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #3E54D8;
+}
+
+@media (min-width: 992px) {
+  body.topNav .page_title {
+    display: none;
+  }
+
+  body.topNav .section-main {
+    position: relative;
+  }
+
+  body.topNav .main-menu {
+    position: absolute;
+    z-index: 12;
+    top: calc(-1 * var(--header_height));
+    left: 0;
+    width: 100%;
+    background: unset;
+    border: none;
+    padding: 0;
+  }
+
+  body.topNav .main-menu nav.nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: var(--header_height);
+  }
+
+  body.topNav .main-menu nav.nav ul li {
+    cursor: pointer;
+    border-bottom: 3px solid transparent !important;
+  }
+
+  body.topNav .main-menu nav.nav ul li.border-bottom {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  body.topNav .main-menu nav.nav ul li:not(:last-child) {
+    margin: 0 2rem 0 0;
+  }
+
+  body.topNav .main-menu nav.nav ul li svg {
+    display: none;
+  }
+
+  body.topNav .main-menu nav.nav ul li a {
+    font-weight: 600;
+    color: #464859;
+  }
+
+  body.topNav .main-menu nav.nav ul li:hover {
+    border-color: #3E54D8 !important;
+  }
+
+  body.topNav .main-contentPadding {
+    padding: 2.8rem var(--section_padding);
+  }
+}
+
 @media (max-width: 1720px) {
   :root {
     --section_padding: 2.5rem;
@@ -3286,7 +3443,7 @@ input[type="text"]:focus {
             transform: scale(0.75);
   }
 
-  .dividends .strategyCards-card-content-graph {
+  .dividends .strategyCards-card-content-graph #dividendsGraph {
     -webkit-transform: scale(1.3);
         -ms-transform: scale(1.3);
             transform: scale(1.3);
@@ -3910,6 +4067,25 @@ input[type="text"]:focus {
     -webkit-transform: translate(0, 100%);
         -ms-transform: translate(0, 100%);
             transform: translate(0, 100%);
+  }
+
+  body.viewProfile .header-logo .burger {
+    display: none;
+  }
+
+  body.viewProfile .header-logo .logo {
+    left: 0;
+    -webkit-transform: translateX(1.5rem);
+        -ms-transform: translateX(1.5rem);
+            transform: translateX(1.5rem);
+  }
+
+  body.viewProfile .header-controls-links-link.registration {
+    display: none;
+  }
+
+  body.viewProfile .header-controls-links-link.auth span {
+    display: none;
   }
 }
 

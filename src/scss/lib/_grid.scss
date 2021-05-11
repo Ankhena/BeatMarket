@@ -25,6 +25,8 @@ $media_md: "max-width: " + $screen_md;
 $media_sm: "max-width: " + $screen_sm;
 $media_xs: "max-width: " + $screen_xs;
 
+$media_full: "min-width: " + $screen_md;
+
 //  АДАПТИВ БЕЗ ПРОМЕЖУТКОВ  \\
 
 :root {

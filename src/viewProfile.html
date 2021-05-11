@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Показатели"
+		})
+
+	</head>
+	<body class="viewProfile">
+
+		@@include("_header.html")
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				<h1 class="main-title">Мой портфель</h1>
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        @@include("_strategyPromo.html")
+
+						<div class="myStrategy">
+							<div class="myStrategy-header">
+								<h2>Мои стратегии</h2>
+								<button class="btn btn_primary">
+									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
+									<span>Изменить порядок</span>
+								</button>
+							</div>
+							<div class="myStrategy-items">
+
+								<div class="myStrategy-items-item open">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Удачливая стратегия",
+										"cashStatus": "error",
+										"cashValue": "-66%"
+									})
+
+									<div class="myStrategy-items-item-content">
+										<nav class="nav">
+											<ul>
+												<li><a href="#">Мои бумаги</a></li>
+												<li><a href="#">+Компанию</a></li>
+												<li><a class="active" href="#">Показатели</a></li>
+												<li><a href="#">Эффективность</a></li>
+												<li><a href="#">Дивиденды</a></li>
+												<li><a href="#">Новости</a></li>
+												<li><a href="#">История</a></li>
+											</ul>
+										</nav>
+										<div class="myStrategy-indicators-container the_table">
+
+                                            @@include("_tableIndicators.html")
+
+                                            <div class="strategyCards">
+                                                <div class="strategyCards-card">
+                                                    <div class="strategyCards-card-header">
+                                                        <h3>P/E портфеля</h3>
+                                                        <label class="strategyCards-card-header-icon">
+                                                            <svg><use xlink:href="img/main.svg#icon-info-2"></use></svg>
+                                                            <input type="checkbox" class="visually_hidden">
+                                                            <div class="dropdown">
+                                                                Данный обзор посвящен секторам американского рынка акций. 
+                                                                Это основная единица классификации компаний. В рамках S&P 500 их насчитывается 11. 
+                                                                Каждый сектор, в свою очередь, подразделяется на индустрии.
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="strategyCards-card-coef">
+                                                        <span>27.65</span>
+                                                    </div>
+                                                    <div class="strategyCards-card-range"></div>
+                                                    <div class="strategyCards-card-text">
+                                                        <span>0</span>
+                                                        <span>100 <strong>(272.11)</strong></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="strategyCards-card">
+                                                    <div class="strategyCards-card-header">
+                                                        <h3>Волатильность портфеля</h3>
+                                                        <label class="strategyCards-card-header-icon">
+                                                            <svg><use xlink:href="img/main.svg#icon-info-2"></use></svg>
+                                                            <input type="checkbox" class="visually_hidden">
+                                                            <div class="dropdown">
+                                                                Данный обзор посвящен секторам американского рынка акций. 
+                                                                Это основная единица классификации компаний. В рамках S&P 500 их насчитывается 11. 
+                                                                Каждый сектор, в свою очередь, подразделяется на индустрии.
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="strategyCards-card-coef">
+                                                        <span>1.05</span>
+                                                    </div>
+                                                    <div class="strategyCards-card-range multicolor"></div>
+                                                    <div class="strategyCards-card-text">
+                                                        <span>Мин. риск</span>
+                                                        <span>Выс. риск</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="strategyCards-card">
+                                                    <div class="strategyCards-card-header">
+                                                        <h3>Коэффициент Шарпа</h3>
+                                                        <label class="strategyCards-card-header-icon">
+                                                            <svg><use xlink:href="img/main.svg#icon-info-2"></use></svg>
+                                                            <input type="checkbox" class="visually_hidden">
+                                                            <div class="dropdown">
+                                                                Данный обзор посвящен секторам американского рынка акций. 
+                                                                Это основная единица классификации компаний. В рамках S&P 500 их насчитывается 11. 
+                                                                Каждый сектор, в свою очередь, подразделяется на индустрии.
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="strategyCards-card-coef">
+                                                        <span>0.81</span>
+                                                    </div>
+                                                    <div class="strategyCards-card-text">
+                                                        <span>Рейтинг среднего значения коэффициента Шарпа <b>1.51</b></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+										</div>
+									</div>
+
+								</div>
+
+                                <div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Стратегия 2",
+										"cashStatus": "success",
+										"cashValue": "+21%"
+									})
+
+								</div>
+							</div>
+						</div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

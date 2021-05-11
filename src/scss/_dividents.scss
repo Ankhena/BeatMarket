@@ -231,27 +231,78 @@
                 &-graph {
                     flex-basis: 33%;
                     margin-right: 2rem;
-                    height: 125px;
                     align-self: center;
-
-                    transform: scale(1.5);
-                    transform-origin: center;
-
-                    @media ($media_xl) {
-                        transform: scale(1.3);
-                    }
+                    position: relative;
 
                     @media ($media_sm) {
                         margin: 0 0 2rem 0;
                     }
 
-                    .highcharts-data-label, .highcharts-data-label-connector, .highcharts-credits {
-                        display: none;
+                    &-info {
+                        text-align: center;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) scale(0.9);
+                        margin-top: -0.25rem;
+
+                        h5 {
+                            font-weight: 500;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        span {
+                            font-weight: 600;
+                            color: $color_black_title;
+                        }
                     }
 
-                    .highcharts-series-group {
-                        transform: scale(1.1);
+                    #dividendsGraph {
+                        height: 125px;
+
+                        transform: scale(1.5);
                         transform-origin: center;
+    
+                        @media ($media_xl) {
+                            transform: scale(1.3);
+                        }
+
+                        g.highcharts-label {
+                            opacity: 0;
+                        }
+    
+                        .highcharts-data-label, .highcharts-data-label-connector, .highcharts-credits {
+                            display: none;
+                        }
+    
+                        .highcharts-series-group {
+                            transform: scale(1.1);
+                            transform-origin: center;
+                        }
+
+                        .highcharts-tooltip {
+                            top: 0 !important;
+                            left: 0 !important;
+                            width: 100%;
+                            height: 100%;
+
+                            span {
+                                font-family: "Montserrat", sans-serif !important;
+                                top: 50% !important;
+                                left: 50% !important;
+                                transform: translate(-50%, -50%) scale(0.9);
+                                margin-top: -0.2rem !important;
+
+                                h5 {
+                                    font-weight: 500;
+                                    margin-bottom: 0.2rem;
+                                }
+        
+                                span {
+                                    font-weight: 600;
+                                    color: $color_black_title;
+                                }
+                            }
+                        }
                     }
                 }
 
