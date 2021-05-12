@@ -1,3 +1,163 @@
+<div class="modal" id="modal_add">
+    <div class="modal-header">
+        <h2>Добавление транзакции</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+        <div class="modal-content-switcher use_mt_first">
+            <div class="modal-content-switcher-button">
+                <label>
+                    <input type="radio" name="switcher" class="visually_hidden" checked>
+                    <span>Купить</span>
+                </label>
+                <label>
+                    <input type="radio" name="switcher" class="visually_hidden">
+                    <span>Продать</span>
+                </label>
+            </div>
+        </div>
+        <div class="modal-content-banner use_mt">
+            <h3>TSCO</h3>
+            <span>Tractor Supply</span>
+        </div>
+        <div class="modal-content-papers use_mt">
+            <div class="modal-content-papers-cost">
+                <label class="label_modal">Цена бумаги</label>
+                <input type="text" placeholder="0%">
+            </div>
+            <div class="modal-content-papers-count">
+                <label class="label_modal">Количество</label>
+                <div class="input_counter">
+                    <button data-counter="counter_add" data-operation="plus" aria-label="Увеличить число">
+                        <svg><use xlink:href="img/main.svg#icon-plus"></use></svg>
+                    </button>
+                    <span id="counter_add">0</span>
+                    <button data-counter="counter_add" data-operation="minus" aria-label="Уменьшить число">
+                        <svg><use xlink:href="img/main.svg#icon-minus"></use></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-content-total use_mt">
+            <label class="label_modal">Итого</label>
+            <span>3 621 $</span>
+        </div>
+        <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue" data-closeModal>Сохранить</button>
+            <button class="btn gray" data-closeModal>Отменить</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal_edit">
+    <div class="modal-header">
+        <h2>Редактирование сделки</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+        <div class="modal-content-banner use_mt_first">
+            <h3>TSCO</h3>
+            <span>Tractor Supply</span>
+        </div>
+        <div class="modal-content-papers use_mt">
+            <div class="modal-content-papers-cost">
+                <label class="label_modal">Цена бумаги</label>
+                <input type="text" placeholder="0%">
+            </div>
+            <div class="modal-content-papers-count">
+                <label class="label_modal">Количество</label>
+                <div class="input_counter">
+                    <button data-counter="counter_edit" data-operation="plus" aria-label="Увеличить число">
+                        <svg><use xlink:href="img/main.svg#icon-plus"></use></svg>
+                    </button>
+                    <span id="counter_edit">0</span>
+                    <button data-counter="counter_edit" data-operation="minus" aria-label="Уменьшить число">
+                        <svg><use xlink:href="img/main.svg#icon-minus"></use></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-content-total use_mt">
+            <label class="label_modal">Итого</label>
+            <span>3 621 $</span>
+        </div>
+        <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue" data-closeModal>Сохранить</button>
+            <button class="btn gray" data-closeModal>Отменить</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal_settings">
+    <div class="modal-header">
+        <h2>Настройки</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+        <div class="modal-content-input use_mt_first">
+            <label class="label_modal">Название стратегии</label>
+            <input type="text">
+        </div>
+        <div class="modal-content-input use_mt">
+            <label class="label_modal">Бенчмарк портфеля</label>
+            <select>
+                <option selected value="SP 500">SP 500</option>
+                <option value="Nasdaq">Nasdaq</option>
+                <option value="Dow Jones">Dow Jones</option>
+            </select>
+        </div>
+        <div class="modal-content-input use_mt">
+            <label class="label_modal">Валюта портфеля</label>
+            <select>
+                <option selected value="Российский рубль">Российский рубль</option>
+                <option value="Американский доллар">Американский доллар</option>
+                <option value="Казахский тенге">Казахский тенге</option>
+            </select>
+        </div>
+        <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue" data-closeModal>Сохранить</button>
+            <button class="btn red" data-changeModal="modal_delete">Удалить стратегию</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal_comment">
+    <div class="modal-header">
+        <h2>Добавить комментарий</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+        <div class="modal-content-input use_mt_first">
+            <label class="label_modal">Введите комментарий</label>
+            <input type="text" value="Продам после 20.04.2022">
+        </div>
+        <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue" data-closeModal>Сохранить</button>
+            <button class="btn gray" data-closeModal>Отменить</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal_delete">
+    <div class="modal-header">
+        <h2>Подтверждение удаления</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+        <div class="modal-content-text use_mt_first">
+            <p>Вы собираетесь удалить свою стратегию, это действие будет необратимо.</p>
+            <br>
+            <strong>Хотите продолжить?</strong>
+        </div>
+        <div class="modal-content-buttons use_mt">
+            <button class="btn btn_red" data-closeModal>Удалить</button>
+            <button class="btn gray" data-closeModal>Отменить</button>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="modal" id="modal_success">
     <div class="modal-header">
         <h2 class="section_title">Хей, это модалка!</h2>

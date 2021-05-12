@@ -10,6 +10,7 @@ $(document).ready(function() {
     --include("_searchInput.js")
     --include("_moveStrategy.js")
     --include("_dividendsGraph.js")
+    --include("_inputCounter.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {

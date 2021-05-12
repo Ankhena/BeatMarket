@@ -20,11 +20,13 @@ function initModal() {
     }
     
     document.querySelectorAll("[data-modal]").forEach(item => {
-        item.addEventListener("click", (e) => showModal(e.target.dataset.modal));
+        item.addEventListener("click", () => {
+            showModal(item.dataset.modal)
+        });
     });
 
     document.querySelectorAll("[data-changeModal]").forEach(item => {
-        item.addEventListener("click", (e) => changeModal(e.target.dataset.changemodal));
+        item.addEventListener("click", () => changeModal(item.dataset.changemodal));
     });
     
     document.querySelectorAll("[data-closeModal]").forEach(item => {

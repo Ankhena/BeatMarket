@@ -97,11 +97,11 @@
                         display: inline-flex;
                     }
 
-                    &:not(:last-child) {
-                        margin-right: 1.5rem;
+                    &:not(:first-child) {
+                        margin-left: 1.5rem;
 
                         @media ($media_sm) {
-                            margin-right: 1rem;
+                            margin-left: 1rem;
                         }
                     }
 
@@ -122,7 +122,7 @@
                         }
                     }
 
-                    &.registration {
+                    &.registration, &.auth {
                         display: none;
                     }
 

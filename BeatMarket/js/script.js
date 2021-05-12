@@ -38,11 +38,13 @@ $(document).ready(function() {
     }
     
     document.querySelectorAll("[data-modal]").forEach(item => {
-        item.addEventListener("click", (e) => showModal(e.target.dataset.modal));
+        item.addEventListener("click", () => {
+            showModal(item.dataset.modal)
+        });
     });
 
     document.querySelectorAll("[data-changeModal]").forEach(item => {
-        item.addEventListener("click", (e) => changeModal(e.target.dataset.changemodal));
+        item.addEventListener("click", () => changeModal(item.dataset.changemodal));
     });
     
     document.querySelectorAll("[data-closeModal]").forEach(item => {
@@ -283,6 +285,17 @@ if (myGraph !== null) {
         }]
     });
 }
+    function initInputCounter() {
+    document.querySelectorAll("[data-counter]").forEach(item => {
+        item.addEventListener("click", () => {
+            let value = +document.querySelector(`#${item.dataset.counter}`).innerText;
+            (item.dataset.operation === "minus" ? value-- : value++);
+            document.querySelector(`#${item.dataset.counter}`).innerText = value;
+        });
+    });
+}
+
+initInputCounter();
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {

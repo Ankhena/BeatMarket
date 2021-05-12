@@ -449,8 +449,10 @@ body.topNav {
             position: absolute;
             z-index: 12;
             top: calc(-1 * var(--header_height));
-            left: 0;
-            width: 100%;
+            
+            width: 60%;
+            left: 50%;
+            transform: translateX(-50%);
     
             background: unset;
             border: none;

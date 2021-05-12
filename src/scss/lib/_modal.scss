@@ -15,14 +15,44 @@
     &.visible {
         top: 50%;
     }
+
+    .label_modal {
+        display: inline-block;
+        color: $color_grey;
+        margin-bottom: 0.6rem;
+    }
+
+    .use_mt {
+        margin-top: 2.2rem;
+
+        @media ($media_xl) {
+            margin-top: 1.8rem;
+        }
+
+        @media ($media_sm) {
+            margin-top: 1.5rem;
+        }
+    }
+
+    .use_mt_first {
+        margin-top: 2.8rem;
+
+        @media ($media_xl) {
+            margin-top: 2.4rem;
+        }
+
+        @media ($media_sm) {
+            margin-top: 2.2rem;
+        }
+    }
 }
 
 .modal {
-    padding: 3.5rem;
-    border-radius: 0.8rem;
-    box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, 0.1);
+    padding: 1.8rem;
+    box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.06);
+    border-radius: 1.1rem;
     background-color: $color_white;
-    width: 34rem;
+    width: 38rem;
 
     @media ($media_xs) {
         width: 90%;
@@ -30,51 +60,209 @@
     }
 
     &-header {
-        text-align: center;
-        line-height: 1.27;
-        margin-bottom: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            font-weight: bold;
+            font-size: 1.8rem;
+            color: $color_black_title;
+            opacity: 0.9;
+        }
+
+        svg {
+            width: 1.4rem;
+            height: 1.4rem;
+            cursor: pointer;
+        }
 
         @media ($media_xs) {
-            margin-bottom: 1.5rem;
 
             h2 {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
             }
         }
     }
 
     &-content {
-        text-align: center;
 
-        &-text {
-            padding: 1rem 0;
-        }
+        &-switcher {
 
-        &-icon {
-            svg {
-                max-width: 10rem;
+            &-button {
+                background: $color_block_bg;
+                border: 1px solid $color_block_border;
+                border-radius: 0.5rem;
+                display: flex;
+                overflow: hidden;
+
+                label {
+                    flex-basis: 50%;
+                    text-align: center;
+
+                    input[type='radio']:checked ~ span {
+                        background-color: $color_blue;
+                        color: $color_white;
+                    }
+
+                    span {
+                        display: flex;
+                        justify-content: center;
+                        transition: 0.3s ease-in-out;
+
+                        padding: 1.24rem 0;
+                        font-weight: 600;
+                        color: lighten($color_black_title, 10%);
+                        cursor: pointer;
+                    }
+                }
             }
         }
-    }
 
-    &-close {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 2.8rem;
-        width: 2.8rem;
-        box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, 0.16);
-        transform: translate(40%, -40%);
-        background-color: $color_white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.95rem;
-        cursor: pointer;
+        &-banner {
+            background: $color_block_bg;
+            box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+            border: 1px solid $color_block_border;
+            border-radius: 0.5rem;
 
-        svg {
-            fill: $color_black_main;
+            display: flex;
+            align-items: baseline;
+            padding: 1.2rem;
+
+            h3 {
+                font-size: 2.2rem;
+                color: $color_blue;
+                margin-right: 0.7rem;
+            }
+
+            span {
+                font-weight: 500;
+            }
+        }
+
+        &-papers {
+            display: flex;
+            justify-content: space-between;
+
+            &-cost {
+                flex-grow: 1;
+                margin-right: 0.5rem;
+
+                @media ($media_xs) {
+                    flex-basis: 50%;
+                }
+            }
+
+            &-count {
+
+                @media ($media_xs) {
+                    flex-basis: 50%;
+                }
+
+                .input_counter {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 8px 15px;
+
+                    background: $color_grey_counter;
+                    border: 1px solid $color_block_border;
+                    border-radius: 0.5rem;
+
+                    span {
+                        color: $color_black_title;
+                        display: inline-block;
+                        margin: 0 1.6rem;
+
+                        @media ($media_xs) {
+                            margin: 0 1.2rem;
+                        }
+                    }
+
+                    button {
+                        border: none;
+                        background-color: unset;
+                        outline: none;
+                        display: flex;
+                        padding: 0;
+                        cursor: pointer;
+                        padding: 5px;
+                        border: 1px solid transparent;
+                        border-radius: 5px;
+
+                        &:hover, &:focus {
+                            background-color: $color_white;
+                        }
+
+                        &:active {
+                            border-color: $color_block_border;
+                        }
+                    
+
+                        svg {
+                            width: 1.3rem;
+                            height: 1.3rem;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        &-text {
+            p {
+                line-height: 1.6;
+                font-weight: 500;
+            }
+        }
+
+        &-total {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                color: $color_blue;
+                font-weight: bold;
+                font-size: 2.8rem;
+                line-height: 1;
+            }
+        }
+
+        &-buttons {
+            display: flex;
+
+            @media ($media_sm) {
+                flex-wrap: wrap;
+            }
+
+            .btn {
+                padding: 1.2rem 0;
+                flex-basis: 50%;
+
+                &.gray, &.red {
+                    background-color: unset;
+                }
+
+                &.gray {
+                    color: $color_grey;
+                }
+
+                &.red {
+                    color: $color_red;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 0.5rem;
+                }
+
+                @media ($media_sm) {
+                    flex-basis: 100%;
+
+                    &:not(:last-child) {
+                        margin: 0 0 0.5rem 0;
+                    }
+                }
+            }
         }
     }
 }
