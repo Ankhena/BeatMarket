@@ -1,4 +1,5 @@
 const myGraph = document.querySelector("#dividendsGraph");
+
 if (myGraph !== null) {
     Highcharts.chart('dividendsGraph', {
         chart: {

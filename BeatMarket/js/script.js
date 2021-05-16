@@ -116,80 +116,83 @@ initSelectric();
 }
 
 initScroll();
+    const myRenderGraph = document.querySelector("#stategyPromoChart");
+if (myRenderGraph !== null) {
     Highcharts.chart('stategyPromoChart', {
-    chart: {
-        type: 'spline',
-        style: { "fontFamily": "" },
-    },
-    title: {
-        text: ''
-    },
-    xAxis: {
-        categories: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
-        labels: {
-            style: {
-                fontSize: "16px",
-                color: "#373943"
-            }
-        }
-    },
-    yAxis: {
+        chart: {
+            type: 'spline',
+            style: { "fontFamily": "" },
+        },
         title: {
             text: ''
         },
-        labels: {
-            formatter: function () {
-                return (this.value / 1000) + 'к';
-            },
-            style: {
-                fontSize: "16px",
-                color: "#373943"
+        xAxis: {
+            categories: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+            labels: {
+                style: {
+                    fontSize: "16px",
+                    color: "#373943"
+                }
             }
         },
-    },
-    tooltip: {
-        crosshairs: true,
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        spline: {
-            marker: {
-                radius: 4,
-                lineColor: 'transparent',
-                lineWidth: 1
+        yAxis: {
+            title: {
+                text: ''
+            },
+            labels: {
+                formatter: function () {
+                    return (this.value / 1000) + 'к';
+                },
+                style: {
+                    fontSize: "16px",
+                    color: "#373943"
+                }
+            },
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: 'transparent',
+                    lineWidth: 1
+                }
             }
-        }
-    },
-    series: [
-
-        {
-            name: 'Портфель',
-            marker: {
-                symbol: 'circle'
-            },
-            data: [1500, 2100, 3500, 5500, 4200, 6500, 7200],
-            color: "#3E54D8"
         },
-        {
-            name: 'S&P 500',
-            marker: {
-                symbol: 'circle'
+        series: [
+    
+            {
+                name: 'Портфель',
+                marker: {
+                    symbol: 'circle'
+                },
+                data: [1500, 2100, 3500, 5500, 4200, 6500, 7200],
+                color: "#3E54D8"
             },
-            data: [2200, 2300, 5200, 3700, 4000, 7800, 3800],
-            color: "#DE4355"
-        },
-        {
-            name: 'Советник',
-            marker: {
-                symbol: 'circle'
+            {
+                name: 'S&P 500',
+                marker: {
+                    symbol: 'circle'
+                },
+                data: [2200, 2300, 5200, 3700, 4000, 7800, 3800],
+                color: "#DE4355"
             },
-            data: [4200, 3300, 1200, 7700, 2000, 5800, 1800],
-            color: "#199F27"
-        }
-
-    ]
-});
+            {
+                name: 'Советник',
+                marker: {
+                    symbol: 'circle'
+                },
+                data: [4200, 3300, 1200, 7700, 2000, 5800, 1800],
+                color: "#199F27"
+            }
+    
+        ]
+    });
+}
     function initSearchInput() {
     document.querySelectorAll("#mySearchContainer").forEach(item => {
 
@@ -255,6 +258,7 @@ initSearchInput()
 
 initMoveStrategy();
     const myGraph = document.querySelector("#dividendsGraph");
+
 if (myGraph !== null) {
     Highcharts.chart('dividendsGraph', {
         chart: {
@@ -449,6 +453,251 @@ initInputCounter();
 }
 
 initBanchGraph();
+    const separation_graph_1_data = [{
+    name: 'Intel',
+    y: 5,
+    z: 100,
+    color: "#5BDE60"
+}, {
+    name: 'Texas instrumental',
+    y: 23.03,
+    z: 100,
+    color: "#5B97DE"
+}, {
+    name: 'Tractor supply',
+    y: 7.11,
+    z: 100,
+    color: "#DE5B5B"
+}, {
+    name: 'Pool',
+    y: 8.25,
+    z: 100,
+    color: "#DEAA5B"
+}, {
+    name: 'ZM company',
+    y: 3.03,
+    z: 100,
+    color: "#5E5BDE"
+}, {
+    name: 'Mastercard',
+    y: 5.24,
+    z: 100,
+    color: "#BC5BDE"
+}, {
+    name: 'Other',
+    y: 55.67,
+    z: 100,
+    color: "#E1E1E1"
+}];
+
+const separation_graph_2_data = [{
+    name: 'Financial',
+    y: 5,
+    z: 100,
+    color: "#5BDE60"
+}, {
+    name: 'Technology',
+    y: 33.03,
+    z: 100,
+    color: "#5B97DE"
+}, {
+    name: 'Tractor supply',
+    y: 17.11,
+    z: 100,
+    color: "#DE5B5B"
+}, {
+    name: 'Pool',
+    y: 28.25,
+    z: 100,
+    color: "#DEAA5B"
+}, {
+    name: 'ZM company',
+    y: 13.03,
+    z: 100,
+    color: "#5E5BDE"
+}];
+
+const separation_graph_3_data = [{
+    name: 'Equity',
+    y: 100,
+    z: 100,
+    color: "#DE5B5B"
+}];
+
+const separation_graph_5_data = [{
+    name: 'Financial',
+    y: 5,
+    z: 100,
+    color: "#5BDE60"
+}, {
+    name: 'Technology',
+    y: 33.03,
+    z: 100,
+    color: "#5B97DE"
+}, {
+    name: 'Tractor supply',
+    y: 17.11,
+    z: 100,
+    color: "#DE5B5B"
+}, {
+    name: 'Pool',
+    y: 28.25,
+    z: 100,
+    color: "#DEAA5B"
+}, {
+    name: 'ZM company',
+    y: 13.03,
+    z: 100,
+    color: "#5E5BDE"
+}, {
+    name: 'Industrial goods',
+    y: 5.24,
+    z: 100,
+    color: "#BC5BDE"
+}];
+
+const separation_graph_6_data = [{
+    name: 'Акции',
+    y: 80,
+    z: 100,
+    color: "#5E5BDE"
+}, {
+    name: 'ETFS',
+    y: 0,
+    z: 100,
+    color: "#5B97DE"
+}, {
+    name: 'Фонды',
+    y: 20,
+    z: 100,
+    color: "#DE5B5B"
+}, {
+    name: 'Денежные средства',
+    y: 0,
+    z: 100,
+    color: "#DEAA5B"
+}];
+
+const separation_graph_1 = document.querySelector("#separation_graph_1");
+const separation_graph_2 = document.querySelector("#separation_graph_2");
+const separation_graph_3 = document.querySelector("#separation_graph_3");
+
+const separation_graph_5 = document.querySelector("#separation_graph_5");
+const separation_graph_6 = document.querySelector("#separation_graph_6");
+
+addPerformanceGraph(separation_graph_1, "separation_graph_1", separation_graph_1_data, false);
+addPerformanceGraph(separation_graph_2, "separation_graph_2", separation_graph_2_data, false);
+addPerformanceGraph(separation_graph_3, "separation_graph_3", separation_graph_3_data, false);
+
+addPerformanceGraph(separation_graph_5, "separation_graph_5", separation_graph_5_data, true);
+addPerformanceGraph(separation_graph_6, "separation_graph_6", separation_graph_6_data, true);
+
+function addPerformanceGraph(node, id, data, isInput) {
+    if (node !== null) {
+        Highcharts.chart(id, {
+            chart: {
+                type: 'variablepie',
+                backgroundColor: 'transparent'
+            },
+            title: {
+                text: ''
+            },
+            tooltip: {
+                headerFormat: '',
+                pointFormat: `
+            <div style="text-align: center;">
+              <h5>{point.name}</h5>
+              <span>{point.y}%</span>
+            </div>
+          `,
+                useHTML: true
+            },
+            series: [{
+                innerSize: '60%',
+                zMin: 1,
+                name: 'countries',
+                data: data
+            }]
+        });
+
+        if (isInput) {
+            addPerformanceGraphLabelsRadio(node.nextElementSibling, data, id);
+        }
+        else {  
+            addPerformanceGraphLabels(node.nextElementSibling, data);
+        }
+        
+        
+    }
+}
+
+function addPerformanceGraphLabels(node, data) {
+
+    data.forEach(item => {
+        let graphContent = document.createElement("div");
+        graphContent.classList.add("graphContent");
+
+        let graphContentName = document.createElement("div");
+        graphContentName.classList.add("graphContent-name");
+
+        let graphRound = document.createElement("div");
+        graphRound.style.backgroundColor = item.color;
+
+        let graphName = document.createElement("span");
+        graphName.innerHTML = item.name;
+
+        graphContentName.appendChild(graphRound);
+        graphContentName.appendChild(graphName);
+    
+        let graphValue = document.createElement("strong");
+        graphValue.classList.add("graphContent-value");
+        graphValue.innerHTML = item.y + "%";
+
+        graphContent.appendChild(graphContentName);
+        graphContent.appendChild(graphValue);
+
+        node.appendChild(graphContent);
+    });
+
+}
+
+function addPerformanceGraphLabelsRadio(node, data, name) {
+
+    data.forEach(item => {
+        let graphContent = document.createElement("div");
+        graphContent.classList.add("graphContent");
+
+        let graphContentName = document.createElement("label");
+        graphContentName.classList.add("graphContent-name");
+        graphContentName.classList.add("label");
+
+        let graphRound = document.createElement("div");
+        graphRound.style.backgroundColor = item.color;
+
+        let graphRadio = document.createElement("input");
+        graphRadio.setAttribute("type", "radio");
+        graphRadio.setAttribute("name", name);
+        graphRadio.classList.add("visually_hidden");
+        graphRadio.classList.add("radio_custom");
+
+        let graphName = document.createElement("span");
+        graphName.innerHTML = item.name;
+
+        graphContentName.appendChild(graphRound);
+        graphContentName.appendChild(graphRadio);
+        graphContentName.appendChild(graphName);
+    
+        let graphValue = document.createElement("strong");
+        graphValue.classList.add("graphContent-value");
+        graphValue.innerHTML = item.y + "%";
+
+        graphContent.appendChild(graphContentName);
+        graphContent.appendChild(graphValue);
+
+        node.appendChild(graphContent);
+    });
+
+}
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {

@@ -12,6 +12,7 @@ $(document).ready(function() {
     --include("_dividendsGraph.js")
     --include("_inputCounter.js")
     --include("_banchGraph.js")
+    --include("_performance.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
