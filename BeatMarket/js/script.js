@@ -470,5 +470,15 @@ initBanchGraph();
             item.classList.toggle("opened");
         });
     });
+
+    document.querySelectorAll(".myStrategy-items-item-header-toggle").forEach(item => { // открытие/закрытие стратегий
+        item.addEventListener("click", () => {
+            item.classList.toggle("active");
+            const content = item.parentNode.nextElementSibling;
+            if (content !== null) {
+                content.classList.toggle("hidden");
+            }
+        });
+    })
     
 });

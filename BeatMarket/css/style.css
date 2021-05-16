@@ -1470,7 +1470,7 @@ input[type="text"]:focus {
 }
 
 .section-header .header-controls-title {
-  margin-left: 3rem;
+  margin-left: 0.7rem;
 }
 
 .section-header .header-controls-links {
@@ -2516,6 +2516,9 @@ input[type="text"]:focus {
 
 .myStrategy-items-item-header-toggle.active svg {
   fill: #fff;
+  -webkit-transform: rotate(180deg) translateY(1px);
+      -ms-transform: rotate(180deg) translateY(1px);
+          transform: rotate(180deg) translateY(1px);
 }
 
 .myStrategy-news-container .table-header h5:nth-child(1) {
@@ -3934,6 +3937,10 @@ input[type="text"]:focus {
   margin-bottom: 1.3rem;
 }
 
+.myStrategy-items-item-content.hidden {
+  display: none;
+}
+
 .myStrategy-items-item-content .nav {
   margin: 3rem -1.5rem 0 -1.5rem;
 }
@@ -4248,6 +4255,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .section-header .header-logo .logo {
     width: 11rem;
+  }
+
+  .section-header .header-controls-title {
+    margin-left: 3.2rem;
   }
 
   .portfolio {

@@ -33,26 +33,25 @@
 							</div>
 							<div class="myStrategy-items">
 
-								<div class="myStrategy-items-item open">
+								<div class="myStrategy-items-item">
 
 									@@include("_myStrategyHeader.html", {
 										"title": "Удачливая стратегия",
 										"cashStatus": "error",
-										"cashValue": "-66%"
+										"cashValue": "-66%",
+										"toggleActive": "active"
 									})
 
 									<div class="myStrategy-items-item-content">
-										<nav class="nav">
-											<ul>
-												<li><a href="#">Мои бумаги</a></li>
-												<li><a href="#">+Компанию</a></li>
-												<li><a href="#">Показатели</a></li>
-												<li><a href="#">Эффективность</a></li>
-												<li><a href="#">Дивиденды</a></li>
-												<li><a class="active" href="#">Новости</a></li>
-												<li><a href="#">История</a></li>
-											</ul>
-										</nav>
+                                        @@include("_myStrategyNav.html", {
+                                            "myPapers": "",
+                                            "addCompany": "",
+                                            "indicators": "",
+                                            "perfomance": "",
+                                            "dividents": "",
+                                            "news": "active",
+                                            "history": ""
+                                        })
 										<div class="myStrategy-news-container the_table">
 											<div class="table">
                                                 <div class="table-header">

@@ -172,6 +172,7 @@
 
             svg {
                 fill: $color_white;
+                transform: rotate(180deg) translateY(1px);
             }
         }
 

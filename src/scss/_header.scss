@@ -78,7 +78,11 @@
             // }
 
             &-title {
-                margin-left: 3rem;
+                margin-left: 0.7rem;
+
+                @media ($media_xl) {
+                    margin-left: 3.2rem;
+                }
 
                 @media ($media_sm) {
                     display: none;
