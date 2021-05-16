@@ -497,6 +497,36 @@ $strategy-btn-margin: 0.8rem;
                 height: 250px;
             }
 
+            .highcharts-halo {
+                display: none;
+            }
+
+            .highcharts-point {
+                display: none;
+
+                &-hover {
+                    display: block;
+                }
+            }
+
+            .highcharts-series-0 {
+                path {
+                    filter: drop-shadow(0px 1px 2px rgba(62, 84, 216, 0.6));
+                }
+            }
+
+            .highcharts-series-1 {
+                path {
+                    filter: drop-shadow(0px 1px 2px rgba(222, 67, 85, 0.6));
+                }
+            }
+
+            .highcharts-series-2 {
+                path {
+                    filter: drop-shadow(0px 1px 2px rgba(25, 159, 39, 0.6));
+                }
+            }
+
             .highcharts-axis-labels {
                 font-weight: 500;
             }

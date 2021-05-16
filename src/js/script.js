@@ -11,6 +11,7 @@ $(document).ready(function() {
     --include("_moveStrategy.js")
     --include("_dividendsGraph.js")
     --include("_inputCounter.js")
+    --include("_banchGraph.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
@@ -26,5 +27,11 @@ $(document).ready(function() {
     });
 
     $(".strategyCards-card-range").slider();
+
+    document.querySelectorAll(".myPapers-item").forEach(item => {
+        item.addEventListener("click", () => {
+            item.classList.toggle("opened");
+        });
+    });
     
 });

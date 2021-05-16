@@ -20,6 +20,7 @@
 @import "history";
 @import "indicators";
 @import "dividents";
+@import "myPapers";
 
 // === main ===
 
@@ -44,8 +45,8 @@
         }
 
         &-menu {
-            flex-basis: 22rem;
-            min-width: 22rem;
+            flex-basis: 21rem;
+            min-width: 21rem;
             background: $color_menu_bg;
             padding: 3rem 1.4rem 3rem var(--section_padding);
             border-right: 2px solid #D3E3FF;

@@ -19,10 +19,14 @@ $(document).ready(function() {
     function initModal() {
     let overlay = document.querySelector(".overlay_modal");
     let body = document.body;
+    let scrollBarWidth = getScrollBarWidth(); // чтобы не прыгала ширина сайта при скрытии скролла 
+
+    //console.log(scrollBarWidth);
     
     function showModal(id) {
         overlay.classList.add("visible");
         body.classList.add("hideScroll");
+        body.style.paddingRight = `${scrollBarWidth}px`;
         document.querySelector(`#${id}`).classList.add("visible");
     }
 
@@ -32,9 +36,22 @@ $(document).ready(function() {
     }
     
     function closeModal() {
-        overlay.classList.remove("visible");
-        body.classList.remove("hideScroll");
         document.querySelector(".modal.visible").classList.remove("visible");
+        setTimeout(() => {
+            overlay.classList.remove("visible");
+            body.classList.remove("hideScroll");
+            body.style.paddingRight = "";
+        }, 150); // так как 0.3s ease-in-out, это нужно чтобы окно модальное не прыгало резко влево во время закрытия
+    }
+
+    function getScrollBarWidth() {
+        const scrollBlock = document.createElement("div");
+        scrollBlock.classList.add("scroll_block_dummy");
+        document.body.appendChild(scrollBlock);
+
+        const scrollBarWidth = scrollBlock.offsetWidth - scrollBlock.clientWidth;
+        document.body.removeChild(scrollBlock);
+        return scrollBarWidth;
     }
     
     document.querySelectorAll("[data-modal]").forEach(item => {
@@ -101,78 +118,78 @@ initSelectric();
 initScroll();
     Highcharts.chart('stategyPromoChart', {
     chart: {
-      type: 'spline',
-      style: {"fontFamily": ""}
+        type: 'spline',
+        style: { "fontFamily": "" },
     },
     title: {
-      text: ''
+        text: ''
     },
     xAxis: {
-      categories: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
-      labels: {
-        style: {
-            fontSize: "16px",
-            color: "#373943"
+        categories: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+        labels: {
+            style: {
+                fontSize: "16px",
+                color: "#373943"
+            }
         }
-      }
     },
     yAxis: {
-      title: {
-        text: ''
-      },
-      labels: {
-        formatter: function () {
-          return (this.value / 1000) + 'к';
+        title: {
+            text: ''
         },
-        style: {
-            fontSize: "16px",
-            color: "#373943"
-        }
-      },
+        labels: {
+            formatter: function () {
+                return (this.value / 1000) + 'к';
+            },
+            style: {
+                fontSize: "16px",
+                color: "#373943"
+            }
+        },
     },
     tooltip: {
-      crosshairs: true,
-      shared: true,
-      useHTML: true
+        crosshairs: true,
+        shared: true,
+        useHTML: true
     },
     plotOptions: {
-      spline: {
-        marker: {
-          radius: 4,
-          lineColor: 'transparent',
-          lineWidth: 1
+        spline: {
+            marker: {
+                radius: 4,
+                lineColor: 'transparent',
+                lineWidth: 1
+            }
         }
-      }
     },
     series: [
 
-    {
-      name: 'Портфель',
-      marker: {
-        symbol: 'circle'
-      },
-      data: [1500, 2100, 3500, 5500, 4200, 6500, 7200],
-      color: "#3E54D8"
-    }, 
-    {
-      name: 'S&P 500',
-      marker: {
-        symbol: 'circle'
-      },
-      data: [2200, 2300, 5200, 3700, 4000, 7800, 3800],
-      color: "#DE4355"
-    },
-    {
-        name: 'Советник',
-        marker: {
-          symbol: 'circle'
+        {
+            name: 'Портфель',
+            marker: {
+                symbol: 'circle'
+            },
+            data: [1500, 2100, 3500, 5500, 4200, 6500, 7200],
+            color: "#3E54D8"
         },
-        data: [4200, 3300, 1200, 7700, 2000, 5800, 1800],
-        color: "#199F27"
-    }
+        {
+            name: 'S&P 500',
+            marker: {
+                symbol: 'circle'
+            },
+            data: [2200, 2300, 5200, 3700, 4000, 7800, 3800],
+            color: "#DE4355"
+        },
+        {
+            name: 'Советник',
+            marker: {
+                symbol: 'circle'
+            },
+            data: [4200, 3300, 1200, 7700, 2000, 5800, 1800],
+            color: "#199F27"
+        }
 
     ]
-  });
+});
     function initSearchInput() {
     document.querySelectorAll("#mySearchContainer").forEach(item => {
 
@@ -296,6 +313,142 @@ if (myGraph !== null) {
 }
 
 initInputCounter();
+    function initBanchGraph() {
+    const banchData = {
+        months: ["Янв 2020", "Фев 2020", "Мар 2020", "Апр 2020", "Май 2020", "Июн 2020", "Июл 2020", "Авг 2020", "Сен 2020", "Окт 2020", "Ноя 2020", "Дек 2020"],
+        data: [
+            {
+                name: "Мой портфель",
+                class: "primary"
+            },
+            {
+                name: "S&P 500",
+                class: "success"
+            },
+        ],
+        percentData: [
+            [32.56, -12.22],
+            [4.44, 5.12], 
+            [6.18, -5.22], 
+            [-10.22, 16.66],
+            [10.23, -5.11],
+            [12.22, 20.66],
+            [-5.22, 4.44], 
+            [10.23, -12.22], 
+            [-5.11, 20.66], 
+            [32.56, 10.23], 
+            [5.12, 20.66], 
+            [-5.11, 16.66]
+        ]
+    };
+
+    const maxValue = fillGraphLabels();
+    fillDescrItems();
+    fillMainGraph(maxValue);
+
+    function fillGraphLabels() { // заполнить серые цифры и графика (обозначения слева)
+        let nums = banchData.percentData.map(item => Math.max.apply(null, item));
+        let maxNum = Math.max.apply(null, nums);
+        let cleanMaxNum = Math.ceil(maxNum).toFixed(2);
+        let cleanArray = [cleanMaxNum, 0, "-" + cleanMaxNum];
+
+        let parentNode = document.querySelector(".banchGraph-descr-percent");
+        if (parentNode === null) {
+            return false;
+        }
+
+        cleanArray.forEach(item => {
+            let elem = document.createElement("span");
+            elem.innerHTML = item;
+            parentNode.appendChild(elem);
+        });
+
+        return cleanMaxNum;
+    }
+
+    function fillDescrItems() {
+        let parentNode = document.querySelector(".banchGraph-descr-items");
+        if (parentNode === null) {
+            return false;
+        }
+
+        banchData.data.forEach(item => {
+            let myNode = document.createElement("div");
+            myNode.classList.add("banchGraph-descr-items-item");
+    
+            let mySpan = document.createElement("span");
+            mySpan.classList.add(item.class);
+
+            if (window.outerWidth > 720) {
+                mySpan.innerHTML = item.name;
+            }
+
+            myNode.appendChild(mySpan);
+            parentNode.appendChild(myNode);
+        });
+    }
+
+    function fillMainGraph(maxValue) {
+        let parentNode = document.querySelector(".banchGraph-content");
+        if (parentNode === null) {
+            return false;
+        }
+
+        banchData.months.forEach((item, i) => {
+            let banchGraph_item = document.createElement("div");
+            banchGraph_item.classList.add("banchGraph-content-item");
+
+            let banchGraph_item_graph = document.createElement("div");
+            banchGraph_item_graph.classList.add("banchGraph-content-item-graph");
+
+            let banchGraph_item_graph_half = document.createElement("div");
+            banchGraph_item_graph_half.classList.add("banchGraph-content-item-graph-half");
+
+
+            let banchGraph_item_date = document.createElement("div");
+            banchGraph_item_date.classList.add("banchGraph-content-item-date");
+
+            let banchGraph_item_date_span = document.createElement("span");
+            banchGraph_item_date_span.innerHTML = item;
+            banchGraph_item_date.appendChild(banchGraph_item_date_span);
+
+            let banchGraph_item_stat = document.createElement("div");
+            banchGraph_item_stat.classList.add("banchGraph-content-item-stat");
+
+            banchData.percentData[i].forEach((elem, j) => {
+                let mySpan = document.createElement("span");
+                mySpan.innerHTML = elem + "%";
+                mySpan.classList.add((elem > 0 ? "success" : "error"));
+                banchGraph_item_stat.appendChild(mySpan);
+
+                let banchGraph_item_graph_half_item = document.createElement("div");
+                banchGraph_item_graph_half_item.classList.add("banchGraph-content-item-graph-half-item");
+                banchGraph_item_graph_half_item.classList.add(banchData.data[j].class);
+
+                let myHeight = (elem * 100) / maxValue;
+
+                if (myHeight < 0) {
+                    myHeight = Math.abs(myHeight);
+                    banchGraph_item_graph_half_item.style.transform = "translateY(calc(100% + 2px)) rotate(180deg)";
+                }
+
+                banchGraph_item_graph_half_item.style.height = `${myHeight}%`;
+
+                banchGraph_item_graph_half.appendChild(banchGraph_item_graph_half_item);
+
+            });
+
+            banchGraph_item_graph.appendChild(banchGraph_item_graph_half);
+
+            banchGraph_item.appendChild(banchGraph_item_graph);
+            banchGraph_item.appendChild(banchGraph_item_date);
+            banchGraph_item.appendChild(banchGraph_item_stat);
+            parentNode.appendChild(banchGraph_item);
+        });
+    }
+}
+
+initBanchGraph();
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
@@ -311,5 +464,11 @@ initInputCounter();
     });
 
     $(".strategyCards-card-range").slider();
+
+    document.querySelectorAll(".myPapers-item").forEach(item => {
+        item.addEventListener("click", () => {
+            item.classList.toggle("opened");
+        });
+    });
     
 });
