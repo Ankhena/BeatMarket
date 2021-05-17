@@ -3,7 +3,7 @@
 	<head>
 
 		@@include('_head.html', {
-			"title": "starterGulp - Main Page"
+			"title": "BeatMarket - Эффективность"
 		})
 
 	</head>
@@ -13,17 +13,341 @@
 
 		<section class="section-outer section-main">
 			<div class="main">
-				
+
 				@@include("_menu.html")
 
+				<h1 class="main-title">Мой портфель</h1>
+
 				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        @@include("_strategyPromo.html")
+
+						<div class="myStrategy">
+							<div class="myStrategy-header">
+								<h2>Мои стратегии</h2>
+								<button class="btn btn_primary">
+									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
+									<span>Изменить порядок</span>
+								</button>
+							</div>
+							<div class="myStrategy-items">
+
+								<div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Удачливая стратегия",
+										"cashStatus": "error",
+										"cashValue": "-66%",
+										"toggleActive": "active"
+									})
+
+									<div class="myStrategy-items-item-content">
+
+                                        @@include("_myStrategyNav.html", {
+                                            "myPapers": "",
+                                            "addCompany": "",
+                                            "indicators": "",
+                                            "perfomance": "active",
+                                            "dividents": "",
+                                            "news": "",
+                                            "history": ""
+                                        })
+
+										<div class="myStrategy-indicators-container the_table">
+
+                                            @@include("_tableIndicators.html")
+
+                                            <div class="performance">
+                                                <div class="performance-info">
+                                                    <div class="performance-info-cards">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <h4>О портфеле</h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <span>Активен с <strong>17 ноября 2019 г</strong></span>
+                                                                <span>Бета портфеля <strong>1.08</strong></span>
+                                                                <span>Дивидендная доходность <strong class="success">+2%</strong></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <h4>Доходность портфеля</h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <span>6 месяцев <strong class="success">+10.5%</strong></span>
+                                                                <span>12 месяцев <strong class="success">+7.53%</strong></span>
+                                                                <span>Все время <strong class="success">+3.21%</strong></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <h4>Лучшая сделка</h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <span>Бумага <strong class="primary">Kia-Tencor (KLAC)</strong></span>
+                                                                <span>Дата сделки <strong>17 ноября 2019 г</strong></span>
+                                                                <span>Доход <strong class="success">+71.53%</strong></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="performance-separation">
+                                                    <div class="header">
+                                                        <h3>Разделение</h3>
+                                                    </div>
+                                                    <div class="card">
+                                                        <div class="card-block">
+                                                            <div class="card-header">
+                                                                <h4>Company Allocation</h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <div class="card-content-graph graph" id="separation_graph_1"></div>
+                                                                <div class="card-content-info">
+                                                                    <!-- <div class="graphContent">
+                                                                        <div class="graphContent-name">
+                                                                            <div></div>
+                                                                            <span>Financial</span>
+                                                                        </div>
+                                                                        <strong class="graphContent-value">25.01%</strong>
+                                                                    </div> -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block">
+                                                            <div class="card-header">
+                                                                <h4>Sector Allocation</h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <div class="card-content-graph graph" id="separation_graph_2"></div>
+                                                                <div class="card-content-info"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block">
+                                                            <div class="card-header">
+                                                                <h4>Asset alocations</h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <div class="card-content-graph graph" id="separation_graph_3"></div>
+                                                                <div class="card-content-info"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="performance-structure">
+                                                    <div class="header">
+                                                        <h3>Состав портфеля</h3>
+                                                    </div>
+                                                    <div class="performance-structure-content">
+                                                        <div class="card">
+                                                            <div class="card-content-graph graph graph-big" id="separation_graph_4"></div>
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="content-header card-header">
+                                                                <h4>Общая сумма</h4>
+                                                            </div>
+                                                            <div class="content-data">
+                                                                <div class="content-data-cost">
+                                                                    <span>33 621 $</span>
+                                                                </div>
+                                                                <div class="content-data-pager pagination">
+                                                                    <ul>
+                                                                        <li class="prev">
+                                                                            <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
+                                                                        </li>
+                                                                        <li class="current"><a href="#">1/7</a></li>
+                                                                        <li class="next">
+                                                                            <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="content-graphInfo">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="performance-sectors">
+                                                    <div class="header">
+                                                        <h3>Распределение акций по секторам</h3>
+                                                        <label class="strategyCards-card-header-icon">
+                                                            <svg><use xlink:href="img/main.svg#icon-info-2"></use></svg>
+                                                            <input type="checkbox" class="visually_hidden">
+                                                            <div class="dropdown">
+                                                                Данный обзор посвящен секторам американского рынка акций. 
+                                                                Это основная единица классификации компаний. В рамках S&P 500 их насчитывается 11. 
+                                                                Каждый сектор, в свою очередь, подразделяется на индустрии.
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="card">
+                                                        <div class="card-block border">
+                                                            <div class="card-content">
+                                                                <div class="card-content-graph graph" id="separation_graph_5"></div>
+                                                                <div class="card-content-info"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block">
+                                                            <div class="card-header">
+                                                                <h4>Крупные холдинги <span class="primary">промышленных товаров</span></h4>
+                                                            </div>
+                                                            <div class="card-list">
+                                                                <ol>
+                                                                    <li>
+                                                                        <div class="name">
+                                                                            <span>Intel</span>
+                                                                            <strong class="primary">(MMM)</strong>
+                                                                        </div>
+                                                                        <div class="value">
+                                                                            <strong>23.03%</strong>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="name">
+                                                                            <span>Texas instrumental</span>
+                                                                            <strong class="primary">(AMAT)</strong>
+                                                                        </div>
+                                                                        <div class="value">
+                                                                            <strong>7.11%</strong>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="name">
+                                                                            <span>Tractor supply</span>
+                                                                            <strong class="primary">(CMI)</strong>
+                                                                        </div>
+                                                                        <div class="value">
+                                                                            <strong>8.25%</strong>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="name">
+                                                                            <span>Pool</span>
+                                                                            <strong class="primary">(POOL)</strong>
+                                                                        </div>
+                                                                        <div class="value">
+                                                                            <strong>3.03%</strong>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="name">
+                                                                            <span>ZM company</span>
+                                                                            <strong class="primary">(ROCK)</strong>
+                                                                        </div>
+                                                                        <div class="value">
+                                                                            <strong>5.24%</strong>
+                                                                        </div>
+                                                                    </li>
+                                                                </ol>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="performance-assets">
+                                                    <div class="header">
+                                                        <h3>Размещение активов</h3>
+                                                        <label class="strategyCards-card-header-icon">
+                                                            <svg><use xlink:href="img/main.svg#icon-info-2"></use></svg>
+                                                            <input type="checkbox" class="visually_hidden">
+                                                            <div class="dropdown">
+                                                                Данный обзор посвящен секторам американского рынка акций. 
+                                                                Это основная единица классификации компаний. В рамках S&P 500 их насчитывается 11. 
+                                                                Каждый сектор, в свою очередь, подразделяется на индустрии.
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="card">
+                                                        <div class="card-block border">
+                                                            <div class="card-header">
+                                                                <h4>Мои активы</h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <div class="card-content-graph graph" id="separation_graph_6"></div>
+                                                                <div class="card-content-info"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block">
+                                                            <div class="card-header">
+                                                                <h4>Всего 19 акций</h4>
+                                                            </div>
+                                                            <div class="card-list">
+                                                                <ol>
+                                                                    <li>
+                                                                        <div class="name">
+                                                                            <span>Financial</span>
+                                                                        </div>
+                                                                        <div class="value">
+                                                                            <strong>6</strong>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="name">
+                                                                            <span>Services</span>
+                                                                        </div>
+                                                                        <div class="value">
+                                                                            <strong>3</strong>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="name">
+                                                                            <span>Consumer Goods</span>
+                                                                        </div>
+                                                                        <div class="value">
+                                                                            <strong>2</strong>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="name">
+                                                                            <span>Materials</span>
+                                                                        </div>
+                                                                        <div class="value">
+                                                                            <strong>4</strong>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="name">
+                                                                            <span>Industrial goods</span>
+                                                                        </div>
+                                                                        <div class="value">
+                                                                            <strong>2</strong>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="name">
+                                                                            <span>Other</span>
+                                                                        </div>
+                                                                        <div class="value">
+                                                                            <strong>1</strong>
+                                                                        </div>
+                                                                    </li>
+                                                                </ol>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+                    </div>
 
 				</div>
-
 			</div>
 		</section>
 
-		@@include("_footer.html")
+        @@include("_footer.html")
 
 	</body>
 </html>
