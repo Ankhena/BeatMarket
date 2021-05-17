@@ -273,6 +273,10 @@
                         .highcharts-data-label, .highcharts-data-label-connector, .highcharts-credits {
                             display: none;
                         }
+
+                        .highcharts-halo {
+                            display: none;
+                        }
     
                         .highcharts-series-group {
                             transform: scale(1.1);

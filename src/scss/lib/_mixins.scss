@@ -305,6 +305,10 @@ input[type="text"] {
                 margin-left: 0.8rem;
             }
 
+            strong {
+                font-weight: 500;
+            }
+
             &:hover {
                 color: $color_blue;
 

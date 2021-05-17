@@ -249,6 +249,12 @@
 
                         li {
 
+                            &:not(:last-child) {
+                                @media ($media_sm) {
+                                    margin-right: 0.2rem;
+                                }
+                            }
+
                             a {
                                 display: flex;
                                 text-decoration: none;

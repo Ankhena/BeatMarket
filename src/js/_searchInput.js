@@ -18,6 +18,16 @@ function initSearchInput() {
         });
     
     });
+
+    document.querySelectorAll(".input_search-container div").forEach(item => {
+        const myInput = document.querySelector("#mySearchInput");
+
+        item.addEventListener("mousedown", (e) => {
+            if (myInput !== null) {
+                myInput.value = item.childNodes[3].innerHTML;
+            }
+        });
+    });
     
     document.querySelectorAll("#mySearchInput").forEach(item => {
         myContainer = document.querySelector(".input_search-container");
@@ -26,7 +36,7 @@ function initSearchInput() {
             myContainer.classList.add("visible");
         });
     
-        item.addEventListener("blur", (e) => {
+        item.addEventListener("blur", (event) => {
             myContainer.classList.remove("visible");
         });
     });

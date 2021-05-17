@@ -987,6 +987,10 @@ input[type="text"]:focus {
   margin-left: 0.8rem;
 }
 
+.input_search-container div strong {
+  font-weight: 500;
+}
+
 .input_search-container div:hover {
   color: #3E54D8;
 }
@@ -3090,6 +3094,10 @@ input[type="text"]:focus {
   display: none;
 }
 
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-halo {
+  display: none;
+}
+
 .dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-series-group {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
@@ -3888,6 +3896,22 @@ input[type="text"]:focus {
   margin-top: 7%;
 }
 
+.performance .card .graph-big {
+  height: 23rem;
+  -webkit-transform: scale(1.35);
+      -ms-transform: scale(1.35);
+          transform: scale(1.35);
+  margin-top: 0;
+}
+
+.performance .card .graph-big .highcharts-tooltip span {
+  -webkit-transform: translate(-50%, -50%) scale(2.1) !important;
+      -ms-transform: translate(-50%, -50%) scale(2.1) !important;
+          transform: translate(-50%, -50%) scale(2.1) !important;
+  margin-top: -0.2rem !important;
+  margin-left: 0.2rem !important;
+}
+
 .performance .card .graph g.highcharts-label {
   opacity: 0;
 }
@@ -3895,6 +3919,10 @@ input[type="text"]:focus {
 .performance .card .graph .highcharts-data-label,
 .performance .card .graph .highcharts-data-label-connector,
 .performance .card .graph .highcharts-credits {
+  display: none;
+}
+
+.performance .card .graph .highcharts-halo {
   display: none;
 }
 
@@ -3980,6 +4008,14 @@ input[type="text"]:focus {
           transform: translate(-590%, -50%);
 }
 
+.performance .card .graphContent-name.label span {
+  cursor: pointer;
+}
+
+.performance .card .graphContent-name.label input[type='radio']:checked ~ span {
+  color: #3E54D8;
+}
+
 .performance .card .graphContent-name.label div {
   margin-right: 0.8rem;
 }
@@ -4029,6 +4065,116 @@ input[type="text"]:focus {
 
 .performance-separation .card-block:not(:last-child) {
   margin-right: 1.8rem;
+}
+
+.performance-structure-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.performance-structure-content .card {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.performance-structure-content .content {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  margin-left: 3rem;
+}
+
+.performance-structure-content .content-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.performance-structure-content .content-data-cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.performance-structure-content .content-data-cost span {
+  color: #fff;
+  background-color: #3E54D8;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.performance-structure-content .content-data-pager ul {
+  border: none;
+}
+
+.performance-structure-content .content-data-pager ul li:not(:last-child) {
+  border: none;
+}
+
+.performance-structure-content .content-data-pager ul li.prev,
+.performance-structure-content .content-data-pager ul li.next {
+  border: 1px solid #E6EEFF;
+  border-radius: 0.4rem;
+}
+
+.performance-structure-content .content-data-pager ul li.prev:hover,
+.performance-structure-content .content-data-pager ul li.next:hover {
+  border-color: #cdddff;
+}
+
+.performance-structure-content .content-data-pager ul li.current:hover a {
+  color: #929398;
+}
+
+.performance-structure-content .content-graphInfo {
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  -webkit-column-gap: 5rem;
+     -moz-column-gap: 5rem;
+          column-gap: 5rem;
+}
+
+.performance-structure-content .content-graphInfo .graphContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.performance-structure-content .content-graphInfo .graphContent span,
+.performance-structure-content .content-graphInfo .graphContent strong {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.performance-structure-content .content-graphInfo .graphContent-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.performance-structure-content .content-graphInfo .graphContent-name div {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  background-color: #929398;
 }
 
 .performance-sectors .card,
@@ -4672,6 +4818,26 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-transform: scale(1.3);
         -ms-transform: scale(1.3);
             transform: scale(1.3);
+  }
+
+  .performance .card .graph-big {
+    height: 18rem;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    margin-top: 0;
+  }
+
+  .performance .card .graph-big .highcharts-series-group {
+    -webkit-transform: scale(1.9) translateY(0.8rem);
+        -ms-transform: scale(1.9) translateY(0.8rem);
+            transform: scale(1.9) translateY(0.8rem);
+  }
+
+  .performance .card .graph-big .highcharts-tooltip span {
+    -webkit-transform: translate(-50%, -50%) scale(1.7) !important;
+        -ms-transform: translate(-50%, -50%) scale(1.7) !important;
+            transform: translate(-50%, -50%) scale(1.7) !important;
   }
 
   .section-main .main-menu {
@@ -5539,6 +5705,10 @@ body.viewProfile .header-controls-links-link.auth span {
     width: 1.5rem;
   }
 
+  .performance .card {
+    cursor: initial;
+  }
+
   .performance .card-content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -5553,6 +5723,12 @@ body.viewProfile .header-controls-links-link.auth span {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin: 0.5rem 0 0 0;
+  }
+
+  .performance .card .graph-big .highcharts-series-group {
+    -webkit-transform: scale(1.8) translateY(0.8rem);
+        -ms-transform: scale(1.8) translateY(0.8rem);
+            transform: scale(1.8) translateY(0.8rem);
   }
 
   .performance-info-cards {
@@ -5575,6 +5751,29 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .performance-separation .card-block:not(:last-child) {
     margin: 0 0 2rem 0;
+  }
+
+  .performance-structure-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .performance-structure-content .card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .performance-structure-content .content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .performance-structure-content .content-graphInfo {
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 3rem;
+       -moz-column-gap: 3rem;
+            column-gap: 3rem;
   }
 
   .performance-sectors .card,
@@ -5657,6 +5856,10 @@ body.viewProfile .header-controls-links-link.auth span {
   .myStrategy-items-item-content .nav ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+
+  .myStrategy-items-item-content .nav ul li:not(:last-child) {
+    margin-right: 0.2rem;
   }
 
   .myStrategy-items-item-content .nav ul li a {

@@ -32,7 +32,7 @@ const separation_graph_1_data = [{
     name: 'Other',
     y: 55.67,
     z: 100,
-    color: "#E1E1E1"
+    color: "#acacac"
 }];
 
 const separation_graph_2_data = [{
@@ -67,6 +67,113 @@ const separation_graph_3_data = [{
     y: 100,
     z: 100,
     color: "#DE5B5B"
+}];
+
+const separation_graph_4_data = [{
+    name: 'INT',
+    y: 23.03,
+    z: 100,
+    color: "#2C7259"
+}, {
+    name: 'TXN',
+    y: 7.11,
+    z: 100,
+    color: "#FFEB34"
+}, {
+    name: 'TCKO',
+    y: 8.25,
+    z: 100,
+    color: "#B22D2D"
+}, {
+    name: 'Pool',
+    y: 3.03,
+    z: 100,
+    color: "#BC5BDE"
+}, {
+    name: 'MA',
+    y: 5.24,
+    z: 100,
+    color: "#2D1336"
+}, {
+    name: 'MMA',
+    y: 55.67,
+    z: 100,
+    color: "#842EA3"
+}, {
+    name: 'LEG',
+    y: 3.03,
+    z: 100,
+    color: "#5BDE60"
+}, {
+    name: 'INT',
+    y: 23.03,
+    z: 100,
+    color: "#2C7259"
+}, {
+    name: 'TXN',
+    y: 7.11,
+    z: 100,
+    color: "#FFEB34"
+}, {
+    name: 'TCKO',
+    y: 8.25,
+    z: 100,
+    color: "#B22D2D"
+}, {
+    name: 'Pool',
+    y: 3.03,
+    z: 100,
+    color: "#BC5BDE"
+}, {
+    name: 'MA',
+    y: 5.24,
+    z: 100,
+    color: "#2D1336"
+}, {
+    name: 'MMA',
+    y: 55.67,
+    z: 100,
+    color: "#842EA3"
+}, {
+    name: 'LEG',
+    y: 3.03,
+    z: 100,
+    color: "#5BDE60"
+}, {
+    name: 'INT',
+    y: 23.03,
+    z: 100,
+    color: "#2C7259"
+}, {
+    name: 'TXN',
+    y: 7.11,
+    z: 100,
+    color: "#FFEB34"
+}, {
+    name: 'TCKO',
+    y: 8.25,
+    z: 100,
+    color: "#B22D2D"
+}, {
+    name: 'Pool',
+    y: 3.03,
+    z: 100,
+    color: "#BC5BDE"
+}, {
+    name: 'MA',
+    y: 5.24,
+    z: 100,
+    color: "#2D1336"
+}, {
+    name: 'MMA',
+    y: 55.67,
+    z: 100,
+    color: "#842EA3"
+}, {
+    name: 'LEG',
+    y: 3.03,
+    z: 100,
+    color: "#5BDE60"
 }];
 
 const separation_graph_5_data = [{
@@ -126,18 +233,18 @@ const separation_graph_6_data = [{
 const separation_graph_1 = document.querySelector("#separation_graph_1");
 const separation_graph_2 = document.querySelector("#separation_graph_2");
 const separation_graph_3 = document.querySelector("#separation_graph_3");
-
+const separation_graph_4 = document.querySelector("#separation_graph_4");
 const separation_graph_5 = document.querySelector("#separation_graph_5");
 const separation_graph_6 = document.querySelector("#separation_graph_6");
 
-addPerformanceGraph(separation_graph_1, "separation_graph_1", separation_graph_1_data, false);
-addPerformanceGraph(separation_graph_2, "separation_graph_2", separation_graph_2_data, false);
-addPerformanceGraph(separation_graph_3, "separation_graph_3", separation_graph_3_data, false);
+addPerformanceGraph(separation_graph_1, "separation_graph_1", separation_graph_1_data, false, "60%");
+addPerformanceGraph(separation_graph_2, "separation_graph_2", separation_graph_2_data, false, "60%");
+addPerformanceGraph(separation_graph_3, "separation_graph_3", separation_graph_3_data, false,"60%");
+addPerformanceGraph(separation_graph_4, "separation_graph_4", separation_graph_4_data, false, "70%");
+addPerformanceGraph(separation_graph_5, "separation_graph_5", separation_graph_5_data, true, "60%");
+addPerformanceGraph(separation_graph_6, "separation_graph_6", separation_graph_6_data, true, "60%");
 
-addPerformanceGraph(separation_graph_5, "separation_graph_5", separation_graph_5_data, true);
-addPerformanceGraph(separation_graph_6, "separation_graph_6", separation_graph_6_data, true);
-
-function addPerformanceGraph(node, id, data, isInput) {
+function addPerformanceGraph(node, id, data, isInput, size) {
     if (node !== null) {
         Highcharts.chart(id, {
             chart: {
@@ -158,7 +265,7 @@ function addPerformanceGraph(node, id, data, isInput) {
                 useHTML: true
             },
             series: [{
-                innerSize: '60%',
+                innerSize: size,
                 zMin: 1,
                 name: 'countries',
                 data: data
@@ -168,8 +275,13 @@ function addPerformanceGraph(node, id, data, isInput) {
         if (isInput) {
             addPerformanceGraphLabelsRadio(node.nextElementSibling, data, id);
         }
-        else {  
-            addPerformanceGraphLabels(node.nextElementSibling, data);
+        else {
+            if (size === "70%") {
+                addPerformanceGraphLabels(document.querySelector(".content-graphInfo"), data);
+            }
+            else {
+                addPerformanceGraphLabels(node.nextElementSibling, data);
+            }
         }
         
         
