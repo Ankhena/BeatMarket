@@ -13,9 +13,11 @@ function initMoveStrategy() {
 
             if (moveActive) {
                 $(".myStrategy-items").sortable("enable");
+                item.children[1].innerHTML = "Сохранить порядок";
             }
             else {
                 $(".myStrategy-items").sortable("disable");
+                item.children[1].innerHTML = "Изменить порядок";
             }
 
             strategies.forEach(item => {

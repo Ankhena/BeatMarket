@@ -1036,7 +1036,6 @@ input[type="text"]:focus {
 
 .the_table .table-content-item:hover {
   background: #FCFDFF;
-  border-color: #D3E3FF;
   -webkit-box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
           box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
 }
@@ -1337,7 +1336,8 @@ input[type="text"]:focus {
 .modal-content-papers-count .input_counter span {
   color: #24252E;
   display: inline-block;
-  margin: 0 1.6rem;
+  width: 3.5rem;
+  text-align: center;
 }
 
 .modal-content-papers-count .input_counter button {
@@ -2545,7 +2545,7 @@ input[type="text"]:focus {
 
 .myStrategy-news-container .table-content-item.shown .text {
   height: auto;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .myStrategy-news-container .table-content-item.shown svg {
@@ -2556,7 +2556,7 @@ input[type="text"]:focus {
 }
 
 .myStrategy-news-container .table-content-item span {
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .myStrategy-news-container .table-content-item .company {
@@ -2575,7 +2575,7 @@ input[type="text"]:focus {
       flex-basis: 60%;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
-  height: 1.3rem;
+  height: 1.4rem;
   overflow: hidden;
 }
 
@@ -2598,7 +2598,7 @@ input[type="text"]:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: none;
+  border-bottom: 1px solid #D3E3FF;
 }
 
 .myStrategy-history-container .table-content-item-info,
@@ -3214,7 +3214,7 @@ input[type="text"]:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: none;
+  border-bottom: 1px solid #D3E3FF;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -4280,6 +4280,11 @@ input[type="text"]:focus {
   border-right: 2px solid #D3E3FF;
 }
 
+.section-main .main-menu .nav.fixed {
+  position: fixed;
+  top: 3rem;
+}
+
 .section-main .main-menu .nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4391,13 +4396,19 @@ input[type="text"]:focus {
 }
 
 .myStrategy-items-item {
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   background-color: #fff;
   border: 1px solid #D3E3FF;
-  -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.22);
-          box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.22);
   border-radius: 1rem;
   padding: 1.5rem;
   overflow: hidden;
+}
+
+.myStrategy-items-item:hover {
+  -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.22);
+          box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.22);
 }
 
 .myStrategy-items-item.move {
@@ -5246,6 +5257,8 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    border-bottom: none;
+    border: none;
   }
 
   .myStrategy-history-container .table-content-item:hover {
@@ -5431,6 +5444,7 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    border-bottom: none;
   }
 
   .myStrategy-myPapers-container .table-content-item:hover {
@@ -5936,9 +5950,5 @@ body.viewProfile .header-controls-links-link.auth span {
   .modal-content-papers-count {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-  }
-
-  .modal-content-papers-count .input_counter span {
-    margin: 0 1.2rem;
   }
 }

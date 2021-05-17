@@ -31,7 +31,7 @@
             &-item {
                 padding: 0 1.5rem;
                 align-items: center;
-                border: none;
+                border-bottom: 1px solid $color_block_border;
 
                 flex-direction: column;
                 align-items: stretch;
@@ -79,6 +79,7 @@
                 @media ($media_sm) {
                     padding: 0 1.5rem .9rem 1.5rem;
                     align-items: center;
+                    border-bottom: none;
 
                     &:hover {
                         box-shadow: unset;

@@ -71,6 +71,12 @@
             }
 
             .nav {
+                
+                &.fixed {
+                    position: fixed;
+                    top: 3rem;
+                }
+
                 ul {
                     li {
                         display: flex;
@@ -195,12 +201,16 @@
         margin-top: 1.8rem;
 
         &-item {
+            transition: 0.2s ease-in-out;
             background-color: $color_white;
             border: 1px solid $color_block_border;
-            box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.22);
             border-radius: 1rem;
             padding: 1.5rem;
             overflow: hidden;
+
+            &:hover {
+                box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.22);
+            }
 
             &.move {
                 box-shadow: 0 0 0 0.5rem $color_strategy_item_outline, 0 0 0 calc(0.5rem + 1px) $color_block_border;
