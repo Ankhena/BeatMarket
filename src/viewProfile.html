@@ -14,12 +14,12 @@
 		<section class="section-outer section-main">
 			<div class="main">
 
-				<h1 class="main-title">Мой портфель</h1>
-
 				<div class="main-content">
                     <div class="main-content emptyPortfolio main-contentPadding">
 
-                        @@include("_strategyPromo.html")
+                        @@include("_strategyPromo.html", {
+                            "addHeader": "true"
+                        })
 
 						<div class="myStrategy">
 							<div class="myStrategy-header">

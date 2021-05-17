@@ -1,7 +1,7 @@
 $screen_xs: 576px; // mobile
 $screen_sm: 768px; // mobile-reverse
 $screen_md: 992px; // planshet
-$screen_lg: 1280px; // notebooks
+$screen_lg: 1279px; // notebooks
 $screen_xl: 1720px; // notebooks full hd
 
 $screen_xs_container: 95% ; // mobile
@@ -26,6 +26,7 @@ $media_sm: "max-width: " + $screen_sm;
 $media_xs: "max-width: " + $screen_xs;
 
 $media_full: "min-width: " + $screen_md;
+$media_md_lg: "min-width: " + $screen_sm + ") and (max-width: " + $screen_lg;
 
 //  АДАПТИВ БЕЗ ПРОМЕЖУТКОВ  \\
 

@@ -1845,6 +1845,16 @@ input[type="text"]:focus {
   color: #DE4355;
 }
 
+.stategyPromo-info-score-header {
+  margin-bottom: 2.22rem;
+}
+
+.stategyPromo-info-score-header h1 {
+  font-size: 2.22rem;
+  color: #24252E;
+  opacity: 0.9;
+}
+
 .stategyPromo-info-score-main {
   margin-bottom: 1.8rem;
 }
@@ -4312,6 +4322,12 @@ input[type="text"]:focus {
   font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section-main .main-menu .nav ul li:not(:last-child) {
@@ -4871,7 +4887,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .section-inner {
     max-width: 950px;
   }
@@ -5950,5 +5966,17 @@ body.viewProfile .header-controls-links-link.auth span {
   .modal-content-papers-count {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .section-main .main-menu {
+    -ms-flex-preferred-size: 6.5rem;
+        flex-basis: 6.5rem;
+    min-width: 6.5rem;
+  }
+
+  .section-main .main-menu .nav ul li a span {
+    display: none;
   }
 }

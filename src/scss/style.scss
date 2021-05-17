@@ -52,6 +52,11 @@
             padding: 3rem 1.4rem 3rem var(--section_padding);
             border-right: 2px solid #D3E3FF;
 
+            @media ($media_md_lg) {
+                flex-basis: 6.5rem;
+                min-width: 6.5rem;
+            }
+
             @media ($media_xl) {
                 flex-basis: 15rem;
                 min-width: 15rem;
@@ -106,8 +111,17 @@
                             font-size: 1rem;
                             text-decoration: none;
 
+                            display: flex;
+                            align-items: center;
+
                             @media ($media_sm) {
                                 font-size: 1.25rem;
+                            }
+
+                            span {
+                                @media ($media_md_lg) {
+                                    display: none;
+                                }
                             }
                         }
 
