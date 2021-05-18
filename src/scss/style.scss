@@ -227,6 +227,7 @@
             }
 
             &.move {
+                transition: none;
                 box-shadow: 0 0 0 0.5rem $color_strategy_item_outline, 0 0 0 calc(0.5rem + 1px) $color_block_border;
                 cursor: grab;
             }

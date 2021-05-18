@@ -2934,7 +2934,7 @@ input[type="text"]:focus {
 }
 
 .dividends .table-header h5 {
-  min-width: 5rem;
+  min-width: 5.2rem;
   margin-right: 0.5rem;
   font-weight: 500;
   color: #606371;
@@ -2956,7 +2956,7 @@ input[type="text"]:focus {
 }
 
 .dividends .table-content-item-info span {
-  min-width: 5rem;
+  min-width: 5.2rem;
   margin-right: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3355,7 +3355,6 @@ input[type="text"]:focus {
 
 .myStrategy-myPapers-container .table-content-item-content-table .table {
   margin-top: 1rem;
-  border-bottom: 1px solid #D3E3FF;
 }
 
 .myStrategy-myPapers-container .table-content-item-content-table .table-content {
@@ -4428,6 +4427,9 @@ input[type="text"]:focus {
 }
 
 .myStrategy-items-item.move {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
   -webkit-box-shadow: 0 0 0 0.5rem #f7f9ff, 0 0 0 calc(0.5rem + 1px) #D3E3FF;
           box-shadow: 0 0 0 0.5rem #f7f9ff, 0 0 0 calc(0.5rem + 1px) #D3E3FF;
   cursor: -webkit-grab;
