@@ -207,7 +207,9 @@ if (myRenderGraph !== null) {
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
                     a[i].style.display = "";
                 } else {
-                    a[i].style.display = "none";
+                    if (!a[i].classList.contains("add")) {
+                        a[i].style.display = "none";
+                    }
                 }
             }
         });
@@ -219,7 +221,7 @@ if (myRenderGraph !== null) {
 
         item.addEventListener("mousedown", (e) => {
             if (myInput !== null) {
-                myInput.value = item.childNodes[3].innerHTML;
+                myInput.value = item.querySelector(".content strong").innerHTML;
             }
         });
     });

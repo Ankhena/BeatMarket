@@ -1,5 +1,49 @@
 .myStrategy-history-container {
 
+    &.crypt {
+
+        .table {
+
+            &-header {
+
+                h5 {
+                    min-width: 21%;
+                }
+            }
+
+            &-content {
+
+                &-item {
+
+                    &-info, &-nums {
+                        display: flex;
+                        min-width: 42%;
+    
+                        span {
+                            min-width: 50%;
+                        }
+
+                        .cost {
+                            font-weight: 600;
+                        }
+                    }
+
+                    &-info {
+                        @media ($media_sm) {
+                            min-width: calc(100% + 3rem);
+                        }
+                    }
+
+                    &-nums {
+                        @media ($media_sm) {
+                            min-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .table {
 
         &-header {
@@ -124,6 +168,7 @@
                         .cost {
                             &::before {
                                 content: "Цена";
+                                font-weight: 500;
                             }
                         }
 
@@ -134,11 +179,28 @@
                                 content: "Общ. стоим.";
                             }
                         }
+
+                        .coin {
+                            font-weight: 500;
+
+                            &::before {
+                                content: "Монета";
+                            }
+                        }
                     }
 
                     .money {
                         color: $color_black_title;
                         font-weight: 600;
+                    }
+
+                    .coin {
+                        color: $color_grey;
+
+                        strong {
+                            font-weight: 600;
+                            color: $color_black_main;
+                        }
                     }
                 }
 

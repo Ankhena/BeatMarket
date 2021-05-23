@@ -2,6 +2,9 @@
     <div class="myStrategy-items-item-header-info">
         <div class="myStrategy-items-item-header-info-title">
             <h3>@@title</h3>
+            @@if (context.titleIcon != "") {
+                <svg><use xlink:href="img/main.svg#@@titleIcon"></use></svg>
+            }
         </div>
         <div class="myStrategy-items-item-header-info-content">
             <div class="myStrategy-items-item-header-info-content-cash">

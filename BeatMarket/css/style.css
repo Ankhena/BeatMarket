@@ -961,7 +961,7 @@ input[type="text"]:focus {
   visibility: visible;
 }
 
-.input_search-container div {
+.input_search-container > div {
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -974,28 +974,52 @@ input[type="text"]:focus {
   cursor: pointer;
 }
 
-.input_search-container div svg {
+.input_search-container > div .add {
+  margin-right: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input_search-container > div .add svg {
   width: 1.2rem;
   height: 1.2rem;
   stroke: #7e8ce5;
-  margin-right: 0.8rem;
 }
 
-.input_search-container div span {
+.input_search-container > div .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input_search-container > div .content svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.7rem;
+}
+
+.input_search-container > div .content span {
   font-size: 0.8rem;
   color: #929398;
   margin-left: 0.8rem;
 }
 
-.input_search-container div strong {
+.input_search-container > div .content strong {
   font-weight: 500;
 }
 
-.input_search-container div:hover {
+.input_search-container > div:hover {
   color: #3E54D8;
 }
 
-.input_search-container div:hover svg {
+.input_search-container > div:hover .add svg {
   stroke: #3E54D8;
 }
 
@@ -1499,6 +1523,11 @@ input[type="text"]:focus {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  max-width: 1.6rem;
+}
+
+.section-header .header-controls-links-link picture img {
+  max-width: 100%;
 }
 
 .section-header .header-controls-links-link:not(:first-child) {
@@ -1526,6 +1555,164 @@ input[type="text"]:focus {
 .section-header .header-controls-links-link.registration,
 .section-header .header-controls-links-link.auth {
   display: none;
+}
+
+.section-header .header-controls-links-link.withCaret {
+  position: relative;
+}
+
+.section-header .header-controls-links-link.withCaret:hover label span {
+  color: #1B2D9D;
+}
+
+.section-header .header-controls-links-link.withCaret:hover label svg {
+  stroke: #1B2D9D;
+}
+
+.section-header .header-controls-links-link.withCaret label {
+  cursor: pointer;
+}
+
+.section-header .header-controls-links-link.withCaret label span {
+  font-size: 1rem;
+  color: #3E54D8;
+  font-weight: 500;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.section-header .header-controls-links-link.withCaret label svg {
+  width: 0.7rem;
+  height: 0.7rem;
+  stroke: #3E54D8;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.section-header .header-controls-links-link.withCaret input[type='checkbox']:checked ~ label ~ .dropdown {
+  display: block;
+}
+
+.section-header .header-controls-links-link.withCaret input[type='checkbox']:checked ~ label svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  stroke: #1B2D9D;
+}
+
+.section-header .header-controls-links-link.withCaret input[type='checkbox']:checked ~ label span {
+  color: #1B2D9D;
+}
+
+.section-header .header-controls-links-link.withCaret.currency .dropdown .content {
+  grid-template-columns: 1fr;
+}
+
+.section-header .header-controls-links-link.withCaret.currency .dropdown .content span {
+  white-space: nowrap;
+}
+
+.section-header .header-controls-links-link.withCaret .dropdown {
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  display: none;
+  z-index: 1;
+  background: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+          box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+}
+
+.section-header .header-controls-links-link.withCaret .dropdown .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.section-header .header-controls-links-link.withCaret .dropdown .content span {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.section-header .header-controls-links-link.withCaret .dropdown .content span.active {
+  font-weight: 600;
+  color: #3E54D8;
+}
+
+.section-header .header-controls-links-link.withCaret .dropdown .content span:hover {
+  color: #3E54D8;
+}
+
+.section-header .header-controls-links-link.person .dropdown label {
+  cursor: pointer;
+}
+
+.section-header .header-controls-links-link.person .dropdown label > span {
+  font-size: 1.2rem;
+  color: #3E54D8;
+  font-weight: 500;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.section-header .header-controls-links-link.person .dropdown label svg {
+  width: 0.7rem;
+  height: 0.7rem;
+  stroke: #3E54D8;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.section-header .header-controls-links-link.person .dropdown .labels {
+  display: none;
+}
+
+.section-header .header-controls-links-link.person .dropdown .content {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.4rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #D3E3FF;
+}
+
+.section-header .header-controls-links-link.person .dropdown .content span {
+  font-size: 1.1rem;
+}
+
+.section-header .header-controls-links-link.person .dropdown .content span.active {
+  font-weight: 600;
+  color: #3E54D8;
+}
+
+.section-header .header-controls-links-link.person .dropdown #langMobile:checked ~ .langMobileContent {
+  display: grid;
+}
+
+.section-header .header-controls-links-link.person .dropdown #langMobile:checked ~ .labels > .langMobileLabel svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.section-header .header-controls-links-link.person .dropdown #currencyMobile:checked ~ .currencyMobileContent {
+  display: grid;
+}
+
+.section-header .header-controls-links-link.person .dropdown #currencyMobile:checked ~ .labels > .currencyMobileLabel svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .section-header .header-controls-links-link .dropdown {
@@ -1572,7 +1759,6 @@ input[type="text"]:focus {
 
 .section-header .header-controls-links-link .dropdown-content li a {
   color: #373943;
-  font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
 }
@@ -1749,6 +1935,26 @@ input[type="text"]:focus {
 
 .myStrategy-emptyPortfolio-container.dummy {
   padding: 4rem 0;
+}
+
+.myStrategy-emptyPortfolio-container.crypt .info {
+  width: 60%;
+}
+
+.myStrategy-emptyPortfolio-container.crypt .info-subtitle {
+  font-size: 1.77rem;
+  color: #24252E;
+  opacity: 0.9;
+}
+
+.myStrategy-emptyPortfolio-container.crypt .info-subtext {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 2.3rem 0 1.77rem 0;
+}
+
+.myStrategy-emptyPortfolio-container.crypt .info-subtext strong {
+  font-weight: 600;
 }
 
 .myStrategy-emptyPortfolio-container .info {
@@ -2379,6 +2585,12 @@ input[type="text"]:focus {
 
 .myStrategy-items-item-header-info-title {
   margin-bottom: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .myStrategy-items-item-header-info-title h3 {
@@ -2386,6 +2598,13 @@ input[type="text"]:focus {
   font-size: 1.1rem;
   color: #3E54D8;
   opacity: 0.9;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+}
+
+.myStrategy-items-item-header-info-title svg {
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 .myStrategy-items-item-header-info-content {
@@ -2414,6 +2633,8 @@ input[type="text"]:focus {
   padding: 0.8rem 1.4rem;
   border-radius: 0.5rem;
   font-weight: bold;
+  min-width: 6rem;
+  text-align: center;
 }
 
 .myStrategy-items-item-header-info-content-cash span.success {
@@ -2599,6 +2820,28 @@ input[type="text"]:focus {
   margin-top: 0.5rem;
 }
 
+.myStrategy-history-container.crypt .table-header h5 {
+  min-width: 21%;
+}
+
+.myStrategy-history-container.crypt .table-content-item-info,
+.myStrategy-history-container.crypt .table-content-item-nums {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 42%;
+}
+
+.myStrategy-history-container.crypt .table-content-item-info span,
+.myStrategy-history-container.crypt .table-content-item-nums span {
+  min-width: 50%;
+}
+
+.myStrategy-history-container.crypt .table-content-item-info .cost,
+.myStrategy-history-container.crypt .table-content-item-nums .cost {
+  font-weight: 600;
+}
+
 .myStrategy-history-container .table-header h5 {
   min-width: 14%;
 }
@@ -2649,6 +2892,15 @@ input[type="text"]:focus {
 .myStrategy-history-container .table-content-item-nums .money {
   color: #24252E;
   font-weight: 600;
+}
+
+.myStrategy-history-container .table-content-item-nums .coin {
+  color: #929398;
+}
+
+.myStrategy-history-container .table-content-item-nums .coin strong {
+  font-weight: 600;
+  color: #373943;
 }
 
 .myStrategy-history-container .table-content-item-operation {
@@ -3209,6 +3461,46 @@ input[type="text"]:focus {
   color: #24252E;
 }
 
+.myStrategy-myPapers-container.crypt .table-header h5,
+.myStrategy-myPapers-container.crypt .table-content-item-header .action,
+.myStrategy-myPapers-container.crypt .table-content-item-header .changeble,
+.myStrategy-myPapers-container.crypt .table-content-item-header-nums span,
+.myStrategy-myPapers-container.crypt .table-content-item-content-table span,
+.myStrategy-myPapers-container.crypt .table-content-item-main span {
+  width: 9.5rem;
+  margin-right: 0.5rem;
+}
+
+.myStrategy-myPapers-container.crypt .table-header h5:first-child,
+.myStrategy-myPapers-container.crypt .table-content-item-header .action,
+.myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-header h5,
+.myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-content span {
+  width: 16rem;
+}
+
+.myStrategy-myPapers-container.crypt .table-content-item-header-main .action-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myStrategy-myPapers-container.crypt .table-content-item-header-main .action-text svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.myStrategy-myPapers-container.crypt .table-content-item-header-main .action-text strong {
+  color: #24252E;
+  margin: 0 0.5rem;
+}
+
 .myStrategy-myPapers-container .table-header h5,
 .myStrategy-myPapers-container .table-content-item-header .action,
 .myStrategy-myPapers-container .table-content-item-header .changeble,
@@ -3238,7 +3530,7 @@ input[type="text"]:focus {
   display: block;
 }
 
-.myStrategy-myPapers-container .table-content-item.opened .table-content-item-header .action svg {
+.myStrategy-myPapers-container .table-content-item.opened .table-content-item-header .action > svg {
   fill: #3E54D8;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -3272,6 +3564,10 @@ input[type="text"]:focus {
 
 .myStrategy-myPapers-container .table-content-item span.comment svg:hover {
   stroke: #3E54D8;
+}
+
+.myStrategy-myPapers-container .table-content-item span.owned {
+  font-weight: 600;
 }
 
 .myStrategy-myPapers-container .table-content-item-header {
@@ -4460,6 +4756,16 @@ input[type="text"]:focus {
   margin: 3rem -1.5rem 0 -1.5rem;
 }
 
+.myStrategy-items-item-content .nav.justifyStart ul {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.myStrategy-items-item-content .nav.justifyStart ul li:not(:last-child) {
+  margin-right: 5rem;
+}
+
 .myStrategy-items-item-content .nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4807,6 +5113,23 @@ body.viewProfile .header-controls-links-link.auth span {
             transform: scale(1.3);
   }
 
+  .myStrategy-myPapers-container.crypt .table-header h5,
+  .myStrategy-myPapers-container.crypt .table-content-item-header .action,
+  .myStrategy-myPapers-container.crypt .table-content-item-header .changeble,
+  .myStrategy-myPapers-container.crypt .table-content-item-header-nums span,
+  .myStrategy-myPapers-container.crypt .table-content-item-content-table span,
+  .myStrategy-myPapers-container.crypt .table-content-item-main span {
+    width: 8rem;
+    margin-right: 0.55rem;
+  }
+
+  .myStrategy-myPapers-container.crypt .table-header h5:first-child,
+  .myStrategy-myPapers-container.crypt .table-content-item-header .action,
+  .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-header h5,
+  .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-content span {
+    width: 15rem;
+  }
+
   .myStrategy-myPapers-container .table-header h5,
   .myStrategy-myPapers-container .table-content-item-header .action,
   .myStrategy-myPapers-container .table-content-item-header .changeble,
@@ -5027,8 +5350,115 @@ body.viewProfile .header-controls-links-link.auth span {
     display: none;
   }
 
+  .section-header .header-controls-links-link picture {
+    max-width: 1.8rem;
+  }
+
   .section-header .header-controls-links-link:not(:first-child) {
     margin-left: 1rem;
+  }
+
+  .section-header .header-controls-links-link.withCaret {
+    display: none;
+  }
+
+  .section-header .header-controls-links-link.withCaret .dropdown input[type='checkbox']:checked ~ .menu label svg {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  .section-header .header-controls-links-link.withCaret .dropdown input[type='checkbox']:checked ~ .menu ~ .content {
+    display: grid;
+  }
+
+  .section-header .header-controls-links-link.withCaret .dropdown .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .section-header .header-controls-links-link.withCaret .dropdown .menu a {
+    font-weight: 500;
+    color: #3E54D8;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .section-header .header-controls-links-link.withCaret .dropdown .menu a:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-header .header-controls-links-link.withCaret .dropdown .menu a label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .section-header .header-controls-links-link.withCaret .dropdown .menu a svg {
+    width: 1rem;
+    height: 1rem;
+    stroke: #3E54D8;
+    margin-left: 0.3rem;
+    margin-top: -0.1rem;
+  }
+
+  .section-header .header-controls-links-link.withCaret .dropdown .content {
+    display: none;
+    grid-template-columns: 1fr;
+    max-height: 10rem;
+    overflow-y: scroll;
+    border-top: 1px solid #D3E3FF;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .section-header .header-controls-links-link.person .dropdown .labels {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #D3E3FF;
+  }
+
+  .section-header .header-controls-links-link.person .dropdown .labels label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .section-header .header-controls-links-link.person .dropdown .labels label:not(:last-child) {
+    margin-right: 1.3rem;
+  }
+
+  .section-header .header-controls-links-link.person .dropdown .labels label span {
+    white-space: nowrap;
+  }
+
+  .section-header .header-controls-links-link.person .dropdown .labels label svg {
+    margin-left: 0.35rem;
+  }
+
+  .section-header .header-controls-links-link .dropdown-content {
+    bottom: -0.5rem;
+    padding: 1.1rem;
   }
 
   .section-header .header-controls-links-link .dropdown-content li svg {
@@ -5116,6 +5546,14 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .myStrategy-emptyPortfolio-container {
     padding: 3rem 0;
+  }
+
+  .myStrategy-emptyPortfolio-container.crypt .info {
+    width: 100%;
+  }
+
+  .myStrategy-emptyPortfolio-container.crypt .info-subtitle {
+    font-size: 1.5rem;
   }
 
   .myStrategy-emptyPortfolio-container .info {
@@ -5270,6 +5708,14 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-right: -0.5rem;
   }
 
+  .myStrategy-history-container.crypt .table-content-item-info {
+    min-width: calc(100% + 3rem);
+  }
+
+  .myStrategy-history-container.crypt .table-content-item-nums {
+    min-width: 100%;
+  }
+
   .myStrategy-history-container .table-content-item {
     padding: 0 1.5rem .9rem 1.5rem;
     -webkit-box-align: center;
@@ -5342,6 +5788,7 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .myStrategy-history-container .table-content-item-nums .cost::before {
     content: "Цена";
+    font-weight: 500;
   }
 
   .myStrategy-history-container .table-content-item-nums .money {
@@ -5350,6 +5797,14 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .myStrategy-history-container .table-content-item-nums .money::before {
     content: "Общ. стоим.";
+  }
+
+  .myStrategy-history-container .table-content-item-nums .coin {
+    font-weight: 500;
+  }
+
+  .myStrategy-history-container .table-content-item-nums .coin::before {
+    content: "Монета";
   }
 
   .myStrategy-history-container .table-content-item-operation .operate {
@@ -5429,6 +5884,32 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-bottom: 1rem;
   }
 
+  .myStrategy-myPapers-container.crypt .table-header h5,
+  .myStrategy-myPapers-container.crypt .table-content-item-header .action,
+  .myStrategy-myPapers-container.crypt .table-content-item-header .changeble,
+  .myStrategy-myPapers-container.crypt .table-content-item-header-nums span,
+  .myStrategy-myPapers-container.crypt .table-content-item-content-table span,
+  .myStrategy-myPapers-container.crypt .table-content-item-main span {
+    width: 30%;
+    margin-right: 0.55rem;
+  }
+
+  .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-content span {
+    width: 35%;
+  }
+
+  .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-content span.comment {
+    white-space: nowrap;
+  }
+
+  .myStrategy-myPapers-container.crypt .table-content-item-header-main .action {
+    width: 100%;
+  }
+
+  .myStrategy-myPapers-container.crypt .table-content-item-header-main .action-text strong {
+    font-size: 1.2rem;
+  }
+
   .myStrategy-myPapers-container .table-header h5,
   .myStrategy-myPapers-container .table-content-item-header .action,
   .myStrategy-myPapers-container .table-content-item-header .changeble,
@@ -5453,7 +5934,7 @@ body.viewProfile .header-controls-links-link.auth span {
     color: #fff;
   }
 
-  .myStrategy-myPapers-container .table-content-item.opened .table-content-item-header .action svg {
+  .myStrategy-myPapers-container .table-content-item.opened .table-content-item-header .action > svg {
     fill: #fff;
   }
 
@@ -5520,6 +6001,19 @@ body.viewProfile .header-controls-links-link.auth span {
     content: "Коммент.";
   }
 
+  .myStrategy-myPapers-container .table-content-item span.percent-hour::before {
+    content: "24ч. %";
+  }
+
+  .myStrategy-myPapers-container .table-content-item span.percent-week::before {
+    content: "7д. %";
+  }
+
+  .myStrategy-myPapers-container .table-content-item span.owned::before {
+    font-weight: 500;
+    content: "Во владении";
+  }
+
   .myStrategy-myPapers-container .table-content-item-header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5565,6 +6059,9 @@ body.viewProfile .header-controls-links-link.auth span {
   .myStrategy-myPapers-container .table-content-item-header-nums {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 
   .myStrategy-myPapers-container .table-content-item-header-nums span {
@@ -5883,6 +6380,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .myStrategy-items-item-content .nav {
     margin-top: 0.5rem;
+  }
+
+  .myStrategy-items-item-content .nav.justifyStart ul li:not(:last-child) {
+    margin-right: 3rem;
   }
 
   .myStrategy-items-item-content .nav ul {

@@ -10,6 +10,37 @@
         padding: 3rem 0;
     }
 
+    &.crypt {
+
+        .info {
+            width: 60%;
+
+            @media ($media_sm) {
+                width: 100%;
+            }
+
+            &-subtitle {
+                font-size: 1.77rem;
+                color: $color_black_title;
+                opacity: 0.9;
+
+                @media ($media_sm) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            &-subtext {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                margin: 2.3rem 0 1.77rem 0;
+
+                strong {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
     .info {
         width: 60%;
         margin: 0 auto;

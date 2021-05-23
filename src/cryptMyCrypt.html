@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Моя криптовалюта"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html")
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html")
+
+				<h1 class="main-title">Мой портфель</h1>
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        @@include("_strategyPromo.html")
+
+						<div class="myStrategy">
+							<div class="myStrategy-header">
+								<h2>Мои стратегии</h2>
+								<button class="btn btn_primary">
+									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
+									<span>Изменить порядок</span>
+								</button>
+							</div>
+							<div class="myStrategy-items">
+
+								<div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Удачливая стратегия",
+										"cashStatus": "error",
+										"cashValue": "-66%",
+										"toggleActive": "active",
+                                        "titleIcon": "icon-bitcoin"
+									})
+
+									<div class="myStrategy-items-item-content">
+                                        @@include("_myStrategyNavCrypto.html", {
+                                            "cryptMyCrypt": "active",
+                                            "cryptAddCoin": "",
+                                            "news": "",
+                                            "cryptHistory": ""
+                                        })
+										<div class="myStrategy-myPapers-container the_table crypt">
+											<div class="table">
+                                                <div class="table-header">
+                                                    <h5>Монета</h5>
+                                                    <h5>Стоимость</h5>
+                                                    <h5>24ч. %</h5>
+                                                    <h5>7д. %</h5>
+                                                    <h5>Во владении</h5>
+                                                    <h5>Комментарий</h5>
+                                                </div>
+                                                <div class="table-content">
+                                                    <div class="table-content-item myPapers-item">
+
+                                                        <div class="table-content-item-header">
+                                                            <div class="table-content-item-header-main">
+                                                                <div class="action">
+                                                                    <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                                    <div class="action-text">
+                                                                        <svg><use xlink:href="img/main.svg#icon-BCH"></use></svg>
+                                                                        <strong>Bitcoin</strong>
+                                                                        <span>BTC</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table-content-item-header-nums">
+                                                                <span class="cost">3161.11 $</span>
+                                                                <span class="percent-hour error">-1.65%</span>
+                                                                <span class="percent-week success">-1.65%</span>
+                                                                <span class="owned">9423.10 $</span>
+                                                                <span class="comment">
+                                                                    Продам на завершении
+                                                                </span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="table-content-item-content">
+                                                            <div class="table-content-item-content-buttons">
+                                                                <button class="btn btn_blue">Купить</button>
+                                                                <button class="btn btn_primary">Продать</button>
+                                                            </div>
+                                                            <div class="table-content-item-content-table">
+                                                                <div class="table">
+                                                                    <div class="table-header">
+                                                                        <h5>Дата</h5>
+                                                                        <h5>Операция</h5>
+                                                                        <h5>Цена</h5>
+                                                                        <h5>Комментарий</h5>
+                                                                    </div>
+                                                                    <div class="table-content">
+                                                                        <div class="table-content-item">
+                                                                            <div class="table-content-item-main">
+                                                                                <span class="count">21.11.2021</span>
+                                                                                <span class="operation error">
+                                                                                    <strong>Продажа</strong>
+                                                                                </span>
+                                                                            </div>
+                                                                            <span class="cost">94.10 $</span>
+                                                                            <span class="comment">Продам на завершении</span>
+                                                            
+                                                                        </div>
+                                                                        <div class="table-content-item">
+                                                                            <div class="table-content-item-main">
+                                                                                <span class="count">21.11.2021</span>
+                                                                                <span class="operation success">
+                                                                                    <strong>Покупка</strong>
+                                                                                </span>
+                                                                            </div>
+                                                                            <span class="cost">94.10 $</span>
+                                                                            <span class="comment">Продам на завершении</span>
+                                                            
+                                                                        </div>
+                                                                        <div class="table-content-item">
+                                                                            <div class="table-content-item-main">
+                                                                                <span class="count">21.11.2021</span>
+                                                                                <span class="operation error">
+                                                                                    <strong>Продажа</strong>
+                                                                                </span>
+                                                                            </div>
+                                                                            <span class="cost">94.10 $</span>
+                                                                            <span class="comment">Продам на завершении</span>
+                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table-content-item-content-pagination pagination">
+                                                                <ul>
+                                                                    <li class="prev">
+                                                                        <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
+                                                                    </li>
+                                                                    <li><a href="#">1</a></li>
+                                                                    <li><a href="#">...</a></li>
+                                                                    <li><a href="#">4</a></li>
+                                                                    <li class="active"><a href="#">5</a></li>
+                                                                    <li><a href="#">6</a></li>
+                                                                    <li><a href="#">...</a></li>
+                                                                    <li><a href="#">12</a></li>
+                                                                    <li class="next">
+                                                                        <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <span>Показано 90-105 из 210</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="table-content-item myPapers-item">
+
+                                                        <div class="table-content-item-header">
+                                                            <div class="table-content-item-header-main">
+                                                                <div class="action">
+                                                                    <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                                    <div class="action-text">
+                                                                        <svg><use xlink:href="img/main.svg#icon-ethereum"></use></svg>
+                                                                        <strong>Ethereum</strong>
+                                                                        <span>ETH</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table-content-item-header-nums">
+                                                                <span class="cost">3161.11 $</span>
+                                                                <span class="percent-hour error">-1.65%</span>
+                                                                <span class="percent-week success">-1.65%</span>
+                                                                <span class="owned">9423.10 $</span>
+                                                                <span class="comment">
+                                                                    Продам на завершении
+                                                                </span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="table-content-item myPapers-item">
+
+                                                        <div class="table-content-item-header">
+                                                            <div class="table-content-item-header-main">
+                                                                <div class="action">
+                                                                    <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                                    <div class="action-text">
+                                                                        <svg><use xlink:href="img/main.svg#icon-ethereum"></use></svg>
+                                                                        <strong>Ethereum</strong>
+                                                                        <span>ETH</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table-content-item-header-nums">
+                                                                <span class="cost">3161.11 $</span>
+                                                                <span class="percent-hour error">-1.65%</span>
+                                                                <span class="percent-week success">-1.65%</span>
+                                                                <span class="owned">9423.10 $</span>
+                                                                <span class="comment">
+                                                                    Продам на завершении
+                                                                </span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+										</div>
+                                        <div class="compare">
+                                            <div class="compare-header">
+                                                <h3>Сравнение с бенчмарком S&P 500</h3>
+                                            </div>
+                                            <div class="compare-menu">
+                                                <div class="compare-menu-choose">
+
+                                                    <div class="compare-menu-choose-item">
+                                                        <div class="compare-menu-choose-item-name">
+                                                            <span class="primary">Мой портфель</span>
+                                                        </div>
+                                                        <label class="compare-menu-choose-item-btn stategyPromo-graph-info-btn btn_mainCash">
+
+                                                            <input type="checkbox" class="visually_hidden">
+                                            
+                                                            <span>Не выбрано</span>
+                                                            <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                            
+                                                            <div class="dropdown">
+                                                                <label class="dropdown-item">
+                                                                    <input type="checkbox" name="myPortfolioCheckbox" class="checkbox_custom visually_hidden">
+                                                                    <span>Стратегия удачи</span>
+                                                                </label>
+                                                                <label class="dropdown-item">
+                                                                    <input type="checkbox" name="myPortfolioCheckbox" class="checkbox_custom visually_hidden">
+                                                                    <span>Стратегия 2</span>
+                                                                </label>
+                                                                <label class="dropdown-item">
+                                                                    <input type="checkbox" name="myPortfolioCheckbox" class="checkbox_custom visually_hidden">
+                                                                    <span>Максимальный выкуп по акциям</span>
+                                                                </label>
+                                                                <label class="dropdown-item">
+                                                                    <button class="btn btn_blue">Применить</button>
+                                                                </label>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="compare-menu-choose-item">
+                                                        <div class="compare-menu-choose-item-name">
+                                                            <span class="success"></span>
+                                                            <label class="compare-menu-choose-item-btn stategyPromo-graph-info-btn btn_mainCash">
+
+                                                                <input type="checkbox" class="visually_hidden">
+                                                
+                                                                <span class="selected">S&P 500</span>
+                                                                <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                
+                                                                <div class="dropdown">
+                                                                    <label class="dropdown-item">
+                                                                        <input type="radio" name="myPortfolioRadio" class="radio_custom visually_hidden">
+                                                                        <span>Стратегия удачи</span>
+                                                                    </label>
+                                                                    <label class="dropdown-item">
+                                                                        <input type="radio" name="myPortfolioRadio" class="radio_custom visually_hidden">
+                                                                        <span>Стратегия 2</span>
+                                                                    </label>
+                                                                    <label class="dropdown-item">
+                                                                        <input type="radio" name="myPortfolioRadio" class="radio_custom visually_hidden">
+                                                                        <span>Максимальный выкуп по акциям</span>
+                                                                    </label>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="compare-menu-info">
+                                                    <div class="compare-menu-info-date">
+                                                        <span>21.11.2021 - 28.11.2021</span>
+                                                    </div>
+                                                    <div class="compare-menu-info-choose">
+                                                        <div class="compare-menu-info-choose-item active">
+                                                            <span>Неделя</span>
+                                                        </div>
+                                                        <div class="compare-menu-info-choose-item">
+                                                            <span>Месяц</span>
+                                                        </div>
+                                                        <div class="compare-menu-info-choose-item">
+                                                            <span>Год</span>
+                                                        </div>
+                                                        <div class="compare-menu-info-choose-item dotted">
+                                                            <svg><use xlink:href="img/main.svg#icon-dottes"></use></svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="banchGraph">
+                                            <div class="banchGraph-descr">
+                                                <div class="banchGraph-descr-percent">
+                                                    <!-- <span>16.00%</span>
+                                                    <span>0</span>
+                                                    <span>-16.00%</span> -->
+                                                </div>
+                                                <div class="banchGraph-descr-items">
+                                                    <!-- <div class="banchGraph-descr-items-item">
+                                                        <span class="primary">Мой портфель</span>
+                                                    </div>
+                                                    <div class="banchGraph-descr-items-item">
+                                                        <span class="success">S&P 500</span>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                            <div class="banchGraph-content">
+                                                <!-- <div class="banchGraph-content-item">
+                                                    <div class="banchGraph-content-item-graph">
+                                                        <div class="banchGraph-content-item-graph-half">
+                                                            <div class="banchGraph-content-item-graph-half-item"></div>
+                                                            <div class="banchGraph-content-item-graph-half-item"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="banchGraph-content-item-date">
+                                                        <span>Янв 2020</span>
+                                                    </div>
+                                                    <div class="banchGraph-content-item-stat">
+                                                        <span class="success">+32.56%</span>
+                                                        <span class="error">-22.56%</span>
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

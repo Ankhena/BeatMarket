@@ -16,6 +16,51 @@
                 <h1 class="page_title">Мой портфель</h1>
             </div>
             <div class="header-controls-links">
+                <div class="header-controls-links-link withCaret lang">
+                    <input type="checkbox" id="langDesktop" class="visually_hidden">
+    
+                    <label for="langDesktop">
+                        <span>Русский</span>
+                        <svg><use xlink:href="img/main.svg#icon-caret-down"></use></svg>
+                    </label>
+    
+                    <div class="dropdown">
+                        <div class="content">
+                            <span class="active">Русский</span>
+                            <span>English</span>
+                            <span>Deutch</span>
+                            <span>Polski</span>
+                            <span>Беларуская</span>
+                            <span>Русский</span>
+                            <span>English</span>
+                            <span>Deutch</span>
+                            <span>Polski</span>
+                            <span>Беларуская</span>
+                            <span>Русский</span>
+                            <span>English</span>
+                            <span>Deutch</span>
+                            <span>Polski</span>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="header-controls-links-link withCaret currency">
+                    <input type="checkbox" id="currencyDesktop" class="visually_hidden">
+    
+                    <label for="currencyDesktop">
+                        <span>$ USD</span>
+                        <svg><use xlink:href="img/main.svg#icon-caret-down"></use></svg>
+                    </label>
+    
+                    <div class="dropdown">
+                        <div class="content">
+                            <span class="active">$ USD</span>
+                            <span>₽ RUB</span>
+                            <span>€ EUR</span>
+                        </div>
+                    </div>
+    
+                </div>
                 <div class="header-controls-links-link active">
                     <img src="./img/header_bell.svg" alt="Иконка колокольчика">
                 </div>
@@ -23,6 +68,45 @@
                     <label class="dropdown">
                         <input type="checkbox" class="visually_hidden">
                         <ul class="dropdown-content">
+
+                            <input type="checkbox" id="langMobile" class="visually_hidden">
+                            <input type="checkbox" id="currencyMobile" class="visually_hidden">
+
+                            <div class="labels">
+                                <label for="langMobile" class="langMobileLabel">
+                                    <span>Русский</span>
+                                    <svg><use xlink:href="img/main.svg#icon-caret-down"></use></svg>
+                                </label>
+    
+                                <label for="currencyMobile" class="currencyMobileLabel">
+                                    <span>$ USD</span>
+                                    <svg><use xlink:href="img/main.svg#icon-caret-down"></use></svg>
+                                </label>
+                            </div>
+
+                            <div class="langMobileContent content">
+                                <span class="active">Русский</span>
+                                <span>English</span>
+                                <span>Deutch</span>
+                                <span>Polski</span>
+                                <span>Беларуская</span>
+                                <span>Русский</span>
+                                <span>English</span>
+                                <span>Deutch</span>
+                                <span>Polski</span>
+                                <span>Беларуская</span>
+                                <span>Русский</span>
+                                <span>English</span>
+                                <span>Deutch</span>
+                                <span>Polski</span>
+                            </div>
+
+                            <div class="currencyMobileContent content">
+                                <span class="active">$ USD</span>
+                                <span>₽ RUB</span>
+                                <span>€ EUR</span>
+                            </div>
+
                             <li class="border-bottom">
                                 <svg><use xlink:href="img/main.svg#icon-gearSix"></use></svg>
                                 <a href="#">Настройки</a>
@@ -31,6 +115,7 @@
                                 <svg><use xlink:href="img/main.svg#icon-signOut"></use></svg>
                                 <a href="#">Выход</a>
                             </li>
+
                         </ul>
                         <img src="./img/header_user.svg" alt="Иконка пользователя">
                     </label>

@@ -261,6 +261,23 @@
                         margin-top: 0.5rem;
                     }
 
+                    &.justifyStart {
+
+                        ul {
+                            justify-content: flex-start;
+
+                            li {
+                                &:not(:last-child) {
+                                    margin-right: 5rem;
+
+                                    @media ($media_sm) {
+                                        margin-right: 3rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     ul {
                         display: flex;
                         width: 100%;

@@ -1,5 +1,88 @@
 .myStrategy-myPapers-container {
 
+    &.crypt {
+
+        .table {
+
+            &-header h5, &-content-item-header .action, &-content-item-header .changeble, 
+            &-content-item-header-nums span, &-content-item-content-table span, &-content-item-main span {
+    
+                width: 9.5rem;
+                margin-right: 0.5rem;
+    
+                @media ($media_xl) {
+                    width: 8rem;
+                    margin-right: 0.55rem;
+                }
+    
+                @media ($media_sm) {
+                    width: 30%;
+                    margin-right: 0.55rem;
+                }
+            }
+
+            &-header h5:first-child, &-content-item-header .action, .table-content-item-content-table .table-header h5, 
+            .table-content-item-content-table .table-content span {
+                width: 16rem;
+
+                @media ($media_xl) {
+                    width: 15rem;
+                }
+            }
+
+            .table-content-item-content-table .table-content span {
+                @media ($media_sm) {
+                    width: 35%;
+
+                    &.comment {
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            // .table-content-item-content-table .table-content-item {
+            //     @media ($media_sm) {
+            //         justify-content: space-between;
+            //     }
+            // }
+
+            &-content-item {
+
+                &-header {
+
+                    &-main {
+
+                        .action {
+                            @media ($media_sm) {
+                                width: 100%;
+                            }
+
+                            &-text {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+    
+                                svg {
+                                    width: 1.8rem;
+                                    height: 1.8rem;
+                                }
+    
+                                strong {
+                                    color: $color_black_title;
+                                    margin: 0 0.5rem;
+
+                                    @media ($media_sm) {
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .table {
 
         &-header h5, &-content-item-header .action, &-content-item-header .changeble, 
@@ -64,7 +147,7 @@
                         }
 
                         .action {
-                            svg {
+                            > svg {
                                 fill: $color_blue;
                                 transform: rotate(180deg);
     
@@ -138,6 +221,10 @@
                         }
                     }
 
+                    &.owned {
+                        font-weight: 600;
+                    }
+
                     &.count {
                         @media ($media_sm) {
                             &::before {
@@ -190,6 +277,31 @@
                         @media ($media_sm) {
                             &::before {
                                 content: "Коммент.";
+                            }
+                        }
+                    }
+
+                    &.percent-hour {
+                        @media ($media_sm) {
+                            &::before {
+                                content: "24ч. %";
+                            }
+                        }
+                    }
+
+                    &.percent-week {
+                        @media ($media_sm) {
+                            &::before {
+                                content: "7д. %";
+                            }
+                        }
+                    }
+
+                    &.owned {
+                        @media ($media_sm) {
+                            &::before {
+                                font-weight: 500;
+                                content: "Во владении";
                             }
                         }
                     }
@@ -277,6 +389,7 @@
 
                         @media ($media_sm) {
                             flex-wrap: wrap;
+                            align-items: baseline;
 
                             span {
                                 margin-top: 1.2rem;

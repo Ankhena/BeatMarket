@@ -284,7 +284,7 @@ input[type="text"] {
             visibility: visible;
         }
 
-        div {
+        > div {
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -292,29 +292,49 @@ input[type="text"] {
             font-weight: 500;
             cursor: pointer;
 
-            svg {
-                width: 1.2rem;
-                height: 1.2rem;
-                stroke: lighten($color_blue, 15%);
+            .add {
                 margin-right: 0.8rem;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    stroke: lighten($color_blue, 15%);
+                    
+                }
             }
 
-            span {
-                font-size: 0.8rem;
-                color: $color_grey;
-                margin-left: 0.8rem;
-            }
+            .content {
+                display: flex;
+                align-items: center;
 
-            strong {
-                font-weight: 500;
+                svg {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    margin-right: 0.7rem;
+                }
+
+                span {
+                    font-size: 0.8rem;
+                    color: $color_grey;
+                    margin-left: 0.8rem;
+                }
+    
+                strong {
+                    font-weight: 500;
+                }
             }
 
             &:hover {
                 color: $color_blue;
 
-                svg {
-                    stroke: $color_blue;
+                .add {
+                    svg {
+                        stroke: $color_blue;
+                    }
                 }
+
             }
         }
     }
