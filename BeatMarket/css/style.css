@@ -781,6 +781,30 @@ input[type="text"]:focus {
   border: 1px solid #a0c3ff;
 }
 
+input[type="text"]:disabled {
+  background-color: #F8F8F8;
+}
+
+input[type="text"]:disabled::-webkit-input-placeholder {
+  color: #373943;
+}
+
+input[type="text"]:disabled::-moz-placeholder {
+  color: #373943;
+}
+
+input[type="text"]:disabled:-ms-input-placeholder {
+  color: #373943;
+}
+
+input[type="text"]:disabled::-ms-input-placeholder {
+  color: #373943;
+}
+
+input[type="text"]:disabled::placeholder {
+  color: #373943;
+}
+
 .btn {
   outline: none;
   border: none;
@@ -1325,6 +1349,29 @@ input[type="text"]:focus {
   font-weight: 500;
 }
 
+.modal-content-banner.crypt {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-content-banner.crypt svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.modal-content-banner.crypt h3 {
+  font-size: 1.33rem;
+  color: #24252E;
+  margin: 0 0.8rem;
+  font-weight: 600;
+}
+
+.modal-content-banner.crypt span {
+  font-size: 1.33rem;
+  color: #929398;
+}
+
 .modal-content-papers {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1335,10 +1382,31 @@ input[type="text"]:focus {
 }
 
 .modal-content-papers-cost {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   margin-right: 0.5rem;
+}
+
+.modal-content-papers-count {
+  position: relative;
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+  margin-right: .5rem;
+}
+
+.modal-content-papers-count.crypt {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.modal-content-papers-count.crypt input {
+  padding-right: calc(25px + 2rem);
+}
+
+.modal-content-papers-count.crypt span {
+  position: absolute;
+  bottom: 16px;
+  right: 1rem;
+  font-weight: 500;
+  color: #929398;
 }
 
 .modal-content-papers-count .input_counter {
@@ -1352,7 +1420,6 @@ input[type="text"]:focus {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 8px 15px;
-  background: #F8F8F8;
   border: 1px solid #D3E3FF;
   border-radius: 0.5rem;
 }
@@ -1360,7 +1427,7 @@ input[type="text"]:focus {
 .modal-content-papers-count .input_counter span {
   color: #24252E;
   display: inline-block;
-  width: 3.5rem;
+  width: 3rem;
   text-align: center;
 }
 
@@ -1390,6 +1457,14 @@ input[type="text"]:focus {
 .modal-content-papers-count .input_counter button svg {
   width: 1.3rem;
   height: 1.3rem;
+}
+
+.modal-content-papers-date {
+  width: 11rem;
+}
+
+.modal-content-papers-date input {
+  text-align: center;
 }
 
 .modal-content-text p {
@@ -5074,6 +5149,15 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 2.4rem;
   }
 
+  .modal-content-papers-count.crypt {
+    -ms-flex-preferred-size: 37%;
+        flex-basis: 37%;
+  }
+
+  .modal-content-papers-date {
+    width: 12rem;
+  }
+
   .section-header .header-logo .logo {
     width: 11rem;
   }
@@ -5292,11 +5376,41 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .modal .use_mt {
-    margin-top: 1.5rem;
+    margin-top: 1.4rem;
   }
 
   .modal .use_mt_first {
-    margin-top: 2.2rem;
+    margin-top: 2rem;
+  }
+
+  .modal-content-papers {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .modal-content-papers-cost,
+  .modal-content-papers-count {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+    margin-right: 0;
+  }
+
+  .modal-content-papers-count.crypt {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+    margin-right: 0;
+  }
+
+  .modal-content-papers-date {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .modal-content-papers-date input {
+    text-align: left;
   }
 
   .modal-content-buttons {
@@ -6459,16 +6573,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .modal-header h2 {
     font-size: 1.2rem;
-  }
-
-  .modal-content-papers-cost {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-
-  .modal-content-papers-count {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
   }
 }
 

@@ -30,7 +30,7 @@
         }
 
         @media ($media_sm) {
-            margin-top: 1.5rem;
+            margin-top: 1.4rem;
         }
     }
 
@@ -42,7 +42,7 @@
         }
 
         @media ($media_sm) {
-            margin-top: 2.2rem;
+            margin-top: 2rem;
         }
     }
 }
@@ -138,25 +138,77 @@
             span {
                 font-weight: 500;
             }
+
+            &.crypt {
+                align-items: center;
+
+                svg {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+
+                h3 {
+                    font-size: 1.33rem;
+                    color: $color_black_title;
+                    margin: 0 0.8rem;
+                    font-weight: 600;
+                }
+
+                span {
+                    font-size: 1.33rem;
+                    color: $color_grey;
+                }
+            }
         }
 
         &-papers {
             display: flex;
             justify-content: space-between;
 
-            &-cost {
-                flex-grow: 1;
-                margin-right: 0.5rem;
+            @media ($media_sm) {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
 
-                @media ($media_xs) {
-                    flex-basis: 50%;
+            &-cost, &-count {
+                @media ($media_sm) {
+                    flex-basis: 49%;
+                    margin-right: 0;
                 }
             }
 
-            &-count {
+            &-cost {
+                margin-right: 0.5rem;
+            }
 
-                @media ($media_xs) {
-                    flex-basis: 50%;
+            &-count {
+                position: relative;
+                flex-basis: 24%;
+                margin-right: .5rem;
+
+                &.crypt {
+                    flex-basis: 35%;
+
+                    @media ($media_xl) {
+                        flex-basis: 37%;
+                    }
+
+                    @media ($media_sm) {
+                        flex-basis: 49%;
+                        margin-right: 0;
+                    }
+
+                    input {
+                        padding-right: calc(25px + 2rem);
+                    }
+
+                    span {
+                        position: absolute;
+                        bottom: 16px;
+                        right: 1rem;
+                        font-weight: 500;
+                        color: $color_grey;
+                    }
                 }
 
                 .input_counter {
@@ -165,14 +217,14 @@
                     justify-content: center;
                     padding: 8px 15px;
 
-                    background: $color_grey_counter;
+                    //background: $color_grey_counter;
                     border: 1px solid $color_block_border;
                     border-radius: 0.5rem;
 
                     span {
                         color: $color_black_title;
                         display: inline-block;
-                        width: 3.5rem;
+                        width: 3rem;
                         text-align: center;
                     }
 
@@ -201,6 +253,27 @@
                             height: 1.3rem;
 
                         }
+                    }
+                }
+            }
+
+            &-date {
+                width: 11rem;
+
+                input {
+                    text-align: center;
+                }
+
+                @media ($media_xl) {
+                    width: 12rem;
+                }
+
+                @media ($media_sm) {
+                    width: 100%;
+                    margin-top: 1rem;
+
+                    input {
+                        text-align: left;
                     }
                 }
             }

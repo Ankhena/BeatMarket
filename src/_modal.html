@@ -37,6 +37,59 @@
                     </button>
                 </div>
             </div>
+            <div class="modal-content-papers-date">
+                <label class="label_modal">Дата</label>
+                <input type="text" placeholder="24.01.2021" disabled>
+            </div>
+        </div>
+        <div class="modal-content-total use_mt">
+            <label class="label_modal">Итого</label>
+            <span>3 621 $</span>
+        </div>
+        <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue" data-closeModal>Сохранить</button>
+            <button class="btn gray" data-closeModal>Отменить</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal_add_crypt">
+    <div class="modal-header">
+        <h2>Добавление транзакции</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+        <div class="modal-content-switcher use_mt_first">
+            <div class="modal-content-switcher-button">
+                <label>
+                    <input type="radio" name="switcher" class="visually_hidden" checked>
+                    <span>Купить</span>
+                </label>
+                <label>
+                    <input type="radio" name="switcher" class="visually_hidden">
+                    <span>Продать</span>
+                </label>
+            </div>
+        </div>
+        <div class="modal-content-banner crypt use_mt">
+            <svg class="edit"><use xlink:href="img/main.svg#icon-BCH"></use></svg>
+            <h3>Bitcoin</h3>
+            <span>BTC</span>
+        </div>
+        <div class="modal-content-papers use_mt">
+            <div class="modal-content-papers-cost">
+                <label class="label_modal">Цена бумаги</label>
+                <input type="text" placeholder="0%">
+            </div>
+            <div class="modal-content-papers-count crypt">
+                <label class="label_modal">Количество</label>
+                <input type="text" value="0.0055">
+                <span>BTC</span>
+            </div>
+            <div class="modal-content-papers-date">
+                <label class="label_modal">Дата</label>
+                <input type="text" placeholder="24.01.2021" disabled>
+            </div>
         </div>
         <div class="modal-content-total use_mt">
             <label class="label_modal">Итого</label>
@@ -67,14 +120,55 @@
             <div class="modal-content-papers-count">
                 <label class="label_modal">Количество</label>
                 <div class="input_counter">
-                    <button data-counter="counter_edit" data-operation="plus" aria-label="Увеличить число">
+                    <button data-counter="counter_add" data-operation="plus" aria-label="Увеличить число">
                         <svg><use xlink:href="img/main.svg#icon-plus"></use></svg>
                     </button>
-                    <span id="counter_edit">0</span>
-                    <button data-counter="counter_edit" data-operation="minus" aria-label="Уменьшить число">
+                    <span id="counter_add">0</span>
+                    <button data-counter="counter_add" data-operation="minus" aria-label="Уменьшить число">
                         <svg><use xlink:href="img/main.svg#icon-minus"></use></svg>
                     </button>
                 </div>
+            </div>
+            <div class="modal-content-papers-date">
+                <label class="label_modal">Дата</label>
+                <input type="text" placeholder="24.01.2021" disabled>
+            </div>
+        </div>
+        <div class="modal-content-total use_mt">
+            <label class="label_modal">Итого</label>
+            <span>3 621 $</span>
+        </div>
+        <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue" data-closeModal>Сохранить</button>
+            <button class="btn gray" data-closeModal>Отменить</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal_edit_crypt">
+    <div class="modal-header">
+        <h2>Редактирование сделки</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+        <div class="modal-content-banner crypt use_mt_first">
+            <svg class="edit"><use xlink:href="img/main.svg#icon-BCH"></use></svg>
+            <h3>Bitcoin</h3>
+            <span>BTC</span>
+        </div>
+        <div class="modal-content-papers use_mt">
+            <div class="modal-content-papers-cost">
+                <label class="label_modal">Цена бумаги</label>
+                <input type="text" placeholder="0%">
+            </div>
+            <div class="modal-content-papers-count crypt">
+                <label class="label_modal">Количество</label>
+                <input type="text" value="0.0055">
+                <span>BTC</span>
+            </div>
+            <div class="modal-content-papers-date">
+                <label class="label_modal">Дата</label>
+                <input type="text" placeholder="24.01.2021" disabled>
             </div>
         </div>
         <div class="modal-content-total use_mt">

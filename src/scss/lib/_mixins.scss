@@ -92,6 +92,13 @@ input[type="text"] {
     &:focus {
         border: 1px solid darken(#d3e3ff, 10%);
     }
+
+    &:disabled {
+        background-color: $color_grey_counter;
+        &::placeholder {
+            color: $color_black_main;
+        }
+    }
 }
 
 .btn {
