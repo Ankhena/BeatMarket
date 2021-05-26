@@ -5,6 +5,7 @@
         margin-top: 2rem;
         display: flex;
         justify-content: space-between;
+        cursor: pointer;
 
         @media ($media_sm) {
             flex-direction: column;
