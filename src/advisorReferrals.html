@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include('_head.html', {
+  "title": "BeatMarket - Купите эти акции у своего брокера"
+  })
+
+</head>
+<body>
+
+@@include("_header.html")
+
+<section class="section-outer section-main">
+  <div class="main">
+
+    @@include("_menu.html")
+
+    <h1 class="main-title">Советник</h1>
+
+    <div class="main-content advisor">
+
+      <section class="buy-stocks">
+        <h1>Рефералы</h1>
+
+        <h1> Рефералы</h1>
+        <section class="referrals__stats">
+          <h2>Статистика</h2>
+          <dl class="referrals__description">
+            <div class="referrals__descr-item">
+              <dd>45</dd>
+              <dt>переходов</dt>
+            </div>
+            <div class="referrals__descr-item">
+              <dd>35</dd>
+              <dt>регистраций</dt>
+            </div>
+            <div class="referrals__descr-item">
+              <dd>12</dd>
+              <dt>аккаунтов активно</dt>
+            </div>
+            <div class="referrals__descr-item">
+              <dd>+12</dd>
+              <dt>дней бесплатной подписки</dt>
+            </div>
+          </dl>
+          <p>За каждого друга, подключившегося по ссылке и пользующегося сервисом, вы получите +1 день бесплатной подписки
+            ежемесячно.</p>
+        </section>
+
+        <section class="referrals__links">
+          <form class="referrals__link">
+            <h2>Ссылка на портфель</h2>
+            <div class="referrals__link-wrap">
+              <input type="url">
+              <button class="referrals__copy-btn btn btn--only-icon" type="button" aria-label="Копировать"></button>
+            </div>
+            <p>
+              <input type="checkbox" name="" id="please-change" checked="">
+              <label for="please-change">Разрешить просмотр моего портфеля по этой ссылке</label>
+            </p>
+          </form>
+
+          <form class="referrals__link">
+            <h2>Реферальная ссылка</h2>
+            <div class="referrals__link-wrap">
+              <input type="url">
+              <button class="referrals__copy-btn btn btn--only-icon" type="button" aria-label="Копировать"></button>
+            </div>
+            <p>Отправляйте её напрямую, если не хотите показывать портфель</p>
+          </form>
+
+        </section>
+
+
+
+
+      </section>
+
+      <!---->
+    </div>
+  </div>
+</section>
+
+@@include("_footer.html")
+
+</body>
+</html>
+

@@ -9,6 +9,8 @@
 @import "./lib/burger";
 @import "./lib/modal";
 
+@import "lib/variables";
+
 @import "header";
 @import "footer";
 @import "createPortfolio";
@@ -23,10 +25,29 @@
 @import "myPapers";
 @import "performance";
 
+@import "all";
+@import "blocks/advisor";
+@import "blocks/btn";
+@import "blocks/prompt";
+@import "blocks/progress";
+@import "blocks/form";
+
+@import "advisorCreatePortfolio";
+@import "advisorBuyStocks";
+@import "advisorPortfolioReady";
+@import "advisorInvestment";
+@import "advisorSellStocks";
+@import "faq";
+@import "advisorDividends";
+@import "advisorProfile";
+@import "advisorReferrals";
+@import "advisorPortfolioSettings";
+
+
 // === main ===
 
 .section-main {
-    
+
     .main {
         display: flex;
         min-height: calc(100vh - var(--header_height) - 1px);
@@ -76,7 +97,7 @@
             }
 
             .nav {
-                
+
                 &.fixed {
                     position: fixed;
                     top: 3rem;
@@ -146,13 +167,12 @@
 
         &-content {
             flex-grow: 1;
-
             @media ($media_sm) {
-                
+
             }
         }
     }
-    
+
 }
 
 // === / main ===
@@ -236,7 +256,7 @@
                 .myStrategy-items-item-header-toggle {
                     background-color: $color_blue;
                     border-color: $color_blue;
-        
+
                     svg {
                         fill: $color_white;
                         transform: rotate(180deg);
@@ -283,7 +303,7 @@
                         width: 100%;
                         justify-content: space-between;
                         border-bottom: 2px solid $color_block_border;
-                        padding: 0 1.5rem; 
+                        padding: 0 1.5rem;
 
                         @media ($media_sm) {
                             flex-wrap: wrap;
@@ -394,7 +414,7 @@
                     height: 1.8rem;
                     stroke: lighten($color_blue, 15%);
                     cursor: pointer;
-    
+
                     &:hover {
                         stroke: $color_blue;
                     }
@@ -445,7 +465,7 @@
             border-radius: 0.25rem;
 
             &.multicolor {
-                background: linear-gradient(270deg, $color_red 26.43%, rgba(255, 255, 255, 0.1) 59.64%), 
+                background: linear-gradient(270deg, $color_red 26.43%, rgba(255, 255, 255, 0.1) 59.64%),
                             linear-gradient(90deg, $color_green 25.13%, rgba(255, 255, 255, 0.1) 72.4%);
             }
 
@@ -494,44 +514,44 @@ body.topNav {
         .page_title {
             display: none;
         }
-    
+
         .section-main {
             position: relative;
         }
-    
+
         .main-menu {
             position: absolute;
             z-index: 12;
             top: calc(-1 * var(--header_height));
-            
+
             width: 60%;
             left: 50%;
             transform: translateX(-50%);
-    
+
             background: unset;
             border: none;
             padding: 0;
-    
+
             nav.nav {
-    
+
                 ul {
                     display: flex;
                     justify-content: center;
                     height: var(--header_height);
-    
+
                     li {
                         cursor: pointer;
                         border-bottom: 3px solid transparent !important;
-    
+
                         &.border-bottom {
                             padding: 0;
                             border-bottom: none;
                         }
-    
+
                         &:not(:last-child) {
                             margin: 0 2rem 0 0;
                         }
-    
+
                         svg {
                             display: none;
                         }
@@ -545,11 +565,11 @@ body.topNav {
                             border-color: $color_blue !important;
                         }
                     }
-    
+
                 }
             }
         }
-    
+
         .main-contentPadding {
             padding: 2.8rem var(--section_padding);
         }

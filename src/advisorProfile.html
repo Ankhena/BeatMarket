@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include('_head.html', {
+  "title": "BeatMarket - Купите эти акции у своего брокера"
+  })
+
+</head>
+<body>
+
+@@include("_header.html")
+
+<section class="section-outer section-main">
+  <div class="main">
+
+    @@include("_menu.html")
+
+    <h1 class="main-title">Советник</h1>
+
+    <div class="main-content advisor">
+
+      <section class="buy-stocks">
+        <h1>Профиль</h1>
+        <form class="form registration">
+
+          <div class="form__item">
+            <label for="email" class="form__label">E-mail</label>
+            <input id="email" type="email" placeholder="" value="mail@mail.ru">
+            <div class="registration__input-prompt">
+
+            </div>
+          </div>
+
+          <div class="form__item">
+            <label for="password" class="form__label">Новый пароль</label>
+            <input id="password" type="password" placeholder="******" value="******">
+            <div class="registration__input-prompt">
+
+            </div>
+          </div>
+
+          <div class="form__item">
+            <label for="passwordnew" class="form__label">Повторите новый пароль</label>
+            <input id="passwordnew" type="password" placeholder="******" value="******">
+            <div class="registration__input-prompt">
+
+            </div>
+          </div>
+
+
+          <div class="page__btns">
+
+
+            <button class="registration__btn btn btn--bright" type="button">Сохранить</button>
+            <button class="registration__btn btn btn--light js-del-profile" type="button">Удалить профиль</button>
+
+
+
+
+          </div>
+        </form>
+
+      </section>
+
+      <!---->
+    </div>
+  </div>
+</section>
+
+@@include("_footer.html")
+
+</body>
+</html>
+

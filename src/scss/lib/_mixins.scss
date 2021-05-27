@@ -264,7 +264,7 @@ input[type="text"] {
         top: 50%;
         transform: translateY(-50%);
     }
-    
+
     &-container {
         position: absolute;
         width: 100%;
@@ -308,7 +308,7 @@ input[type="text"] {
                     width: 1.2rem;
                     height: 1.2rem;
                     stroke: lighten($color_blue, 15%);
-                    
+
                 }
             }
 
@@ -327,7 +327,7 @@ input[type="text"] {
                     color: $color_grey;
                     margin-left: 0.8rem;
                 }
-    
+
                 strong {
                     font-weight: 500;
                 }
@@ -430,7 +430,7 @@ input[type="text"] {
                 &:hover {
                     a {
                         color: $color_white;
-                    }       
+                    }
                 }
             }
 
@@ -441,7 +441,7 @@ input[type="text"] {
                     svg {
                         stroke: $color_blue;
                     }
-                }       
+                }
             }
 
             &:not(:last-child) {
@@ -484,3 +484,16 @@ input[type="text"] {
 }
 
 // === / Mixins ===
+
+
+// flex gap mixin
+@mixin gap($gapSize: 1em) {
+    //margin: calc(-1 * #{$gapSize}) 0 0 calc(-1 * #{$gapSize});
+    margin-left: calc(-1 * #{$gapSize});
+    width: calc(100% + #{$gapSize});
+
+    > * {
+        //margin: $gapSize 0 0 $gapSize;
+        margin-left: $gapSize;
+    }
+}

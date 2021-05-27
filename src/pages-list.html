@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include('_head.html', {
+  "title": "Список страниц"
+  })
+
+</head>
+<body>
+
+@@include("_header.html")
+<section class="section-outer section-main">
+  <div class="main">
+
+    @@include("_menu.html")
+
+    <h1 class="main-title">Советник</h1>
+
+    <div class="main-content" style="padding: 5rem">
+      <section class="pages-list">
+        <style>
+          .pages-list li {
+            margin-bottom: 1rem;
+          }
+
+          .pages-list a {
+            color: #3e54d8;
+            font-weight: 500;
+            text-decoration: none;
+          }
+
+          .pages-list .danger {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            color: #de4355;
+            font-weight: 500;
+          }
+        </style>
+
+        <ol>
+          <li><a href="advisorCreatePortfolio.html">Создание портфеля</a> <span class="danger"> ⚖ </span></li>
+          <li><a href="advisorBuyStocks.html">Купите эти акции у своего брокера</a> <span class="danger"> ✣ </span></li>
+          <li><a href="advisorPortfolioReady.html">Портфель готов</a> <span class="danger">✣</span></li>
+          <li>
+            <a href="advisorInvestment.html">Инвестирование (Купите эти акции у своего брокера)</a>
+            <br><span class="danger"> ⃠  &nbsp;&nbsp; (Сделай из этой <a href="advisorBuyStocks.html">advisorBuyStocks.html</a>
+          )</span>
+          </li>
+          <li>
+            <a href="advisorSellStocks.html">Продайте эти акции у своего брокера</a>
+            <span class="danger">✣</span>
+          </li>
+          <li>
+            <a href="faq.html">FAQ</a>
+            <span class="danger">✣</span></li>
+          <li>
+            <a href="advisorDividends.html">Дивиденды</a>
+            <span class="danger">✣</span></li>
+          <li>
+            <a href="advisorProfile.html">Профиль</a>
+            <span class="danger">✣ </span></li>
+          <li>
+            <a href="advisorReferrals.html">Рефералы</a>
+            <span class="danger">✣</span>
+          </li>
+          <li><a href="advisorPortfolioSettings.html">Настройка портфеля</a> <span class="danger">✣</span></li>
+        </ol>
+        <br>
+        <ul>
+          <li><span class="danger"> ⃠ </span> страница только создана</li>
+          <li><span class="danger">✣</span> только разметка</li>
+          <li><span class="danger">※</span> адаптив не сделан или не проверен</li>
+          <li><span class="danger">⚖</span> типа сделано, не проверено</li>
+          <li><span class="danger">♛</span> можно проверять</li>
+        </ul>
+
+        <br><br><br>
+        <p>УСЛОВИЕ инклюда header'a !!!!!!!!!!!</p>
+
+
+
+      </section>
+
+
+
+    </div>
+  </div>
+</section>
+
+@@include("_footer.html")
+
+</body>
+</html>

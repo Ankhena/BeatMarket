@@ -1,0 +1,164 @@
+.btn--as-link {
+  display: inline;
+  min-width: unset;
+  padding: unset;
+  border: none;
+  letter-spacing: normal;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  background: transparent;
+  color: $color_blue;
+  text-decoration: underline;
+  text-align: left;
+
+}
+
+.btn--only-icon {
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+  min-width: unset;
+
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+}
+
+.btn--close {
+
+}
+
+.btn--settings {
+  width: 35px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-settings) no-repeat center / 60px;
+
+}
+
+.btn--edit {
+  width: 28px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-edit) no-repeat center / contain;
+}
+
+.btn--edit2 {
+  width: 28px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-edit-2) no-repeat center / 140%;
+}
+
+.btn--copy {
+  width: 28px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-copy) no-repeat center / 140%;
+}
+
+.btn--del {
+  width: 28px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-del-3) no-repeat center / 140%;
+}
+
+.btn--to-archive {
+  width: 28px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-to-archive) no-repeat center / 140%;
+}
+
+.btn--form-archive {
+  width: 28px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-from-archive) no-repeat center / 140%;
+}
+
+.btn--exit {
+  width: 25px;
+  height: 25px;
+  background: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6614 15.7341L12.0714 17.1441L17.0714 12.1441L12.0714 7.1441L10.6614 8.5541L13.2414 11.1441H3.57141V13.1441H13.2414L10.6614 15.7341ZM19.5714 3.1441H5.57141C5.04098 3.1441 4.53227 3.35482 4.1572 3.72989C3.78212 4.10496 3.57141 4.61367 3.57141 5.1441V9.1441H5.57141V5.1441H19.5714V19.1441H5.57141V15.1441H3.57141V19.1441C3.57141 19.6745 3.78212 20.1832 4.1572 20.5583C4.53227 20.9334 5.04098 21.1441 5.57141 21.1441H19.5714C20.6714 21.1441 21.5714 20.2441 21.5714 19.1441V5.1441C21.5714 4.0441 20.6714 3.1441 19.5714 3.1441Z' fill='%23AAAAAA'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.btn--copy {
+
+}
+
+.btn--refresh {
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background: url(../img/sprite.svg#icon-refresh) no-repeat center / 40px 40px;
+  }
+}
+
+.btn--buy {
+  width: 100%;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background: url(../img/sprite.svg#icon-buy) no-repeat center / 36px 36px;
+  }
+
+}
+
+.btn--sell {
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background: url(../img/sprite.svg#icon-sell) no-repeat center / 36px 36px;
+  }
+}
+
+.btn--arrow-right {
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background: url(../img/sprite.svg#icon-arrow-right) no-repeat center / 36px 36px;
+  }
+}
+
+.btn--minus {
+  width: 28px;
+  //color: $gray;
+
+  &::before {
+    content: "-";
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+  }
+}
+
+.btn--plus {
+  width: 28px;
+  //color: $gray;
+
+  &::before {
+    content: "+";
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+  }
+}
