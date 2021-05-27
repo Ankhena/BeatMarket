@@ -13,6 +13,7 @@ $(document).ready(function() {
     --include("_inputCounter.js")
     --include("_banchGraph.js")
     --include("_performance.js")
+    --include("_dateRangePicker.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {

@@ -24,6 +24,7 @@
 @import "dividents";
 @import "myPapers";
 @import "performance";
+@import "daterangepicker";
 
 @import "all";
 @import "blocks/advisor";
@@ -440,6 +441,20 @@
                     bottom: 0;
                     right: 0;
                     transform: translate(50%, 100%);
+
+                    &.last {
+                        transform: translate(0, 100%);
+
+                        @media ($media_sm) {
+                            transform: translate(50%, 100%);
+                        }
+                    }
+
+                    p {
+                        font-size: inherit;
+                        max-height: 8rem;
+                        overflow-y: auto;
+                    }
 
                     @media ($media_sm) {
                         transform: translate(0, 100%);
