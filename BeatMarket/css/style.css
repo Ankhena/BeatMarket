@@ -746,7 +746,9 @@ body.hideScroll {
   color: #24252E;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
   background: #fff;
   border: 1px solid #d3e3ff;
   border-radius: 10px;
@@ -756,56 +758,68 @@ input[type="text"] {
   width: 100%;
 }
 
-input[type="text"]::-webkit-input-placeholder {
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder {
   color: #929398;
 }
 
-input[type="text"]::-moz-placeholder {
+input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="password"]::-moz-placeholder {
   color: #929398;
 }
 
-input[type="text"]:-ms-input-placeholder {
+input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder {
   color: #929398;
 }
 
-input[type="text"]::-ms-input-placeholder {
+input[type="text"]::-ms-input-placeholder, input[type="email"]::-ms-input-placeholder, input[type="password"]::-ms-input-placeholder {
   color: #929398;
 }
 
-input[type="text"]::placeholder {
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
   color: #929398;
 }
 
 input[type="text"]:hover,
-input[type="text"]:focus {
+input:hover[type="email"],
+input:hover[type="password"],
+input[type="text"]:focus,
+input:focus[type="email"],
+input:focus[type="password"] {
   border: 1px solid #a0c3ff;
 }
 
-input[type="text"]:disabled {
+input[type="text"]:disabled,
+input:disabled[type="email"],
+input:disabled[type="password"] {
   background-color: #F8F8F8;
 }
 
-input[type="text"]:disabled::-webkit-input-placeholder {
+input[type="text"]:disabled::-webkit-input-placeholder, input[type="email"]:disabled::-webkit-input-placeholder, input[type="password"]:disabled::-webkit-input-placeholder {
   color: #373943;
 }
 
-input[type="text"]:disabled::-moz-placeholder {
+input[type="text"]:disabled::-moz-placeholder, input[type="email"]:disabled::-moz-placeholder, input[type="password"]:disabled::-moz-placeholder {
   color: #373943;
 }
 
-input[type="text"]:disabled:-ms-input-placeholder {
+input[type="text"]:disabled:-ms-input-placeholder, input[type="email"]:disabled:-ms-input-placeholder, input[type="password"]:disabled:-ms-input-placeholder {
   color: #373943;
 }
 
-input[type="text"]:disabled::-ms-input-placeholder {
+input[type="text"]:disabled::-ms-input-placeholder, input[type="email"]:disabled::-ms-input-placeholder, input[type="password"]:disabled::-ms-input-placeholder {
   color: #373943;
 }
 
-input[type="text"]:disabled::placeholder {
+input[type="text"]:disabled::placeholder,
+input[type="email"]:disabled::placeholder,
+input[type="password"]:disabled::placeholder {
   color: #373943;
 }
 
-input[type="text"].error {
+input[type="text"].error,
+input.error[type="email"],
+input.error[type="password"] {
   border-color: #E88390;
 }
 
@@ -5965,6 +5979,51 @@ td {
 
 .monthly-dividends__th-period {
   width: 20rem;
+}
+
+.advisor-profile {
+  position: relative;
+}
+
+.advisor-profile::after {
+  content: "";
+  position: absolute;
+  top: -200px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 960px;
+  background: url("data:image/svg+xml,%3Csvg width='747' height='870' viewBox='0 0 747 870' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='283.5' cy='96.5' r='96.5' fill='%23ED6373'/%3E%3Ccircle cx='69.5' cy='800.5' r='69.5' fill='%233E54D8'/%3E%3Cpath d='M666.5 552C622.041 552 586 515.71 586 471.251C586 426.516 622.265 390 667 390H747V471.5C747 515.959 710.959 552 666.5 552Z' fill='%23F3B63F'/%3E%3C/svg%3E%0A") no-repeat top right;
+  pointer-events: none;
+  z-index: 11;
+}
+
+.advisor-profile__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: calc(-1 * 1rem);
+  width: calc(100% + 1rem);
+  margin-top: 2.7rem;
+}
+
+.advisor-profile__btns > * {
+  margin-left: 1rem;
+}
+
+.advisor-profile__btns .btn {
+  width: calc(50% - 1rem);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.advisor-profile__btns .btn--danger-inverse {
+  border-color: transparent;
+  background: transparent;
+}
+
+.registration {
+  width: 31.66667rem;
 }
 
 .section-main .main {

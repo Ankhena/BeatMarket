@@ -105,6 +105,10 @@ input[type="text"] {
     }
 }
 
+input[type="email"], input[type="password"] {
+    @extend input[type="text"];
+}
+
 .btn {
     outline: none;
     border: none;
