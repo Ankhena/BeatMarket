@@ -27,12 +27,15 @@
 @import "daterangepicker";
 
 @import "all";
+@import "helpers-end";
 @import "blocks/advisor";
 @import "blocks/btn";
 @import "blocks/prompt";
 @import "blocks/progress";
 @import "blocks/form";
 @import "blocks/table";
+@import "blocks/details";
+
 
 @import "advisorCreatePortfolio";
 @import "advisorBuyStocks";
@@ -659,4 +662,4 @@ body.viewProfile {
 }
 
 
-@import "helpers-end";
+

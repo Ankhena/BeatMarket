@@ -5108,6 +5108,10 @@ input[type="checkbox"]:focus {
   color: #3E54D8;
 }
 
+.h-hide {
+  display: none !important;
+}
+
 .advisor {
   padding-bottom: 100px;
   margin: 6rem 7rem 0 2rem;
@@ -5555,6 +5559,64 @@ td {
   border-bottom: 1px solid #E6EEFF;
 }
 
+.details {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.details--bg {
+  padding: 36px;
+  border: 1px solid #E6E6E6;
+  -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+          box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.details__header {
+  position: relative;
+}
+
+.details__title {
+  padding-right: 30px;
+  margin-top: 1.77778rem;
+  margin-bottom: 1.77778rem;
+  font-size: 1.22222rem;
+  font-weight: 500;
+}
+
+.details__btn {
+  position: absolute;
+  top: 0.5em;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: transparent url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.42361 11.7408C7.48783 11.8207 7.57376 11.8861 7.67401 11.9313C7.77425 11.9764 7.8858 12 7.99905 12C8.1123 12 8.22385 11.9764 8.32409 11.9313C8.42434 11.8861 8.51027 11.8207 8.5745 11.7408L14.875 3.94134C14.9479 3.85138 14.9907 3.74601 14.9986 3.63668C15.0066 3.52735 14.9794 3.41825 14.9201 3.32121C14.8608 3.22418 14.7716 3.14294 14.6622 3.08631C14.5528 3.02968 14.4274 2.99983 14.2995 3H1.69856C1.57104 3.00045 1.44607 3.03069 1.33711 3.08745C1.22814 3.14422 1.13929 3.22537 1.08011 3.32217C1.02093 3.41898 0.993662 3.52778 1.00124 3.63688C1.00882 3.74597 1.05095 3.85123 1.12311 3.94134L7.42361 11.7408Z' fill='%233E54D8'/%3E%3C/svg%3E%0A") no-repeat center;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  opacity: 0.6;
+}
+
+.details__btn:focus {
+  outline: none;
+}
+
+.details--open .details__btn {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  opacity: 1;
+}
+
+.details:not(.details--open) .details__text {
+  display: none;
+}
+
 .adv-portfolio h1 {
   margin-bottom: 3.56rem;
   line-height: 1.4;
@@ -5729,6 +5791,71 @@ td {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.faq {
+  position: relative;
+  line-height: 1.5;
+  margin-left: 12.27778rem;
+  margin-right: 19.44444rem;
+  z-index: 0;
+}
+
+.faq .details {
+  border-bottom: 1px solid #D3E3FF;
+}
+
+.faq__subtitle {
+  margin-bottom: 3.88889rem;
+  font-size: 1.11111rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.faq__content {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
+          box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
+  border-radius: 1rem;
+  position: relative;
+  padding-left: 5rem;
+  padding-right: 6.11111rem;
+  padding-bottom: 3.88889rem;
+  margin-bottom: 3.55556rem;
+  background: #ffffff;
+}
+
+.faq__content::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -90px;
+  right: -110px;
+  display: block;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='1172' height='1356' viewBox='0 0 1172 1356' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='89.5' cy='633.5' r='89.5' fill='%23199F27'/%3E%3C/svg%3E%0A") no-repeat top left, url("data:image/svg+xml,%3Csvg width='1172' height='1356' viewBox='0 0 1172 1356' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1063.5' cy='1247.5' r='108.5' fill='%233E54D8'/%3E%3Ccircle cx='1076' cy='73' r='73' fill='%23F3B63F'/%3E%3C/svg%3E%0A") no-repeat top right;
+  z-index: -1;
+}
+
+.faq__details-list {
+  margin-bottom: 3.55556rem;
+}
+
+.faq__more a {
+  font-weight: 600;
+  color: #3E54D8;
+  text-decoration: none;
+}
+
+.faq__more a:hover,
+.faq__more a:focus {
+  color: #1B2D9D;
+}
+
+.faq__more-title {
+  margin-bottom: 1em;
+  font-size: 1.22222rem;
+  font-weight: 600;
 }
 
 .section-main .main {
@@ -6165,10 +6292,6 @@ body.viewProfile .header-controls-links-link.auth span {
   font-weight: 600;
   font-size: 0.9rem;
   color: #3E54D8;
-}
-
-.h-hide {
-  display: none !important;
 }
 
 @media (min-width: 564px) {
