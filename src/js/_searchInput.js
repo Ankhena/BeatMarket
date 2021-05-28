@@ -25,31 +25,33 @@ function initSearchInput() {
 
     function renderBreadcrumbs(breadcrumbsData) {
         const breadcrumbsContainer = document.querySelector(".breadcrumbs");
-        breadcrumbsContainer.innerHTML = ""; // очищаем все внутренние ноды
+        if (breadcrumbsContainer !== null) {
+            breadcrumbsContainer.innerHTML = ""; // очищаем все внутренние ноды
 
-        breadcrumbsData.forEach((item, i) => { // и по дате загружаем новые
-            let breadcrumb = document.createElement("div");
-            breadcrumb.classList.add("breadcrumb");
-            breadcrumb.setAttribute("data-id", i);
-
-            let breadcrumb_name = document.createElement("strong");
-            breadcrumb_name.innerHTML = item.name;
-
-            let breadcrumb_org = document.createElement("span");
-            breadcrumb_org.innerHTML = item.org;
-
-            breadcrumb.appendChild(breadcrumb_name);
-            breadcrumb.appendChild(breadcrumb_org);
-
-            breadcrumbsContainer.appendChild(breadcrumb);
-
-            breadcrumb.addEventListener("click", function(e) {
-                let id = breadcrumb.getAttribute("data-id"); // при клике получаем id breadcrumb
-                breadcrumbs.splice(id, 1); // удаляем из массива объект с необходимым breadcrmb
-                renderBreadcrumbs(breadcrumbs); // перерисовываем
+            breadcrumbsData.forEach((item, i) => { // и по дате загружаем новые
+                let breadcrumb = document.createElement("div");
+                breadcrumb.classList.add("breadcrumb");
+                breadcrumb.setAttribute("data-id", i);
+    
+                let breadcrumb_name = document.createElement("strong");
+                breadcrumb_name.innerHTML = item.name;
+    
+                let breadcrumb_org = document.createElement("span");
+                breadcrumb_org.innerHTML = item.org;
+    
+                breadcrumb.appendChild(breadcrumb_name);
+                breadcrumb.appendChild(breadcrumb_org);
+    
+                breadcrumbsContainer.appendChild(breadcrumb);
+    
+                breadcrumb.addEventListener("click", function(e) {
+                    let id = breadcrumb.getAttribute("data-id"); // при клике получаем id breadcrumb
+                    breadcrumbs.splice(id, 1); // удаляем из массива объект с необходимым breadcrmb
+                    renderBreadcrumbs(breadcrumbs); // перерисовываем
+                });
+    
             });
-
-        });
+        }
     }
 
     document.querySelectorAll(".input_search-container > div").forEach(item => {
@@ -76,7 +78,6 @@ function initSearchInput() {
         });
     });
 
-    console.log("render")
     renderBreadcrumbs(breadcrumbs);
 }
 

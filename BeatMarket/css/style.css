@@ -2136,6 +2136,11 @@ input[type="text"].error {
   font-size: 0.9rem;
 }
 
+.myStrategy-emptyPortfolio-container .info-button {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
 .myStrategy-emptyPortfolio-container .sprites svg {
   position: absolute;
 }
@@ -2144,7 +2149,7 @@ input[type="text"].error {
   width: 130px;
   height: 260px;
   left: -1.5rem;
-  top: 10%;
+  top: 5rem;
   -webkit-transform-origin: top left;
       -ms-transform-origin: top left;
           transform-origin: top left;
@@ -6209,7 +6214,7 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-transform: scale(0.2);
         -ms-transform: scale(0.2);
             transform: scale(0.2);
-    top: 10%;
+    top: 2rem;
   }
 
   .myStrategy-emptyPortfolio-container .sprites-right {

@@ -220,31 +220,33 @@ if (myRenderGraph !== null) {
 
     function renderBreadcrumbs(breadcrumbsData) {
         const breadcrumbsContainer = document.querySelector(".breadcrumbs");
-        breadcrumbsContainer.innerHTML = ""; // очищаем все внутренние ноды
+        if (breadcrumbsContainer !== null) {
+            breadcrumbsContainer.innerHTML = ""; // очищаем все внутренние ноды
 
-        breadcrumbsData.forEach((item, i) => { // и по дате загружаем новые
-            let breadcrumb = document.createElement("div");
-            breadcrumb.classList.add("breadcrumb");
-            breadcrumb.setAttribute("data-id", i);
-
-            let breadcrumb_name = document.createElement("strong");
-            breadcrumb_name.innerHTML = item.name;
-
-            let breadcrumb_org = document.createElement("span");
-            breadcrumb_org.innerHTML = item.org;
-
-            breadcrumb.appendChild(breadcrumb_name);
-            breadcrumb.appendChild(breadcrumb_org);
-
-            breadcrumbsContainer.appendChild(breadcrumb);
-
-            breadcrumb.addEventListener("click", function(e) {
-                let id = breadcrumb.getAttribute("data-id"); // при клике получаем id breadcrumb
-                breadcrumbs.splice(id, 1); // удаляем из массива объект с необходимым breadcrmb
-                renderBreadcrumbs(breadcrumbs); // перерисовываем
+            breadcrumbsData.forEach((item, i) => { // и по дате загружаем новые
+                let breadcrumb = document.createElement("div");
+                breadcrumb.classList.add("breadcrumb");
+                breadcrumb.setAttribute("data-id", i);
+    
+                let breadcrumb_name = document.createElement("strong");
+                breadcrumb_name.innerHTML = item.name;
+    
+                let breadcrumb_org = document.createElement("span");
+                breadcrumb_org.innerHTML = item.org;
+    
+                breadcrumb.appendChild(breadcrumb_name);
+                breadcrumb.appendChild(breadcrumb_org);
+    
+                breadcrumbsContainer.appendChild(breadcrumb);
+    
+                breadcrumb.addEventListener("click", function(e) {
+                    let id = breadcrumb.getAttribute("data-id"); // при клике получаем id breadcrumb
+                    breadcrumbs.splice(id, 1); // удаляем из массива объект с необходимым breadcrmb
+                    renderBreadcrumbs(breadcrumbs); // перерисовываем
+                });
+    
             });
-
-        });
+        }
     }
 
     document.querySelectorAll(".input_search-container > div").forEach(item => {
@@ -271,7 +273,6 @@ if (myRenderGraph !== null) {
         });
     });
 
-    console.log("render")
     renderBreadcrumbs(breadcrumbs);
 }
 
@@ -946,23 +947,25 @@ initDateRangePicker();
     const myHeader = document.querySelector(".section-header");
     if (myHeader !== null && window.innerWidth >= 768) {
         const myNav = document.querySelector(".main-menu-nav.nav");
-        let atStart = true;
+        if (myNav !== null) {
+            let atStart = true;
 
-        if (pageYOffset >= myHeader.clientHeight) {
-            atStart = false;
-            myNav.classList.add("fixed");
-        }
-
-        window.addEventListener('scroll', () => {
-            if (pageYOffset >= myHeader.clientHeight && atStart) {
+            if (pageYOffset >= myHeader.clientHeight) {
                 atStart = false;
                 myNav.classList.add("fixed");
             }
-            if (pageYOffset <= myHeader.clientHeight && !atStart) {
-                atStart = true;
-                myNav.classList.remove("fixed");
-            }
-        });
+    
+            window.addEventListener('scroll', () => {
+                if (pageYOffset >= myHeader.clientHeight && atStart) {
+                    atStart = false;
+                    myNav.classList.add("fixed");
+                }
+                if (pageYOffset <= myHeader.clientHeight && !atStart) {
+                    atStart = true;
+                    myNav.classList.remove("fixed");
+                }
+            });
+        }
     }
     
 });

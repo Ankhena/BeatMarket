@@ -9,14 +9,16 @@
 	</head>
 	<body>
 
-		@@include("_header.html")
+		@@include("_header.html", {
+			"title": "Мой портфель"
+		})
 
 		<section class="section-outer section-main">
 			<div class="main">
 
-				@@include("_menu.html")
-
-				<h1 class="main-title">Мой портфель</h1>
+				@@include("_menu.html", {
+					"title": "Мой портфель"
+				})
 
 				<div class="main-content">
                     <div class="main-content portfolio">
