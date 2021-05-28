@@ -10,6 +10,14 @@
   color: $color_red;
 }
 
+.btn--danger-transparent {
+  padding-left: 1em;
+  padding-right: 1em;
+  border: transparent;
+  background: transparent;
+  color: $color_red;
+}
+
 .btn--as-link {
   display: inline;
   min-width: unset;
@@ -56,9 +64,11 @@
   height: 28px;
   background: url("data:image/svg+xml, %3Csvg id='icon-pencil' width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.68934 20.2499H4.5C4.30109 20.2499 4.11032 20.1709 3.96967 20.0302C3.82902 19.8896 3.75 19.6988 3.75 19.4999V15.3105C3.75 15.2121 3.7694 15.1145 3.80709 15.0235C3.84478 14.9325 3.90003 14.8499 3.96967 14.7802L15.2197 3.53022C15.3603 3.38956 15.5511 3.31055 15.75 3.31055C15.9489 3.31055 16.1397 3.38956 16.2803 3.53022L20.4697 7.71956C20.6103 7.86021 20.6893 8.05097 20.6893 8.24989C20.6893 8.4488 20.6103 8.63956 20.4697 8.78022L9.21967 20.0302C9.15003 20.0999 9.06735 20.1551 8.97635 20.1928C8.88536 20.2305 8.78783 20.2499 8.68934 20.2499Z' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' stroke='%231B2D9D'/%3E%3Cpath d='M12.75 6L18 11.25' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' stroke='%231B2D9D'/%3E%3Cpath d='M8.95321 20.2013L3.79883 15.0469' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' stroke='%231B2D9D'/%3E%3C/svg%3E%0A") no-repeat center / contain;
   opacity: 0.8;
+
   &:hover {
     opacity: 1;
   }
+
   &:focus {
     outline: none;
     opacity: 1;
@@ -179,34 +189,33 @@
   }
 }
 
-.btn--minus {
-  width: 28px;
-  //color: $gray;
-
+@mixin plus-minus-btns {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  width: 36/18*1rem;
+  height: 36/18*1rem;
+  color: $color_blue;
   &::before {
-    content: "-";
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 16px;
-    height: 16px;
-    border: 1px solid currentColor;
-    border-radius: 50%;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.btn--minus {
+  @include plus-minus-btns;
+  &::before {
+    background: linear-gradient(to right, $color_blue, $color_blue) no-repeat center / 14px 2px;
   }
 }
 
 .btn--plus {
-  width: 28px;
-  //color: $gray;
+  @include plus-minus-btns;
 
   &::before {
-    content: "+";
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 16px;
-    height: 16px;
-    border: 1px solid currentColor;
-    border-radius: 50%;
+    background: linear-gradient(to bottom, $color_blue, $color_blue) no-repeat center / 2px 14px, linear-gradient(to right, $color_blue, $color_blue) no-repeat center / 14px 2px;
   }
 }

@@ -29,6 +29,26 @@ dd {
   margin-left: 0;
   margin-right: 0;
 }
+.backlink-block {
+  margin-bottom: 50/18*1rem;
+}
+
+.backlink {
+  font-weight: 500;
+  color: $color_blue;
+  text-decoration: none;
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-top: 1px solid $color_blue;
+    border-left: 1px solid $color_blue;
+    transform: rotate(-45deg);
+  }
+}
 
 .ticket-name {
   display: inline-block;

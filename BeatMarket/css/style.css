@@ -5138,6 +5138,30 @@ dd {
   margin-right: 0;
 }
 
+.backlink-block {
+  margin-bottom: 2.77778rem;
+}
+
+.backlink {
+  font-weight: 500;
+  color: #3E54D8;
+  text-decoration: none;
+}
+
+.backlink::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-top: 1px solid #3E54D8;
+  border-left: 1px solid #3E54D8;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .ticket-name {
   display: inline-block;
   vertical-align: middle;
@@ -5213,6 +5237,14 @@ dd {
 .btn--danger-inverse {
   border: 1px solid #DE4355;
   background: #ffffff;
+  color: #DE4355;
+}
+
+.btn--danger-transparent {
+  padding-left: 1em;
+  padding-right: 1em;
+  border: transparent;
+  background: transparent;
   color: #DE4355;
 }
 
@@ -5371,32 +5403,35 @@ dd {
 }
 
 .btn--minus {
-  width: 28px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+  width: 2rem;
+  height: 2rem;
+  color: #3E54D8;
 }
 
 .btn--minus::before {
-  content: "-";
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 16px;
-  height: 16px;
-  border: 1px solid currentColor;
-  border-radius: 50%;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn--minus::before {
+  background: -webkit-gradient(linear, left top, right top, from(#3E54D8), to(#3E54D8)) no-repeat center/14px 2px;
+  background: -o-linear-gradient(left, #3E54D8, #3E54D8) no-repeat center/14px 2px;
+  background: linear-gradient(to right, #3E54D8, #3E54D8) no-repeat center/14px 2px;
 }
 
 .btn--plus {
-  width: 28px;
-}
-
-.btn--plus::before {
-  content: "+";
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -5406,10 +5441,23 @@ dd {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 16px;
-  height: 16px;
-  border: 1px solid currentColor;
-  border-radius: 50%;
+  vertical-align: middle;
+  width: 2rem;
+  height: 2rem;
+  color: #3E54D8;
+}
+
+.btn--plus::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn--plus::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(#3E54D8), to(#3E54D8)) no-repeat center/2px 14px, -webkit-gradient(linear, left top, right top, from(#3E54D8), to(#3E54D8)) no-repeat center/14px 2px;
+  background: -o-linear-gradient(top, #3E54D8, #3E54D8) no-repeat center/2px 14px, -o-linear-gradient(left, #3E54D8, #3E54D8) no-repeat center/14px 2px;
+  background: linear-gradient(to bottom, #3E54D8, #3E54D8) no-repeat center/2px 14px, linear-gradient(to right, #3E54D8, #3E54D8) no-repeat center/14px 2px;
 }
 
 .checkbox-toggle__input {
@@ -6119,8 +6167,8 @@ td {
 
 .advisor-profile__btns .btn {
   width: calc(50% - 1rem);
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .advisor-profile__btns .btn--danger-inverse {
@@ -6252,6 +6300,38 @@ td {
   -webkit-column-gap: 8px;
      -moz-column-gap: 8px;
           column-gap: 8px;
+}
+
+.adv-portfolio-settings h1 {
+  margin-bottom: 2.77778rem;
+}
+
+.adv-portfolio-settings .details {
+  margin-bottom: 1.11111rem;
+}
+
+.adv-portfolio-settings__top-up {
+  margin-bottom: 2.77778rem;
+}
+
+.adv-portfolio-settings__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: calc(-1 * 1rem);
+  width: calc(100% + 1rem);
+  margin-top: 2.7rem;
+}
+
+.adv-portfolio-settings__btns > * {
+  margin-left: 1rem;
+}
+
+.adv-portfolio-settings__btns input[type="text"],
+.adv-portfolio-settings__btns input[type="email"],
+.adv-portfolio-settings__btns input[type="url"],
+.adv-portfolio-settings__btns input[type="password"] {
+  width: 453px;
 }
 
 .section-main .main {

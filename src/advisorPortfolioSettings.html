@@ -22,48 +22,36 @@
     })
 
     <div class="main-content advisor">
+      <p class="backlink-block">
+        <a class="backlink" href="">Вернуться к советнику</a>
+      </p>
 
-      <section class="buy-stocks">
+      <section class="adv-portfolio-settings">
         <h1>Настройка портфеля</h1>
-        <section>
+        <section class="adv-portfolio-settings__top-up">
           <h2>Пополнить счет</h2>
-          <form class="form portfolio__form" action="">
-            <input class="" type="text" name="" id="iiiii">
-            <label class="visually-hidden" for="iiiii">Пополнить счет</label>
-            <button class="btn btn--bright">
-              Пополнить
-            </button>
+          <form class="form" action="">
+            <div class="adv-portfolio-settings__btns">
+              <input type="text" placeholder="Введите сумму">
+              <button class="btn btn_blue">Пополнить</button>
+            </div>
+
           </form>
         </section>
 
-        <section class="portfolio__change-plan details details--bg">
+        <section class="adv-portfolio-settings__change-plan details details--bg details--open">
           <header class="details__header">
             <h2 class="details__title">Изменить текущий объём свободных средств</h2>
             <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
           </header>
 
           <form class="form portfolio__form details__text" action="">
-            <input type="text" name="" id="iiiiiiiiii">
-            <label class="visually-hidden" for="iiiiiiiiii">Введите сумму</label>
-            <button class="btn btn--bright">
-              Изменить
-            </button>
+            <div class="adv-portfolio-settings__btns">
+              <input type="text" placeholder="Введите сумму">
+              <button class="btn btn_blue">Изменить</button>
+            </div>
+
           </form>
-        </section>
-
-        <section class="details  details--bg">
-          <header class="details__header">
-            <h2 class="details__title">Настройки дивидендов</h2>
-            <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
-          </header>
-
-          <div class="details__text">
-            <input id="checkbox-111" class="portfolio__checkbox visually-hidden" type="checkbox" name="">
-            <label for="checkbox-111">
-              <span></span>
-              Автоматически зачислять дивиденты на счёт портфеля (скоро)
-            </label>
-          </div>
         </section>
 
         <section class="details  details--bg details--open">
@@ -74,17 +62,13 @@
 
           <div class="details__text">
             <div class="table-wrap">
-              <table class="portfolio__edit-portfolio-table table ">
-                <tbody><tr class="table__title-tr">
-
+              <table class="table">
+                <tbody>
+                <tr class="table__title-tr">
                   <th>Акция</th>
-
                   <th>Количество</th>
-
-                  <th>Ср. цена<br> покупки</th>
-
+                  <th>Цена</th>
                   <th>Сумма</th>
-
                 </tr>
 
                 <tr>
@@ -98,15 +82,13 @@
                     <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
                   </td>
                   <td class="table__td table__td--nowrap">
-                    <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn" aria-label="Редактировать"></button>
-                    <input id="" class="contenteditable-input js-contenteditable-input h-hide" type="text" name="" value="183,18">
+                    <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn"
+                            aria-label="Редактировать"></button>
+                    <input class="contenteditable-input js-contenteditable-input h-hide" type="text" name=""
+                           value="183,18">
                     <span class="portfolio__price contenteditable-span js-contenteditable-span">183,18</span>
-
                   </td>
-                  <td>
-                    110,71
-                  </td>
-
+                  <td>110,71 $</td>
                 </tr>
 
                 <tr>
@@ -120,15 +102,13 @@
                     <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
                   </td>
                   <td class="table__td table__td--nowrap">
-                    <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn" aria-label="Редактировать"></button>
-                    <input id="" class="contenteditable-input js-contenteditable-input h-hide" type="text" name="" value="183,18">
+                    <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn"
+                            aria-label="Редактировать"></button>
+                    <input class="contenteditable-input js-contenteditable-input h-hide" type="text" name=""
+                           value="183,18">
                     <span class="portfolio__price contenteditable-span js-contenteditable-span">183,18</span>
-
                   </td>
-                  <td>
-                    110,71
-                  </td>
-
+                  <td>110,71 $</td>
                 </tr>
 
                 <tr>
@@ -142,15 +122,13 @@
                     <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
                   </td>
                   <td class="table__td table__td--nowrap">
-                    <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn" aria-label="Редактировать"></button>
-                    <input id="" class="contenteditable-input js-contenteditable-input h-hide" type="text" name="" value="183,18">
+                    <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn"
+                            aria-label="Редактировать"></button>
+                    <input class="contenteditable-input js-contenteditable-input h-hide" type="text" name=""
+                           value="183,18">
                     <span class="portfolio__price contenteditable-span js-contenteditable-span">183,18</span>
-
                   </td>
-                  <td>
-                    110,71
-                  </td>
-
+                  <td>110,71 $</td>
                 </tr>
 
                 <tr>
@@ -164,15 +142,13 @@
                     <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
                   </td>
                   <td class="table__td table__td--nowrap">
-                    <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn" aria-label="Редактировать"></button>
-                    <input id="" class="contenteditable-input js-contenteditable-input h-hide" type="text" name="" value="183,18">
+                    <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn"
+                            aria-label="Редактировать"></button>
+                    <input class="contenteditable-input js-contenteditable-input h-hide" type="text" name=""
+                           value="183,18">
                     <span class="portfolio__price contenteditable-span js-contenteditable-span">183,18</span>
-
                   </td>
-                  <td>
-                    110,71
-                  </td>
-
+                  <td>110,71 $</td>
                 </tr>
 
                 <tr>
@@ -186,15 +162,13 @@
                     <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
                   </td>
                   <td class="table__td table__td--nowrap">
-                    <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn" aria-label="Редактировать"></button>
-                    <input id="" class="contenteditable-input js-contenteditable-input h-hide" type="text" name="" value="183,18">
+                    <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn"
+                            aria-label="Редактировать"></button>
+                    <input class="contenteditable-input js-contenteditable-input h-hide" type="text" name=""
+                           value="183,18">
                     <span class="portfolio__price contenteditable-span js-contenteditable-span">183,18</span>
-
                   </td>
-                  <td>
-                    110,71
-                  </td>
-
+                  <td>110,71 $</td>
                 </tr>
 
                 <tr>
@@ -208,42 +182,39 @@
                     <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
                   </td>
                   <td class="table__td table__td--nowrap">
-                    <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn" aria-label="Редактировать"></button>
-                    <input id="" class="contenteditable-input js-contenteditable-input h-hide" type="text" name="" value="183,18">
+                    <button class="btn btn--only-icon btn--edit contenteditable-btn js-contenteditable-btn"
+                            aria-label="Редактировать"></button>
+                    <input class="contenteditable-input js-contenteditable-input h-hide" type="text" name=""
+                           value="183,18">
                     <span class="portfolio__price contenteditable-span js-contenteditable-span">183,18</span>
-
                   </td>
-                  <td>
-                    110,71
-                  </td>
-
+                  <td>110,71 $</td>
                 </tr>
 
-                </tbody></table>
+                </tbody>
+              </table>
             </div>
-            <div class="page__btns">
-              <button class="page__btn btn btn--bright">Применить изменения</button>
-              <button class="page__btn btn btn--light">Удалить портфель</button>
+            <div class="adv-portfolio-settings__btns">
+              <button class="btn btn_blue">Применить изменения</button>
+              <button class="btn btn--danger-transparent" type="button">Удалить портфель</button>
             </div>
           </div>
         </section>
 
-        <section class="details  details--bg">
+        <section class="details details--bg details--open">
           <header class="details__header">
             <h2 class="details__title">Название портфеля</h2>
             <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
           </header>
 
-          <form class="form portfolio__form portfolio__form--edit-portfolio-title details__text" action="">
-            <input type="text" placeholder="Портфель">
-            <label for=""></label>
-            <button class="btn btn--bright" type="submit">Применить</button>
+          <form class="form details__text" action="">
+            <div class="adv-portfolio-settings__btns">
+              <input type="text" placeholder="Портфель">
+              <button class="btn btn_blue" type="submit">Применить</button>
+            </div>
+
           </form>
         </section>
-
-
-
-
 
 
       </section>
