@@ -5384,6 +5384,52 @@ dd {
   border-radius: 50%;
 }
 
+.checkbox--toggle {
+  position: fixed;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.checkbox--toggle + label span {
+  --color: #929398;
+  --size: 26px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 55px;
+  height: calc(var(--size) + 4px);
+  background: var(--color);
+  border: 2px solid var(--color);
+  border-radius: calc((var(--size) + 4px) / 2);
+}
+
+.checkbox--toggle + label span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  top: 50%;
+  left: 2px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: left .2s ease-out;
+  -o-transition: left .2s ease-out;
+  transition: left .2s ease-out;
+}
+
+.checkbox--toggle:checked + label span {
+  --color: #3E54D8;
+}
+
+.checkbox--toggle:checked + label span::before {
+  left: calc(100% - var(--size) - 2px);
+}
+
 .prompt {
   position: relative;
   padding: 2rem 1.8rem 2rem 5.5rem;

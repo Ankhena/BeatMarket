@@ -7,6 +7,9 @@
   })
 
   <style>
+    .style-guide {
+      line-height: 1.5;
+    }
     .style-guide section {
       margin-top: 3rem;
     }
@@ -61,7 +64,7 @@
   <div class="main">
 
     @@include("_menu.html", {
-      "title": "Странички и UI"
+    "title": "Странички и UI"
     })
 
     <div class="main-content" style="padding: 5rem">
@@ -157,9 +160,19 @@
 
         </section>
 
-        <section>
+        <section style="display: grid; gap: 1em">
           <h2>checkbox и radio</h2>
-          <input id="=" type="checkbox" checked>
+          <div>
+            <input id="=" type="checkbox" checked> обычный
+          </div>
+          <div>
+            toggle <i>(если нужно поменять местами, сначала текст, потом чекбокс, то либо поменять местами прямо в коде
+            либо флекс и ордер)</i> <br>
+            <input id="please-change" class="checkbox checkbox--toggle" type="checkbox" checked="">
+            <label for="please-change"><span></span>Текст подписи</label>
+
+          </div>
+
         </section>
 
 
