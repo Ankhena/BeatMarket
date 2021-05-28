@@ -39,17 +39,6 @@
     margin-top: 0;
   }
 
-  a {
-    //@include _1000 {
-    //  white-space: nowrap;
-    //}
-  }
-
-  button {
-    //@include _1000 {
-    //  white-space: nowrap;
-    //}
-  }
 }
 
 .prompt__title {
@@ -74,6 +63,12 @@
     //  @include gap(12px);
     //  text-align: left;
     //}
+  }
+}
+
+.prompt--without-icon {
+  &::before {
+    display: none;
   }
 }
 

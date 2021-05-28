@@ -1,0 +1,16 @@
+.monthly-dividends {
+
+}
+.monthly-dividends__info-text {
+  font-size: 20/18*1rem;
+  line-height: 1.6;
+}
+
+.monthly-dividends__index {
+  font-size: 50/18*1rem;
+  font-weight: 700;
+}
+
+.monthly-dividends__tables {
+  @include block-beauty;
+}

@@ -1,13 +1,15 @@
 .table {
   --td-paddind: 1em 1.33rem;
   width: 100%;
-  @include block-beauty;
+
   border-collapse: collapse;
 }
 
 .table--radius {
-  border-radius: 1rem;
-  overflow: hidden;
+  @include block-beauty;
+
+  //border-radius: 1rem;
+  //overflow: hidden;
 }
 
 .table__title-tr {

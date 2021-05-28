@@ -44,22 +44,25 @@
       font-weight: 500;
     }
 
+    b {
+      font-weight: 700;
+    }
+
   </style>
 
 </head>
 <body>
 
 @@include("_header.html", {
-"title": "Странички"
+"title": "Странички и UI"
 })
 
 <section class="section-outer section-main style-guide">
   <div class="main">
 
     @@include("_menu.html", {
-    "title": "Странички"
+      "title": "Странички и UI"
     })
-
 
     <div class="main-content" style="padding: 5rem">
       <section class="pages-list">
@@ -209,11 +212,14 @@
               <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
             </div>
             <div class="details__text">
-              Скоринг – это система оценки эффективности вашего следования рекомендациям системы. Чем выше скоринг, тем выше вероятность получения удовлетворительных результатов инвестирования.
+              Скоринг – это система оценки эффективности вашего следования рекомендациям системы. Чем выше скоринг, тем
+              выше вероятность получения удовлетворительных результатов инвестирования.
               <br>
-              Статистика и время показывают, что инвесторы с более высоким уровнем скоринга добиваются более высоких результатов.
+              Статистика и время показывают, что инвесторы с более высоким уровнем скоринга добиваются более высоких
+              результатов.
               <br>
-              В ближайшем будущем мы планируем внедрить систему, анализирующую результаты инвесторов и результаты скоринга, чтобы предоставлять эти данные для понимания.
+              В ближайшем будущем мы планируем внедрить систему, анализирующую результаты инвесторов и результаты
+              скоринга, чтобы предоставлять эти данные для понимания.
             </div>
           </div>
 
@@ -225,12 +231,52 @@
               <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
             </div>
             <div class="details__text">
-              Скоринг – это система оценки эффективности вашего следования рекомендациям системы. Чем выше скоринг, тем выше вероятность получения удовлетворительных результатов инвестирования.
+              Скоринг – это система оценки эффективности вашего следования рекомендациям системы. Чем выше скоринг, тем
+              выше вероятность получения удовлетворительных результатов инвестирования.
               <br>
-              Статистика и время показывают, что инвесторы с более высоким уровнем скоринга добиваются более высоких результатов.
+              Статистика и время показывают, что инвесторы с более высоким уровнем скоринга добиваются более высоких
+              результатов.
               <br>
-              В ближайшем будущем мы планируем внедрить систему, анализирующую результаты инвесторов и результаты скоринга, чтобы предоставлять эти данные для понимания.
+              В ближайшем будущем мы планируем внедрить систему, анализирующую результаты инвесторов и результаты
+              скоринга, чтобы предоставлять эти данные для понимания.
             </div>
+          </div>
+        </section>
+
+
+        <section>
+          <h2>Prompt (изначально это были уведомления)</h2>
+          <p>Чтобы скрыть уведомление, нужно добавить класс <code>.prompt--hide</code></p>
+          <div class="prompt">Обычное Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis dolorum
+            expedita magni necessitatibus nesciunt quia. Aliquid aspernatur atque culpa distinctio, ducimus ex illo ipsa
+            ipsam magni modi nisi optio placeat provident quaerat, quia rem voluptas voluptate? A, architecto beatae
+            dolores facere ipsum odit placeat provident quis repellat veniam voluptatum!
+          </div>
+          <div class="prompt prompt--without-icon">
+            Без иконки <code>.prompt--without-icon</code>
+          </div>
+
+          <div class="prompt prompt--danger">.prompt--danger</div>
+
+          <div class="prompt prompt--ok">.prompt--ok</div>
+          <div class="prompt">
+            <button class="btn btn--only-icon prompt__close" aria-label="Закрыть"></button>
+            <b>С кнопкой закрыть</b>
+            <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis dolorum expedita magni
+            necessitatibus nesciunt quia. Aliquid aspernatur atque culpa distinctio, ducimus ex illo ipsa ipsam magni
+            modi nisi optio placeat provident quaerat, quia rem voluptas voluptate? A, architecto beatae dolores facere
+            ipsum odit placeat provident quis repellat veniam voluptatum!
+          </div>
+
+          <p><b>"летающая"</b></p>
+          <div class="prompt">
+            <button class="btn btn--only-icon prompt__close" aria-label="Закрыть"></button>
+            <b>prompt prompt--sticky</b> - сейчас убран класс prompt--sticky, чтобы не мешал <br>
+            <b>В новом дизайне не проверялась</b>
+            Типовая подсказка летающая
+            Типовая подсказка летающаяТиповая подсказка летающаяТиповая подсказка летающаяТиповая подсказка
+            летающаяТиповая
+            подсказка летающаяТиповая подсказка летающаяТиповая подсказка летающ
           </div>
         </section>
 

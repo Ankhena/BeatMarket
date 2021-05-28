@@ -5407,6 +5407,10 @@ input[type="checkbox"]:focus {
   text-align: center;
 }
 
+.prompt--without-icon::before {
+  display: none;
+}
+
 .prompt--danger {
   border-left: 0.5rem solid #F3B63F;
   background: #F4EFE7;
@@ -5589,14 +5593,13 @@ input[type="checkbox"]:focus {
 .table {
   --td-paddind: 1em 1.33rem;
   width: 100%;
-  background: #ffffff;
-  -webkit-box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
-          box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
-  border-radius: 1rem;
   border-collapse: collapse;
 }
 
 .table--radius {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
+          box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
   border-radius: 1rem;
   overflow: hidden;
 }
@@ -5876,6 +5879,7 @@ td {
   -webkit-box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
           box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
   border-radius: 1rem;
+  overflow: hidden;
   position: relative;
   padding-left: 5rem;
   padding-right: 6.11111rem;
@@ -5915,6 +5919,24 @@ td {
   margin-bottom: 1em;
   font-size: 1.22222rem;
   font-weight: 600;
+}
+
+.monthly-dividends__info-text {
+  font-size: 1.11111rem;
+  line-height: 1.6;
+}
+
+.monthly-dividends__index {
+  font-size: 2.77778rem;
+  font-weight: 700;
+}
+
+.monthly-dividends__tables {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
+          box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .section-main .main {
