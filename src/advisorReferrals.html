@@ -46,35 +46,48 @@
               <dd>0</dd>
             </div>
           </dl>
-          <p>За каждого друга, подключившегося по ссылке и пользующегося сервисом, вы получите +1 день бесплатной подписки ежемесячно. (до 15 дней бесплатно, ежемесячно. Экономьте на подписке до 50%!)</p>
+          <p>За каждого друга, подключившегося по ссылке и пользующегося сервисом, вы получите +1 день бесплатной
+            подписки ежемесячно. (до 15 дней бесплатно, ежемесячно. Экономьте на подписке до 50%!)</p>
         </section>
 
 
-          <form class="referrals__link">
-            <h3>Ссылка на советник</h3>
-            <div class="referrals__link-wrap">
-              <input type="url">
-              <button class="referrals__copy-btn btn btn--only-icon" type="button" aria-label="Копировать"></button>
-            </div>
-            <p>
-              <input type="checkbox" name="" id="please-change" checked="">
-              <label for="please-change">Разрешить просмотр моего портфеля по этой ссылке</label>
-            </p>
-          </form>
-
-          <form class="referrals__link">
-            <h3>Реферальная ссылка</h3>
-            <div class="referrals__link-wrap">
-              <input type="url">
-              <button class="referrals__copy-btn btn btn--only-icon" type="button" aria-label="Копировать"></button>
-            </div>
-            <p>Отправляйте её напрямую, если не хотите показывать портфель</p>
-          </form>
-
-        <form  class="referrals__link referrals__link--strategy">
-          <h3>Ссылки на мои стратегии</h3>
+        <form class="referrals__link">
+          <h3>Ссылка на советник</h3>
+          <div class="referrals__link-wrap">
+            <input type="url">
+            <button class="referrals__copy-btn btn btn--only-icon" type="button" aria-label="Копировать"></button>
+          </div>
+          <p>
+            <input id="please-change" class="checkbox checkbox--toggle" type="checkbox" checked="">
+            <label for="please-change"><span></span>Хочу, чтобы моя реферальная ссылка на результаты советника была
+              доступна всем</label>
+          </p>
         </form>
 
+        <form class="referrals__link">
+          <h3>Реферальная ссылка</h3>
+          <div class="referrals__link-wrap">
+            <input type="url">
+            <button class="referrals__copy-btn btn btn--only-icon" type="button" aria-label="Копировать"></button>
+          </div>
+          <p>Отправляйте её напрямую, если не хотите показывать портфель</p>
+        </form>
+
+        <form class="referrals__link referrals__link--strategy">
+          <h3>Ссылки на мои стратегии</h3>
+          <div>
+            <h4>Тестовая стратегия 1</h4>
+            <p>
+              <input type="url">
+              <button class="btn btn--only-icon btn--copy-link">+</button>
+            </p>
+
+            <p>
+              <input id="please-change2" class="checkbox checkbox--toggle" type="checkbox" checked="">
+              <label for="please-change2"><span></span>Хочу, чтобы моя реферальная ссылка на результаты стратегии была доступна всем</label>
+            </p>
+          </div>
+        </form>
 
 
       </section>
