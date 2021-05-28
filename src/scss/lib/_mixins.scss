@@ -177,6 +177,18 @@ input[type="text"] {
             fill: $color_blue;
         }
     }
+
+    &_link {
+        color: $color_blue;
+        font-weight: 600;
+        background-color: unset;
+        padding: 0;
+
+        @media ($media_sm) {
+            padding: 0;
+            text-align: left;
+        }
+    }
 }
 
 .main-contentPadding {
@@ -546,6 +558,17 @@ input[type="text"] {
             font-weight: 500;
             font-size: 0.8rem;
             color: $color_grey;
+        }
+    }
+}
+
+.modals_preview {
+    display: inline-flex;
+    flex-direction: column;
+
+    .btn {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
         }
     }
 }
