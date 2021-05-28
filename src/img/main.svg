@@ -296,10 +296,21 @@
             <path d="M15.972 5.5L11.058 12.262L9 22.258L15.972 26.5L22.944 22.258L20.844 12.22L15.972 5.5ZM10.134 21.796L11.688 14.194L15.216 24.904L10.134 21.796ZM12.192 12.472L15.972 7.264L19.752 12.472L15.972 23.896L12.192 12.472ZM16.686 24.904L20.214 14.194L21.768 21.796L16.686 24.904Z" fill="white"/>
         </symbol>
 
-        <svg id="icon-breadcrumbClose" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon-breadcrumbClose" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="11.5714" fill="white" stroke="#D3E3FF" stroke-width="0.857143"/>
             <path d="M16.3392 7.66113L7.66064 16.3397M16.3392 16.3397L7.66064 7.66113" stroke="#373943" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        </symbol>
+
+        <symbol id="icon-modal-notify-check" width="228" height="224" viewBox="0 0 228 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M114 92.625V128.25" stroke="#F3B63F" stroke-width="14.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M101.666 35.6114L23.3125 170.98C22.0588 173.146 21.3976 175.604 21.3955 178.106C21.3934 180.609 22.0506 183.068 23.3007 185.236C24.5509 187.404 26.35 189.205 28.5171 190.457C30.6842 191.709 33.1428 192.368 35.6456 192.368H192.353C194.856 192.368 197.315 191.709 199.482 190.457C201.649 189.205 203.448 187.405 204.698 185.236C205.948 183.068 206.605 180.609 206.603 178.106C206.601 175.604 205.94 173.146 204.686 170.98L126.332 35.6114C125.081 33.4488 123.282 31.6534 121.118 30.4052C118.953 29.157 116.498 28.5 113.999 28.5C111.501 28.5 109.046 29.157 106.881 30.4052C104.717 31.6534 102.918 33.4488 101.666 35.6114V35.6114Z" stroke="#F3B63F" stroke-width="14.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M114 171C119.903 171 124.688 166.215 124.688 160.312C124.688 154.41 119.903 149.625 114 149.625C108.097 149.625 103.312 154.41 103.312 160.312C103.312 166.215 108.097 171 114 171Z" fill="#F3B63F"/>
+        </symbol>
+
+        <symbol id="icon-modal-notify-thank" width="228" height="228" viewBox="0 0 228 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M153.188 92.625L100.937 142.5L74.8125 117.562" stroke="#3E54D8" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M114 199.5C161.22 199.5 199.5 161.22 199.5 114C199.5 66.7797 161.22 28.5 114 28.5C66.7797 28.5 28.5 66.7797 28.5 114C28.5 161.22 66.7797 199.5 114 199.5Z" stroke="#3E54D8" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
 
 
 

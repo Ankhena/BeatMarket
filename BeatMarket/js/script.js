@@ -18,8 +18,16 @@ $(document).ready(function() {
  
     function initModal() {
     let overlay = document.querySelector(".overlay_modal");
+    let html = document.documentElement;
     let body = document.body;
-    let scrollBarWidth = getScrollBarWidth(); // чтобы не прыгала ширина сайта при скрытии скролла 
+    let scrollBarWidth = 0
+
+    let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0); // высота видимой страницы
+    let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight); // общ. высота страницы
+
+    if (height > vh) {
+        scrollBarWidth = getScrollBarWidth(); // чтобы не прыгала ширина сайта при скрытии скролла 
+    }
 
     //console.log(scrollBarWidth);
     
