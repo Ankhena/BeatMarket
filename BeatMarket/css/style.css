@@ -5935,6 +5935,36 @@ td {
   -webkit-box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
           box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
   border-radius: 1rem;
+  overflow: hidden;
+}
+
+.monthly-dividends__tables .table-wrap:not(:first-child) {
+  border-top: 1px solid #D3E3FF;
+}
+
+.monthly-dividends__tables th {
+  background: #ffffff;
+}
+
+.monthly-dividends__tables td {
+  background: #F5F6FD;
+}
+
+.monthly-dividends__tables .details__btn {
+  position: static;
+}
+
+.monthly-dividends__table.details--open th {
+  background: #FCFDFF;
+}
+
+.monthly-dividends__th-button {
+  width: 70px;
+  text-align: center;
+}
+
+.monthly-dividends__th-period {
+  width: 20rem;
 }
 
 .section-main .main {

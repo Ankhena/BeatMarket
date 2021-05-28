@@ -13,4 +13,42 @@
 
 .monthly-dividends__tables {
   @include block-beauty;
+  overflow: hidden;
+
+  .table-wrap {
+    &:not(:first-child) {
+      border-top: 1px solid $color_block_border;
+    }
+  }
+
+
+  th {
+    background: $color-inverse;
+  }
+  td {
+    background: $color_th_bg;
+  }
+
+  .details__btn {
+    position: static;
+  }
+}
+
+.monthly-dividends__table {
+  &.details--open {
+
+    th {
+      background: $color_block_bg;
+    }
+  }
+}
+
+
+.monthly-dividends__th-button {
+  width: 70px;
+  text-align: center;
+}
+
+.monthly-dividends__th-period {
+  width: 20rem ;
 }
