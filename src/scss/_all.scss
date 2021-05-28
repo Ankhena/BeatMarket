@@ -25,6 +25,10 @@ input[type="checkbox"] {
     outline: none;
   }
 }
+dd {
+  margin-left: 0;
+  margin-right: 0;
+}
 
 .ticket-name {
   display: inline-block;

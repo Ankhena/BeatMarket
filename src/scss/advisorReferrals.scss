@@ -1,0 +1,79 @@
+@mixin referrals-block {
+  @include block-beauty;
+  padding: 40/18*1rem 32/18*1rem;
+}
+
+.referrals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32/18*1rem;
+}
+
+.referrals__title {
+  grid-column: 1/-1;
+}
+
+.referrals__stats {
+  grid-column: 1/-1;
+  position: relative;
+  @include referrals-block;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 60px;
+    transform: translateY(-50%);
+    display: block;
+    width: 109px;
+    height: 109px;
+    border-radius: 50%;
+    background: $color_yellow;
+  }
+}
+
+.referrals__description {
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
+  justify-content: space-between;
+  padding-bottom: 32/18*1rem;
+  border-bottom: 1px solid $color_block_border;
+
+  p {
+    line-height: 1.6;
+  }
+}
+
+.referrals__descr-item {
+  display: flex;
+  flex-direction: column;
+  dt {
+    display: block;
+    width: max-content;
+  }
+
+  dd {
+    order: -1;
+    display: block;
+    margin-right: 12px;
+    font-size: 37px;
+    line-height: 1;
+    font-weight: 600;
+    color: $color_blue;
+  }
+
+}
+
+.referrals__descr-item--zero {
+  dd {
+    color: $color_grey;
+  }
+}
+
+.referrals__link {
+  @include referrals-block;
+}
+
+.referrals__link--strategy {
+  grid-column: 1/-1;
+}
