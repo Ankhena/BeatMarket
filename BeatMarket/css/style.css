@@ -5879,7 +5879,6 @@ td {
   -webkit-box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
           box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
   border-radius: 1rem;
-  overflow: hidden;
   position: relative;
   padding-left: 5rem;
   padding-right: 6.11111rem;
@@ -5936,7 +5935,6 @@ td {
   -webkit-box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
           box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
   border-radius: 1rem;
-  overflow: hidden;
 }
 
 .section-main .main {
