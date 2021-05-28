@@ -49,13 +49,17 @@
 </head>
 <body>
 
-@@include("_header.html")
+@@include("_header.html", {
+"title": "Странички"
+})
+
 <section class="section-outer section-main style-guide">
   <div class="main">
 
-    @@include("_menu.html")
+    @@include("_menu.html", {
+    "title": "Странички"
+    })
 
-    <h1 class="main-title">Советник</h1>
 
     <div class="main-content" style="padding: 5rem">
       <section class="pages-list">

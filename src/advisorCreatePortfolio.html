@@ -9,18 +9,17 @@
 </head>
 <body>
 
-@@include("_header.html")
-
+@@include("_header.html", {
+"title": "Советник"
+})
 <section class="section-outer section-main">
   <div class="main">
 
-    @@include("_menu.html")
-
-    <h1 class="main-title">Советник</h1>
+    @@include("_menu.html", {
+    "title": ""
+    })
 
     <div class="main-content advisor">
-
-
       <section class="adv-portfolio">
         <div class="portfolio__prompt-sticky prompt prompt--danger">
           <div>Подтвердите, пожалуйста, почту. Мы отправили письмо на ваш E-mail</div>

@@ -5163,6 +5163,10 @@ input[type="checkbox"]:focus {
   color: #3E54D8;
 }
 
+.section-main .main-title:empty {
+  display: none;
+}
+
 .h-hide {
   display: none !important;
 }
