@@ -1186,6 +1186,56 @@ input[type="text"].error {
   background-color: #a8b2ed;
 }
 
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.breadcrumbs .breadcrumb {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-bottom: 0.9rem;
+  background-color: #F6F7FD;
+  border: 1px solid #8C9BEA;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+}
+
+.breadcrumbs .breadcrumb::after {
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url(../../img/breadcrumbClose.svg);
+  background-size: 100%;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.breadcrumbs .breadcrumb:not(:last-child) {
+  margin-right: 0.9rem;
+}
+
+.breadcrumbs .breadcrumb strong {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #3E54D8;
+  margin-right: 0.4rem;
+}
+
+.breadcrumbs .breadcrumb span {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #929398;
+}
+
 .overlay_burger {
   z-index: 10;
 }
