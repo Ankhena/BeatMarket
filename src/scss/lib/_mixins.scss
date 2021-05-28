@@ -505,6 +505,9 @@ input[type="text"] {
 
 
 // flex gap mixin
+// column-gap для флексов поддерживается современными браузерами
+// но не поддерживается 6м айфоном Максима
+// поэтому, такой дурацкий миксин
 @mixin gap($gapSize: 1em) {
     //margin: calc(-1 * #{$gapSize}) 0 0 calc(-1 * #{$gapSize});
     margin-left: calc(-1 * #{$gapSize});

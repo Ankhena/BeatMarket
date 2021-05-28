@@ -32,6 +32,7 @@
 @import "blocks/prompt";
 @import "blocks/progress";
 @import "blocks/form";
+@import "blocks/table";
 
 @import "advisorCreatePortfolio";
 @import "advisorBuyStocks";
@@ -656,3 +657,6 @@ body.viewProfile {
     }
 
 }
+
+
+@import "helpers-end";

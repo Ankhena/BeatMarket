@@ -1,0 +1,27 @@
+.table {
+  --td-paddind: 1em 1.33rem;
+  width: 100%;
+  @include block-beauty;
+  border-collapse: collapse;
+}
+
+.table--radius {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.table__title-tr {
+  background: $color_th_bg;
+
+  th {
+    padding: var(--td-paddind);
+    font-size: 16/18*1rem;
+    font-weight: 500;
+    text-align: left;
+  }
+}
+
+.table__td, td {
+  padding: var(--td-paddind);
+  border-bottom: 1px solid $color-border_dop;
+}
