@@ -9,14 +9,16 @@
 	</head>
 	<body>
 
-		@@include("_header.html")
+		@@include("_header.html", {
+			"title": "Мой портфель"
+		})
 
 		<section class="section-outer section-main">
 			<div class="main">
 
-				@@include("_menu.html")
-
-				<h1 class="main-title">Мой портфель</h1>
+				@@include("_menu.html", {
+					"title": "Мой портфель"
+				})
 
 				<div class="main-content">
                     <div class="main-content emptyPortfolio main-contentPadding">
@@ -68,48 +70,9 @@
 												<h2 class="info-title">Выбранный портфель пока что пуст</h2>
 												<h4 class="info-subtitle">Добавьте ценные бумаги вручную</h4>
 												<p class="info-text">Наберите кодировку или название бумаги, чтобы увидеть её в списке, отметьте, чтобы добавить в портфель.</p>
-												<div class="info-search input_search" id="mySearchContainer">
-													<input type="text" placeholder="Например, TESLA" id="mySearchInput">
-													<svg><use xlink:href="img/main.svg#icon-search"></use></svg>
-													<div class="input_search-container">
-														<div>
-                                                            <div class="add">
-                                                                <svg><use xlink:href="img/main.svg#icon-PlusCircle"></use></svg>
-                                                            </div>
-															<div class="content">
-																<strong>TSLA</strong>
-																<span>Tesla motors</span>
-                                                            </div>
-														</div>
-														<div>
-                                                            <div class="add">
-                                                                <svg><use xlink:href="img/main.svg#icon-PlusCircle"></use></svg>
-                                                            </div>
-															<div class="content">
-																<strong>AAPL</strong>
-																<span>Apple</span>
-                                                            </div>
-														</div>
-														<div>
-                                                            <div class="add">
-                                                                <svg><use xlink:href="img/main.svg#icon-PlusCircle"></use></svg>
-                                                            </div>
-															<div class="content">
-																<strong>TSLA</strong>
-																<span>Tesla motors</span>
-                                                            </div>
-														</div>
-														<div>
-                                                            <div class="add">
-                                                                <svg><use xlink:href="img/main.svg#icon-PlusCircle"></use></svg>
-                                                            </div>
-															<div class="content">
-																<strong>AAPL</strong>
-																<span>Apple</span>
-                                                            </div>
-														</div>
-													</div>
-												</div>
+												
+												@@include("_inputSearch.html")
+
 											</div>
 											<div class="sprites">
 												<svg class="sprites-left"><use xlink:href="img/main.svg#icon-strategy-sprite-red"></use></svg>

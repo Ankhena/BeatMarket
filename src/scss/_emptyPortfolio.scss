@@ -82,6 +82,11 @@
             line-height: 1.6;
             font-size: 0.9rem;
         }
+
+        &-button {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
     }
 
     .sprites {
@@ -94,7 +99,7 @@
             width: 130px;
             height: 260px;
             left: -1.5rem;
-            top: 10%;
+            top: 5rem;
             transform-origin: top left;
 
             @media ($media_xl) {
@@ -103,7 +108,7 @@
 
             @media ($media_sm) {
                 transform: scale(0.2);
-                top: 10%;
+                top: 2rem;
             }
         }
 

@@ -501,6 +501,55 @@ input[type="text"] {
 	background-color: lighten($color_blue, 25%);
 }
 
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+
+    .breadcrumb {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 0.9rem;
+
+        background-color: $breadcrumb_bg;
+        border: 1px solid $breadcrumb_border;
+        border-radius: 0.5rem;
+        padding: 0.6rem 1rem;
+
+        &::after {
+            content: "";
+            width: 1.4rem;
+            height: 1.4rem;
+            background-image: url(../../img/breadcrumbClose.svg);
+            background-size: 100%;
+            margin-left: 0.5rem;
+            cursor: pointer;
+            // border: 1px solid $color_block_border;
+            // background-color: $color_white;
+            // border-radius: 50%;
+            // display: block;
+
+        }
+
+        &:not(:last-child) {
+            margin-right: 0.9rem;
+        }
+
+        strong {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: $color_blue;
+            margin-right: 0.4rem;
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 0.8rem;
+            color: $color_grey;
+        }
+    }
+}
+
 // === / Mixins ===
 
 

@@ -296,6 +296,12 @@
             <path d="M15.972 5.5L11.058 12.262L9 22.258L15.972 26.5L22.944 22.258L20.844 12.22L15.972 5.5ZM10.134 21.796L11.688 14.194L15.216 24.904L10.134 21.796ZM12.192 12.472L15.972 7.264L19.752 12.472L15.972 23.896L12.192 12.472ZM16.686 24.904L20.214 14.194L21.768 21.796L16.686 24.904Z" fill="white"/>
         </symbol>
 
+        <svg id="icon-breadcrumbClose" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="11.5714" fill="white" stroke="#D3E3FF" stroke-width="0.857143"/>
+            <path d="M16.3392 7.66113L7.66064 16.3397M16.3392 16.3397L7.66064 7.66113" stroke="#373943" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+
 
         <linearGradient id="paint0_linear" x1="12.4453" y1="6.77886" x2="17.4875" y2="11.9736" gradientUnits="userSpaceOnUse">
             <stop offset="0.21" stop-color="#F15A24"/>
