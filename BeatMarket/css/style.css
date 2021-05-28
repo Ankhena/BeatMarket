@@ -844,7 +844,8 @@ input.error[type="password"] {
   transition: 0.3s ease-in-out;
 }
 
-.btn_primary {
+.btn_primary,
+.btn--copy-link {
   background-color: #fff;
   border: 2px solid #D3E3FF;
   -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
@@ -852,7 +853,8 @@ input.error[type="password"] {
   color: #373943;
 }
 
-.btn_primary:hover {
+.btn_primary:hover,
+.btn--copy-link:hover {
   border: 2px solid #87b2ff;
 }
 
@@ -5265,6 +5267,32 @@ dd {
   opacity: 1;
 }
 
+.btn--copy-link {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+}
+
+.btn--copy-link::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.2931 8.9294L17.768 6.45452C18.2786 5.94341 18.8849 5.53791 19.5523 5.26119C20.2197 4.98448 20.9351 4.84197 21.6576 4.8418C22.3801 4.84163 23.0955 4.98381 23.763 5.26021C24.4305 5.53662 25.0371 5.94183 25.5479 6.45271C26.0588 6.96358 26.464 7.57011 26.7404 8.23763C27.0168 8.90515 27.159 9.62059 27.1589 10.3431C27.1587 11.0656 27.0162 11.7809 26.7395 12.4483C26.4627 13.1157 26.0572 13.7221 25.5461 14.2327L22.0106 17.7682C21.4999 18.279 20.8936 18.6841 20.2263 18.9605C19.559 19.2369 18.8438 19.3791 18.1215 19.3791C17.3992 19.3791 16.684 19.2369 16.0167 18.9605C15.3495 18.6841 14.7431 18.279 14.2324 17.7682' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.7076 23.0708L14.2327 25.5457C13.7221 26.0568 13.1157 26.4623 12.4483 26.739C11.7809 27.0158 11.0656 27.1583 10.3431 27.1584C9.62059 27.1586 8.90515 27.0164 8.23763 26.74C7.57011 26.4636 6.96358 26.0584 6.45271 25.5475C5.94183 25.0367 5.53662 24.4301 5.26021 23.7626C4.98381 23.0951 4.84163 22.3796 4.8418 21.6572C4.84197 20.9347 4.98448 20.2193 5.26119 19.5519C5.53791 18.8845 5.94341 18.2782 6.45452 17.7675L9.99005 14.232C10.5008 13.7213 11.1071 13.3162 11.7744 13.0398C12.4417 12.7634 13.1569 12.6211 13.8791 12.6211C14.6014 12.6211 15.3166 12.7634 15.9839 13.0398C16.6512 13.3162 17.2575 13.7213 17.7682 14.232' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center/32px;
+  -webkit-filter: invert(22%) sepia(15%) saturate(425%) hue-rotate(192deg) brightness(94%) contrast(95%);
+          filter: invert(22%) sepia(15%) saturate(425%) hue-rotate(192deg) brightness(94%) contrast(95%);
+}
+
+.btn--copy-link:hover {
+  background: #3E54D8;
+  border-color: #3E54D8;
+}
+
+.btn--copy-link:hover::before {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
 .btn--edit2 {
   width: 28px;
   height: 28px;
@@ -5384,14 +5412,14 @@ dd {
   border-radius: 50%;
 }
 
-.checkbox--toggle {
+.checkbox-toggle__input {
   position: fixed;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
 }
 
-.checkbox--toggle + label span {
+.checkbox-toggle__input + span {
   --color: #929398;
   --size: 26px;
   position: relative;
@@ -5404,7 +5432,7 @@ dd {
   border-radius: calc((var(--size) + 4px) / 2);
 }
 
-.checkbox--toggle + label span::before {
+.checkbox-toggle__input + span::before {
   content: "";
   position: absolute;
   display: block;
@@ -5422,11 +5450,11 @@ dd {
   transition: left .2s ease-out;
 }
 
-.checkbox--toggle:checked + label span {
+.checkbox-toggle__input:checked + span {
   --color: #3E54D8;
 }
 
-.checkbox--toggle:checked + label span::before {
+.checkbox-toggle__input:checked + span::before {
   left: calc(100% - var(--size) - 2px);
 }
 
@@ -6169,6 +6197,8 @@ td {
 }
 
 .referrals__link {
+  display: grid;
+  row-gap: 1.77778rem;
   background: #ffffff;
   -webkit-box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
           box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
@@ -6176,8 +6206,32 @@ td {
   padding: 2.22222rem 1.77778rem;
 }
 
+.referrals__link--ref {
+  background: #F5F6FD;
+}
+
 .referrals__link--strategy {
   grid-column: 1/-1;
+}
+
+.referrals__link--strategy h4 {
+  margin-bottom: 0.9rem;
+}
+
+.referrals__link--strategy .referrals__btns {
+  margin-bottom: 0.9rem;
+}
+
+.referrals__text {
+  font-size: 0.83333ref;
+}
+
+.referrals__btns {
+  display: grid;
+  grid-template-columns: auto 56px;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
 }
 
 .section-main .main {

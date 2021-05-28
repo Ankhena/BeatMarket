@@ -10,6 +10,7 @@
     .style-guide {
       line-height: 1.5;
     }
+
     .style-guide section {
       margin-top: 3rem;
     }
@@ -152,6 +153,10 @@
               <br>
             </div>
             <div>
+              <button class="btn btn--copy-link" aria-label="Копировать ссылку"></button>
+              <div>btn btn--copy-link</div>
+            </div>
+            <div>
               <button class="btn btn--transparent btn--refresh">Сгенерировать заново</button>
               <div>btn btn--transparent btn--refresh</div>
             </div>
@@ -168,8 +173,10 @@
           <div>
             toggle <i>(если нужно поменять местами, сначала текст, потом чекбокс, то либо поменять местами прямо в коде
             либо флекс и ордер)</i> <br>
-            <input id="please-change" class="checkbox checkbox--toggle" type="checkbox" checked="">
-            <label for="please-change"><span></span>Текст подписи</label>
+            <label class="checkbox-toggle">
+              <input class="checkbox-toggle__input" type="checkbox" checked="">
+              <span class="checkbox-toggle__toggle"></span> Текст подписи
+            </label>
 
           </div>
 

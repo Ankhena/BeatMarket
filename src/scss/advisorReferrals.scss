@@ -7,6 +7,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32/18*1rem;
+
+  //h3 {
+  //  margin-bottom: 32/18*1rem;
+  //}
 }
 
 .referrals__title {
@@ -71,9 +75,31 @@
 }
 
 .referrals__link {
+  display: grid;
+  row-gap: 32/18*1rem;
   @include referrals-block;
+}
+
+.referrals__link--ref {
+  background: $color_lighten_grey;
 }
 
 .referrals__link--strategy {
   grid-column: 1/-1;
+  h4 {
+    margin-bottom: 0.9rem;
+  }
+  .referrals__btns {
+    margin-bottom: 0.9rem;
+  }
+}
+
+.referrals__text {
+  font-size: 15/18*1ref;
+}
+
+.referrals__btns {
+  display: grid;
+  grid-template-columns: auto 56px;
+  column-gap: 8px;
 }
