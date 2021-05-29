@@ -7,30 +7,43 @@
             &-header h5, &-content-item-header .action, &-content-item-header .changeble, 
             &-content-item-header-nums span, &-content-item-content-table span, &-content-item-main span {
     
-                width: 9.5rem;
-                margin-right: 0.5rem;
+                width: 8rem;
+                margin-right: 0.2rem;
     
                 @media ($media_xl) {
-                    width: 8rem;
-                    margin-right: 0.55rem;
+                    width: 6.5rem;
+                    margin-right: 0.2rem;
                 }
     
                 @media ($media_sm) {
                     width: 30%;
-                    margin-right: 0.55rem;
+                    margin-right: 0.4rem;
                 }
             }
 
-            &-header h5:first-child, &-content-item-header .action, .table-content-item-content-table .table-header h5, 
-            .table-content-item-content-table .table-content span {
-                width: 16rem;
+            &-header h5:first-child, &-content-item-header .action {
+                width: 12rem;
 
                 @media ($media_xl) {
-                    width: 15rem;
+                    width: 11rem;
                 }
             }
 
+            .table-content-item-content-table .table-header h5, 
             .table-content-item-content-table .table-content span {
+                width: 9.5rem;
+
+                @media ($media_xl) {
+                    width: 8.5rem;
+                }
+            }
+
+            .table-content-item span.comment {
+                white-space: initial;
+            }
+
+            .table-content-item-content-table .table-content span {
+
                 @media ($media_sm) {
                     width: 35%;
 
@@ -99,6 +112,15 @@
             @media ($media_sm) {
                 width: 30%;
                 margin-right: 0.55rem;
+            }
+        }
+
+        &-header h5:first-child, &-content-item-header .action, .table-content-item-content-table .table-header h5, 
+        .table-content-item-content-table .table-content span {
+            width: 10rem;
+
+            @media ($media_xl) {
+                width: 9rem;
             }
         }
 
@@ -265,6 +287,14 @@
                         }
                     }
 
+                    &.cash-percent {
+                        @media ($media_sm) {
+                            &::before {
+                                content: "Общ. доход %";
+                            }
+                        }
+                    }
+
                     &.type {
                         @media ($media_sm) {
                             &::before {
@@ -274,7 +304,28 @@
                     }
 
                     &.comment {
+                        transition: 0.3s ease-in-out;
+                        max-height: 3.5rem;
+                        overflow-y: auto;
+
+                        &::-webkit-scrollbar-track {
+                            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                            background-color: #F5F5F5;
+                        }
+                        
+                        &::-webkit-scrollbar {
+                            width: 6px;
+                            background-color: #F5F5F5;
+                        }
+                        
+                        &::-webkit-scrollbar-thumb {
+                            background-color: lighten($color_blue, 25%);
+                        }
+
                         @media ($media_sm) {
+                            width: 100%;
+                            max-height: initial;
+
                             &::before {
                                 content: "Коммент.";
                             }

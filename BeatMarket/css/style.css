@@ -3893,15 +3893,22 @@ input[type="text"].error {
 .myStrategy-myPapers-container.crypt .table-content-item-header-nums span,
 .myStrategy-myPapers-container.crypt .table-content-item-content-table span,
 .myStrategy-myPapers-container.crypt .table-content-item-main span {
-  width: 9.5rem;
-  margin-right: 0.5rem;
+  width: 8rem;
+  margin-right: 0.2rem;
 }
 
 .myStrategy-myPapers-container.crypt .table-header h5:first-child,
-.myStrategy-myPapers-container.crypt .table-content-item-header .action,
+.myStrategy-myPapers-container.crypt .table-content-item-header .action {
+  width: 12rem;
+}
+
 .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-header h5,
 .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-content span {
-  width: 16rem;
+  width: 9.5rem;
+}
+
+.myStrategy-myPapers-container.crypt .table .table-content-item span.comment {
+  white-space: initial;
 }
 
 .myStrategy-myPapers-container.crypt .table-content-item-header-main .action-text {
@@ -3935,6 +3942,13 @@ input[type="text"].error {
 .myStrategy-myPapers-container .table-content-item-main span {
   width: 6.5rem;
   margin-right: 0.75rem;
+}
+
+.myStrategy-myPapers-container .table-header h5:first-child,
+.myStrategy-myPapers-container .table-content-item-header .action,
+.myStrategy-myPapers-container .table .table-content-item-content-table .table-header h5,
+.myStrategy-myPapers-container .table .table-content-item-content-table .table-content span {
+  width: 10rem;
 }
 
 .myStrategy-myPapers-container .table-content-item {
@@ -3994,6 +4008,28 @@ input[type="text"].error {
 
 .myStrategy-myPapers-container .table-content-item span.owned {
   font-weight: 600;
+}
+
+.myStrategy-myPapers-container .table-content-item span.comment {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  max-height: 3.5rem;
+  overflow-y: auto;
+}
+
+.myStrategy-myPapers-container .table-content-item span.comment::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.myStrategy-myPapers-container .table-content-item span.comment::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.myStrategy-myPapers-container .table-content-item span.comment::-webkit-scrollbar-thumb {
+  background-color: #a8b2ed;
 }
 
 .myStrategy-myPapers-container .table-content-item-header {
@@ -6012,15 +6048,18 @@ body.viewProfile .header-controls-links-link.auth span {
   .myStrategy-myPapers-container.crypt .table-content-item-header-nums span,
   .myStrategy-myPapers-container.crypt .table-content-item-content-table span,
   .myStrategy-myPapers-container.crypt .table-content-item-main span {
-    width: 8rem;
-    margin-right: 0.55rem;
+    width: 6.5rem;
+    margin-right: 0.2rem;
   }
 
   .myStrategy-myPapers-container.crypt .table-header h5:first-child,
-  .myStrategy-myPapers-container.crypt .table-content-item-header .action,
+  .myStrategy-myPapers-container.crypt .table-content-item-header .action {
+    width: 11rem;
+  }
+
   .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-header h5,
   .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-content span {
-    width: 15rem;
+    width: 8.5rem;
   }
 
   .myStrategy-myPapers-container .table-header h5,
@@ -6031,6 +6070,13 @@ body.viewProfile .header-controls-links-link.auth span {
   .myStrategy-myPapers-container .table-content-item-main span {
     width: 5.5rem;
     margin-right: 0.55rem;
+  }
+
+  .myStrategy-myPapers-container .table-header h5:first-child,
+  .myStrategy-myPapers-container .table-content-item-header .action,
+  .myStrategy-myPapers-container .table .table-content-item-content-table .table-header h5,
+  .myStrategy-myPapers-container .table .table-content-item-content-table .table-content span {
+    width: 9rem;
   }
 
   .myStrategy-myPapers-container .table-content-item span.comment {
@@ -6835,7 +6881,7 @@ body.viewProfile .header-controls-links-link.auth span {
   .myStrategy-myPapers-container.crypt .table-content-item-content-table span,
   .myStrategy-myPapers-container.crypt .table-content-item-main span {
     width: 30%;
-    margin-right: 0.55rem;
+    margin-right: 0.4rem;
   }
 
   .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-content span {
@@ -6937,8 +6983,17 @@ body.viewProfile .header-controls-links-link.auth span {
     content: "Общ. доход";
   }
 
+  .myStrategy-myPapers-container .table-content-item span.cash-percent::before {
+    content: "Общ. доход %";
+  }
+
   .myStrategy-myPapers-container .table-content-item span.type::before {
     content: "Тип. бумаги";
+  }
+
+  .myStrategy-myPapers-container .table-content-item span.comment {
+    width: 100%;
+    max-height: initial;
   }
 
   .myStrategy-myPapers-container .table-content-item span.comment::before {
