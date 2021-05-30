@@ -114,10 +114,10 @@
 
             &-big {
                 transform-origin: center;
-                transform: scale(3) translateY(3%);
+                transform: scale(3.5) translateY(3%);
 
                 @media ($media_xl) {
-                    transform: scale(2.5);
+                    transform: scale(3);
                 }
 
                 @media ($media_sm) {
@@ -307,9 +307,9 @@
                 align-items: center;
                 justify-content: center;
 
-                flex-basis: 23rem;
-                min-width: 23rem;
-                height: 23rem;
+                flex-basis: 27rem;
+                min-width: 27rem;
+                height: 27rem;
 
                 @media ($media_sm) {
                     flex-basis: 100%;

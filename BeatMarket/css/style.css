@@ -4673,9 +4673,9 @@ input[type="text"].error {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
-  -webkit-transform: scale(3) translateY(3%);
-      -ms-transform: scale(3) translateY(3%);
-          transform: scale(3) translateY(3%);
+  -webkit-transform: scale(3.5) translateY(3%);
+      -ms-transform: scale(3.5) translateY(3%);
+          transform: scale(3.5) translateY(3%);
 }
 
 .performance .card .graph .highcharts-root {
@@ -4861,10 +4861,10 @@ input[type="text"].error {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-preferred-size: 23rem;
-      flex-basis: 23rem;
-  min-width: 23rem;
-  height: 23rem;
+  -ms-flex-preferred-size: 27rem;
+      flex-basis: 27rem;
+  min-width: 27rem;
+  height: 27rem;
 }
 
 .performance-structure-content .content {
@@ -6128,9 +6128,9 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .performance .card .graph-big {
-    -webkit-transform: scale(2.5);
-        -ms-transform: scale(2.5);
-            transform: scale(2.5);
+    -webkit-transform: scale(3);
+        -ms-transform: scale(3);
+            transform: scale(3);
   }
 
   .section-main .main-menu {
