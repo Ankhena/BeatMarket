@@ -3772,6 +3772,16 @@ input[type="text"].error {
           transform-origin: center;
 }
 
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-root {
+  -webkit-filter: drop-shadow(0px 2px 2px #acadb1);
+          filter: drop-shadow(0px 2px 2px #acadb1);
+}
+
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-point-hover {
+  -webkit-filter: drop-shadow(0px 1px 1px #929398);
+          filter: drop-shadow(0px 1px 1px #929398);
+}
+
 .dividends .strategyCards-card-content-graph #dividendsGraph g.highcharts-label {
   opacity: 0;
 }
@@ -4679,6 +4689,11 @@ input[type="text"].error {
   margin-left: 0.2rem !important;
 }
 
+.performance .card .graph .highcharts-root {
+  -webkit-filter: drop-shadow(0px 2px 2px #acadb1);
+          filter: drop-shadow(0px 2px 2px #acadb1);
+}
+
 .performance .card .graph g.highcharts-label {
   opacity: 0;
 }
@@ -4691,6 +4706,11 @@ input[type="text"].error {
 
 .performance .card .graph .highcharts-halo {
   display: none;
+}
+
+.performance .card .graph .highcharts-point-hover {
+  -webkit-filter: drop-shadow(0px 1px 1px #929398);
+          filter: drop-shadow(0px 1px 1px #929398);
 }
 
 .performance .card .graph .highcharts-series-group {
