@@ -20,6 +20,9 @@ if (myGraph !== null) {
             useHTML: true
         },
         series: [{
+            center: ["150px", "150px"],
+            size: 40,
+            sizeBy: 'radius',
             innerSize: '60%',
             zMin: 1,
             name: 'countries',

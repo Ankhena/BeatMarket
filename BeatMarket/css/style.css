@@ -4612,14 +4612,16 @@ input[type="text"].error {
 }
 
 .performance .card-content-graph {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  -ms-flex-preferred-size: 125px;
+      flex-basis: 125px;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .performance .card-content-info {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4664,29 +4666,16 @@ input[type="text"].error {
 
 .performance .card .graph {
   height: 125px;
-  -webkit-transform: scale(1.6);
-      -ms-transform: scale(1.6);
-          transform: scale(1.6);
-  -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
-  margin-top: 7%;
+  width: 125px;
 }
 
 .performance .card .graph-big {
-  height: 23rem;
-  -webkit-transform: scale(1.35);
-      -ms-transform: scale(1.35);
-          transform: scale(1.35);
-  margin-top: 0;
-}
-
-.performance .card .graph-big .highcharts-tooltip span {
-  -webkit-transform: translate(-50%, -50%) scale(2.1) !important;
-      -ms-transform: translate(-50%, -50%) scale(2.1) !important;
-          transform: translate(-50%, -50%) scale(2.1) !important;
-  margin-top: -0.2rem !important;
-  margin-left: 0.2rem !important;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(3) translateY(3%);
+      -ms-transform: scale(3) translateY(3%);
+          transform: scale(3) translateY(3%);
 }
 
 .performance .card .graph .highcharts-root {
@@ -4714,12 +4703,12 @@ input[type="text"].error {
 }
 
 .performance .card .graph .highcharts-series-group {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
+  -webkit-transform: scale(1.4);
+      -ms-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .performance .card .graph .highcharts-tooltip {
@@ -4727,21 +4716,23 @@ input[type="text"].error {
   left: 0 !important;
   width: 100%;
   height: 100%;
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .performance .card .graph .highcharts-tooltip span {
   font-family: "Montserrat", sans-serif !important;
   top: 50% !important;
   left: 50% !important;
-  -webkit-transform: translate(-50%, -50%) scale(0.7);
-      -ms-transform: translate(-50%, -50%) scale(0.7);
-          transform: translate(-50%, -50%) scale(0.7);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin-top: -0.2rem !important;
 }
 
 .performance .card .graph .highcharts-tooltip span h5 {
   font-weight: 500;
-  margin-bottom: 0.2rem;
   white-space: normal;
 }
 
@@ -4861,8 +4852,19 @@ input[type="text"].error {
 }
 
 .performance-structure-content .card {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 23rem;
+      flex-basis: 23rem;
+  min-width: 23rem;
+  height: 23rem;
 }
 
 .performance-structure-content .content {
@@ -6125,30 +6127,10 @@ body.viewProfile .header-controls-links-link.auth span {
     padding: 0.3rem;
   }
 
-  .performance .card .graph {
-    -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-            transform: scale(1.3);
-  }
-
   .performance .card .graph-big {
-    height: 18rem;
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-    margin-top: 0;
-  }
-
-  .performance .card .graph-big .highcharts-series-group {
-    -webkit-transform: scale(1.9) translateY(0.8rem);
-        -ms-transform: scale(1.9) translateY(0.8rem);
-            transform: scale(1.9) translateY(0.8rem);
-  }
-
-  .performance .card .graph-big .highcharts-tooltip span {
-    -webkit-transform: translate(-50%, -50%) scale(1.7) !important;
-        -ms-transform: translate(-50%, -50%) scale(1.7) !important;
-            transform: translate(-50%, -50%) scale(1.7) !important;
+    -webkit-transform: scale(2.5);
+        -ms-transform: scale(2.5);
+            transform: scale(2.5);
   }
 
   .section-main .main-menu {
@@ -7273,10 +7255,10 @@ body.viewProfile .header-controls-links-link.auth span {
     margin: 0.5rem 0 0 0;
   }
 
-  .performance .card .graph-big .highcharts-series-group {
-    -webkit-transform: scale(1.8) translateY(0.8rem);
-        -ms-transform: scale(1.8) translateY(0.8rem);
-            transform: scale(1.8) translateY(0.8rem);
+  .performance .card .graph-big {
+    -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+            transform: scale(2);
   }
 
   .performance-info-cards {
@@ -7309,6 +7291,9 @@ body.viewProfile .header-controls-links-link.auth span {
   .performance-structure-content .card {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: calc(90vw - (1.33rem * 2));
   }
 
   .performance-structure-content .content {

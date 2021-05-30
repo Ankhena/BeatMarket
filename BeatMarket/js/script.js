@@ -338,6 +338,9 @@ if (myGraph !== null) {
             useHTML: true
         },
         series: [{
+            center: ["150px", "150px"],
+            size: 40,
+            sizeBy: 'radius',
             innerSize: '60%',
             zMin: 1,
             name: 'countries',
@@ -690,7 +693,7 @@ const separation_graph_4_data = [{
     y: 3.03,
     z: 100,
     color: "#5BDE60"
-}];
+},];
 
 const separation_graph_5_data = [{
     name: 'Financial',
