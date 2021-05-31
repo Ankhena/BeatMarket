@@ -130,7 +130,7 @@
                             margin-bottom: 2rem;
                         }
 
-                        &:hover, &:focus {
+                        &.active, &:hover, &:focus {
                             svg {
                                 stroke: $color_blue;
                                 fill: $color_blue;
