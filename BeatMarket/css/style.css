@@ -3772,6 +3772,16 @@ input[type="text"].error {
           transform-origin: center;
 }
 
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-root {
+  -webkit-filter: drop-shadow(0px 2px 2px #acadb1);
+          filter: drop-shadow(0px 2px 2px #acadb1);
+}
+
+.dividends .strategyCards-card-content-graph #dividendsGraph .highcharts-point-hover {
+  -webkit-filter: drop-shadow(0px 1px 1px #929398);
+          filter: drop-shadow(0px 1px 1px #929398);
+}
+
 .dividends .strategyCards-card-content-graph #dividendsGraph g.highcharts-label {
   opacity: 0;
 }
@@ -3893,15 +3903,22 @@ input[type="text"].error {
 .myStrategy-myPapers-container.crypt .table-content-item-header-nums span,
 .myStrategy-myPapers-container.crypt .table-content-item-content-table span,
 .myStrategy-myPapers-container.crypt .table-content-item-main span {
-  width: 9.5rem;
-  margin-right: 0.5rem;
+  width: 8rem;
+  margin-right: 0.2rem;
 }
 
 .myStrategy-myPapers-container.crypt .table-header h5:first-child,
-.myStrategy-myPapers-container.crypt .table-content-item-header .action,
+.myStrategy-myPapers-container.crypt .table-content-item-header .action {
+  width: 12rem;
+}
+
 .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-header h5,
 .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-content span {
-  width: 16rem;
+  width: 9.5rem;
+}
+
+.myStrategy-myPapers-container.crypt .table .table-content-item span.comment {
+  white-space: initial;
 }
 
 .myStrategy-myPapers-container.crypt .table-content-item-header-main .action-text {
@@ -3935,6 +3952,13 @@ input[type="text"].error {
 .myStrategy-myPapers-container .table-content-item-main span {
   width: 6.5rem;
   margin-right: 0.75rem;
+}
+
+.myStrategy-myPapers-container .table-header h5:first-child,
+.myStrategy-myPapers-container .table-content-item-header .action,
+.myStrategy-myPapers-container .table .table-content-item-content-table .table-header h5,
+.myStrategy-myPapers-container .table .table-content-item-content-table .table-content span {
+  width: 10rem;
 }
 
 .myStrategy-myPapers-container .table-content-item {
@@ -3994,6 +4018,28 @@ input[type="text"].error {
 
 .myStrategy-myPapers-container .table-content-item span.owned {
   font-weight: 600;
+}
+
+.myStrategy-myPapers-container .table-content-item span.comment {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  max-height: 3.5rem;
+  overflow-y: auto;
+}
+
+.myStrategy-myPapers-container .table-content-item span.comment::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.myStrategy-myPapers-container .table-content-item span.comment::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.myStrategy-myPapers-container .table-content-item span.comment::-webkit-scrollbar-thumb {
+  background-color: #a8b2ed;
 }
 
 .myStrategy-myPapers-container .table-content-item-header {
@@ -4566,14 +4612,16 @@ input[type="text"].error {
 }
 
 .performance .card-content-graph {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  -ms-flex-preferred-size: 125px;
+      flex-basis: 125px;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .performance .card-content-info {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4618,29 +4666,21 @@ input[type="text"].error {
 
 .performance .card .graph {
   height: 125px;
-  -webkit-transform: scale(1.6);
-      -ms-transform: scale(1.6);
-          transform: scale(1.6);
-  -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
-  margin-top: 7%;
+  width: 125px;
 }
 
 .performance .card .graph-big {
-  height: 23rem;
-  -webkit-transform: scale(1.35);
-      -ms-transform: scale(1.35);
-          transform: scale(1.35);
-  margin-top: 0;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(3.5) translateY(3%);
+      -ms-transform: scale(3.5) translateY(3%);
+          transform: scale(3.5) translateY(3%);
 }
 
-.performance .card .graph-big .highcharts-tooltip span {
-  -webkit-transform: translate(-50%, -50%) scale(2.1) !important;
-      -ms-transform: translate(-50%, -50%) scale(2.1) !important;
-          transform: translate(-50%, -50%) scale(2.1) !important;
-  margin-top: -0.2rem !important;
-  margin-left: 0.2rem !important;
+.performance .card .graph .highcharts-root {
+  -webkit-filter: drop-shadow(0px 2px 2px #acadb1);
+          filter: drop-shadow(0px 2px 2px #acadb1);
 }
 
 .performance .card .graph g.highcharts-label {
@@ -4657,13 +4697,18 @@ input[type="text"].error {
   display: none;
 }
 
+.performance .card .graph .highcharts-point-hover {
+  -webkit-filter: drop-shadow(0px 1px 1px #929398);
+          filter: drop-shadow(0px 1px 1px #929398);
+}
+
 .performance .card .graph .highcharts-series-group {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
+  -webkit-transform: scale(1.4);
+      -ms-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .performance .card .graph .highcharts-tooltip {
@@ -4671,21 +4716,23 @@ input[type="text"].error {
   left: 0 !important;
   width: 100%;
   height: 100%;
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .performance .card .graph .highcharts-tooltip span {
   font-family: "Montserrat", sans-serif !important;
   top: 50% !important;
   left: 50% !important;
-  -webkit-transform: translate(-50%, -50%) scale(0.7);
-      -ms-transform: translate(-50%, -50%) scale(0.7);
-          transform: translate(-50%, -50%) scale(0.7);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin-top: -0.2rem !important;
 }
 
 .performance .card .graph .highcharts-tooltip span h5 {
   font-weight: 500;
-  margin-bottom: 0.2rem;
   white-space: normal;
 }
 
@@ -4805,8 +4852,19 @@ input[type="text"].error {
 }
 
 .performance-structure-content .card {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 27rem;
+      flex-basis: 27rem;
+  min-width: 27rem;
+  height: 27rem;
 }
 
 .performance-structure-content .content {
@@ -6012,15 +6070,18 @@ body.viewProfile .header-controls-links-link.auth span {
   .myStrategy-myPapers-container.crypt .table-content-item-header-nums span,
   .myStrategy-myPapers-container.crypt .table-content-item-content-table span,
   .myStrategy-myPapers-container.crypt .table-content-item-main span {
-    width: 8rem;
-    margin-right: 0.55rem;
+    width: 6.5rem;
+    margin-right: 0.2rem;
   }
 
   .myStrategy-myPapers-container.crypt .table-header h5:first-child,
-  .myStrategy-myPapers-container.crypt .table-content-item-header .action,
+  .myStrategy-myPapers-container.crypt .table-content-item-header .action {
+    width: 11rem;
+  }
+
   .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-header h5,
   .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-content span {
-    width: 15rem;
+    width: 8.5rem;
   }
 
   .myStrategy-myPapers-container .table-header h5,
@@ -6031,6 +6092,13 @@ body.viewProfile .header-controls-links-link.auth span {
   .myStrategy-myPapers-container .table-content-item-main span {
     width: 5.5rem;
     margin-right: 0.55rem;
+  }
+
+  .myStrategy-myPapers-container .table-header h5:first-child,
+  .myStrategy-myPapers-container .table-content-item-header .action,
+  .myStrategy-myPapers-container .table .table-content-item-content-table .table-header h5,
+  .myStrategy-myPapers-container .table .table-content-item-content-table .table-content span {
+    width: 9rem;
   }
 
   .myStrategy-myPapers-container .table-content-item span.comment {
@@ -6059,30 +6127,10 @@ body.viewProfile .header-controls-links-link.auth span {
     padding: 0.3rem;
   }
 
-  .performance .card .graph {
-    -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-            transform: scale(1.3);
-  }
-
   .performance .card .graph-big {
-    height: 18rem;
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-    margin-top: 0;
-  }
-
-  .performance .card .graph-big .highcharts-series-group {
-    -webkit-transform: scale(1.9) translateY(0.8rem);
-        -ms-transform: scale(1.9) translateY(0.8rem);
-            transform: scale(1.9) translateY(0.8rem);
-  }
-
-  .performance .card .graph-big .highcharts-tooltip span {
-    -webkit-transform: translate(-50%, -50%) scale(1.7) !important;
-        -ms-transform: translate(-50%, -50%) scale(1.7) !important;
-            transform: translate(-50%, -50%) scale(1.7) !important;
+    -webkit-transform: scale(3);
+        -ms-transform: scale(3);
+            transform: scale(3);
   }
 
   .section-main .main-menu {
@@ -6835,7 +6883,7 @@ body.viewProfile .header-controls-links-link.auth span {
   .myStrategy-myPapers-container.crypt .table-content-item-content-table span,
   .myStrategy-myPapers-container.crypt .table-content-item-main span {
     width: 30%;
-    margin-right: 0.55rem;
+    margin-right: 0.4rem;
   }
 
   .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-content span {
@@ -6937,8 +6985,17 @@ body.viewProfile .header-controls-links-link.auth span {
     content: "Общ. доход";
   }
 
+  .myStrategy-myPapers-container .table-content-item span.cash-percent::before {
+    content: "Общ. доход %";
+  }
+
   .myStrategy-myPapers-container .table-content-item span.type::before {
     content: "Тип. бумаги";
+  }
+
+  .myStrategy-myPapers-container .table-content-item span.comment {
+    width: 100%;
+    max-height: initial;
   }
 
   .myStrategy-myPapers-container .table-content-item span.comment::before {
@@ -7198,10 +7255,10 @@ body.viewProfile .header-controls-links-link.auth span {
     margin: 0.5rem 0 0 0;
   }
 
-  .performance .card .graph-big .highcharts-series-group {
-    -webkit-transform: scale(1.8) translateY(0.8rem);
-        -ms-transform: scale(1.8) translateY(0.8rem);
-            transform: scale(1.8) translateY(0.8rem);
+  .performance .card .graph-big {
+    -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+            transform: scale(2);
   }
 
   .performance-info-cards {
@@ -7234,6 +7291,9 @@ body.viewProfile .header-controls-links-link.auth span {
   .performance-structure-content .card {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: calc(90vw - (1.33rem * 2));
   }
 
   .performance-structure-content .content {

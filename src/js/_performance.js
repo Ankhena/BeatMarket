@@ -268,6 +268,8 @@ function addPerformanceGraph(node, id, data, isInput, size) {
                 innerSize: size,
                 zMin: 1,
                 name: 'countries',
+                borderWidth: 0,
+                borderColor: null,
                 data: data
             }]
         });
