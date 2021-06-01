@@ -6,12 +6,11 @@
   z-index: 0;
 
   //@media ($media_lg)  {
-  @media (max-width: 1460px)  {
-    //margin-left: 74px;
-    //margin-right: 100px;
+  @media (max-width: 1460px) {
     margin-left: 2rem;
     margin-right: 0;
   }
+
   @media ($media_md) {
     margin-left: 0;
   }
@@ -96,5 +95,4 @@
   margin-bottom: 1em;
   font-size: 22/18*1rem;
   font-weight: 600;
-
 }
