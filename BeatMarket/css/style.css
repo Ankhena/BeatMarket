@@ -4191,7 +4191,7 @@ input[type="text"].error {
 
 .myStrategy-myPapers-container .table-content-item span.comment {
   color: #929398;
-  white-space: nowrap;
+  word-wrap: break-word;
   line-height: 1.4;
 }
 
@@ -4708,10 +4708,14 @@ input[type="text"].error {
 
 .banchGraph-content-item-graph-half-item.success {
   background-color: #199F27;
+  -webkit-filter: drop-shadow(0px 1px 1px #199F27);
+          filter: drop-shadow(0px 1px 1px #199F27);
 }
 
 .banchGraph-content-item-graph-half-item.primary {
   background-color: #687ae1;
+  -webkit-filter: drop-shadow(0px 1px 1px #687ae1);
+          filter: drop-shadow(0px 1px 1px #687ae1);
 }
 
 .banchGraph-content-item-date {

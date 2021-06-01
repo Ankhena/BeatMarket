@@ -208,7 +208,7 @@
 
                     &.comment {
                         color: $color_grey;
-                        white-space: nowrap;
+                        word-wrap: break-word;
                         line-height: 1.4;
 
                         @media ($media_xl) {
@@ -975,10 +975,12 @@ $banch_items_height: 60px;
 
                         &.success {
                             background-color: $color_green;
+                            filter: drop-shadow(0px 1px 1px $color_green);
                         }
 
                         &.primary {
                             background-color: lighten($color_blue, 10%);
+                            filter: drop-shadow(0px 1px 1px lighten($color_blue, 10%));
                         }
                     }
                 }
