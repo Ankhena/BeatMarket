@@ -246,5 +246,46 @@
 }
 
 .buy-stocks__table--ass {
+  tr {
+    @media ($media_md) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(max-content, 1fr));
+    }
+  }
+  .td-name {
+    @media ($media_md) {
+      order: -1;
+    }
+  }
 
+  .td-price, .td-count {
+    @media ($media_md)  {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      column-gap: 11/18*1rem;
+
+      .btn {
+        order: -1;
+        grid-column: 1/2;
+        grid-row: 1/3;
+        width: 36px;
+        height: 36px;
+        border: 1px solid #d3e3ff;
+        border-radius: 5px;
+        background-size: 17px;
+      }
+    }
+  }
+
+  .td-summ, .td-btns {
+    @media ($media_md)  {
+      padding-bottom: 2rem;
+    }
+  }
+
+  .td-btns {
+    @media ($media_md) {
+      order: 1;
+    }
+  }
 }
