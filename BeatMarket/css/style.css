@@ -5775,8 +5775,8 @@ td {
 
 .details {
   position: relative;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 1.77778rem;
+  padding-bottom: 1.77778rem;
 }
 
 .details--bg {
@@ -5814,8 +5814,6 @@ td {
 
 .details__title {
   padding-right: 30px;
-  margin-top: 1.77778rem;
-  margin-bottom: 1.77778rem;
   font-size: 1.22222rem;
   font-weight: 500;
 }
@@ -5838,6 +5836,10 @@ td {
 
 .details__btn:focus {
   outline: none;
+}
+
+.details__text {
+  margin-top: 1.77778rem;
 }
 
 .details--open .details__btn {
@@ -6032,6 +6034,10 @@ td {
 
 .faq .details {
   border-bottom: 1px solid #D3E3FF;
+}
+
+.faq .details--open .details__title {
+  color: #3E54D8;
 }
 
 .faq__subtitle {
@@ -7079,6 +7085,20 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 }
 
+@media (max-width: 1460px) {
+  .faq {
+    margin-left: 2rem;
+    margin-right: 0;
+  }
+
+  .faq__content::after {
+    top: -25px;
+    left: -30px;
+    right: -40px;
+    background-size: 50%;
+  }
+}
+
 @media (max-width: 1279px) {
   .section-inner {
     max-width: 950px;
@@ -7086,6 +7106,16 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .portfolio__prompt-sticky {
     grid-template-columns: 1fr;
+  }
+
+  .faq__content {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+
+  .faq__content {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
@@ -7278,6 +7308,14 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+
+  .faq {
+    margin-left: 0;
+  }
+
+  .faq__content::after {
+    display: none;
   }
 }
 
@@ -8588,6 +8626,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .modal-header h2 {
     font-size: 1.2rem;
+  }
+
+  .buy-stocks__btns {
+    grid-template-columns: 1fr;
   }
 }
 

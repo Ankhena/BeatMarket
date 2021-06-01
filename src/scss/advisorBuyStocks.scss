@@ -103,6 +103,9 @@
     width: 100%;
     margin-left: 0;
   }
+  @media ($media_xs) {
+    grid-template-columns: 1fr;
+  }
 
   & > * {
     @media ($media_md) {

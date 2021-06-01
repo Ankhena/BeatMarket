@@ -1,7 +1,7 @@
 .details {
   position: relative;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 32/18*1rem;
+  padding-bottom: 32/18*1rem;
 
   //tr:not(.table__title-tr) {
   //  background: transparent;
@@ -11,7 +11,6 @@
   //}
 
 }
-
 
 .details--bg {
   @include block-beauty;
@@ -29,12 +28,14 @@
 
     opacity: 1;
   }
+
   &:not(.detail--open) {
     .details__btn {
       border: 1px solid $color_blue;
       background-color: $color-inverse;
     }
   }
+
   &.details--open {
     .details__btn {
       // быстрое неверное решение с bg, или заменить на псевдо с фильтрами или ещё что-нибудь
@@ -49,8 +50,8 @@
 
 .details__title {
   padding-right: 30px;
-  margin-top: 32/18*1rem;
-  margin-bottom: 32/18*1rem;
+  //margin-top: 32/18*1rem;
+  //margin-bottom: 32/18*1rem;
   font-size: 22/18*1rem;
   font-weight: 500;
 }
@@ -74,6 +75,9 @@
   }
 }
 
+.details__text {
+  margin-top: 32/18*1rem;
+}
 
 .details--open {
   .details__btn {
@@ -86,6 +90,7 @@
   //
   //}
 }
+
 .details:not(.details--open) .details__text {
   display: none;
 }
