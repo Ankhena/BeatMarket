@@ -5891,7 +5891,7 @@ td {
   content: "";
   position: absolute;
   top: 0;
-  right: 300px;
+  right: 16%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -5904,16 +5904,11 @@ td {
 }
 
 .adv-portfolio__btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: calc(-1 * 1rem);
-  width: calc(100% + 1rem);
+  display: grid;
+  grid-template-columns: 1fr -webkit-min-content;
+  grid-template-columns: 1fr min-content;
+  gap: 1rem;
   margin-top: 2.7rem;
-}
-
-.adv-portfolio__btns > * {
-  margin-left: 1rem;
 }
 
 .adv-portfolio__btns .progress {
@@ -7094,6 +7089,145 @@ body.viewProfile .header-controls-links-link.auth span {
   .section-inner {
     max-width: 90%;
   }
+
+  .advisor {
+    padding: 2.8rem var(--section_padding);
+    margin: 0;
+  }
+
+  .adv-portfolio__btns {
+    grid-template-columns: 1fr;
+  }
+
+  .adv-portfolio__btns .progress {
+    margin-bottom: 1rem;
+  }
+
+  .buy-stocks__prompt::after {
+    display: none;
+  }
+
+  .buy-stocks__info-text {
+    font-size: 1rem;
+  }
+
+  .buy-stocks__index {
+    font-size: 2rem;
+  }
+
+  .buy-stocks__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    -webkit-column-gap: 0.85714rem;
+       -moz-column-gap: 0.85714rem;
+            column-gap: 0.85714rem;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .buy-stocks__btns > * {
+    margin: 0;
+  }
+
+  .buy-stocks__btns .progress {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+
+  .buy-stocks__table {
+    display: block;
+  }
+
+  .buy-stocks__table tbody {
+    display: contents;
+  }
+
+  .buy-stocks__table .table__title-tr {
+    display: none;
+  }
+
+  .buy-stocks__table td {
+    display: block;
+    padding: 1rem;
+    border: none;
+    font-size: 1.14286rem;
+    font-weight: 500;
+  }
+
+  .buy-stocks__table td::before {
+    display: block;
+    margin-bottom: 0.61111rem;
+    font-size: 0.92857rem;
+    font-weight: 500;
+    line-height: 1.23077;
+  }
+
+  .buy-stocks__table .td-name {
+    grid-column: 1/-1;
+    background: #F5F6FD;
+  }
+
+  .buy-stocks__table .td-name .ticket-title {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 140px;
+  }
+
+  .buy-stocks__table .td-count {
+    font-size: 1.14286rem;
+    font-weight: 500;
+  }
+
+  .buy-stocks__table .td-count::before {
+    content: "Кол-во ";
+  }
+
+  .buy-stocks__table .td-price::before {
+    content: "Текущая цена ";
+  }
+
+  .buy-stocks__table .td-summ::before {
+    content: "Сумма ";
+  }
+
+  .buy-stocks__table .td-refresh {
+    grid-column: 1/-1;
+    background: #F5F6FD;
+  }
+
+  .buy-stocks__table--abs tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .buy-stocks__table--abs .td-price {
+    display: grid;
+    grid-template-columns: -webkit-min-content 1fr;
+    grid-template-columns: min-content 1fr;
+    -webkit-column-gap: 0.61111rem;
+       -moz-column-gap: 0.61111rem;
+            column-gap: 0.61111rem;
+  }
+
+  .buy-stocks__table--abs .td-price .btn {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #d3e3ff;
+    border-radius: 5px;
+    background-size: 17px;
+  }
+
+  .buy-stocks__table--ai tr {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(-webkit-max-content, 1fr));
+    grid-template-columns: repeat(3, minmax(max-content, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
@@ -8232,8 +8366,40 @@ body.viewProfile .header-controls-links-link.auth span {
     width: 100%;
   }
 
+  .progress {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    background: none;
+  }
+
+  .progress::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 16px;
+    padding: 0.7em;
+    font-weight: 400;
+    border-radius: 8px;
+    color: #ffffff;
+    background: -webkit-gradient(linear, left top, right top, from(#3E54D8), to(#ffffff));
+    background: -o-linear-gradient(left, #3E54D8 var(--point), #ffffff var(--point));
+    background: linear-gradient(to right, #3E54D8 var(--point), #ffffff var(--point));
+  }
+
+  .progress__value {
+    width: 100%;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+    color: #373943;
+  }
+
   .adv-portfolio h1 {
     font-size: 2rem;
+  }
+
+  .adv-portfolio__form::after {
+    display: none;
   }
 
   .section-main .main {
