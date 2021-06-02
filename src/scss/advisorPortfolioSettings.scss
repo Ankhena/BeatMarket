@@ -13,23 +13,10 @@
       font-size: 20/14*1rem;
     }
   }
-  //.details__header {
-  //  @media ($media_md) {
-  //    padding: 1.8rem 1.8rem 0 1.8rem;
-  //  }
-  //}
-  //.details__btn {
-  //  @media ($media_md) {
-  //    top: 1rem;
-  //    right: 1rem;
-  //  }
-  //}
 }
 
 
 .adv-portfolio-settings__btns {
-  //display: flex;
-  //@include gap(1rem);
   display: grid;
   grid-template-columns: max-content max-content;
   gap: 1rem;
