@@ -34,7 +34,7 @@
                 width: 9.5rem;
 
                 @media ($media_xl) {
-                    width: 8.5rem;
+                    width: 8rem;
                 }
             }
 
@@ -117,10 +117,15 @@
 
         &-header h5:first-child, &-content-item-header .action, .table-content-item-content-table .table-header h5, 
         .table-content-item-content-table .table-content span {
-            width: 10rem;
+            width: 8rem;
 
             @media ($media_xl) {
-                width: 9rem;
+                width: 6.5rem;
+            }
+
+            @media ($media_sm) {
+                width: 30%;
+                margin-right: 0.4rem;
             }
         }
 
@@ -171,7 +176,7 @@
                         .action {
                             > svg {
                                 fill: $color_blue;
-                                transform: rotate(180deg);
+                                transform: rotate(0deg);
     
                                 @media ($media_sm) {
                                     fill: $color_white;
@@ -213,6 +218,15 @@
 
                         @media ($media_xl) {
                             white-space: initial;
+                        }
+
+                        @media ($media_sm) {
+                            width: 100%;
+                            max-height: initial;
+
+                            &::before {
+                                content: "Коммент.";
+                            }
                         }
 
                         &:hover {
@@ -321,15 +335,6 @@
                         &::-webkit-scrollbar-thumb {
                             background-color: lighten($color_blue, 25%);
                         }
-
-                        @media ($media_sm) {
-                            width: 100%;
-                            max-height: initial;
-
-                            &::before {
-                                content: "Коммент.";
-                            }
-                        }
                     }
 
                     &.percent-hour {
@@ -388,10 +393,11 @@
                             display: flex;
                             align-items: center;
 
-                            svg {
+                            > svg {
                                 width: .8rem;
                                 height: .8rem;
                                 fill: lighten($color_blue, 15%);
+                                transform: rotate(-90deg);
                             }
                         
                             &-text {
@@ -459,6 +465,7 @@
                     display: none;
 
                     &-buttons {
+                        display: flex;
 
                         .btn {
                             font-size: 0.9rem;
@@ -467,14 +474,27 @@
                             &:first-child {
                                 margin-right: 1rem;
                             }
+
+                            &.btn_redInverse {
+                                margin-left: auto;
+                            }
                         }
 
                         @media ($media_sm) {
                             display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
 
                             .btn {
                                 padding: 0.9rem 0;
-                                width: 50%;
+                                width: 47%;
+                            }
+
+                            .btn_redInverse {
+                                width: 80%;
+                                border: none;
+                                background-color: transparent;
+                                margin: 1rem auto 0 auto;
                             }
                         }
                     }

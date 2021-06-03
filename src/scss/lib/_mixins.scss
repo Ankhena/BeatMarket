@@ -165,6 +165,16 @@ input[type="text"] {
         }
     }
 
+    &_redInverse {
+        border: 2px solid $color_red;
+        background-color: $color_white;
+        color: $color_red;
+
+        &:hover {
+            border-color: darken($color_red, 10%);
+        }
+    }
+
     &_mainCash {
         border: 2px solid $color_blue;
         box-sizing: border-box;

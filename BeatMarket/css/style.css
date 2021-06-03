@@ -870,6 +870,16 @@ input[type="text"].error {
   background-color: #e51e35;
 }
 
+.btn_redInverse {
+  border: 2px solid #ED6373;
+  background-color: #fff;
+  color: #ED6373;
+}
+
+.btn_redInverse:hover {
+  border-color: #e8354a;
+}
+
 .btn_mainCash {
   border: 2px solid #3E54D8;
   -webkit-box-sizing: border-box;
@@ -4152,7 +4162,7 @@ input[type="text"].error {
 .myStrategy-myPapers-container .table-content-item-header .action,
 .myStrategy-myPapers-container .table .table-content-item-content-table .table-header h5,
 .myStrategy-myPapers-container .table .table-content-item-content-table .table-content span {
-  width: 10rem;
+  width: 8rem;
 }
 
 .myStrategy-myPapers-container .table-content-item {
@@ -4176,9 +4186,9 @@ input[type="text"].error {
 
 .myStrategy-myPapers-container .table-content-item.opened .table-content-item-header .action > svg {
   fill: #3E54D8;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .myStrategy-myPapers-container .table-content-item span.success {
@@ -4261,10 +4271,13 @@ input[type="text"].error {
           align-items: center;
 }
 
-.myStrategy-myPapers-container .table-content-item-header-main .action svg {
+.myStrategy-myPapers-container .table-content-item-header-main .action > svg {
   width: .8rem;
   height: .8rem;
   fill: #7e8ce5;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .myStrategy-myPapers-container .table-content-item-header-main .action-text {
@@ -4306,6 +4319,12 @@ input[type="text"].error {
   display: none;
 }
 
+.myStrategy-myPapers-container .table-content-item-content-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .myStrategy-myPapers-container .table-content-item-content-buttons .btn {
   font-size: 0.9rem;
   padding: 0.9rem 3.2rem;
@@ -4313,6 +4332,10 @@ input[type="text"].error {
 
 .myStrategy-myPapers-container .table-content-item-content-buttons .btn:first-child {
   margin-right: 1rem;
+}
+
+.myStrategy-myPapers-container .table-content-item-content-buttons .btn.btn_redInverse {
+  margin-left: auto;
 }
 
 .myStrategy-myPapers-container .table-content-item-content-table .table {
@@ -6281,7 +6304,7 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-header h5,
   .myStrategy-myPapers-container.crypt .table .table-content-item-content-table .table-content span {
-    width: 8.5rem;
+    width: 8rem;
   }
 
   .myStrategy-myPapers-container .table-header h5,
@@ -6298,7 +6321,7 @@ body.viewProfile .header-controls-links-link.auth span {
   .myStrategy-myPapers-container .table-content-item-header .action,
   .myStrategy-myPapers-container .table .table-content-item-content-table .table-header h5,
   .myStrategy-myPapers-container .table .table-content-item-content-table .table-content span {
-    width: 9rem;
+    width: 6.5rem;
   }
 
   .myStrategy-myPapers-container .table-content-item span.comment {
@@ -7156,6 +7179,14 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-right: 0.55rem;
   }
 
+  .myStrategy-myPapers-container .table-header h5:first-child,
+  .myStrategy-myPapers-container .table-content-item-header .action,
+  .myStrategy-myPapers-container .table .table-content-item-content-table .table-header h5,
+  .myStrategy-myPapers-container .table .table-content-item-content-table .table-content span {
+    width: 30%;
+    margin-right: 0.4rem;
+  }
+
   .myStrategy-myPapers-container .table-content-item.opened .table-content-item-header-main {
     background-color: #3E54D8;
     border-color: transparent;
@@ -7190,6 +7221,15 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .myStrategy-myPapers-container .table-content-item:last-child {
     border-bottom: 1px solid #D3E3FF;
+  }
+
+  .myStrategy-myPapers-container .table-content-item span.comment {
+    width: 100%;
+    max-height: initial;
+  }
+
+  .myStrategy-myPapers-container .table-content-item span.comment::before {
+    content: "Коммент.";
   }
 
   .myStrategy-myPapers-container .table-content-item span {
@@ -7235,15 +7275,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .myStrategy-myPapers-container .table-content-item span.type::before {
     content: "Тип. бумаги";
-  }
-
-  .myStrategy-myPapers-container .table-content-item span.comment {
-    width: 100%;
-    max-height: initial;
-  }
-
-  .myStrategy-myPapers-container .table-content-item span.comment::before {
-    content: "Коммент.";
   }
 
   .myStrategy-myPapers-container .table-content-item span.percent-hour::before {
@@ -7317,11 +7348,23 @@ body.viewProfile .header-controls-links-link.auth span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .myStrategy-myPapers-container .table-content-item-content-buttons .btn {
     padding: 0.9rem 0;
-    width: 50%;
+    width: 47%;
+  }
+
+  .myStrategy-myPapers-container .table-content-item-content-buttons .btn_redInverse {
+    width: 80%;
+    border: none;
+    background-color: transparent;
+    margin: 1rem auto 0 auto;
   }
 
   .myStrategy-myPapers-container .table-content-item-content-table .table-content-item {
@@ -7721,7 +7764,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 769px) and (max-width: 1279px) {
   .section-main .main-menu {
     -ms-flex-preferred-size: 6.5rem;
         flex-basis: 6.5rem;
