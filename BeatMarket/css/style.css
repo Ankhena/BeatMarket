@@ -723,6 +723,9 @@ body.hideScroll {
   width: 1px;
   height: 1px;
   margin: -1px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .scroll_block_dummy {
