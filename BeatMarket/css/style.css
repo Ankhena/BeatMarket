@@ -5973,7 +5973,7 @@ input[type="text"].error {
 
 .strategyCards-card-header-icon .dropdown p {
   font-size: inherit;
-  max-height: 8rem;
+  max-height: 7rem;
   overflow-y: auto;
 }
 
@@ -7708,9 +7708,9 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .strategyCards-card-header-icon .dropdown.last {
-    -webkit-transform: translate(50%, 100%);
-        -ms-transform: translate(50%, 100%);
-            transform: translate(50%, 100%);
+    -webkit-transform: translate(0, 100%);
+        -ms-transform: translate(0, 100%);
+            transform: translate(0, 100%);
   }
 
   .strategyCards-card-header-icon .dropdown {

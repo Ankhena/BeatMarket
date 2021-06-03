@@ -426,13 +426,13 @@
                         transform: translate(0, 100%);
 
                         @media ($media_sm) {
-                            transform: translate(50%, 100%);
+                            transform: translate(0, 100%);
                         }
                     }
 
                     p {
                         font-size: inherit;
-                        max-height: 8rem;
+                        max-height: 7rem;
                         overflow-y: auto;
                     }
 
