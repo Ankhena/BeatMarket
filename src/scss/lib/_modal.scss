@@ -364,14 +364,14 @@
             }
 
             &-date {
-                width: 11rem;
+                width: 13rem;
 
                 input {
                     text-align: center;
                 }
 
                 @media ($media_xl) {
-                    width: 12rem;
+                    width: 14rem;
                 }
 
                 @media ($media_sm) {

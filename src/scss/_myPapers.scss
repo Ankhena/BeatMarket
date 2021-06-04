@@ -7,11 +7,11 @@
             &-header h5, &-content-item-header .action, &-content-item-header .changeble, 
             &-content-item-header-nums span, &-content-item-content-table span, &-content-item-main span {
     
-                width: 8rem;
+                width: 7.7rem;
                 margin-right: 0.2rem;
     
                 @media ($media_xl) {
-                    width: 6.5rem;
+                    width: 6.2rem;
                     margin-right: 0.2rem;
                 }
     
@@ -117,7 +117,7 @@
 
         &-header h5:first-child, &-content-item-header .action, .table-content-item-content-table .table-header h5, 
         .table-content-item-content-table .table-content span {
-            width: 8rem;
+            width: 7.7rem;
 
             @media ($media_xl) {
                 width: 6.5rem;
@@ -183,6 +183,21 @@
                                 }
                             }
                         }
+
+                        .changeble {
+
+                            @media ($media_sm) {
+                                span.success {
+                                    color: $color_green_light_table_header;
+                                }
+                            }
+                        
+                        }
+                    }
+
+                    .table-content-item-header-nums {
+                        height: initial;
+                        margin-bottom: 0;
                     }
                 }
 
@@ -214,15 +229,20 @@
                     &.comment {
                         color: $color_grey;
                         word-wrap: break-word;
-                        line-height: 1.4;
+                        line-height: 1.35;
+                        width: 11rem !important;
+                        margin: 0;
 
                         @media ($media_xl) {
                             white-space: initial;
+                            width: 10rem !important;
                         }
 
                         @media ($media_sm) {
-                            width: 100%;
+                            margin-top: 1.2rem;
+                            width: 100% !important;
                             max-height: initial;
+                            line-height: 1.5;
 
                             &::before {
                                 content: "Коммент.";
@@ -320,7 +340,7 @@
                     &.comment {
                         transition: 0.3s ease-in-out;
                         max-height: 3.5rem;
-                        overflow-y: auto;
+                        overflow-y: hidden;
 
                         &::-webkit-scrollbar-track {
                             -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -369,6 +389,7 @@
 
                     @media ($media_sm) {
                         flex-direction: column;
+                        padding: 0;
                     }
 
                     &-main {
@@ -394,8 +415,10 @@
                             align-items: center;
 
                             > svg {
-                                width: .8rem;
-                                height: .8rem;
+                                min-width: .8rem;
+                                min-height: .8rem;
+                                max-width: .8rem;
+                                max-height: .8rem;
                                 fill: lighten($color_blue, 15%);
                                 transform: rotate(-90deg);
                             }
@@ -406,8 +429,8 @@
                                 margin-left: 0.7rem;
 
                                 @media ($media_sm) {
-                                    flex-direction: row;
-                                    align-items: center;
+                                    // flex-direction: row;
+                                    // align-items: center;
                                 }
 
                                 strong {
@@ -415,9 +438,19 @@
                                     color: $color_blue;
                                     margin-bottom: 0.2rem;
 
+                                    span {
+                                        display: none;
+                                        color: $color_grey;
+                                        font-weight: 400;
+                                        font-size: 0.85rem;
+
+                                        @media ($media_sm) {
+                                            display: inline;
+                                        }
+                                    }
+
                                     @media ($media_sm) {
                                         font-size: 1.6rem;
-                                        margin: 0 0.7rem 0 0;
                                         font-weight: bold;
                                     }
                                 }
@@ -425,6 +458,20 @@
                                 span {
                                     color: $color_grey;
                                     font-size: 0.8rem;
+
+                                    display: inline-block;
+                                    white-space: nowrap;
+                                    max-width: 6rem;
+                                    overflow-x: hidden;
+                                    text-overflow: ellipsis;
+
+                                    @media ($media_xl) {
+                                        max-width: 5rem;
+                                    }
+
+                                    @media ($media_sm) {
+                                        max-width: 8rem;
+                                    }
                                 }
                             }
                         }
@@ -432,9 +479,8 @@
                         .changeble {
                             span {
                                 @media ($media_sm) {
-                                    &::before {
-                                        content: "Изменение";
-                                    }
+                                    font-size: 1.3rem;
+                                    font-weight: 600;
                                 }
                             }
                         }
@@ -445,6 +491,10 @@
                         align-items: center;
 
                         @media ($media_sm) {
+                            height: 0;
+                            overflow: hidden;
+                            margin-bottom: -1.05rem;
+
                             flex-wrap: wrap;
                             align-items: baseline;
 
@@ -461,8 +511,11 @@
                     background-color: $color_table_header;
                     border-bottom: 1px solid $color_block_border;
                     margin: 0 -1.5rem;
-
                     display: none;
+
+                    @media ($media_sm) {
+                        margin: 1.5rem -1.5rem;
+                    }
 
                     &-buttons {
                         display: flex;

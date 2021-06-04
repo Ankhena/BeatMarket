@@ -1989,7 +1989,7 @@ input[type="text"].error {
 }
 
 .modal-content-papers-date {
-  width: 11rem;
+  width: 13rem;
 }
 
 .modal-content-papers-date input {
@@ -4110,7 +4110,7 @@ input[type="text"].error {
 .myStrategy-myPapers-container.crypt .table-content-item-header-nums span,
 .myStrategy-myPapers-container.crypt .table-content-item-content-table span,
 .myStrategy-myPapers-container.crypt .table-content-item-main span {
-  width: 8rem;
+  width: 7.7rem;
   margin-right: 0.2rem;
 }
 
@@ -4165,7 +4165,7 @@ input[type="text"].error {
 .myStrategy-myPapers-container .table-content-item-header .action,
 .myStrategy-myPapers-container .table .table-content-item-content-table .table-header h5,
 .myStrategy-myPapers-container .table .table-content-item-content-table .table-content span {
-  width: 8rem;
+  width: 7.7rem;
 }
 
 .myStrategy-myPapers-container .table-content-item {
@@ -4194,6 +4194,11 @@ input[type="text"].error {
           transform: rotate(0deg);
 }
 
+.myStrategy-myPapers-container .table-content-item.opened .table-content-item-header-nums {
+  height: initial;
+  margin-bottom: 0;
+}
+
 .myStrategy-myPapers-container .table-content-item span.success {
   color: #199F27;
 }
@@ -4205,7 +4210,9 @@ input[type="text"].error {
 .myStrategy-myPapers-container .table-content-item span.comment {
   color: #929398;
   word-wrap: break-word;
-  line-height: 1.4;
+  line-height: 1.35;
+  width: 11rem !important;
+  margin: 0;
 }
 
 .myStrategy-myPapers-container .table-content-item span.comment:hover {
@@ -4232,7 +4239,7 @@ input[type="text"].error {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   max-height: 3.5rem;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .myStrategy-myPapers-container .table-content-item span.comment::-webkit-scrollbar-track {
@@ -4275,8 +4282,10 @@ input[type="text"].error {
 }
 
 .myStrategy-myPapers-container .table-content-item-header-main .action > svg {
-  width: .8rem;
-  height: .8rem;
+  min-width: .8rem;
+  min-height: .8rem;
+  max-width: .8rem;
+  max-height: .8rem;
   fill: #7e8ce5;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
@@ -4300,9 +4309,22 @@ input[type="text"].error {
   margin-bottom: 0.2rem;
 }
 
+.myStrategy-myPapers-container .table-content-item-header-main .action-text strong span {
+  display: none;
+  color: #929398;
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
 .myStrategy-myPapers-container .table-content-item-header-main .action-text span {
   color: #929398;
   font-size: 0.8rem;
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 6rem;
+  overflow-x: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 .myStrategy-myPapers-container .table-content-item-header-nums {
@@ -6248,7 +6270,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .modal-content-papers-date {
-    width: 12rem;
+    width: 14rem;
   }
 
   .section-header .header-logo .logo {
@@ -6296,7 +6318,7 @@ body.viewProfile .header-controls-links-link.auth span {
   .myStrategy-myPapers-container.crypt .table-content-item-header-nums span,
   .myStrategy-myPapers-container.crypt .table-content-item-content-table span,
   .myStrategy-myPapers-container.crypt .table-content-item-main span {
-    width: 6.5rem;
+    width: 6.2rem;
     margin-right: 0.2rem;
   }
 
@@ -6329,6 +6351,11 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .myStrategy-myPapers-container .table-content-item span.comment {
     white-space: initial;
+    width: 10rem !important;
+  }
+
+  .myStrategy-myPapers-container .table-content-item-header-main .action-text span {
+    max-width: 5rem;
   }
 
   .compare-menu-choose-item-btn svg {
@@ -7208,6 +7235,10 @@ body.viewProfile .header-controls-links-link.auth span {
     fill: #fff;
   }
 
+  .myStrategy-myPapers-container .table-content-item.opened .table-content-item-header .changeble span.success {
+    color: #1BD32F;
+  }
+
   .myStrategy-myPapers-container .table-content-item {
     padding: 0 1.5rem .9rem 1.5rem;
     -webkit-box-align: center;
@@ -7227,8 +7258,10 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .myStrategy-myPapers-container .table-content-item span.comment {
-    width: 100%;
+    margin-top: 1.2rem;
+    width: 100% !important;
     max-height: initial;
+    line-height: 1.5;
   }
 
   .myStrategy-myPapers-container .table-content-item span.comment::before {
@@ -7298,6 +7331,7 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0;
   }
 
   .myStrategy-myPapers-container .table-content-item-header-main {
@@ -7315,27 +7349,28 @@ body.viewProfile .header-controls-links-link.auth span {
     width: auto;
   }
 
-  .myStrategy-myPapers-container .table-content-item-header-main .action-text {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .myStrategy-myPapers-container .table-content-item-header-main .action-text strong span {
+    display: inline;
   }
 
   .myStrategy-myPapers-container .table-content-item-header-main .action-text strong {
     font-size: 1.6rem;
-    margin: 0 0.7rem 0 0;
     font-weight: bold;
   }
 
-  .myStrategy-myPapers-container .table-content-item-header-main .changeble span::before {
-    content: "Изменение";
+  .myStrategy-myPapers-container .table-content-item-header-main .action-text span {
+    max-width: 8rem;
+  }
+
+  .myStrategy-myPapers-container .table-content-item-header-main .changeble span {
+    font-size: 1.3rem;
+    font-weight: 600;
   }
 
   .myStrategy-myPapers-container .table-content-item-header-nums {
+    height: 0;
+    overflow: hidden;
+    margin-bottom: -1.05rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-align: baseline;
@@ -7345,6 +7380,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .myStrategy-myPapers-container .table-content-item-header-nums span {
     margin-top: 1.2rem;
+  }
+
+  .myStrategy-myPapers-container .table-content-item-content {
+    margin: 1.5rem -1.5rem;
   }
 
   .myStrategy-myPapers-container .table-content-item-content-buttons {
