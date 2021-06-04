@@ -225,10 +225,21 @@ input[type="text"] {
     }
 }
 
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+    ~ .radio_custom, ~ .checkbox_custom {
+        &::before {
+            background-color: $color_blue;
+            border: 2px solid $color_blue;
+        }
+
+        &::after {
+            background-color: $color_white;
+        }
+    }
+}
+
 .radio_custom, .checkbox_custom {
     position: relative;
-    width: 0px;
-    height: 0px;
 
     &::before,
     &::after {
@@ -238,12 +249,17 @@ input[type="text"] {
     }
 
     &::after {
-        width: 0.5rem;
-        height: 0.5rem;
-        transform: translate(85%, 80%);
+        left: 0;
+        top: 50%;
+        transform: translate(0.4rem, -50%);
+        width: .5rem;
+        height: .5rem; 
     }
 
     &::before {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
         width: 1.33rem;
         height: 1.33rem;
         background-color: $color_white;

@@ -917,11 +917,24 @@ input[type="text"].error {
   padding: 2.8rem var(--section_padding) 2.8rem 1.8rem;
 }
 
+input[type="checkbox"]:checked ~ .radio_custom::before,
+input[type="checkbox"]:checked ~ .checkbox_custom::before,
+input[type="radio"]:checked ~ .radio_custom::before,
+input[type="radio"]:checked ~ .checkbox_custom::before {
+  background-color: #3E54D8;
+  border: 2px solid #3E54D8;
+}
+
+input[type="checkbox"]:checked ~ .radio_custom::after,
+input[type="checkbox"]:checked ~ .checkbox_custom::after,
+input[type="radio"]:checked ~ .radio_custom::after,
+input[type="radio"]:checked ~ .checkbox_custom::after {
+  background-color: #fff;
+}
+
 .radio_custom,
 .checkbox_custom {
   position: relative;
-  width: 0px;
-  height: 0px;
 }
 
 .radio_custom::before,
@@ -935,15 +948,22 @@ input[type="text"].error {
 
 .radio_custom::after,
 .checkbox_custom::after {
-  width: 0.5rem;
-  height: 0.5rem;
-  -webkit-transform: translate(85%, 80%);
-      -ms-transform: translate(85%, 80%);
-          transform: translate(85%, 80%);
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0.4rem, -50%);
+      -ms-transform: translate(0.4rem, -50%);
+          transform: translate(0.4rem, -50%);
+  width: .5rem;
+  height: .5rem;
 }
 
 .radio_custom::before,
 .checkbox_custom::before {
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 1.33rem;
   height: 1.33rem;
   background-color: #fff;
@@ -2969,7 +2989,7 @@ input[type="text"].error {
 }
 
 .stategyPromo-graph-info-btn .dropdown-item span {
-  margin-left: 2rem;
+  padding-left: 2rem;
   font-weight: 500;
   white-space: nowrap;
 }
