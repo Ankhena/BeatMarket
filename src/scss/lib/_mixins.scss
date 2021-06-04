@@ -225,16 +225,22 @@ input[type="text"] {
     }
 }
 
-.radio_custom {
+.radio_custom, .checkbox_custom {
     position: relative;
     width: 0px;
+    height: 0px;
 
     &::before,
     &::after {
         content: "";
         position: absolute;
         display: block;
-        border-radius: 50%;
+    }
+
+    &::after {
+        width: 0.5rem;
+        height: 0.5rem;
+        transform: translate(85%, 80%);
     }
 
     &::before {
@@ -245,6 +251,7 @@ input[type="text"] {
     }
 
     &:checked {
+
         &::before {
             background-color: $color_blue;
             border: 2px solid $color_blue;
@@ -252,45 +259,31 @@ input[type="text"] {
 
         &::after {
             background-color: $color_white;
-            width: 0.5rem;
-            height: 0.5rem;
-            transform: translate(85%, 80%);
         }
     }
 }
 
-.checkbox_custom {
-    position: relative;
-    width: 0px;
+.radio_custom {
 
     &::before,
     &::after {
-        content: "";
-        position: absolute;
-        display: block;
+        border-radius: 50%;
     }
+}
+
+.checkbox_custom {
 
     &::before {
-        width: 1.33rem;
-        height: 1.33rem;
         border-radius: 0.3rem;
-        background-color: $color_white;
-        border: 2px solid lighten($color_grey, 20%);
     }
 
     &:checked {
         &::before {
             border-radius: 0.3rem;
-            background-color: $color_blue;
-            border: 2px solid $color_blue;
         }
 
         &::after {
-            background-color: $color_white;
             border-radius: 2px;
-            width: 0.5rem;
-            height: 0.5rem;
-            transform: translate(85%, 80%);
         }
     }
 }

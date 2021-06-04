@@ -917,45 +917,15 @@ input[type="text"].error {
   padding: 2.8rem var(--section_padding) 2.8rem 1.8rem;
 }
 
-.radio_custom {
-  position: relative;
-  width: 0px;
-}
-
-.radio_custom::before,
-.radio_custom::after {
-  content: "";
-  position: absolute;
-  display: block;
-  border-radius: 50%;
-}
-
-.radio_custom::before {
-  width: 1.33rem;
-  height: 1.33rem;
-  background-color: #fff;
-  border: 2px solid #c6c7ca;
-}
-
-.radio_custom:checked::before {
-  background-color: #3E54D8;
-  border: 2px solid #3E54D8;
-}
-
-.radio_custom:checked::after {
-  background-color: #fff;
-  width: 0.5rem;
-  height: 0.5rem;
-  -webkit-transform: translate(85%, 80%);
-      -ms-transform: translate(85%, 80%);
-          transform: translate(85%, 80%);
-}
-
+.radio_custom,
 .checkbox_custom {
   position: relative;
   width: 0px;
+  height: 0px;
 }
 
+.radio_custom::before,
+.radio_custom::after,
 .checkbox_custom::before,
 .checkbox_custom::after {
   content: "";
@@ -963,28 +933,49 @@ input[type="text"].error {
   display: block;
 }
 
-.checkbox_custom::before {
-  width: 1.33rem;
-  height: 1.33rem;
-  border-radius: 0.3rem;
-  background-color: #fff;
-  border: 2px solid #c6c7ca;
-}
-
-.checkbox_custom:checked::before {
-  border-radius: 0.3rem;
-  background-color: #3E54D8;
-  border: 2px solid #3E54D8;
-}
-
-.checkbox_custom:checked::after {
-  background-color: #fff;
-  border-radius: 2px;
+.radio_custom::after,
+.checkbox_custom::after {
   width: 0.5rem;
   height: 0.5rem;
   -webkit-transform: translate(85%, 80%);
       -ms-transform: translate(85%, 80%);
           transform: translate(85%, 80%);
+}
+
+.radio_custom::before,
+.checkbox_custom::before {
+  width: 1.33rem;
+  height: 1.33rem;
+  background-color: #fff;
+  border: 2px solid #c6c7ca;
+}
+
+.radio_custom:checked::before,
+.checkbox_custom:checked::before {
+  background-color: #3E54D8;
+  border: 2px solid #3E54D8;
+}
+
+.radio_custom:checked::after,
+.checkbox_custom:checked::after {
+  background-color: #fff;
+}
+
+.radio_custom::before,
+.radio_custom::after {
+  border-radius: 50%;
+}
+
+.checkbox_custom::before {
+  border-radius: 0.3rem;
+}
+
+.checkbox_custom:checked::before {
+  border-radius: 0.3rem;
+}
+
+.checkbox_custom:checked::after {
+  border-radius: 2px;
 }
 
 .input_search {
