@@ -160,7 +160,8 @@ if (myRenderGraph !== null) {
         tooltip: {
             crosshairs: true,
             shared: true,
-            useHTML: true
+            useHTML: true,
+            valueSuffix: '$'
         },
         plotOptions: {
             spline: {
@@ -444,9 +445,9 @@ initInputCounter();
             let mySpan = document.createElement("span");
             mySpan.classList.add(item.class);
 
-            if (window.outerWidth > 720) {
+            //if (window.outerWidth > 720) {
                 mySpan.innerHTML = item.name;
-            }
+            //}
 
             myNode.appendChild(mySpan);
             parentNode.appendChild(myNode);

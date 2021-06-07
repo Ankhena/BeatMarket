@@ -680,6 +680,69 @@ $banch_items_height: 60px;
             border-radius: 0px 8px 8px 0px;
         }
 
+        &-summary {
+            background-color: darken($color_white, 2%);
+            border: 1px solid darken($color_white, 7%);
+            box-sizing: border-box;
+            border-radius: 0.4rem;
+            padding: 0.7rem;
+
+            &-title {
+                color: $color_black_title;
+                font-weight: 600;
+                font-size: 1rem;
+            }
+
+            &-content {
+                margin-top: 0.9rem;
+
+                span {
+                    position: relative;
+                    display: inline-block;
+                    padding-left: 1.2rem;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0.7rem;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        content: "";
+                        min-width: 0.8rem;
+                        min-height: 0.8rem;
+                        background-color: red;
+                        border-radius: 0.25rem;
+                    }
+
+                    &.green {
+                        &::before {
+                            background-color: $color_green;
+                        }
+                    }
+
+                    &.primary {
+                        &::before {
+                            background-color: lighten($color_blue, 10%);
+                        }
+                    }
+
+                    &.success {
+                        color: $color_green;
+                    }
+
+                    &.error {
+                        color: $color_red;
+                    }
+                }
+            }
+        }
+
         &-percent {
             height: $banch_info_height;
             display: flex;
@@ -701,7 +764,7 @@ $banch_items_height: 60px;
             justify-content: space-between;
 
             @media ($media_sm) {
-                align-items: center;
+                //align-items: center;
             }
 
             &-item {
