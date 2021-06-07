@@ -4161,6 +4161,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   border-color: 1px solid #D3E3FF;
   -webkit-box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
           box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+  background-color: #FCFDFF;
 }
 
 .statTable__content--opened .statSticker__arrow {
@@ -5216,6 +5217,11 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   margin-left: auto;
 }
 
+.performance-sectors .card-list li .value strong,
+.performance-assets .card-list li .value strong {
+  white-space: nowrap;
+}
+
 .performance-sectors .card-list li:not(:last-child),
 .performance-assets .card-list li:not(:last-child) {
   margin-bottom: 0.8rem;
@@ -5236,6 +5242,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 .performance-assets .card .graphContent span,
 .performance-assets .card .graphContent strong {
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .performance-sectors .card .graphContent:not(:last-child),
@@ -7100,6 +7107,11 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .statTable__content {
     cursor: initial;
+    background-color: #F5F6FD;
+  }
+
+  .statTable__content:hover {
+    background-color: #F5F6FD;
   }
 
   .statTable__content--opened .statTable__item {

@@ -47,12 +47,18 @@
 
         @media ($media_sm) {
             cursor: initial;
+            background-color: $color_table_header;
         }
 
         &:hover {
             transition: 0.3s ease-in-out;
             border-color: 1px solid $color_block_border;
             box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+            background-color: $color_block_bg;
+
+            @media ($media_sm) {
+                background-color: $color_table_header;
+            }
         }
 
         &--opened {
