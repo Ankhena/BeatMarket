@@ -1259,7 +1259,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   content: "";
   width: 1.4rem;
   height: 1.4rem;
-  background-image: url(../../img/breadcrumbClose.svg);
+  background-image: url(../img/breadcrumbClose.svg);
   background-size: 100%;
   margin-left: 0.5rem;
   cursor: pointer;
