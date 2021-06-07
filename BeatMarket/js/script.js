@@ -924,6 +924,27 @@ function addPerformanceGraphLabelsRadio(node, data, name) {
 }
 
 initDateRangePicker();
+    function initTableMain() {
+    let commentTableText = document.querySelectorAll(".modal-content-simpleText");
+
+    document.querySelectorAll(".statTable__content").forEach(item => {
+        item.addEventListener("click", () => {
+            item.classList.toggle("statTable__content--opened");
+        });
+    });
+
+    document.querySelectorAll(".statTable__item--comment").forEach(item => {
+        item.addEventListener("click", (e) => {
+            let text = item.querySelector(".statTable__value").innerHTML;
+            if (commentTableText.length > 0) {
+                commentTableText[0].innerHTML = text;
+            }
+            e.stopPropagation();
+        });
+    });
+}
+
+initTableMain();
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
@@ -939,12 +960,6 @@ initDateRangePicker();
     });
 
     $(".strategyCards-card-range").slider();
-
-    document.querySelectorAll(".myPapers-item").forEach(item => {
-        item.addEventListener("click", () => {
-            item.classList.toggle("opened");
-        });
-    });
 
     document.querySelectorAll(".myStrategy-items-item-header-toggle").forEach(item => { // открытие/закрытие стратегий
         item.addEventListener("click", () => {
