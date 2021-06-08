@@ -2425,21 +2425,82 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .section-footer {
-  background-color: tomato;
-  padding: 1.5rem 0;
+  background-color: #fff;
+  padding: 2.7rem 1.8rem;
 }
 
 .section-footer .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 2.5rem;
+}
+
+.section-footer .footer-contact,
+.section-footer .footer-text,
+.section-footer .footer-link {
+  line-height: 1.6;
+}
+
+.section-footer .footer-contact a,
+.section-footer .footer-text a,
+.section-footer .footer-link a {
+  color: #3E54D8;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.section-footer .footer-contact a:hover,
+.section-footer .footer-contact a:focus,
+.section-footer .footer-text a:hover,
+.section-footer .footer-text a:focus,
+.section-footer .footer-link a:hover,
+.section-footer .footer-link a:focus {
+  border-color: #3E54D8;
+}
+
+.section-footer .footer-logo {
+  width: 12rem;
+}
+
+.section-footer .footer-logo-icon {
+  max-width: 100%;
+}
+
+.section-footer .footer-text {
+  color: #929398;
+}
+
+.section-footer .footer-text strong {
+  color: #3E54D8;
+  font-weight: normal;
+}
+
+.section-footer .footer-contact,
+.section-footer .footer-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: flex-start;
+}
+
+.section-footer .footer-contact {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.section-footer .footer-link {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.section-footer .footer p {
-  color: #fff;
+  height: 4rem;
 }
 
 .portfolio {
@@ -6733,6 +6794,28 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .section-header .header-controls-select {
     margin: 0.8rem 0 0 0;
+  }
+
+  .section-footer {
+    padding: 2.7rem 0 0 0;
+  }
+
+  .section-footer .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .section-footer .footer-contact,
+  .section-footer .footer-logo {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .section-footer .footer-contact a {
+    margin-top: 0.2rem;
+  }
+
+  .section-footer .footer-link:last-child {
+    margin-top: -1.8rem;
   }
 
   .portfolio {

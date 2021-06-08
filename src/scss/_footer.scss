@@ -1,19 +1,90 @@
 // === Footer [ Стили для футера, используемые на всех страницах ] ===
 
 .section-footer {
-    background-color: $color_primary;
-    padding: 1.5rem 0;
+    background-color: $color_white;
+    padding: 2.7rem 1.8rem;
+
+    @media ($media_sm) {
+        padding: 2.7rem 0 0 0;
+    }
 
     .section-inner {
     
     }
     
     .footer {
-        display: flex;
-        justify-content: space-between;
-    
-        p {
-            color: $color_white;
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        gap: 2.5rem;
+
+        @media ($media_sm) {
+            grid-template-columns: 1fr;
+
+            &-contact, &-logo {
+                justify-self: center;
+                text-align: center;
+            }
+        }
+
+        &-contact, &-text, &-link {
+            line-height: 1.6;
+
+            a {
+                color: $color_blue;
+                font-weight: 500;
+                text-decoration: none;
+                border-bottom: 1px solid transparent;
+                transition: 0.3s ease-in-out;
+            
+                &:hover, &:focus {
+                    border-color: $color_blue;
+                }
+            }
+        }
+
+        &-logo {
+            width: 12rem;
+
+            &-icon {
+                max-width: 100%;
+            }
+        }
+
+        &-text {
+            color: $color_grey;
+
+            strong {
+                color: $color_blue;
+                font-weight: normal;
+            }
+        }
+
+        &-contact, &-link {
+            display: inline-flex;
+            flex-direction: column;
+            justify-self: flex-start;
+        }
+
+        &-contact {
+            justify-content: space-around;
+
+            @media ($media_sm) {
+                a {
+                    margin-top: 0.2rem;
+                }
+            }
+        }
+
+        &-link {
+            justify-content: space-between;
+            height: 4rem;
+
+            
+            @media ($media_sm) {
+                &:last-child {
+                    margin-top: -1.8rem;
+                }
+            }
         }
     }
     
