@@ -1,0 +1,22 @@
+.adv-portfolio-settings {
+  h1 {
+    margin-bottom: 50/18*1rem;
+  }
+  .details {
+    margin-bottom: 20/18*1rem;
+  }
+}
+
+.adv-portfolio-settings__top-up {
+  margin-bottom: 50/18*1rem;
+}
+
+.adv-portfolio-settings__btns {
+  display: flex;
+  @include gap(1rem);
+  margin-top: 2.7rem;
+
+  input[type="text"] {
+    width: 453px;
+  }
+}

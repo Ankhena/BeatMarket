@@ -15,7 +15,7 @@ testWebP(function (support) {
 });;
 
 $(document).ready(function() {
- 
+
     function initModal() {
     let overlay = document.querySelector(".overlay_modal");
     let html = document.documentElement;
@@ -925,6 +925,7 @@ function addPerformanceGraphLabelsRadio(node, data, name) {
 }
 
 initDateRangePicker();
+<<<<<<< HEAD
     function initTableMain() {
     let commentTableText = document.querySelectorAll(".modal-content-simpleText");
 
@@ -946,6 +947,63 @@ initDateRangePicker();
 }
 
 initTableMain();
+=======
+    // contenteditable
+
+let pens = document.querySelectorAll('.js-contenteditable-btn');
+
+let priceInpus = document.querySelectorAll('.js-contenteditable-input');
+let priceTexts = document.querySelectorAll('.js-contenteditable-span');
+
+pens.forEach((pen) => pen.addEventListener('click', function (e) {
+
+  priceInpus.forEach(item => item.classList.add('h-hide'));
+  priceTexts.forEach(item => item.classList.remove('h-hide'));
+
+  let priceText = this.parentElement.querySelector('.js-contenteditable-span');
+  let priceInput = this.parentElement.querySelector('.js-contenteditable-input');
+
+  priceText.classList.add('h-hide');
+
+  priceInput.classList.remove('h-hide');
+  priceInput.focus();
+
+
+}))
+
+
+// end contenteditable
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+// toggle details
+
+let detailsBtns = document.querySelectorAll('.details__btn, .details__title');
+if (detailsBtns !== null) {
+  detailsBtns.forEach((btn) => btn.addEventListener('click', function (e) {
+    this.closest('.details').classList.toggle('details--open');
+  }))
+}
+
+
+// end toggle details
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+// close prompt
+
+let btnsClosePrompt = document.querySelectorAll('.prompt__close');
+
+btnsClosePrompt.forEach((btn) => btn.addEventListener('click', function (e) {
+  this.closest('.prompt').classList.add('prompt--hide');
+}))
+
+// end close prompt
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+>>>>>>> ad18f0814c474efa48c8a5095238b83ef4839eaa
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
@@ -995,5 +1053,5 @@ initTableMain();
             });
         }
     }
-    
+
 });

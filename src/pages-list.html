@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include('_head.html', {
+  "title": "Список страниц"
+  })
+
+  <style>
+    .style-guide {
+      line-height: 1.5;
+    }
+
+    .style-guide section {
+      margin-top: 3rem;
+    }
+
+
+    h2 {
+      margin-top: 2em;
+      margin-bottom: 1.5em;
+    }
+
+    h3 {
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+    p {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    .pages-list li {
+      margin-bottom: 1rem;
+    }
+
+    .pages-list a {
+      color: #3e54d8;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .pages-list .danger {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      color: #de4355;
+      font-weight: 500;
+    }
+
+    b {
+      font-weight: 700;
+    }
+
+  </style>
+
+</head>
+<body>
+
+@@include("_header.html", {
+"title": "Странички и UI"
+})
+
+<section class="section-outer section-main style-guide">
+  <div class="main">
+
+    @@include("_menu.html", {
+    "title": "Странички и UI"
+    })
+
+    <div class="main-content" style="padding: 5rem">
+      <section class="pages-list">
+
+        <ol>
+          <li><a href="advisorCreatePortfolio.html">Создание портфеля</a>
+            <span class="danger"> ⚖ </span>
+          </li>
+          <li><a href="advisorBuyStocks.html">Купите эти акции у своего брокера</a>
+            <span class="danger"> ※ </span>
+          </li>
+          <li><a href="advisorPortfolioReady.html">Портфель готов</a>
+            <span class="danger">✣</span>
+          </li>
+          <li>
+            <a href="advisorInvestment.html">Инвестирование (Купите эти акции у своего брокера)</a>
+            <span class="danger">※ </span>
+          </li>
+          <li>
+            <a href="advisorSellStocks.html">Продайте эти акции у своего брокера</a>
+            <span class="danger">※</span>
+          </li>
+          <li>
+            <a href="faq.html">FAQ</a>
+            <span class="danger">※</span></li>
+          <li>
+            <a href="advisorDividends.html">Дивиденды</a>
+            <span class="danger">※</span></li>
+          <li>
+            <a href="advisorProfile.html">Профиль</a>
+            <span class="danger">※ </span></li>
+          <li>
+            <a href="advisorReferrals.html">Рефералы</a>
+            <span class="danger">※</span>
+          </li>
+          <li><a href="advisorPortfolioSettings.html">Настройка портфеля</a> <span class="danger">※</span></li>
+        </ol>
+        <br>
+        <ul>
+          <li><span class="danger"> ⃠ </span> страница только создана</li>
+          <li><span class="danger">✣</span> только разметка</li>
+          <li><span class="danger">※</span> адаптив не сделан или не проверен</li>
+          <li><span class="danger">⚖</span> типа сделано, не проверено</li>
+          <li><span class="danger">♛</span> можно проверять</li>
+        </ul>
+
+        <br><br><br>
+        <p>УСЛОВИЕ инклюда header'a !!!!!!!!!!!</p>
+        <h3>Страницы Алима</h3>
+        <ol>
+          <li><a href="performance.html">Эффективность</a></li>
+          <li><a href="myPapers.html">Мои бумаги</a></li>
+          <li><a href="company.html">Добавить компанию</a></li>
+          <li><a href="indicators.html">Показатели</a></li>
+          <li><a href="dividends.html">Дивиденды</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="history.html">История</a></li>
+          <li><a href="viewProfile.html">Просмотр профиля</a></li>
+          <li><a href="topNavigation.html">Верхняя навигация</a></li>
+          <li><a href="createPortfolio.html">Создание портфеля</a></li>
+          <li><a href="moveStrategy.html">Перемещение стратегий</a></li>
+          <li><a href="emptyPortfolio.html">Пустой портфель</a></li>
+          <li><a href="404.html">404</a></li>
+          <li><a href="dummy.html">Заглушка</a></li>
+        </ol>
+        <p>5 модальных окон находятся на странице "<a href="history.html">История</a>", в таблице кликайте на
+          карандашики</p>
+      </section>
+
+
+      <section>
+
+        <section>
+          <h2>Кнопки</h2>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); justify-items: start; gap: 20px">
+            <button class="btn">btn</button>
+            <button class="btn btn_blue">btn btn-blue</button>
+            <button class="btn btn_red">btn btn-red</button>
+            <button class="btn btn--danger-inverse">btn btn--danger-inverse</button>
+            <button type="button" class="btn btn_primary">btn btn_primary</button>
+            <button class="btn btn--danger-transparent" type="button">Удалить портфель</button>
+            <div>
+              <button class="btn btn--edit btn--only-icon"></button>
+              <div>btn btn--edit btn--only-icon</div>
+              <br>
+            </div>
+            <div>
+              <button class="btn btn--copy-link" aria-label="Копировать ссылку"></button>
+              <div>btn btn--copy-link</div>
+            </div>
+            <div>
+              <button class="btn btn--transparent btn--refresh">Сгенерировать заново</button>
+              <div>btn btn--transparent btn--refresh</div>
+            </div>
+            <div>
+              <button class="btn btn--only-icon btn--minus" aria-label="Минус"></button>
+              2/4
+              <button class="btn btn--only-icon btn--plus" aria-label="Плюс"></button>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section style="display: grid; gap: 1em">
+          <h2>checkbox и radio</h2>
+          <div>
+            <input id="=" type="checkbox" checked> обычный
+          </div>
+          <div>
+            toggle <i>(если нужно поменять местами, сначала текст, потом чекбокс, то либо поменять местами прямо в коде
+            либо флекс и ордер)</i> <br>
+            <label class="checkbox-toggle">
+              <input class="checkbox-toggle__input" type="checkbox" checked="">
+              <span class="checkbox-toggle__toggle"></span> Текст подписи
+            </label>
+
+          </div>
+
+        </section>
+
+
+        <section>
+
+          <style>
+            .progress + .progress {
+              margin-top: 1rem;
+            }
+          </style>
+
+          <h2>Progress-bar</h2>
+          <div class="progress progress--0">
+              <span class="progress__value">
+                progress progress--0
+              </span>
+          </div>
+          <div class="progress progress--1-3">
+            <span class="progress__value">
+              progress progress--1-3
+            </span>
+          </div>
+          <div class="progress progress--1-2">
+            <span class="progress__value">
+              progress--1-2
+            </span>
+          </div>
+          <div class="progress progress--2-3">
+            <span class="progress__value">
+              progress--2-3
+            </span>
+          </div>
+          <div class="progress progress--99-100">
+            <span class="progress__value">
+              Почти готово
+            </span>
+          </div>
+
+        </section>
+
+        <section>
+          <h2>Details (Сворачивающиеся блоки)</h2>
+          <p>Может быть применено как к li, так и к div</p>
+
+          <div class="details">
+            <div class="details__header">
+              <h2 class="details__title">
+                Что такое скоринг? (Без фона, но обычно располагается на белом)
+              </h2>
+              <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
+            </div>
+            <div class="details__text">
+              Скоринг – это система оценки эффективности вашего следования рекомендациям системы. Чем выше скоринг, тем
+              выше вероятность получения удовлетворительных результатов инвестирования.
+              <br>
+              Статистика и время показывают, что инвесторы с более высоким уровнем скоринга добиваются более высоких
+              результатов.
+              <br>
+              В ближайшем будущем мы планируем внедрить систему, анализирующую результаты инвесторов и результаты
+              скоринга, чтобы предоставлять эти данные для понимания.
+            </div>
+          </div>
+
+          <div class="details details--bg">
+            <div class="details__header">
+              <h2 class="details__title">
+                Что такое скоринг? (С другими кнопками и фоном)
+              </h2>
+              <button class="details__btn" aria-label="Показать/свернуть подробности"></button>
+            </div>
+            <div class="details__text">
+              Скоринг – это система оценки эффективности вашего следования рекомендациям системы. Чем выше скоринг, тем
+              выше вероятность получения удовлетворительных результатов инвестирования.
+              <br>
+              Статистика и время показывают, что инвесторы с более высоким уровнем скоринга добиваются более высоких
+              результатов.
+              <br>
+              В ближайшем будущем мы планируем внедрить систему, анализирующую результаты инвесторов и результаты
+              скоринга, чтобы предоставлять эти данные для понимания.
+            </div>
+          </div>
+
+        </section>
+
+
+        <section>
+          <h2>Prompt (изначально это были уведомления)</h2>
+          <p>Чтобы скрыть уведомление, нужно добавить класс <code>.prompt--hide</code></p>
+          <div class="prompt">Обычное Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis dolorum
+            expedita magni necessitatibus nesciunt quia. Aliquid aspernatur atque culpa distinctio, ducimus ex illo ipsa
+            ipsam magni modi nisi optio placeat provident quaerat, quia rem voluptas voluptate? A, architecto beatae
+            dolores facere ipsum odit placeat provident quis repellat veniam voluptatum!
+          </div>
+          <div class="prompt prompt--without-icon">
+            Без иконки <code>.prompt--without-icon</code>
+          </div>
+
+          <div class="prompt prompt--danger">.prompt--danger</div>
+
+          <div class="prompt prompt--ok">.prompt--ok</div>
+          <div class="prompt">
+            <button class="btn btn--only-icon prompt__close" aria-label="Закрыть"></button>
+            <b>С кнопкой закрыть</b>
+            <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis dolorum expedita magni
+            necessitatibus nesciunt quia. Aliquid aspernatur atque culpa distinctio, ducimus ex illo ipsa ipsam magni
+            modi nisi optio placeat provident quaerat, quia rem voluptas voluptate? A, architecto beatae dolores facere
+            ipsum odit placeat provident quis repellat veniam voluptatum!
+          </div>
+
+          <p><b>"летающая"</b></p>
+          <div class="prompt">
+            <button class="btn btn--only-icon prompt__close" aria-label="Закрыть"></button>
+            <b>prompt prompt--sticky</b> - сейчас убран класс prompt--sticky, чтобы не мешал <br>
+            <b>В новом дизайне не проверялась</b>
+            Типовая подсказка летающая
+            Типовая подсказка летающаяТиповая подсказка летающаяТиповая подсказка летающаяТиповая подсказка
+            летающаяТиповая
+            подсказка летающаяТиповая подсказка летающаяТиповая подсказка летающ
+          </div>
+        </section>
+
+
+      </section>
+
+
+    </div>
+  </div>
+</section>
+
+@@include("_footer.html")
+
+</body>
+</html>

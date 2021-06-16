@@ -1,7 +1,7 @@
 --include("_webpsup.js");
 
 $(document).ready(function() {
- 
+
     --include("_modal.js")
     --include("_burger.js")
     --include("_selectric.js")
@@ -15,6 +15,7 @@ $(document).ready(function() {
     --include("_performance.js")
     --include("_dateRangePicker.js")
     --include("_tableMain.js")
+    --include("_design.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
@@ -64,5 +65,5 @@ $(document).ready(function() {
             });
         }
     }
-    
+
 });

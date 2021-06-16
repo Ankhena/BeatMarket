@@ -1,0 +1,221 @@
+.btn--transparent {
+  background: transparent;
+  color: currentColor;
+  border-color: transparent;
+}
+
+.btn--danger-inverse {
+  border: 1px solid $color_red;
+  background: $color-inverse;
+  color: $color_red;
+}
+
+.btn--danger-transparent {
+  padding-left: 1em;
+  padding-right: 1em;
+  border: transparent;
+  background: transparent;
+  color: $color_red;
+}
+
+.btn--as-link {
+  display: inline;
+  min-width: unset;
+  padding: unset;
+  border: none;
+  letter-spacing: normal;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  background: transparent;
+  color: $color_blue;
+  text-decoration: underline;
+  text-align: left;
+
+}
+
+.btn--only-icon {
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+  min-width: unset;
+
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+}
+
+.btn--close {
+
+}
+
+.btn--settings {
+  width: 35px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-settings) no-repeat center / 60px;
+
+}
+
+.btn--edit {
+  --color: #{$color_blue};
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+  background: url("data:image/svg+xml, %3Csvg id='icon-pencil' width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.68934 20.2499H4.5C4.30109 20.2499 4.11032 20.1709 3.96967 20.0302C3.82902 19.8896 3.75 19.6988 3.75 19.4999V15.3105C3.75 15.2121 3.7694 15.1145 3.80709 15.0235C3.84478 14.9325 3.90003 14.8499 3.96967 14.7802L15.2197 3.53022C15.3603 3.38956 15.5511 3.31055 15.75 3.31055C15.9489 3.31055 16.1397 3.38956 16.2803 3.53022L20.4697 7.71956C20.6103 7.86021 20.6893 8.05097 20.6893 8.24989C20.6893 8.4488 20.6103 8.63956 20.4697 8.78022L9.21967 20.0302C9.15003 20.0999 9.06735 20.1551 8.97635 20.1928C8.88536 20.2305 8.78783 20.2499 8.68934 20.2499Z' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' stroke='%231B2D9D'/%3E%3Cpath d='M12.75 6L18 11.25' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' stroke='%231B2D9D'/%3E%3Cpath d='M8.95321 20.2013L3.79883 15.0469' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' stroke='%231B2D9D'/%3E%3C/svg%3E%0A") no-repeat center / contain;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+    opacity: 1;
+  }
+}
+
+.btn--copy-link {
+  @extend .btn_primary;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.2931 8.9294L17.768 6.45452C18.2786 5.94341 18.8849 5.53791 19.5523 5.26119C20.2197 4.98448 20.9351 4.84197 21.6576 4.8418C22.3801 4.84163 23.0955 4.98381 23.763 5.26021C24.4305 5.53662 25.0371 5.94183 25.5479 6.45271C26.0588 6.96358 26.464 7.57011 26.7404 8.23763C27.0168 8.90515 27.159 9.62059 27.1589 10.3431C27.1587 11.0656 27.0162 11.7809 26.7395 12.4483C26.4627 13.1157 26.0572 13.7221 25.5461 14.2327L22.0106 17.7682C21.4999 18.279 20.8936 18.6841 20.2263 18.9605C19.559 19.2369 18.8438 19.3791 18.1215 19.3791C17.3992 19.3791 16.684 19.2369 16.0167 18.9605C15.3495 18.6841 14.7431 18.279 14.2324 17.7682' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.7076 23.0708L14.2327 25.5457C13.7221 26.0568 13.1157 26.4623 12.4483 26.739C11.7809 27.0158 11.0656 27.1583 10.3431 27.1584C9.62059 27.1586 8.90515 27.0164 8.23763 26.74C7.57011 26.4636 6.96358 26.0584 6.45271 25.5475C5.94183 25.0367 5.53662 24.4301 5.26021 23.7626C4.98381 23.0951 4.84163 22.3796 4.8418 21.6572C4.84197 20.9347 4.98448 20.2193 5.26119 19.5519C5.53791 18.8845 5.94341 18.2782 6.45452 17.7675L9.99005 14.232C10.5008 13.7213 11.1071 13.3162 11.7744 13.0398C12.4417 12.7634 13.1569 12.6211 13.8791 12.6211C14.6014 12.6211 15.3166 12.7634 15.9839 13.0398C16.6512 13.3162 17.2575 13.7213 17.7682 14.232' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center / 32px;
+
+    filter: invert(22%) sepia(15%) saturate(425%) hue-rotate(192deg) brightness(94%) contrast(95%); // = #373943
+  }
+
+  &:hover {
+    background: $color_blue;
+    border-color: $color_blue;
+
+    &::before {
+      filter: invert(100%);
+    }
+  }
+}
+
+.btn--edit2 {
+  width: 28px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-edit-2) no-repeat center / 140%;
+}
+
+.btn--copy {
+  width: 28px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-copy) no-repeat center / 140%;
+}
+
+.btn--del {
+  width: 28px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-del-3) no-repeat center / 140%;
+}
+
+.btn--to-archive {
+  width: 28px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-to-archive) no-repeat center / 140%;
+}
+
+.btn--form-archive {
+  width: 28px;
+  height: 28px;
+  background: url(../img/sprite.svg#icon-from-archive) no-repeat center / 140%;
+}
+
+.btn--exit {
+  width: 25px;
+  height: 25px;
+  background: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6614 15.7341L12.0714 17.1441L17.0714 12.1441L12.0714 7.1441L10.6614 8.5541L13.2414 11.1441H3.57141V13.1441H13.2414L10.6614 15.7341ZM19.5714 3.1441H5.57141C5.04098 3.1441 4.53227 3.35482 4.1572 3.72989C3.78212 4.10496 3.57141 4.61367 3.57141 5.1441V9.1441H5.57141V5.1441H19.5714V19.1441H5.57141V15.1441H3.57141V19.1441C3.57141 19.6745 3.78212 20.1832 4.1572 20.5583C4.53227 20.9334 5.04098 21.1441 5.57141 21.1441H19.5714C20.6714 21.1441 21.5714 20.2441 21.5714 19.1441V5.1441C21.5714 4.0441 20.6714 3.1441 19.5714 3.1441Z' fill='%23AAAAAA'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.btn--copy {
+
+}
+
+.btn--refresh {
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4736 15.582H4.97363V8.08203' stroke='%23667CEC' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M29.7224 10.2773C28.4456 9.00048 26.9298 7.98766 25.2615 7.29666C23.5933 6.60565 21.8053 6.25 19.9997 6.25C18.194 6.25 16.406 6.60565 14.7378 7.29666C13.0695 7.98766 11.5537 9.00048 10.2769 10.2773L4.97363 15.5806' stroke='%23667CEC' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M27.5264 24.418H35.0264V31.918' stroke='%23667CEC' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.2773 29.7213C11.5541 30.9981 13.0699 32.0109 14.7382 32.7019C16.4064 33.3929 18.1944 33.7486 20.0001 33.7486C21.8057 33.7486 23.5937 33.3929 25.262 32.7019C26.9302 32.0109 28.446 30.9981 29.7228 29.7213L35.0261 24.418' stroke='%23667CEC' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center / contain;
+  }
+}
+
+.btn--buy {
+  width: 100%;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background: url(../img/sprite.svg#icon-buy) no-repeat center / 36px 36px;
+  }
+
+}
+
+.btn--sell {
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background: url(../img/sprite.svg#icon-sell) no-repeat center / 36px 36px;
+  }
+}
+
+.btn--arrow-right {
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background: url(../img/sprite.svg#icon-arrow-right) no-repeat center / 36px 36px;
+  }
+}
+
+@mixin plus-minus-btns {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  width: 36/18*1rem;
+  height: 36/18*1rem;
+  color: $color_blue;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.btn--minus {
+  @include plus-minus-btns;
+  &::before {
+    background: linear-gradient(to right, $color_blue, $color_blue) no-repeat center / 14px 2px;
+  }
+}
+
+.btn--plus {
+  @include plus-minus-btns;
+
+  &::before {
+    background: linear-gradient(to bottom, $color_blue, $color_blue) no-repeat center / 2px 14px, linear-gradient(to right, $color_blue, $color_blue) no-repeat center / 14px 2px;
+  }
+}

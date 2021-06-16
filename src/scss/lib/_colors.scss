@@ -22,13 +22,15 @@ $color_blue: #3E54D8;
 $color_green: #199F27;
 $color_yellow: #F3B63F;
 $color_red: #ED6373;
-
+$color_red_bright: #DE4355;
 
 $color_red_border: #E88390;
 
+$color-inverse: #ffffff;
 $color_grey: #929398;
+$color_lighten_grey: #F5F6FD;
 $color_light_grey: #F5F5F5;
-$color_table_header: #F5F6FD;
+$color_table_header: $color_lighten_grey;
 $color_table_header_title: #606371;
 $color_border_graph_banch: #EDEDED;
 
@@ -45,3 +47,8 @@ $color_burger_close: #666666;
 
 $color_slider_dot: #ffa3a3;
 $color_slider_dot_active: #813b3b;
+
+$color_progress_from: $color_blue;
+$color_progress_to: $color-inverse;
+$danger_bg: #F4EFE7;
+$color_th_bg: $color_lighten_grey;
