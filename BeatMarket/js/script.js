@@ -925,7 +925,6 @@ function addPerformanceGraphLabelsRadio(node, data, name) {
 }
 
 initDateRangePicker();
-<<<<<<< HEAD
     function initTableMain() {
     let commentTableText = document.querySelectorAll(".modal-content-simpleText");
 
@@ -947,7 +946,6 @@ initDateRangePicker();
 }
 
 initTableMain();
-=======
     // contenteditable
 
 let pens = document.querySelectorAll('.js-contenteditable-btn');
@@ -1003,7 +1001,6 @@ btnsClosePrompt.forEach((btn) => btn.addEventListener('click', function (e) {
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 
->>>>>>> ad18f0814c474efa48c8a5095238b83ef4839eaa
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {

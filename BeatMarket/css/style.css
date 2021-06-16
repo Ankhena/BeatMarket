@@ -847,7 +847,6 @@ input.error[type="password"] {
   transition: 0.3s ease-in-out;
 }
 
-<<<<<<< HEAD
 .btn__icon {
   min-width: 32px;
   max-width: 32px;
@@ -863,11 +862,8 @@ input.error[type="password"] {
   stroke: #3E54D8;
 }
 
-.btn_primary {
-=======
 .btn_primary,
 .btn--copy-link {
->>>>>>> ad18f0814c474efa48c8a5095238b83ef4839eaa
   background-color: #fff;
   border: 2px solid #D3E3FF;
   -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
@@ -5895,9 +5891,9 @@ dd {
 }
 
 .btn--danger-inverse {
-  border: 1px solid #DE4355;
+  border: 1px solid #ED6373;
   background: #ffffff;
-  color: #DE4355;
+  color: #ED6373;
 }
 
 .btn--danger-transparent {
@@ -5905,7 +5901,7 @@ dd {
   padding-right: 1em;
   border: transparent;
   background: transparent;
-  color: #DE4355;
+  color: #ED6373;
 }
 
 .btn--as-link {
@@ -6610,7 +6606,7 @@ td {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background: #ED6373;
+  background: #f2919c;
   z-index: -1;
 }
 
