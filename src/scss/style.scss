@@ -25,6 +25,7 @@
 @import "myPapers";
 @import "performance";
 @import "daterangepicker";
+@import "onboard";
 
 @import "all";
 @import "helpers-end";
@@ -630,6 +631,7 @@ body.viewProfile {
 
         &.registration {
             display: block;
+            width: auto;
 
             @media ($media_sm) {
                 display: none;

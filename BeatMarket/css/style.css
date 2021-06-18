@@ -5761,6 +5761,200 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 /*  Larger Screen Styling */
 
+.onboard {
+  z-index: 20;
+  padding: 0 var(--section_padding);
+}
+
+.onboard.visible {
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 20;
+}
+
+.onboard-container {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.onboard-container.invisible {
+  opacity: 0;
+}
+
+.onboard-container.hidden {
+  display: none;
+}
+
+.onboard-header {
+  height: var(--header_height);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.onboard-header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20rem;
+}
+
+.onboard-header .logo picture {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.onboard-header .logo-icon {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  max-width: 100%;
+}
+
+.onboard-header .title {
+  color: #fff;
+  font-size: 1.75rem;
+}
+
+.onboard-header .close {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.onboard-header .close svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.onboard-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3rem 0;
+}
+
+.onboard-content-menu {
+  min-width: 20rem;
+}
+
+.onboard-content-menu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.onboard-content-menu ul li.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.onboard-content-menu ul li svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: #fff;
+  margin-right: 0.8rem;
+}
+
+.onboard-content-menu ul li a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.onboard-content-menu ul li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.onboard-content-info {
+  color: #fff;
+}
+
+.onboard-content-info-title {
+  display: none;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.onboard-content-info-subtitle {
+  font-size: 1.33rem;
+}
+
+.onboard-content-info-description {
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 2.2rem 0;
+  min-height: 5rem;
+}
+
+.onboard-content-info-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.onboard-content-info-pagination-item {
+  height: 0.3rem;
+  width: 2.75rem;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.onboard-content-info-pagination-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.onboard-content-info-pagination-item.active {
+  background-color: #3E54D8;
+}
+
+.onboard-content-info-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5.5rem;
+}
+
+.onboard-content-info-buttons .btn {
+  padding: 1.2rem 0;
+  width: 15rem;
+}
+
+.onboard-content-info-buttons .btn:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.onboard-content-info-buttons .btn.hidden {
+  display: none;
+}
+
+.onboard-content-info-buttons .btn_primary,
+.onboard-content-info-buttons .btn--copy-link {
+  border: none;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   vertical-align: middle;
@@ -7408,6 +7602,7 @@ body.viewProfile .header-controls-links-link.person {
 
 body.viewProfile .header-controls-links-link.registration {
   display: block;
+  width: auto;
 }
 
 body.viewProfile .header-controls-links-link.registration .btn {
@@ -7669,6 +7864,22 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-transform: scale(3);
         -ms-transform: scale(3);
             transform: scale(3);
+  }
+
+  .onboard-header .logo {
+    width: 17rem;
+  }
+
+  .onboard-header .logo picture {
+    max-width: 11rem;
+  }
+
+  .onboard-header .title {
+    font-size: 1.5rem;
+  }
+
+  .onboard-content-menu {
+    min-width: 17rem;
   }
 
   .section-main .main-menu {
@@ -8836,6 +9047,74 @@ body.viewProfile .header-controls-links-link.auth span {
     width: 100%;
   }
 
+  .onboard-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+
+  .onboard-header .logo {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    padding: 0;
+    width: 11rem;
+  }
+
+  .onboard-header .title {
+    display: none;
+  }
+
+  .onboard-header .close {
+    cursor: initial;
+  }
+
+  .onboard-content {
+    padding: 2rem 0;
+  }
+
+  .onboard-content-menu {
+    display: none;
+  }
+
+  .onboard-content-menu ul li svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .onboard-content-menu ul li a {
+    font-size: 1.25rem;
+  }
+
+  .onboard-content-info-title {
+    display: block;
+  }
+
+  .onboard-content-info-description {
+    min-height: 11rem;
+  }
+
+  .onboard-content-info-pagination-item {
+    cursor: initial;
+  }
+
+  .onboard-content-info-buttons {
+    margin-top: 4rem;
+  }
+
+  .onboard-content-info-buttons .btn {
+    width: 50%;
+  }
+
   .adv-portfolio h1 {
     font-size: 2rem;
   }
@@ -8984,6 +9263,10 @@ body.viewProfile .header-controls-links-link.auth span {
 }
 
 @media (min-width: 769px) and (max-width: 1279px) {
+  .onboard-content-menu ul li a span {
+    display: none;
+  }
+
   .section-main .main-menu {
     -ms-flex-preferred-size: 6.5rem;
         flex-basis: 6.5rem;

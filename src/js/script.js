@@ -16,6 +16,7 @@ $(document).ready(function() {
     --include("_dateRangePicker.js")
     --include("_tableMain.js")
     --include("_design.js")
+    --include("_onboard.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
