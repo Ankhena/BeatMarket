@@ -1,596 +1,419 @@
-.myStrategy-myPapers-container {
-
-    &.crypt {
-
-        .table {
-
-            &-header h5, &-content-item-header .action, &-content-item-header .changeble, 
-            &-content-item-header-nums span, &-content-item-content-table span, &-content-item-main span {
-    
-                width: 8rem;
-                margin-right: 0.2rem;
-    
-                @media ($media_xl) {
-                    width: 6.5rem;
-                    margin-right: 0.2rem;
-                }
-    
-                @media ($media_sm) {
-                    width: 30%;
-                    margin-right: 0.4rem;
-                }
-            }
-
-            &-header h5:first-child, &-content-item-header .action {
-                width: 12rem;
-
-                @media ($media_xl) {
-                    width: 11rem;
-                }
-            }
-
-            .table-content-item-content-table .table-header h5, 
-            .table-content-item-content-table .table-content span {
-                width: 9.5rem;
-
-                @media ($media_xl) {
-                    width: 8.5rem;
-                }
-            }
-
-            .table-content-item span.comment {
-                white-space: initial;
-            }
-
-            .table-content-item-content-table .table-content span {
-
-                @media ($media_sm) {
-                    width: 35%;
-
-                    &.comment {
-                        white-space: nowrap;
-                    }
-                }
-            }
-
-            // .table-content-item-content-table .table-content-item {
-            //     @media ($media_sm) {
-            //         justify-content: space-between;
-            //     }
-            // }
-
-            &-content-item {
-
-                &-header {
-
-                    &-main {
-
-                        .action {
-                            @media ($media_sm) {
-                                width: 100%;
-                            }
-
-                            &-text {
-                                display: flex;
-                                flex-direction: row;
-                                align-items: center;
-    
-                                svg {
-                                    width: 1.8rem;
-                                    height: 1.8rem;
-                                }
-    
-                                strong {
-                                    color: $color_black_title;
-                                    margin: 0 0.5rem;
-
-                                    @media ($media_sm) {
-                                        font-size: 1.2rem;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .table {
-
-        &-header h5, &-content-item-header .action, &-content-item-header .changeble, 
-        &-content-item-header-nums span, &-content-item-content-table span, &-content-item-main span {
-
-            width: 6.5rem;
-            margin-right: 0.75rem;
-
-            @media ($media_xl) {
-                width: 5.5rem;
-                margin-right: 0.55rem;
-            }
-
-            @media ($media_sm) {
-                width: 30%;
-                margin-right: 0.55rem;
-            }
-        }
-
-        &-header h5:first-child, &-content-item-header .action, .table-content-item-content-table .table-header h5, 
-        .table-content-item-content-table .table-content span {
-            width: 10rem;
-
-            @media ($media_xl) {
-                width: 9rem;
-            }
-        }
-
-        &-header {
-
-            h5 {
-
-            }
-        }
-
-        &-content {
-
-            &-item {
-                padding: 0 1.5rem;
-                align-items: center;
-                border-bottom: 1px solid $color_block_border;
-
-                flex-direction: column;
-                align-items: stretch;
-
-                &.opened {
-                    .table-content-item-content {
-                        display: block;
-                    }
-
-                    .table-content-item-header {
-                        &-main {
-                            @media ($media_sm) {
-                                background-color: $color_blue;
-                                border-color: transparent;
-
-                                .action-text {
-                                    span, strong {
-                                        color: $color_white;
-                                    }
-                                }
-
-                                .changeble {
-                                    span {
-                                        &::before {
-                                            color: $color_white;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .action {
-                            > svg {
-                                fill: $color_blue;
-                                transform: rotate(180deg);
-    
-                                @media ($media_sm) {
-                                    fill: $color_white;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                @media ($media_sm) {
-                    padding: 0 1.5rem .9rem 1.5rem;
-                    align-items: center;
-                    border-bottom: none;
-
-                    &:hover {
-                        box-shadow: unset;
-                        border: none;
-                    }
-
-                    &:last-child {
-                        border-bottom: 1px solid $color_block_border;
-                    }
-                }
-
-                span {
-
-                    &.success {
-                        color: $color_green;
-                    }
-
-                    &.error {
-                        color: $color_red;
-                    }
-
-                    &.comment {
-                        color: $color_grey;
-                        white-space: nowrap;
-                        line-height: 1.4;
-
-                        @media ($media_xl) {
-                            white-space: initial;
-                        }
-
-                        &:hover {
-                            color: $color_blue;
-                        }
-
-                        svg {
-                            stroke: lighten($color_blue, 15%);
-                            width: 1.3rem;
-                            height: 1.3rem;
-                            cursor: pointer;
-
-                            &:hover {
-                                stroke: $color_blue;
-                            }
-                        }
-                    }
-
-                    @media ($media_sm) {
-                        display: flex;
-                        flex-direction: column;
-
-                        &::before {
-                            color: $color_grey;
-                            font-size: 0.8rem;
-                            margin-bottom: 0.2rem;
-                            white-space: nowrap;
-                        }
-                    }
-
-                    &.owned {
-                        font-weight: 600;
-                    }
-
-                    &.count {
-                        @media ($media_sm) {
-                            &::before {
-                                content: "Кол-во";
-                            }
-                        }
-                    }
-
-                    &.cost {
-                        @media ($media_sm) {
-                            &::before {
-                                content: "Цена";
-                            }
-                        }
-                    }
-
-                    &.money {
-                        @media ($media_sm) {
-                            &::before {
-                                content: "Общ. стоимость";
-                            }
-                        }
-                    }
-
-                    &.daily {
-                        @media ($media_sm) {
-                            &::before {
-                                content: "Дн. доход";
-                            }
-                        }
-                    }
-
-                    &.cash {
-                        @media ($media_sm) {
-                            &::before {
-                                content: "Общ. доход";
-                            }
-                        }
-                    }
-
-                    &.cash-percent {
-                        @media ($media_sm) {
-                            &::before {
-                                content: "Общ. доход %";
-                            }
-                        }
-                    }
-
-                    &.type {
-                        @media ($media_sm) {
-                            &::before {
-                                content: "Тип. бумаги";
-                            }
-                        }
-                    }
-
-                    &.comment {
-                        transition: 0.3s ease-in-out;
-                        max-height: 3.5rem;
-                        overflow-y: auto;
-
-                        &::-webkit-scrollbar-track {
-                            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-                            background-color: #F5F5F5;
-                        }
-                        
-                        &::-webkit-scrollbar {
-                            width: 6px;
-                            background-color: #F5F5F5;
-                        }
-                        
-                        &::-webkit-scrollbar-thumb {
-                            background-color: lighten($color_blue, 25%);
-                        }
-
-                        @media ($media_sm) {
-                            width: 100%;
-                            max-height: initial;
-
-                            &::before {
-                                content: "Коммент.";
-                            }
-                        }
-                    }
-
-                    &.percent-hour {
-                        @media ($media_sm) {
-                            &::before {
-                                content: "24ч. %";
-                            }
-                        }
-                    }
-
-                    &.percent-week {
-                        @media ($media_sm) {
-                            &::before {
-                                content: "7д. %";
-                            }
-                        }
-                    }
-
-                    &.owned {
-                        @media ($media_sm) {
-                            &::before {
-                                font-weight: 500;
-                                content: "Во владении";
-                            }
-                        }
-                    }
-                }
-
-                &-header {
-                    display: flex;
-                    padding: 0.9rem 0;
-
-                    @media ($media_sm) {
-                        flex-direction: column;
-                    }
-
-                    &-main {
-                        display: flex;
-                        align-items: center;
-
-                        @media ($media_sm) {
-                            background: $color_table_header;
-                            border: 1px solid $color_block_border;
-                            padding: 1rem 1.5rem;
-                            margin: 0 calc(-1.5rem - 1px);
-                            justify-content: space-between;
-                        }
-
-                        .action, .changeble {
-                            @media ($media_sm) {
-                                width: auto;
-                            }
-                        }
-
-                        .action {
-                            display: flex;
-                            align-items: center;
-
-                            svg {
-                                width: .8rem;
-                                height: .8rem;
-                                fill: lighten($color_blue, 15%);
-                            }
-                        
-                            &-text {
-                                display: flex;
-                                flex-direction: column;
-                                margin-left: 0.7rem;
-
-                                @media ($media_sm) {
-                                    flex-direction: row;
-                                    align-items: center;
-                                }
-
-                                strong {
-                                    font-weight: 600;
-                                    color: $color_blue;
-                                    margin-bottom: 0.2rem;
-
-                                    @media ($media_sm) {
-                                        font-size: 1.6rem;
-                                        margin: 0 0.7rem 0 0;
-                                        font-weight: bold;
-                                    }
-                                }
-
-                                span {
-                                    color: $color_grey;
-                                    font-size: 0.8rem;
-                                }
-                            }
-                        }
-
-                        .changeble {
-                            span {
-                                @media ($media_sm) {
-                                    &::before {
-                                        content: "Изменение";
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    &-nums {
-                        display: flex;
-                        align-items: center;
-
-                        @media ($media_sm) {
-                            flex-wrap: wrap;
-                            align-items: baseline;
-
-                            span {
-                                margin-top: 1.2rem;
-                            }
-                        }
-                    }
-
-                }
-
-                &-content {
-                    padding: 1.5rem;
-                    background-color: $color_table_header;
-                    border-bottom: 1px solid $color_block_border;
-                    margin: 0 -1.5rem;
-
-                    display: none;
-
-                    &-buttons {
-
-                        .btn {
-                            font-size: 0.9rem;
-                            padding: 0.9rem 3.2rem;
-
-                            &:first-child {
-                                margin-right: 1rem;
-                            }
-                        }
-
-                        @media ($media_sm) {
-                            display: flex;
-
-                            .btn {
-                                padding: 0.9rem 0;
-                                width: 50%;
-                            }
-                        }
-                    }
-
-                    &-table {
-
-                        .table {
-                            margin-top: 1rem;
-                            //border-bottom: 1px solid $color_block_border;
-
-                            &-content {
-                                margin: 0 -1.5rem;
-                                padding: 0 1.5rem;
-
-                                &-item {
-                                    display: flex;
-                                    flex-direction: row;
-                                    padding: 0.9rem 0;
-                                    margin: 0;
-                                    border-top: 1px solid $color_block_border;
-                                    align-items: center;
-
-                                    &:hover {
-                                        background: unset;
-                                        border-top: 1px solid $color_block_border;
-                                        box-shadow: none;
-                                    }
-
-                                    @media ($media_sm) {
-                                        flex-wrap: wrap;
-            
-                                        span {
-                                            margin-top: 1.1rem;
-                                        }
-                                    }
-
-                                    .comment {
-                                        @media ($media_sm) {
-                                            width: 100%;
-                                        }
-                                    }
-
-                                    &-main {
-                                        display: flex;
-
-                                        @media ($media_sm) {
-                                            width: 100%;
-                                            display: flex;
-                                            justify-content: space-between;
-
-                                            span {
-                                                margin: 0;
-
-                                                &.count {
-                                                    font-size: 1.7rem;
-                                                    font-weight: bold;
-
-                                                    &::before {
-                                                        content: none;
-                                                    }
-                                                }
-                                            }
-                                        }
-
-                                        .operation {
-
-                                            strong {
-                                                font-size: 0.8rem;
-                                                color: $color_white;
-                                                padding: 0.4rem 0.7rem;
-                                                background-color: $color_grey;
-                                                font-weight: 600;
-                                                border-radius: 0.5rem;
-                                                text-align: center;
-                                            }
-                    
-                                            &.success {
-                                                strong {
-                                                    background-color: $color_green;
-                                                }
-                                            }
-                    
-                                            &.error {
-                                                strong {
-                                                    background-color: $color_red;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .pagination {
-        margin-top: 1.5rem;
+.statTable {
+    margin: 2.2rem -1.5rem;
+    width: calc(100% + 3rem);
+
+    // .statTable__row
+
+    &__row {
+        display: flex;
+        align-items: center;
+        padding: 0 1.5rem;
+        font-weight: 500;
+        font-size: 0.9rem;
 
         @media ($media_sm) {
-            display: flex;
             flex-wrap: wrap;
-            justify-content: center;
         }
 
-        ul {
-            margin-right: 1.8rem;
+        &--mobileBorder {
+            @media ($media_sm) {
+                border-top: 1px solid $color_border_dop;
+            }
+        }
+
+        &--header {
+            background-color: $color_table_header;
+            border-top: 1px solid $color_border_dop;
+            border-bottom: 1px solid $color_border_dop;
 
             @media ($media_sm) {
-                margin: 0 0 1rem 0;
+                display: none;
+            }
+            
+            .statTable__item {
+                color: $color_table_header_title;
+            }
+        }
+
+        &--content {
+            border-bottom: 1px solid $color_border_dop;
+        }
+    }
+
+    // .statTable__content
+
+    &__content {
+        cursor: pointer;
+
+        @media ($media_sm) {
+            cursor: initial;
+            background-color: $color_table_header;
+        }
+
+        &:hover {
+            transition: 0.3s ease-in-out;
+            border-color: 1px solid $color_block_border;
+            box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+            background-color: $color_block_bg;
+
+            @media ($media_sm) {
+                background-color: $color_table_header;
+            }
+        }
+
+        &--opened {
+
+            .statSticker__arrow {
+                transform: rotate(0deg);
+                fill: $color_blue;
+            }
+
+            .statTable__subtable {
+                display: block;
+            }
+
+            @media ($media_sm) {
+
+                .statTable__item {
+                    display: flex;
+                }
+
+                .statTable__item--label {
+                    display: block;
+                }
+
+                .statTable__item--sticker {
+                    background-color: $color_blue;
+                }
+
+                .statSticker__arrow {
+                    fill: $color_white;
+                }
+                
+                .statStickerInfo__title,
+                .statStickerInfo__cost,
+                .statStickerInfo__subtitle {
+                    color: $color_white;
+                }
+
+                .statSticker__percent--success {
+                    color: $color_green_light_table_header;
+                }
+            }
+        }
+    }
+
+    // .statTable__subtable
+
+    &__subtable {
+        display: none;
+
+        .statTable__row--header {
+            border-top: none;
+        }
+    }
+
+    // .statTable__item
+
+    &__item {
+        flex-basis: 100%;
+        padding: 1rem 0;
+        line-height: 1.5;
+
+        @media ($media_sm) {
+            display: none;
+            flex-direction: column;
+            flex-basis: 50%;
+            justify-content: space-between;
+        }
+
+        &--grow {
+            flex-basis: 150%;
+        }
+
+        &--shrink {
+            flex-basis: 60%;
+        }
+
+        &--success {
+            color: $color_green;
+        }
+
+        &--error {
+            color: $color_red;
+        }
+
+        &--comment {
+            color: $color_grey;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media ($media_sm) {
+                flex-basis: 100%;
+
+                .statTable__value {
+                    white-space: initial;
+                    line-height: 1.6;
+                }
+            }
+        }
+
+        &--sticker {
+            overflow: hidden;
+
+            @media ($media_sm) {
+                display: flex;
+                margin: 0 -1.5rem;
+                padding: 1rem 1.5rem;
+                flex-direction: row;
+                flex-basis: calc(100% + 3rem);
+            }
+        }
+
+        &--mobDate {
+            @media ($media_sm) {
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+        }
+
+        &--label {
+            @media ($media_sm) {
+                display: block;
+            }
+        }
+    }
+
+    &__description {
+        display: none;
+        margin-bottom: 0.4rem;
+        color: $color_table_header_title;
+
+        @media ($media_sm) {
+            display: inline-block;
+        }
+    }
+
+    &__label {
+        padding: 0.3rem 0.7rem;
+        background-color: $color_grey;
+        color: $color_white;
+        border-radius: 0.5rem;
+
+        &--success {
+            background-color: $color_green;
+        }
+
+        &--error {
+            background-color: $color_red;
+        }
+    }
+
+    &__value {
+        white-space: nowrap;
+    }
+
+    &__pencil {
+        transition: 0.3s ease-in-out;
+        stroke: lighten($color_blue, 15%);
+        width: 1.3rem;
+        height: 1.3rem;
+        cursor: pointer;
+
+        &:hover {
+            stroke: $color_blue;
+        }
+    }
+}
+
+
+.statSubtable {
+    padding: 1.5rem;
+    background-color: $color_table_header;
+    border-bottom: 1px solid $color_border_dop;
+
+    // .statSubtable__buttons
+
+    &__buttons {
+        display: flex;
+
+        @media ($media_sm) {
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+
+    // .statSubtable__button
+
+    &__button {
+        padding: 0.9rem 3.3rem;
+        font-size: 0.9rem;
+
+        @media ($media_sm) {
+            flex-basis: calc(50% - 0.5rem);
+            padding: 0.9rem 0;
+        }
+
+        &--right {
+            margin-left: auto;
+
+            @media ($media_sm) {
+                margin-top: 1rem;
+                flex-basis: 100%;
+                border: none;
+                background-color: transparent;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+
+            @media ($media_sm) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    // .statSubtable__table
+
+    &__table {
+
+    }
+
+    // .statSubtable__pagination
+
+    &__pagination {
+
+        @media ($media_sm) {
+            text-align: center;
+        }
+
+        span {
+            margin-left: 1.5rem;
+
+            @media ($media_sm) {
+                display: inline-block;
+                margin: 1rem 0 0 0;
             }
         }
     }
 }
+
+.statSticker {
+    display: flex;
+    align-items: center;
+
+    // .statSticker__icon
+
+    &__icon {
+        margin-right: 0.8rem;
+    }
+
+    // .statSticker__arrow
+
+    &__arrow {
+        width: 0.8rem;
+        height: 0.8rem;
+        fill: $breadcrumb_border;
+        margin-top: 0.5rem;
+        transform: rotate(-90deg);
+        transition: 0.2s ease-in-out;
+    }
+
+    // .statSticker__img
+
+    &__img {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 0.6rem;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // .statSticker__content
+
+    &__content {
+        margin-right: 0.6rem;
+    }
+
+    // .statSticker__percent
+
+    &__percent {
+        font-weight: 600;
+        font-size: 1.3rem;
+        margin-left: auto;
+        display: none;
+
+        @media ($media_sm) {
+            display: inline;
+        }
+
+        &--success {
+            color: $color_green;
+        }
+
+        &--error {
+            color: $color_red;
+        }
+
+    }
+}
+
+.statStickerInfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    font-weight: 500;
+    max-width: 7rem;
+
+    @media ($media_xl) {
+        max-width: 5rem;
+    }
+
+    @media ($media_sm) {
+        max-width: 10rem;
+    }
+
+    // .statStickerInfo__title
+
+    &__title {
+        font-weight: 600;
+        color: $color_blue;
+        font-size: 0.9rem;
+
+        @media ($media_sm) {
+            font-size: 1rem;
+        }
+    }
+
+    // .statStickerInfo__cost
+
+    &__cost {
+        font-size: 0.9rem;
+        margin-left: 0.3rem;
+        display: none;
+
+        @media ($media_sm) {
+            display: inline;
+        }
+    }
+
+    // .statStickerInfo__subtitle
+
+    &__subtitle {
+        flex-basis: 100%;
+        font-size: 0.8rem;
+        color: $color_grey;
+
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+
 
 .compare {
     margin-top: 3.33rem;
@@ -857,6 +680,69 @@ $banch_items_height: 60px;
             border-radius: 0px 8px 8px 0px;
         }
 
+        &-summary {
+            background-color: darken($color_white, 2%);
+            border: 1px solid darken($color_white, 7%);
+            box-sizing: border-box;
+            border-radius: 0.4rem;
+            padding: 0.7rem;
+
+            &-title {
+                color: $color_black_title;
+                font-weight: 600;
+                font-size: 1rem;
+            }
+
+            &-content {
+                margin-top: 0.9rem;
+
+                span {
+                    position: relative;
+                    display: inline-block;
+                    padding-left: 1.2rem;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0.7rem;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        content: "";
+                        min-width: 0.8rem;
+                        min-height: 0.8rem;
+                        background-color: red;
+                        border-radius: 0.25rem;
+                    }
+
+                    &.green {
+                        &::before {
+                            background-color: $color_green;
+                        }
+                    }
+
+                    &.primary {
+                        &::before {
+                            background-color: lighten($color_blue, 10%);
+                        }
+                    }
+
+                    &.success {
+                        color: $color_green;
+                    }
+
+                    &.error {
+                        color: $color_red;
+                    }
+                }
+            }
+        }
+
         &-percent {
             height: $banch_info_height;
             display: flex;
@@ -878,7 +764,7 @@ $banch_items_height: 60px;
             justify-content: space-between;
 
             @media ($media_sm) {
-                align-items: center;
+                //align-items: center;
             }
 
             &-item {
@@ -975,10 +861,12 @@ $banch_items_height: 60px;
 
                         &.success {
                             background-color: $color_green;
+                            filter: drop-shadow(0px 1px 1px $color_green);
                         }
 
                         &.primary {
                             background-color: lighten($color_blue, 10%);
+                            filter: drop-shadow(0px 1px 1px lighten($color_blue, 10%));
                         }
                     }
                 }

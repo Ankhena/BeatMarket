@@ -489,6 +489,10 @@
 
                     .value {
                         margin-left: auto;
+
+                        strong {
+                            white-space: nowrap;
+                        }
                     }
 
                     &:not(:last-child) {
@@ -511,6 +515,7 @@
                 span,
                 strong {
                     font-size: 0.9rem;
+                    white-space: nowrap;
                 }
     
                 &:not(:last-child) {

@@ -1,7 +1,7 @@
 --include("_webpsup.js");
 
 $(document).ready(function() {
- 
+
     --include("_modal.js")
     --include("_burger.js")
     --include("_selectric.js")
@@ -14,6 +14,9 @@ $(document).ready(function() {
     --include("_banchGraph.js")
     --include("_performance.js")
     --include("_dateRangePicker.js")
+    --include("_tableMain.js")
+    --include("_design.js")
+    --include("_onboard.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
@@ -29,12 +32,6 @@ $(document).ready(function() {
     });
 
     $(".strategyCards-card-range").slider();
-
-    document.querySelectorAll(".myPapers-item").forEach(item => {
-        item.addEventListener("click", () => {
-            item.classList.toggle("opened");
-        });
-    });
 
     document.querySelectorAll(".myStrategy-items-item-header-toggle").forEach(item => { // открытие/закрытие стратегий
         item.addEventListener("click", () => {
@@ -69,5 +66,5 @@ $(document).ready(function() {
             });
         }
     }
-    
+
 });

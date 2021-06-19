@@ -26,7 +26,7 @@ $media_sm: "max-width: " + $screen_sm;
 $media_xs: "max-width: " + $screen_xs;
 
 $media_full: "min-width: " + $screen_md;
-$media_md_lg: "min-width: " + $screen_sm + ") and (max-width: " + $screen_lg;
+$media_md_lg: "min-width: " + ($screen_sm+1) + ") and (max-width: " + $screen_lg;
 
 //  АДАПТИВ БЕЗ ПРОМЕЖУТКОВ  \\
 

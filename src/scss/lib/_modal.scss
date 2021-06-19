@@ -139,6 +139,10 @@
             }
         }
 
+        &-simpleText {
+            line-height: 1.6;
+        }
+
         &-switcher {
 
             &-button {
@@ -240,144 +244,6 @@
 
             .tarrifs-cards {
                 margin-top: 1.8rem;
-
-                &-card {
-                    position: relative;
-                    overflow: hidden;
-                    background-color: $color_white;
-                    border: 1px solid $color_block_border;
-                    border-radius: 0.9rem;
-                    padding: 1.8rem 1.5rem;
-                    display: flex;
-                    flex-direction: column;
-                    transition: 0.3s ease-in-out;
-                    cursor: pointer;
-
-                    &:not(:last-child) {
-                        margin-bottom: 1.5rem;
-                    }
-    
-                    @media ($media_sm) {
-                        cursor: initial;
-                    }
-    
-                    &::before {
-                        position: absolute;
-                        content: "";
-                        width: 8rem;
-                        height: 8rem;
-                        border-radius: 50%;
-                        right: 0;
-                        top: 0;
-                        transform: translate(50%, -50%);
-                        transition: 0.3s ease-in-out;
-                    }
-    
-                    &.blue {
-                        &::before {
-                            background-color: $color_blue;
-                        }
-                    }
-    
-                    &.green {
-                        &::before {
-                            background-color: $color_green;
-                        }
-                    }
-    
-                    &.red {
-                        &::before {
-                            background-color: $color_red;
-                        }
-                    }
-    
-                    &.yellow {
-                        &::before {
-                            background-color: $color_yellow;
-                        }
-                    }
-    
-                    &:hover {
-                        box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.22);
-                        transform: translateY(-0.5rem);
-    
-                        &::before {
-                            transform: translate(50%, -50%) scale(1.8);
-    
-                            @media ($media_sm) {
-                                transform: translate(50%, -50%) scale(1.3);
-                            }
-                        }
-    
-                        .btn_tarrifs {
-                            box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
-                            background-color: $color_blue;
-                            color: $color_white;
-                            border-color: $color_blue;
-                        }
-                    }
-    
-                    &-header {
-    
-                        h3 {
-                            color: $color_black_title;
-                            font-size: 1.33rem;
-                            font-weight: 600;
-                        }
-                    }
-    
-                    &-cost {
-                        margin-top: 1rem;
-    
-                        strong {
-                            color: $color_blue;
-                            font-size: 1.77rem;
-                            margin-right: 0.3rem;
-                        }
-    
-                        span {
-                            color: $color_grey;
-                            font-size: 0.9rem;
-                            font-weight: 500;
-                        }
-                    }
-    
-                    &-text {
-                        margin: 2.2rem 0;
-    
-                        p {
-                            line-height: 1.6;
-                            color: $color_black_title;
-                            font-size: 0.9rem;
-                        }
-                    }
-    
-                    &-btn {
-                        margin-top: auto;
-    
-                        .btn_tarrifs {
-                            font-weight: 600;
-                            color: $color_blue;
-                            border: 1px solid $color_block_border;
-                            padding: 1.5rem 3rem;
-                            background-color: $color_white;
-                            transition: 0.3s ease-in-out;
-                        
-                            @media ($media_sm) {
-                                padding: 1.5rem 0;
-                                width: 100%;
-                                text-align: center;
-                            }
-                        
-                            &:hover {
-                                box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
-                                background-color: $color_blue_hover;
-                                color: $color_white;
-                                border-color: $color_blue_hover;
-                            }
-                        }
-                    }
-                }
             }
         }
 
@@ -502,14 +368,14 @@
             }
 
             &-date {
-                width: 11rem;
+                width: 13rem;
 
                 input {
                     text-align: center;
                 }
 
                 @media ($media_xl) {
-                    width: 12rem;
+                    width: 14rem;
                 }
 
                 @media ($media_sm) {

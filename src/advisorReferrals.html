@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include('_head.html', {
+  "title": "BeatMarket - Купите эти акции у своего брокера"
+  })
+
+</head>
+<body>
+
+@@include("_header.html", {
+"title": "Рефералы"
+})
+
+<section class="section-outer section-main">
+  <div class="main">
+
+    @@include("_menu.html", {
+    "title": "Рефералы"
+    })
+
+    <h1 class="main-title">Статистика</h1>
+
+    <div class="main-content advisor">
+
+      <section class="referrals">
+        <h2 class="referrals__title">Статистика</h2>
+        <section class="referrals__stats">
+
+          <dl class="referrals__description">
+            <div class="referrals__descr-item">
+              <dt>переходов</dt>
+              <dd>45</dd>
+            </div>
+            <div class="referrals__descr-item">
+              <dt>регистраций</dt>
+              <dd>35</dd>
+            </div>
+            <div class="referrals__descr-item referrals__descr-item--zero">
+              <dt>аккаунтов активно</dt>
+              <dd>0</dd>
+            </div>
+            <div class="referrals__descr-item referrals__descr-item--zero">
+              <dt>дней бесплатной подписки</dt>
+              <dd>0</dd>
+            </div>
+          </dl>
+          <p>За каждого друга, подключившегося по ссылке и пользующегося сервисом, вы получите +1 день бесплатной
+            подписки ежемесячно. (до 15 дней бесплатно, ежемесячно. Экономьте на подписке до 50%!)</p>
+        </section>
+
+
+        <form class="referrals__link">
+          <h3>Ссылка на советник</h3>
+          <p class="referrals__btns">
+            <input type="url">
+            <button class="btn btn--copy-link" aria-label="Копировать ссылку"></button>
+          </p>
+
+          <label class="referrals__text checkbox-toggle">
+            <input class="checkbox-toggle__input" type="checkbox" checked="">
+            <span class="checkbox-toggle__toggle"></span> Хочу, чтобы моя реферальная ссылка на результаты советника была доступна всем
+          </label>
+        </form>
+
+        <form class="referrals__link referrals__link--ref">
+          <h3>Реферальная ссылка</h3>
+          <p class="referrals__btns">
+            <input type="url">
+            <button class="btn btn--copy-link" aria-label="Копировать ссылку"></button>
+          </p>
+          <p class="referrals__text">Отправляйте её напрямую, если не хотите показывать портфель</p>
+        </form>
+
+        <form class="referrals__link referrals__link--strategy">
+          <h3>Ссылки на мои стратегии</h3>
+          <div>
+            <h4>Тестовая стратегия 1</h4>
+            <p class="referrals__btns">
+              <input type="url">
+              <button class="btn btn--copy-link" aria-label="Копировать ссылку"></button>
+            </p>
+            <label class="referrals__text checkbox-toggle">
+              <input class="checkbox-toggle__input" type="checkbox" checked="">
+              <span class="checkbox-toggle__toggle"></span> Хочу,
+              чтобы моя реферальная ссылка на результаты стратегии была доступна всем
+            </label>
+          </div>
+          <div>
+            <h4>Тестовая стратегия 1</h4>
+            <p class="referrals__btns">
+              <input type="url">
+              <button class="btn btn--copy-link" aria-label="Копировать ссылку"></button>
+            </p>
+            <label class="referrals__text checkbox-toggle">
+              <input class="checkbox-toggle__input" type="checkbox" checked="">
+              <span class="checkbox-toggle__toggle"></span> Хочу,
+              чтобы моя реферальная ссылка на результаты стратегии была доступна всем
+            </label>
+          </div>
+        </form>
+
+
+      </section>
+
+      <!---->
+    </div>
+  </div>
+</section>
+
+@@include("_footer.html")
+
+</body>
+</html>
+
