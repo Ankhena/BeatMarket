@@ -25,6 +25,7 @@
 @import "myPapers";
 @import "performance";
 @import "daterangepicker";
+@import "onboard";
 
 @import "all";
 @import "helpers-end";
@@ -157,7 +158,7 @@
                             margin-bottom: 2rem;
                         }
 
-                        &:hover, &:focus {
+                        &.active, &:hover, &:focus {
                             svg {
                                 stroke: $color_blue;
                                 fill: $color_blue;
@@ -452,13 +453,13 @@
                         transform: translate(0, 100%);
 
                         @media ($media_sm) {
-                            transform: translate(50%, 100%);
+                            transform: translate(0, 100%);
                         }
                     }
 
                     p {
                         font-size: inherit;
-                        max-height: 8rem;
+                        max-height: 7rem;
                         overflow-y: auto;
                     }
 
@@ -631,6 +632,7 @@ body.viewProfile {
 
         &.registration {
             display: block;
+            width: auto;
 
             @media ($media_sm) {
                 display: none;

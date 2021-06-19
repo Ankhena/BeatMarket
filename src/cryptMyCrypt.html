@@ -52,165 +52,252 @@
                                             "news": "",
                                             "cryptHistory": ""
                                         })
-										<div class="myStrategy-myPapers-container the_table crypt">
-											<div class="table">
-                                                <div class="table-header">
-                                                    <h5>Монета</h5>
-                                                    <h5>Стоимость</h5>
-                                                    <h5>24ч. %</h5>
-                                                    <h5>7д. %</h5>
-                                                    <h5>Во владении</h5>
-                                                    <h5>Комментарий</h5>
+
+                                        <div class="statTable">
+                                            <div class="statTable__row statTable__row--header">
+                                                <span class="statTable__item statTable__item--grow">Монета</span>
+                                                <span class="statTable__item">Кол-во</span>
+                                                <span class="statTable__item">Цена</span>
+                                                <span class="statTable__item">Сумма</span>
+                                                <span class="statTable__item statTable__item--shrink">24ч. %</span>
+                                                <span class="statTable__item">Итого</span>
+                                                <span class="statTable__item">Комментарий</span>
+                                            </div>
+                                            <div class="statTable__content">
+                                                <div class="statTable__row statTable__row--content statTable__row--mobileBorder">
+                                                    <div class="statTable__item statTable__item--sticker statTable__item--grow statSticker">
+                                                        <div class="statSticker__icon">
+                                                            <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                        </div>
+                                                        <div class="statSticker__img">
+                                                            <img src="./img/statTable__icons/bitcoin.svg" alt="Иконка биткоина">
+                                                        </div>
+                                                        <div class="statSticker__content statStickerInfo">
+                                                            <h3 class="statStickerInfo__title">BAT</h3>
+                                                            <span class="statStickerInfo__cost">422.21 P</span>
+                                                            <span class="statStickerInfo__subtitle">Basic Attention Token</span>
+                                                        </div>
+                                                        <div class="statSticker__percent statSticker__percent--error">
+                                                            <span>+1.56%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="statTable__item">
+                                                        <span class="statTable__description">Кол-во</span>
+                                                        <span class="statTable__value">0.0000312</span>
+                                                    </div>
+                                                    <div class="statTable__item">
+                                                        <span class="statTable__description">Цена</span>
+                                                        <span class="statTable__value">0.0000312</span>
+                                                    </div>
+                                                    <div class="statTable__item statTable__item--success">
+                                                        <span class="statTable__description">Сумма</span>
+                                                        <span class="statTable__value">0.0000312</span>
+                                                    </div>
+                                                    <div class="statTable__item statTable__item--shrink statTable__item--error">
+                                                        <span class="statTable__description">24ч. %</span>
+                                                        <span class="statTable__value">25.5%</span>
+                                                    </div>
+                                                    <div class="statTable__item statTable__item--success">
+                                                        <span class="statTable__description">Итого</span>
+                                                        <span class="statTable__value">0.0000312</span>
+                                                    </div>
+                                                    <div class="statTable__item statTable__item--comment" data-modal="modal_comment_table">
+                                                        <span class="statTable__description">Комментарий</span>
+                                                        <span class="statTable__value">Докупить на спаде</span>
+                                                    </div>
                                                 </div>
-                                                <div class="table-content">
-                                                    <div class="table-content-item myPapers-item">
-
-                                                        <div class="table-content-item-header">
-                                                            <div class="table-content-item-header-main">
-                                                                <div class="action">
-                                                                    <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                                                                    <div class="action-text">
-                                                                        <svg><use xlink:href="img/main.svg#icon-BCH"></use></svg>
-                                                                        <strong>Bitcoin</strong>
-                                                                        <span>BTC</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="table-content-item-header-nums">
-                                                                <span class="cost">3161.11 $</span>
-                                                                <span class="percent-hour error">-1.65%</span>
-                                                                <span class="percent-week success">-1.65%</span>
-                                                                <span class="owned">9423.10 $</span>
-                                                                <span class="comment">
-                                                                    Продам на завершении
-                                                                </span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="table-content-item-content">
-                                                            <div class="table-content-item-content-buttons">
-                                                                <button class="btn btn_blue">Купить</button>
-                                                                <button class="btn btn_primary">Продать</button>
-                                                            </div>
-                                                            <div class="table-content-item-content-table">
-                                                                <div class="table">
-                                                                    <div class="table-header">
-                                                                        <h5>Дата</h5>
-                                                                        <h5>Операция</h5>
-                                                                        <h5>Цена</h5>
-                                                                        <h5>Комментарий</h5>
-                                                                    </div>
-                                                                    <div class="table-content">
-                                                                        <div class="table-content-item">
-                                                                            <div class="table-content-item-main">
-                                                                                <span class="count">21.11.2021</span>
-                                                                                <span class="operation error">
-                                                                                    <strong>Продажа</strong>
-                                                                                </span>
-                                                                            </div>
-                                                                            <span class="cost">94.10 $</span>
-                                                                            <span class="comment">Продам на завершении</span>
-                                                            
-                                                                        </div>
-                                                                        <div class="table-content-item">
-                                                                            <div class="table-content-item-main">
-                                                                                <span class="count">21.11.2021</span>
-                                                                                <span class="operation success">
-                                                                                    <strong>Покупка</strong>
-                                                                                </span>
-                                                                            </div>
-                                                                            <span class="cost">94.10 $</span>
-                                                                            <span class="comment">Продам на завершении</span>
-                                                            
-                                                                        </div>
-                                                                        <div class="table-content-item">
-                                                                            <div class="table-content-item-main">
-                                                                                <span class="count">21.11.2021</span>
-                                                                                <span class="operation error">
-                                                                                    <strong>Продажа</strong>
-                                                                                </span>
-                                                                            </div>
-                                                                            <span class="cost">94.10 $</span>
-                                                                            <span class="comment">Продам на завершении</span>
-                                                            
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="table-content-item-content-pagination pagination">
-                                                                <ul>
-                                                                    <li class="prev">
-                                                                        <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
-                                                                    </li>
-                                                                    <li><a href="#">1</a></li>
-                                                                    <li><a href="#">...</a></li>
-                                                                    <li><a href="#">4</a></li>
-                                                                    <li class="active"><a href="#">5</a></li>
-                                                                    <li><a href="#">6</a></li>
-                                                                    <li><a href="#">...</a></li>
-                                                                    <li><a href="#">12</a></li>
-                                                                    <li class="next">
-                                                                        <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
-                                                                    </li>
-                                                                </ul>
-                                                                <span>Показано 90-105 из 210</span>
-                                                            </div>
-                                                        </div>
-
+                                                <div class="statTable__subtable statSubtable">
+                                                    <div class="statSubtable__buttons">
+                                                        <button class="statSubtable__button btn btn_blue">Купить</button>
+                                                        <button class="statSubtable__button btn btn_primary">Продать</button>
+                                                        <button class="statSubtable__button statSubtable__button--right btn btn_redInverse">Удалить компанию</button>
                                                     </div>
-                                                    <div class="table-content-item myPapers-item">
-
-                                                        <div class="table-content-item-header">
-                                                            <div class="table-content-item-header-main">
-                                                                <div class="action">
-                                                                    <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                                                                    <div class="action-text">
-                                                                        <svg><use xlink:href="img/main.svg#icon-ethereum"></use></svg>
-                                                                        <strong>Ethereum</strong>
-                                                                        <span>ETH</span>
-                                                                    </div>
-                                                                </div>
+                                                    <div class="statSubtable__table statTable">
+                                                        <div class="statTable__row statTable__row--header">
+                                                            <span class="statTable__item">Дата</span>
+                                                            <span class="statTable__item">Операция</span>
+                                                            <span class="statTable__item">Кол-во</span>
+                                                            <span class="statTable__item">Цена</span>
+                                                            <span class="statTable__item">Сумма</span>
+                                                            <span class="statTable__item">Итого</span>
+                                                        </div>
+                                                        <div class="statTable__row statTable__row--mobileBorder statTable__row--content">
+                                                            <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                                                            <div class="statTable__item statTable__item--label">
+                                                                <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
                                                             </div>
-                                                            <div class="table-content-item-header-nums">
-                                                                <span class="cost">3161.11 $</span>
-                                                                <span class="percent-hour error">-1.65%</span>
-                                                                <span class="percent-week success">-1.65%</span>
-                                                                <span class="owned">9423.10 $</span>
-                                                                <span class="comment">
-                                                                    Продам на завершении
-                                                                </span>
+                                                            <div class="statTable__item">
+                                                                <span class="statTable__description">Кол-во</span>
+                                                                <span class="statTable__value">0.0000312</span>
+                                                            </div>
+                                                            <div class="statTable__item">
+                                                                <span class="statTable__description">Цена</span>
+                                                                <span class="statTable__value">0.0000312</span>
+                                                            </div>
+                                                            <div class="statTable__item">
+                                                                <span class="statTable__description">Сумма</span>
+                                                                <span class="statTable__value">0.0000312</span>
+                                                            </div>
+                                                            <div class="statTable__item statTable__item--success">
+                                                                <span class="statTable__description">Итого</span>
+                                                                <span class="statTable__value">+122 224.56 P (+12.21%)</span>
                                                             </div>
                                                         </div>
-
+                                                        <div class="statTable__row statTable__row--content">
+                                                            <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                                                            <div class="statTable__item statTable__item--label">
+                                                                <span class="statTable__value statTable__label statTable__label--success">Покупка</span>
+                                                            </div>
+                                                            <div class="statTable__item">
+                                                                <span class="statTable__description">Кол-во</span>
+                                                                <span class="statTable__value">0.0000312</span>
+                                                            </div>
+                                                            <div class="statTable__item">
+                                                                <span class="statTable__description">Цена</span>
+                                                                <span class="statTable__value">0.0000312</span>
+                                                            </div>
+                                                            <div class="statTable__item">
+                                                                <span class="statTable__description">Сумма</span>
+                                                                <span class="statTable__value">0.0000312</span>
+                                                            </div>
+                                                            <div class="statTable__item statTable__item--success">
+                                                                <span class="statTable__description">Итого</span>
+                                                                <span class="statTable__value">+122 224.56 P (+12.21%)</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="statTable__row statTable__row--content">
+                                                            <span class="statTable__item statTable__item--mobDate">20.11.2021</span>
+                                                            <div class="statTable__item statTable__item--label">
+                                                                <span class="statTable__value statTable__label statTable__label--error">Продажа</span>
+                                                            </div>
+                                                            <div class="statTable__item">
+                                                                <span class="statTable__description">Кол-во</span>
+                                                                <span class="statTable__value">0.0000312</span>
+                                                            </div>
+                                                            <div class="statTable__item">
+                                                                <span class="statTable__description">Цена</span>
+                                                                <span class="statTable__value">0.0000312</span>
+                                                            </div>
+                                                            <div class="statTable__item">
+                                                                <span class="statTable__description">Сумма</span>
+                                                                <span class="statTable__value">0.0000312</span>
+                                                            </div>
+                                                            <div class="statTable__item statTable__item--success">
+                                                                <span class="statTable__description">Итого</span>
+                                                                <span class="statTable__value">+122 224.56 P (+12.21%)</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="table-content-item myPapers-item">
-
-                                                        <div class="table-content-item-header">
-                                                            <div class="table-content-item-header-main">
-                                                                <div class="action">
-                                                                    <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                                                                    <div class="action-text">
-                                                                        <svg><use xlink:href="img/main.svg#icon-ethereum"></use></svg>
-                                                                        <strong>Ethereum</strong>
-                                                                        <span>ETH</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="table-content-item-header-nums">
-                                                                <span class="cost">3161.11 $</span>
-                                                                <span class="percent-hour error">-1.65%</span>
-                                                                <span class="percent-week success">-1.65%</span>
-                                                                <span class="owned">9423.10 $</span>
-                                                                <span class="comment">
-                                                                    Продам на завершении
-                                                                </span>
-                                                            </div>
-                                                        </div>
-
+                                                    <div class="statSubtable__pagination pagination">
+                                                        <ul>
+                                                            <li class="prev">
+                                                                <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
+                                                            </li>
+                                                            <li><a href="#">1</a></li>
+                                                            <li><a href="#">...</a></li>
+                                                            <li><a href="#">4</a></li>
+                                                            <li class="active"><a href="#">5</a></li>
+                                                            <li><a href="#">6</a></li>
+                                                            <li><a href="#">...</a></li>
+                                                            <li><a href="#">12</a></li>
+                                                            <li class="next">
+                                                                <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
+                                                            </li>
+                                                        </ul>
+                                                        <span>Показано 90-105 из 210</span>
                                                     </div>
                                                 </div>
                                             </div>
-										</div>
+                                            <div class="statTable__content">
+                                                <div class="statTable__row statTable__row--content">
+                                                    <div class="statTable__item statTable__item--sticker statTable__item--grow statSticker">
+                                                        <div class="statSticker__icon">
+                                                            <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                        </div>
+                                                        <div class="statSticker__img">
+                                                            <img src="./img/statTable__icons/eos.svg" alt="Иконка эфира">
+                                                        </div>
+                                                        <div class="statSticker__content statStickerInfo">
+                                                            <h3 class="statStickerInfo__title">ETH</h3>
+                                                            <span class="statStickerInfo__cost">422.21 P</span>
+                                                            <span class="statStickerInfo__subtitle">Basic Attention Token</span>
+                                                        </div>
+                                                        <div class="statSticker__percent statSticker__percent--success">
+                                                            <span>+1.56%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="statTable__item">
+                                                        <span class="statTable__description">Кол-во</span>
+                                                        <span class="statTable__value">0.0000312</span>
+                                                    </div>
+                                                    <div class="statTable__item">
+                                                        <span class="statTable__description">Цена</span>
+                                                        <span class="statTable__value">0.0000312</span>
+                                                    </div>
+                                                    <div class="statTable__item statTable__item--success">
+                                                        <span class="statTable__description">Сумма</span>
+                                                        <span class="statTable__value">0.0000312</span>
+                                                    </div>
+                                                    <div class="statTable__item statTable__item--shrink statTable__item--error">
+                                                        <span class="statTable__description">24ч. %</span>
+                                                        <span class="statTable__value">25.5%</span>
+                                                    </div>
+                                                    <div class="statTable__item statTable__item--success">
+                                                        <span class="statTable__description">Итого</span>
+                                                        <span class="statTable__value">0.0000312</span>
+                                                    </div>
+                                                    <div class="statTable__item statTable__item--comment" data-modal="modal_comment_table">
+                                                        <span class="statTable__description">Комментарий</span>
+                                                        <span class="statTable__value">Докупить на спаде</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="statTable__content">
+                                                <div class="statTable__row statTable__row--content">
+                                                    <div class="statTable__item statTable__item--sticker statTable__item--grow statSticker">
+                                                        <div class="statSticker__icon">
+                                                            <svg class="statSticker__arrow"><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                                        </div>
+                                                        <div class="statSticker__img">
+                                                            <img src="./img/statTable__icons/tezos.svg" alt="Иконка тезоса">
+                                                        </div>
+                                                        <div class="statSticker__content statStickerInfo">
+                                                            <h3 class="statStickerInfo__title">XTZ</h3>
+                                                            <span class="statStickerInfo__cost">422.21 P</span>
+                                                            <span class="statStickerInfo__subtitle">Basic Attention Token</span>
+                                                        </div>
+                                                        <div class="statSticker__percent statSticker__percent--error">
+                                                            <span>+1.56%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="statTable__item">
+                                                        <span class="statTable__description">Кол-во</span>
+                                                        <span class="statTable__value">0.0000312</span>
+                                                    </div>
+                                                    <div class="statTable__item">
+                                                        <span class="statTable__description">Цена</span>
+                                                        <span class="statTable__value">0.0000312</span>
+                                                    </div>
+                                                    <div class="statTable__item statTable__item--success">
+                                                        <span class="statTable__description">Сумма</span>
+                                                        <span class="statTable__value">0.0000312</span>
+                                                    </div>
+                                                    <div class="statTable__item statTable__item--shrink statTable__item--error">
+                                                        <span class="statTable__description">24ч. %</span>
+                                                        <span class="statTable__value">25.5%</span>
+                                                    </div>
+                                                    <div class="statTable__item statTable__item--success">
+                                                        <span class="statTable__description">Итого</span>
+                                                        <span class="statTable__value">0.0000312</span>
+                                                    </div>
+                                                    <div class="statTable__item statTable__item--comment">
+                                                        <span class="statTable__description">Комментарий</span>
+                                                        <svg class="statTable__pencil"><use xlink:href="img/main.svg#icon-pencil"></use></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="compare">
                                             <div class="compare-header">
                                                 <h3>Сравнение с бенчмарком S&P 500</h3>
@@ -302,10 +389,17 @@
 
                                         <div class="banchGraph">
                                             <div class="banchGraph-descr">
-                                                <div class="banchGraph-descr-percent">
-                                                    <!-- <span>16.00%</span>
+                                                <!-- <div class="banchGraph-descr-percent">
+                                                    <span>16.00%</span>
                                                     <span>0</span>
-                                                    <span>-16.00%</span> -->
+                                                    <span>-16.00%</span>
+                                                </div> -->
+                                                <div class="banchGraph-descr-summary">
+                                                    <h3 class="banchGraph-descr-summary-title">Итого</h3>
+                                                    <div class="banchGraph-descr-summary-content">
+                                                        <span class="primary success">+32.56%</span>
+                                                        <span class="green error">-12.56%</span>
+                                                    </div>
                                                 </div>
                                                 <div class="banchGraph-descr-items">
                                                     <!-- <div class="banchGraph-descr-items-item">

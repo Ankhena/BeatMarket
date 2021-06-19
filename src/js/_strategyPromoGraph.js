@@ -34,7 +34,8 @@ if (myRenderGraph !== null) {
         tooltip: {
             crosshairs: true,
             shared: true,
-            useHTML: true
+            useHTML: true,
+            valueSuffix: '$'
         },
         plotOptions: {
             spline: {

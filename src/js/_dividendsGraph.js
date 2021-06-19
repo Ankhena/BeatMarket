@@ -23,6 +23,8 @@ if (myGraph !== null) {
             innerSize: '60%',
             zMin: 1,
             name: 'countries',
+            borderWidth: 0,
+            borderColor: null,
             data: [{
                 name: 'AMAT',
                 y: 1000,

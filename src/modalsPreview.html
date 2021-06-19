@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Превью модалок"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Модалки"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Модалки"
+				})
+
+				<div class="main-content">
+
+                    <div class="main-content main-contentPadding modals_preview">
+                        <button class="btn btn_blue" data-modal="modal_add">Модалка "Добавление транзакции"</button>
+                        <button class="btn btn_blue" data-modal="modal_add_crypt">Модалка "Добавление транзакции крипта"</button>
+                        <button class="btn btn_blue" data-modal="modal_edit">Модалка "Редактирование сделки"</button>
+                        <button class="btn btn_blue" data-modal="modal_edit_crypt">Модалка "Редактирование сделки крипта"</button>
+                        <button class="btn btn_blue" data-modal="modal_settings">Модалка "Настройки"</button>
+                        <button class="btn btn_blue" data-modal="modal_comment">Модалка "Добавить комментарий"</button>
+                        <button class="btn btn_blue" data-modal="modal_delete">Модалка "Подтверждение удаления"</button>
+
+                        <br>
+                        NEW
+                        <br>
+                        <br>
+
+                        <button class="btn btn_blue" data-modal="modal_some_error">Модалка "Произошла ошибка"</button>
+                        <button class="btn btn_blue" data-modal="modal_test_period">Модалка "Тест.период закончился"</button>
+                        <button class="btn btn_blue" data-modal="modal_thank">Модалка "Спасибо!"</button>
+                        <button class="btn btn_blue" data-modal="modal_subscribe_end">Модалка "Срок подписки истек"</button>
+                        <button class="btn btn_blue" data-modal="modal_subscribe_create">Модалка "Оформление подписки"</button>
+                        <button class="btn btn_blue" data-modal="modal_subscribe_cancel">Модалка "Отмена подписки"</button>
+                        <button class="btn btn_blue" data-modal="modal_delete_portfolio">Модалка "Под. удаления портфеля"</button>
+                        <button class="btn btn_blue" data-modal="modal_test_period_tarrifs">Модалка "Тест.период закончился Тарифы"</button>
+
+                        <br>
+                        NEW страницы Советника
+                        <br>
+                        <br>
+
+                        <a href="./advisorSubscribe.html">Подписка пробный период</a>
+                        <br>
+                        <a href="./advisorSubscribeExpired.html">Подписка пробный период истек</a>
+                        <br>
+                        <a href="./advisorSubscribeExpensive.html">Подписка без дешевого тарифа</a>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>
