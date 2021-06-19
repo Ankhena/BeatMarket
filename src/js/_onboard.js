@@ -109,7 +109,9 @@ function initOnBoard(isOnBoard) { // isOnBoard - опция показа
             overlay_container.classList.add("invisible");
 
             setTimeout(() => {
-                body.classList.remove("hideScroll");
+                if (!document.querySelector(".burger input[type='checkbox']").checked) {
+                    body.classList.remove("hideScroll");
+                }
                 body.style.paddingRight = "";
                 overlay.classList.remove("visible");
                 overlay_container.classList.add("hidden");

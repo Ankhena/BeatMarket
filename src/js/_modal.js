@@ -29,7 +29,9 @@ function initModal() {
         document.querySelector(".modal.visible").classList.remove("visible");
         setTimeout(() => {
             overlay.classList.remove("visible");
-            body.classList.remove("hideScroll");
+            if (!document.querySelector(".burger input[type='checkbox']").checked) {
+                body.classList.remove("hideScroll");
+            }
             body.style.paddingRight = "";
         }, 150); // так как 0.3s ease-in-out, это нужно чтобы окно модальное не прыгало резко влево во время закрытия
     }
