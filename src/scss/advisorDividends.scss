@@ -1,14 +1,44 @@
 .monthly-dividends {
-
+  position: relative;
+  z-index: 0;
 }
+.monthly-dividends__info {
+    padding-left: 1.8rem;
+}
+
 .monthly-dividends__info-text {
+  position: relative;
   font-size: 20/18*1rem;
   line-height: 1.6;
+
+  @media ($media_md) {
+    font-size: 1rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -76px;
+    right: 10%;
+    display: block;
+    width: 186px;
+    height: 186px;
+    border-radius: 50%;
+    background: $color_blue;
+    z-index: -1;
+
+    @media ($media_md) {
+      display: none;
+    }
+  }
 }
 
 .monthly-dividends__index {
   font-size: 50/18*1rem;
   font-weight: 700;
+  @media ($media_md) {
+    font-size: 2rem;
+  }
 }
 
 .monthly-dividends__tables {
@@ -21,10 +51,14 @@
     }
   }
 
-
   th {
     background: $color-inverse;
+    @media ($media_md) {
+      font-size: inherit;
+      font-weight: inherit;
+    }
   }
+
   td {
     background: $color_th_bg;
   }
@@ -35,20 +69,25 @@
 }
 
 .monthly-dividends__table {
+
+  @media ($media_md) {
+    font-weight: 500;
+    font-size: 18/14*1rem
+  }
+
   &.details--open {
 
     th {
       background: $color_block_bg;
     }
   }
-}
 
+  .monthly-dividends__th-button {
+    width: 70px;
+    text-align: center;
+  }
 
-.monthly-dividends__th-button {
-  width: 70px;
-  text-align: center;
-}
-
-.monthly-dividends__th-period {
-  width: 20rem ;
+  .monthly-dividends__th-period {
+    width: 20rem;
+  }
 }

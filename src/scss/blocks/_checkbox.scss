@@ -12,6 +12,7 @@
   & + span {
     --color: #{$color_grey};
     --size: 26px;
+    flex-shrink: 0;
     position: relative;
     display: inline-block;
     vertical-align: middle;

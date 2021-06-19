@@ -37,6 +37,11 @@ dd {
   font-weight: 500;
   color: $color_blue;
   text-decoration: none;
+
+  @media ($media_md) {
+    font-size: 18/14*1rem;
+  }
+
   &::before {
     content: "";
     display: inline-block;

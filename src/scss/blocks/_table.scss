@@ -25,3 +25,7 @@
   padding: var(--td-paddind);
   border-bottom: 1px solid $color-border_dop;
 }
+
+.table__td-nowrap {
+  white-space: nowrap;
+}
