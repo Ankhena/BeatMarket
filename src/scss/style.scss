@@ -175,6 +175,7 @@
 
         &-content {
             flex-grow: 1;
+            min-width: 0; // хак, чтобы не смело уезжать за экран при переполнениях таблиц и длинными словами и именно min
             @media ($media_sm) {
 
             }
@@ -666,4 +667,44 @@ body.viewProfile {
 }
 
 
+.page-without-menu {
+    .page_title {
+        display: none;
+    }
 
+    h1.main-title {
+        @media ($media_sm) {
+            display: none;
+        }
+    }
+
+
+    .header-logo {
+
+        .burger {
+            display: none;
+        }
+
+        .logo {
+            @media ($media_sm) {
+                padding: 0;
+                width: 12rem;
+            }
+        }
+    }
+
+    .header-controls {
+
+        &-links {
+
+            div:first-child {
+                display: none;
+            }
+
+        }
+
+        @media ($media_sm) {
+            justify-content: flex-end;
+        }
+    }
+}

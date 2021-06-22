@@ -8,3 +8,11 @@
     margin: 0;
   }
 }
+
+.page-without-menu .advisor {
+  margin: 6rem 7rem 0;
+  @media ($media_md) {
+    padding: 2.8rem var(--section_padding);
+    margin: 0;
+  }
+}

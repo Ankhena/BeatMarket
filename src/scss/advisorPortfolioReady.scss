@@ -134,6 +134,10 @@
     right: 1.8rem;
   }
 
+  .tooltip__text {
+
+  }
+
   svg {
     circle {
       fill: transparent;
@@ -270,14 +274,24 @@
 
 }
 
-.adv-prtf-ready__comparison__charts {
+.adv-prtf-ready__comparison-charts {
   @include block-beauty;
   padding: 1.5rem;
 
   .table-wrap {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    width: calc(100% + 3rem);
+    overflow-x: auto;
     @media ($media_md) {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
       overflow-x: scroll;
     }
+  }
+  th {
+    white-space: nowrap;
   }
 }
 
@@ -320,14 +334,14 @@
 
 .adv-prtf-ready__comparison-table {
   margin-top: 2rem;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-  width: calc(100% + 3rem);
+  //margin-left: -1.5rem;
+  //margin-right: -1.5rem;
+  //width: calc(100% + 3rem);
 
   @media ($media_md) {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    //width: 100%;
+    //margin-left: auto;
+    //margin-right: auto;
   }
 
   tr {
