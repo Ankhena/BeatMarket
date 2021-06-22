@@ -7181,12 +7181,23 @@ td {
   font-weight: 500;
 }
 
-.adv-prtf-ready__comparison__charts {
+.adv-prtf-ready__comparison-charts {
   background: #ffffff;
   -webkit-box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
           box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
   border-radius: 1rem;
   padding: 1.5rem;
+}
+
+.adv-prtf-ready__comparison-charts .table-wrap {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  width: calc(100% + 3rem);
+  overflow-x: auto;
+}
+
+.adv-prtf-ready__comparison-charts th {
+  white-space: nowrap;
 }
 
 .adv-prtf-ready__comparison-tabs {
@@ -7230,9 +7241,6 @@ td {
 
 .adv-prtf-ready__comparison-table {
   margin-top: 2rem;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-  width: calc(100% + 3rem);
 }
 
 .adv-prtf-ready__comparison-table tr {
@@ -7897,6 +7905,7 @@ td {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  min-width: 0;
 }
 
 .myStrategy {
@@ -8828,14 +8837,11 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-bottom: 12px;
   }
 
-  .adv-prtf-ready__comparison__charts .table-wrap {
-    overflow-x: scroll;
-  }
-
-  .adv-prtf-ready__comparison-table {
+  .adv-prtf-ready__comparison-charts .table-wrap {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    overflow-x: scroll;
   }
 
   .adv-prtf-ready__btns {
