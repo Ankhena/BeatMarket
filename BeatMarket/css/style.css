@@ -6733,21 +6733,20 @@ td {
 .tooltip--open .tooltip__text {
   position: absolute;
   top: calc(100% + 12px);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  right: 0;
   display: block;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  max-width: 250px;
-  padding: 12px;
+  max-width: 600px;
+  padding: 1rem;
   border-radius: 12px;
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-box-shadow: 0 0 16px 0 #C1CDDF;
           box-shadow: 0 0 16px 0 #C1CDDF;
   background: #ffffff;
+  text-align: left;
   z-index: 2;
 }
 
@@ -10418,6 +10417,10 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-bottom: 0.7rem;
     font-weight: 600;
     color: #373943;
+  }
+
+  .tooltip--open .tooltip__text {
+    max-width: 250px;
   }
 
   .adv-portfolio h1 {
