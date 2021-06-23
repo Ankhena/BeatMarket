@@ -156,4 +156,4 @@ function initOnBoard(isOnBoard) { // isOnBoard - опция показа
 
 }
 
-initOnBoard(true); // ЕСЛИ TRUE - ИНИЦИАЛИЗИРУЕМ, ИНАЧЕ НЕТ
+initOnBoard(true); // ЕСЛИ TRUE - ИНИЦИАЛИЗИРУЕМ, ИНАЧЕ НЕТ 

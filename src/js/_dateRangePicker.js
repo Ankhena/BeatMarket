@@ -32,6 +32,18 @@ function initDateRangePicker() {
         ],
         firstDay: 1
     }
+
+    $("").daterangepicker({
+        locale: rusLocale,
+        opens: 'left'
+    });
+
+    $('.inputGroup__item--date').daterangepicker({
+        locale: rusLocale,
+        opens: 'left'
+    }, function(start, end, label) {
+        $(".inputGroup__item--date .inputGroup__control").val(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
+    });
     
     $('#chooseDataStrategy').daterangepicker({
         locale: rusLocale,

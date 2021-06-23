@@ -76,7 +76,7 @@ body {
     color: $color_black_title;
 }
 
-input[type="text"] {
+input[type="text"], textarea {
     background: $color_white;
     border: 1px solid #d3e3ff;
     border-radius: 10px;
@@ -84,6 +84,7 @@ input[type="text"] {
     padding: 16px 25px;
     font-weight: 500;
     width: 100%;
+    resize: none;
 
     &::placeholder {
         color: #929398;
@@ -947,6 +948,108 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
 
     .tarrifsCard {
         margin: 0;
+    }
+}
+
+.wantThis {
+    background-color: $color_white;
+    border: 1px solid $color_block_border;
+    border-radius: 1rem;
+    text-align: center;
+
+    padding: 4.5rem 1rem;
+    position: relative;
+    overflow: hidden;
+
+    // .wantThis__header
+
+    &__header {
+        font-size: 1.75rem;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+
+        @media ($media_sm) {
+            font-size: 1.5rem;
+        }
+    }
+
+    // .wantThis__title
+
+    &__title {
+        font-size: inherit;
+        line-height: 1.6;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        // .wantThis__title--mark
+
+        &--mark {
+            position: relative;
+            white-space: nowrap;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0.2rem;
+                width: 100%;
+                height: 0.7rem;
+                background-color: $color_yellow;
+
+                @media ($media_sm) {
+                    height: 0.5rem;
+                }
+            }
+
+            span {
+                position: relative;
+            }
+        }
+    }
+
+    // .wantThis__btn
+
+    &__btn {
+        margin-top: 2.5rem;
+    }
+
+    // .wantThis__circle
+
+    &__circle {
+        position: absolute;
+        width: 8.5rem;
+        height: 8.5rem;
+        border-radius: 50%;
+
+        // .wantThis__circle--red
+
+        &--red {
+            background-color: $color_red;
+            left: 4rem;
+            top: 0;
+            transform: translateY(-50%);
+
+            @media ($media_sm) {
+                left: 0;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        // .wantThis__circle--yellow
+
+        &--yellow {
+            background-color: $color_yellow;
+            right: 4rem;
+            bottom: 0;
+            transform: translateY(50%);
+
+            @media ($media_sm) {
+                right: 2rem;
+                transform: translateY(70%);
+            }
+        }
     }
 }
 

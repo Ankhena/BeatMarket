@@ -17,6 +17,7 @@ $(document).ready(function() {
     --include("_tableMain.js")
     --include("_design.js")
     --include("_onboard.js")
+    --include("_ticketSelect.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {

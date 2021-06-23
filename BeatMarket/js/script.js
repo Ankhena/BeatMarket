@@ -910,6 +910,18 @@ function addPerformanceGraphLabelsRadio(node, data, name) {
         ],
         firstDay: 1
     }
+
+    $("").daterangepicker({
+        locale: rusLocale,
+        opens: 'left'
+    });
+
+    $('.inputGroup__item--date').daterangepicker({
+        locale: rusLocale,
+        opens: 'left'
+    }, function(start, end, label) {
+        $(".inputGroup__item--date .inputGroup__control").val(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
+    });
     
     $('#chooseDataStrategy').daterangepicker({
         locale: rusLocale,
@@ -1255,7 +1267,14 @@ if (document.querySelector('#adv-prtf-ready__comparison-chart')) {
 
 }
 
-initOnBoard(true); // ЕСЛИ TRUE - ИНИЦИАЛИЗИРУЕМ, ИНАЧЕ НЕТ
+initOnBoard(true); // ЕСЛИ TRUE - ИНИЦИАЛИЗИРУЕМ, ИНАЧЕ НЕТ 
+    function initTicketSelect() {
+    $('.inputSelect__radio').on('change', function(){
+        $('.inputSelect__value').html($(this).next().html());
+    });
+}
+
+initTicketSelect();
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {

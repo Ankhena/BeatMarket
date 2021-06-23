@@ -752,7 +752,8 @@ body.hideScroll {
 input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"] {
+input[type="password"],
+textarea {
   background: #fff;
   border: 1px solid #d3e3ff;
   border-radius: 10px;
@@ -760,28 +761,30 @@ input[type="password"] {
   padding: 16px 25px;
   font-weight: 500;
   width: 100%;
+  resize: none;
 }
 
-input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder {
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #929398;
 }
 
-input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="url"]::-moz-placeholder, input[type="password"]::-moz-placeholder {
+input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="url"]::-moz-placeholder, input[type="password"]::-moz-placeholder, textarea::-moz-placeholder {
   color: #929398;
 }
 
-input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder {
+input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #929398;
 }
 
-input[type="text"]::-ms-input-placeholder, input[type="email"]::-ms-input-placeholder, input[type="url"]::-ms-input-placeholder, input[type="password"]::-ms-input-placeholder {
+input[type="text"]::-ms-input-placeholder, input[type="email"]::-ms-input-placeholder, input[type="url"]::-ms-input-placeholder, input[type="password"]::-ms-input-placeholder, textarea::-ms-input-placeholder {
   color: #929398;
 }
 
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 input[type="url"]::placeholder,
-input[type="password"]::placeholder {
+input[type="password"]::placeholder,
+textarea::placeholder {
   color: #929398;
 }
 
@@ -792,44 +795,49 @@ input:hover[type="password"],
 input[type="text"]:focus,
 input:focus[type="email"],
 input:focus[type="url"],
-input:focus[type="password"] {
+input:focus[type="password"],
+textarea:hover,
+textarea:focus {
   border: 1px solid #a0c3ff;
 }
 
 input[type="text"]:disabled,
 input:disabled[type="email"],
 input:disabled[type="url"],
-input:disabled[type="password"] {
+input:disabled[type="password"],
+textarea:disabled {
   background-color: #F8F8F8;
 }
 
-input[type="text"]:disabled::-webkit-input-placeholder, input[type="email"]:disabled::-webkit-input-placeholder, input[type="url"]:disabled::-webkit-input-placeholder, input[type="password"]:disabled::-webkit-input-placeholder {
+input[type="text"]:disabled::-webkit-input-placeholder, input[type="email"]:disabled::-webkit-input-placeholder, input[type="url"]:disabled::-webkit-input-placeholder, input[type="password"]:disabled::-webkit-input-placeholder, textarea:disabled::-webkit-input-placeholder {
   color: #373943;
 }
 
-input[type="text"]:disabled::-moz-placeholder, input[type="email"]:disabled::-moz-placeholder, input[type="url"]:disabled::-moz-placeholder, input[type="password"]:disabled::-moz-placeholder {
+input[type="text"]:disabled::-moz-placeholder, input[type="email"]:disabled::-moz-placeholder, input[type="url"]:disabled::-moz-placeholder, input[type="password"]:disabled::-moz-placeholder, textarea:disabled::-moz-placeholder {
   color: #373943;
 }
 
-input[type="text"]:disabled:-ms-input-placeholder, input[type="email"]:disabled:-ms-input-placeholder, input[type="url"]:disabled:-ms-input-placeholder, input[type="password"]:disabled:-ms-input-placeholder {
+input[type="text"]:disabled:-ms-input-placeholder, input[type="email"]:disabled:-ms-input-placeholder, input[type="url"]:disabled:-ms-input-placeholder, input[type="password"]:disabled:-ms-input-placeholder, textarea:disabled:-ms-input-placeholder {
   color: #373943;
 }
 
-input[type="text"]:disabled::-ms-input-placeholder, input[type="email"]:disabled::-ms-input-placeholder, input[type="url"]:disabled::-ms-input-placeholder, input[type="password"]:disabled::-ms-input-placeholder {
+input[type="text"]:disabled::-ms-input-placeholder, input[type="email"]:disabled::-ms-input-placeholder, input[type="url"]:disabled::-ms-input-placeholder, input[type="password"]:disabled::-ms-input-placeholder, textarea:disabled::-ms-input-placeholder {
   color: #373943;
 }
 
 input[type="text"]:disabled::placeholder,
 input[type="email"]:disabled::placeholder,
 input[type="url"]:disabled::placeholder,
-input[type="password"]:disabled::placeholder {
+input[type="password"]:disabled::placeholder,
+textarea:disabled::placeholder {
   color: #373943;
 }
 
 input[type="text"].error,
 input.error[type="email"],
 input.error[type="url"],
-input.error[type="password"] {
+input.error[type="password"],
+textarea.error {
   border-color: #E88390;
 }
 
@@ -1629,6 +1637,84 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .rate-cards .tarrifsCard {
   margin: 0;
+}
+
+.wantThis {
+  background-color: #fff;
+  border: 1px solid #D3E3FF;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 4.5rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.wantThis__header {
+  font-size: 1.75rem;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wantThis__title {
+  font-size: inherit;
+  line-height: 1.6;
+}
+
+.wantThis__title:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.wantThis__title--mark {
+  position: relative;
+  white-space: nowrap;
+}
+
+.wantThis__title--mark::before {
+  content: "";
+  position: absolute;
+  bottom: 0.2rem;
+  width: 100%;
+  height: 0.7rem;
+  background-color: #F3B63F;
+}
+
+.wantThis__title--mark span {
+  position: relative;
+}
+
+.wantThis__btn {
+  margin-top: 2.5rem;
+}
+
+.wantThis__circle {
+  position: absolute;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+}
+
+.wantThis__circle--red {
+  background-color: #ED6373;
+  left: 4rem;
+  top: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.wantThis__circle--yellow {
+  background-color: #F3B63F;
+  right: 4rem;
+  bottom: 0;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 .overlay_burger {
@@ -5955,6 +6041,387 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   border: none;
 }
 
+.support__write {
+  margin-bottom: 1.4rem;
+  background-color: #fff;
+  border: 1px solid #D3E3FF;
+  border-radius: 1rem;
+}
+
+.support__add {
+  margin-bottom: 2.8rem;
+}
+
+.supportWrite {
+  padding: 2.2rem 1.4rem;
+}
+
+.supportWrite__header {
+  position: relative;
+  margin-bottom: 2.2rem;
+}
+
+.supportWrite__title {
+  font-size: 1.33rem;
+  font-weight: 500;
+  color: #24252E;
+  padding-right: 1.6rem;
+}
+
+.supportWrite__close {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+}
+
+.supportWrite__icon {
+  width: 1.45rem;
+  height: 1.45rem;
+}
+
+.supportWrite__item:not(:last-child) {
+  margin-bottom: 1.1rem;
+}
+
+.ticketTable {
+  color: #24252E;
+  font-weight: 500;
+  background-color: #fff;
+}
+
+.ticketTable__row {
+  padding: 1.8rem 0;
+  margin: 0 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ticketTable__row--header {
+  background-color: #F5F6FD;
+  border-top: 1px solid #E6EEFF;
+  border-bottom: 1px solid #E6EEFF;
+  padding: 0.9rem 1.4rem;
+  margin: 0;
+}
+
+.ticketTable__row:not(:last-child) {
+  border-bottom: 1px solid #E6EEFF;
+}
+
+.ticketTable__link {
+  -ms-flex-item-align: start;
+      align-self: start;
+  color: #3E54D8;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.ticketTable__link:hover {
+  border-color: #3E54D8;
+}
+
+.ticketTable__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.ticketTable__item--mobile {
+  display: none;
+}
+
+.ticketTable__item--grow {
+  -ms-flex-preferred-size: 350%;
+      flex-basis: 350%;
+}
+
+.ticketTable__item--theme {
+  line-height: 1.4;
+}
+
+.ticketTable__subtitle {
+  display: none;
+  margin-bottom: 0.3rem;
+}
+
+.ticketTable__value--num {
+  color: #929398;
+}
+
+.ticketTableStatus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+}
+
+.ticketTableStatus--wait {
+  color: #F3B63F;
+}
+
+.ticketTableStatus--archive {
+  color: #929398;
+}
+
+.ticketTableStatus--answer {
+  color: #3E54D8;
+}
+
+.ticketTableStatus__icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 0.4rem;
+}
+
+.ticket {
+  background-color: #fff;
+  border: 1px solid #D3E3FF;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.ticket__content {
+  padding: 2.2rem 1.4rem;
+}
+
+.ticket__header {
+  margin-bottom: 2.2rem;
+}
+
+.ticket__title {
+  font-size: 2.2rem;
+  color: #24252E;
+}
+
+.ticket__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ticket__control {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.ticket__control:not(:last-child) {
+  margin-right: 1.1rem;
+}
+
+.ticket__control--theme {
+  -ms-flex-preferred-size: 180%;
+      flex-basis: 180%;
+}
+
+.inputGroup__label {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.inputGroup__item {
+  position: relative;
+}
+
+.inputGroup__control.inputGroup__control--padding {
+  padding-right: 3.5rem;
+}
+
+.inputGroup__icon {
+  width: 1.7rem;
+  height: 1.7rem;
+  stroke: #8C9BEA;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.inputSelect {
+  position: relative;
+}
+
+.inputSelect__container {
+  position: relative;
+  display: inline-block;
+  background-color: #F8F8F8;
+  border: 1px solid #D3E3FF;
+  border-radius: 10px;
+  outline: 0;
+  padding: 16px 25px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.inputSelect__icon {
+  width: 0.5rem;
+  height: 0.5rem;
+  stroke: #8C9BEA;
+  fill: #8C9BEA;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.inputSelect__checkbox:checked ~ .inputSelect__container .inputSelect__icon {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+      -ms-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+
+.inputSelect__checkbox:checked ~ .inputSelect__dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inputSelect__dropdown {
+  position: absolute;
+  bottom: -0.5rem;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  width: 100%;
+  background-color: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+          box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inputSelect__item:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+
+.inputSelect__radio:checked ~ .inputSelect__choose {
+  color: #3E54D8;
+}
+
+.inputSelect__choose {
+  padding-left: 1.8rem;
+  font-weight: 500;
+}
+
+.dialogData__title {
+  font-size: 2.2rem;
+  color: #24252E;
+}
+
+.dialogData__name {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: 2.7rem 0 1.5rem 0;
+  line-height: 1.4;
+}
+
+.dialogData__status {
+  color: #3E54D8;
+  font-weight: 500;
+}
+
+.dialogData__number {
+  color: #929398;
+  font-size: 1rem;
+}
+
+.dialogData__data {
+  color: #373943;
+}
+
+.dialogContent {
+  background-color: #fff;
+  border: 1px solid #D3E3FF;
+  border-radius: 1rem;
+  margin-top: 2.7rem;
+}
+
+.dialogMessages {
+  padding: 2.2rem 0;
+  margin: 0 1.4rem;
+  border-bottom: 1px solid #D3E3FF;
+}
+
+.dialogMessages__message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dialogMessages__message:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+
+.dialogMessages__message--author {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.dialogMessages__message--author .dialogMessages__content {
+  color: #fff;
+  background-color: #3E54D8;
+  border-color: #3E54D8;
+}
+
+.dialogMessages__header {
+  margin-bottom: 1.3rem;
+}
+
+.dialogMessages__author {
+  font-weight: 600;
+  color: #3E54D8;
+}
+
+.dialogMessages__date {
+  color: #929398;
+  font-weight: 500;
+}
+
+.dialogMessages__content {
+  background-color: #fff;
+  border: 1px solid #D3E3FF;
+  border-radius: 0.5rem;
+  padding: 1.1rem 1.35rem;
+  line-height: 1.6;
+  width: 70%;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   vertical-align: middle;
@@ -8582,6 +9049,15 @@ body.viewProfile .header-controls-links-link.auth span {
     max-width: 950px;
   }
 
+  .ticket__control--theme {
+    -ms-flex-preferred-size: 120%;
+        flex-basis: 120%;
+  }
+
+  .dialogMessages__content {
+    width: 100%;
+  }
+
   .portfolio__prompt-sticky {
     grid-template-columns: 1fr;
   }
@@ -9327,6 +9803,28 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .rate-cards {
     grid-template-columns: 1fr;
+  }
+
+  .wantThis__header {
+    font-size: 1.5rem;
+  }
+
+  .wantThis__title--mark::before {
+    height: 0.5rem;
+  }
+
+  .wantThis__circle--red {
+    left: 0;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+
+  .wantThis__circle--yellow {
+    right: 2rem;
+    -webkit-transform: translateY(70%);
+        -ms-transform: translateY(70%);
+            transform: translateY(70%);
   }
 
   .burger {
@@ -10398,6 +10896,83 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .onboard-content-info-buttons .btn {
     width: 50%;
+  }
+
+  .ticketTable__row--header {
+    display: none;
+  }
+
+  .ticketTable__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+
+  .ticketTable__row:not(:last-child) {
+    border-bottom: none;
+  }
+
+  .ticketTable__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-bottom: 1.3rem;
+    padding: 0 1rem;
+  }
+
+  .ticketTable__item--mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .ticketTable__item--header {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    background-color: #F5F6FD;
+    border-top: 1px solid #E6EEFF;
+    border-bottom: 1px solid #E6EEFF;
+  }
+
+  .ticketTable__item--theme {
+    display: none;
+  }
+
+  .ticketTable__subtitle {
+    display: block;
+  }
+
+  .ticket__title {
+    font-size: 2rem;
+  }
+
+  .ticket__controls {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .ticket__control:not(:last-child) {
+    margin: 0 0 1.3rem 0;
+  }
+
+  .dialogData__link {
+    margin-top: 1rem;
+  }
+
+  .dialogData__link .backlink {
+    font-size: 1.1rem;
+  }
+
+  .dialogData__title {
+    font-size: 2rem;
   }
 
   .btn--copy-link {
