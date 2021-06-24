@@ -7742,7 +7742,20 @@ td {
 .adv-prtf-ready__efficiency-table .tr-sell .td-count,
 .adv-prtf-ready__efficiency-table .tr-sell .td-price--m,
 .adv-prtf-ready__efficiency-table .tr-sell .td-summ--day {
-  display: none;
+  display: table-cell;
+}
+
+.adv-prtf-ready__efficiency-table .td-total {
+  font-weight: 700;
+}
+
+.adv-prtf-ready__efficiency-table .tr-total__value {
+  margin-left: 0.66667rem;
+  font-weight: 600;
+}
+
+.adv-prtf-ready__efficiency-table .tr-total__summ {
+  margin-left: 50px;
 }
 
 .adv-prtf-ready__efficiency-table .btn {
@@ -9401,6 +9414,12 @@ body.viewProfile .header-controls-links-link.auth span {
     background-color: #F5F6FD;
   }
 
+  .adv-prtf-ready__efficiency-table .tr-sell .td-count,
+  .adv-prtf-ready__efficiency-table .tr-sell .td-price--m,
+  .adv-prtf-ready__efficiency-table .tr-sell .td-summ--day {
+    display: none;
+  }
+
   .adv-prtf-ready__efficiency-table td {
     display: block;
     padding: 1rem;
@@ -9502,6 +9521,10 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-bottom: .2rem;
   }
 
+  .adv-prtf-ready__efficiency-table .tr-total__value {
+    margin-left: unset;
+  }
+
   .adv-prtf-ready__efficiency-table .tr-total__stocks .tr-total__name {
     font-size: 0;
   }
@@ -9509,6 +9532,10 @@ body.viewProfile .header-controls-links-link.auth span {
   .adv-prtf-ready__efficiency-table .tr-total__stocks .tr-total__name::before {
     content: "Кол-во";
     font-size: .92857rem;
+  }
+
+  .adv-prtf-ready__efficiency-table .tr-total__summ {
+    margin-left: unset;
   }
 
   .adv-prtf-ready__efficiency-table .tr-total__summ .tr-total__name {

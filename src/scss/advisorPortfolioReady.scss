@@ -429,7 +429,10 @@
 
   .tr-sell {
     .td-count, .td-price--m, .td-summ--day {
-      display: none;
+      display: table-cell;
+      @media ($media_md) {
+        display: none;
+      }
     }
   }
 
@@ -524,6 +527,7 @@
   }
 
   .td-total {
+    font-weight: 700;
     @media ($media_md) {
       grid-column: 1/-1;
       background: $color_th_bg;
@@ -546,6 +550,15 @@
 
   }
 
+  .tr-total__value {
+    margin-left: 12/18*1rem;
+    font-weight: 600;
+    @media ($media_md) {
+      margin-left: unset;
+    }
+
+  }
+
   .tr-total__stocks {
     .tr-total__name {
       @media ($media_md) {
@@ -561,6 +574,11 @@
   }
 
   .tr-total__summ {
+    margin-left: 50px;
+    @media ($media_md) {
+      margin-left: unset;
+    }
+
     .tr-total__name {
       @media ($media_md) {
         font-size: .92857rem;
