@@ -7411,7 +7411,15 @@ td {
 }
 
 .adv-prtf-ready h2 {
+  -ms-flex-item-align: start;
+      align-self: start;
   margin-bottom: 1.33333rem;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .adv-prtf-ready .highcharts-figure,
@@ -7473,14 +7481,25 @@ td {
 }
 
 .adv-prtf-ready__efficiency {
-  display: grid;
-  grid-template-columns: 1fr -webkit-max-content;
-  grid-template-columns: 1fr max-content;
-  gap: 2rem;
-  margin-bottom: 3.33333rem;
+  --gap: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: calc(0px - var(--gap));
+  margin-bottom: 1.3333rem;
 }
 
 .adv-prtf-ready__efficiency-descr {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin-left: var(--gap);
+  margin-bottom: var(--gap);
   background: #ffffff;
   -webkit-box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
           box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
@@ -7489,15 +7508,18 @@ td {
 }
 
 .adv-prtf-ready__efficiency-descr header {
+  position: relative;
   display: grid;
   grid-template-columns: auto auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 12px;
   margin-bottom: 1rem;
 }
 
 .adv-prtf-ready__efficiency__btns {
+  align-self: start;
   display: grid;
   grid-template-columns: repeat(3, -webkit-max-content);
   grid-template-columns: repeat(3, max-content);
@@ -7529,11 +7551,19 @@ td {
   -webkit-box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
           box-shadow: 0 0 0 1px #D3E3FF, 0 9px 16px -13px rgba(62, 84, 216, 0.22);
   border-radius: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin-left: var(--gap);
+  margin-bottom: var(--gap);
   position: relative;
   padding-top: 1.66667rem;
   padding-bottom: 1.66667rem;
-  padding-left: 5rem;
-  padding-right: 8.5rem;
+  padding-left: 2rem;
+  padding-right: calc(56px + 1rem);
   text-align: center;
 }
 
@@ -7629,11 +7659,12 @@ td {
 
 .adv-prtf-ready__efficiency-data span:last-child {
   line-height: 1;
+  white-space: nowrap;
 }
 
 .adv-prtf-ready__efficiency-data--stocks span:last-child,
 .adv-prtf-ready__efficiency-data--cash span:last-child {
-  font-size: 2.77778rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 
@@ -9349,24 +9380,29 @@ body.viewProfile .header-controls-links-link.auth span {
             order: 1;
   }
 
+  .adv-prtf-ready h2 {
+    -webkit-line-clamp: 4;
+  }
+
   .adv-prtf-ready__prompt-sticky {
     font-size: 1.14286rem;
   }
 
-  .adv-prtf-ready__efficiency {
-    grid-template-columns: 1fr;
+  .adv-prtf-ready__efficiency__btns {
+    grid-template-columns: -webkit-min-content;
+    grid-template-columns: min-content;
+    grid-template-rows: repeat(3, -webkit-max-content);
+    grid-template-rows: repeat(3, max-content);
+  }
+
+  .adv-prtf-ready__efficiency__btns::before {
+    justify-self: center;
+    width: 32px;
+    height: 1px;
   }
 
   .adv-prtf-ready__efficiency-pie {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    width: 100%;
   }
 
   .adv-prtf-ready__efficiency-pie a {
@@ -11050,6 +11086,21 @@ body.viewProfile .header-controls-links-link.auth span {
     font-size: 2rem;
   }
 
+  .btn--settings {
+    width: 56px;
+    height: 56px;
+  }
+
+  .btn--share {
+    width: 56px;
+    height: 56px;
+  }
+
+  .btn--edit {
+    width: 28px;
+    height: 28px;
+  }
+
   .btn--copy-link {
     width: 56px;
     height: 56px;
@@ -11106,6 +11157,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .adv-portfolio__form::after {
     display: none;
+  }
+
+  .adv-prtf-ready__efficiency-text {
+    grid-template-columns: 1fr;
   }
 
   .adv-prtf-ready__description {
@@ -11336,8 +11391,8 @@ body.viewProfile .header-controls-links-link.auth span {
 
 @media (max-width: 360px) {
   .adv-prtf-ready__pie-chart svg {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 170px;
+    max-height: 170px;
   }
 
   .adv-prtf-ready__pie-chart-numbers {
