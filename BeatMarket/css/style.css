@@ -8783,14 +8783,16 @@ body.viewProfile .stategyPromo-info-score-header {
   margin-bottom: 7rem;
 }
 
-body.viewProfile .stategyPromo-info-score-main,
-body.viewProfile .stategyPromo-info-score-secondary {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transform-origin: center left;
-      -ms-transform-origin: center left;
-          transform-origin: center left;
+body.viewProfile .stategyPromo-info-score h4 {
+  font-size: 0.9rem;
+}
+
+body.viewProfile .stategyPromo-info-score-main p {
+  font-size: 3.3rem;
+}
+
+body.viewProfile .stategyPromo-info-score-secondary-item p {
+  font-size: 1.6rem;
 }
 
 body.viewProfile .header-controls-links-link.active,

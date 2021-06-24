@@ -664,9 +664,20 @@ body.viewProfile {
                 }
             }
 
-            &-main, &-secondary {
-                transform: scale(1.1);
-                transform-origin: center left;
+            h4 {
+                font-size: 0.9rem;
+            }
+            
+            &-main {
+                p {
+                    font-size: 3.3rem;
+                }
+            }
+            
+            &-secondary-item {
+                p {
+                    font-size: 1.6rem;
+                }
             }
         }
     }
