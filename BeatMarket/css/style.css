@@ -2514,6 +2514,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   text-decoration: none;
 }
 
+.section-header .header-controls-links-link .dropdown-content li.useViewProfile {
+  display: none;
+}
+
 .section-header .header-controls-links-link .dropdown-content li:not(:last-child) {
   margin-bottom: 1rem;
 }
@@ -2535,7 +2539,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .section-footer {
   background-color: #fff;
-  padding: 2.7rem 1.8rem;
+  padding: 2.7rem 0;
 }
 
 .section-footer .footer {
@@ -5848,7 +5852,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 /*  Larger Screen Styling */
 
 .onboard {
-  z-index: 20;
+  z-index: -1;
   padding: 0 var(--section_padding);
 }
 
@@ -6542,11 +6546,11 @@ dd {
 
 .advisor {
   padding-bottom: 100px;
-  margin: 6rem 7rem 0 2rem;
+  margin: 2rem 7rem 0 2rem;
 }
 
 .page-without-menu .advisor {
-  margin: 6rem 7rem 0;
+  margin: 1rem 7rem 0;
 }
 
 .btn--transparent {
@@ -8699,6 +8703,50 @@ body.viewProfile .page_title {
 
 body.viewProfile .main-contentPadding {
   padding: 2.8rem var(--section_padding);
+}
+
+body.viewProfile .wantThis {
+  margin-top: 1.5rem;
+}
+
+body.viewProfile .header-controls-links-link .dropdown-content li.border-bottom {
+  display: none;
+}
+
+body.viewProfile .header-controls-links-link .dropdown-content li.useViewProfile {
+  display: block;
+}
+
+body.viewProfile .myStrategy-items-item-header-info-content-settings {
+  display: none;
+}
+
+body.viewProfile .myStrategy-items-item-header-toggle {
+  display: none;
+}
+
+body.viewProfile .myStrategy-items-item-content .nav ul {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body.viewProfile .myStrategy-items-item-content .nav ul li:not(:last-child) {
+  margin-right: 5rem;
+}
+
+body.viewProfile .stategyPromo-info-score-header {
+  margin-bottom: 7rem;
+}
+
+body.viewProfile .stategyPromo-info-score-main,
+body.viewProfile .stategyPromo-info-score-secondary {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transform-origin: center left;
+      -ms-transform-origin: center left;
+          transform-origin: center left;
 }
 
 body.viewProfile .header-controls-links-link.active,
@@ -11167,6 +11215,18 @@ body.viewProfile .header-controls-links-link.auth span {
             transform: translate(0, 100%);
   }
 
+  body.viewProfile .myStrategy-items-item-content .nav ul li:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  body.viewProfile .stategyPromo-info-score {
+    margin-bottom: 1rem;
+  }
+
+  body.viewProfile .stategyPromo-info-score-header {
+    margin-bottom: 3rem;
+  }
+
   body.viewProfile .header-logo .burger {
     display: none;
   }
@@ -11176,6 +11236,10 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-transform: translateX(1.5rem);
         -ms-transform: translateX(1.5rem);
             transform: translateX(1.5rem);
+  }
+
+  body.viewProfile .header-controls-links-link.person {
+    display: block;
   }
 
   body.viewProfile .header-controls-links-link.registration {

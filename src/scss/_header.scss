@@ -451,6 +451,10 @@
                                         font-size: 1.25rem;
                                     }
                                 }
+
+                                &.useViewProfile {
+                                    display: none;
+                                }
         
                                 &:not(:last-child) {
                                     margin-bottom: 1rem;

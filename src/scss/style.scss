@@ -611,6 +611,66 @@ body.viewProfile {
         padding: 2.8rem var(--section_padding);
     }
 
+    .wantThis {
+        margin-top: 1.5rem;
+    }
+
+    .header-controls-links-link {
+        .dropdown-content {
+            li.border-bottom {
+                display: none;
+            }
+            li.useViewProfile {
+                display: block;
+            }
+        }
+    }
+
+    .myStrategy-items-item-header-info-content-settings {
+        display: none;
+    }
+
+    .myStrategy-items-item-header-toggle {
+        display: none;
+    }
+
+    .myStrategy-items-item-content .nav ul {
+        justify-content: flex-start;
+
+        li {
+            &:not(:last-child) {
+                margin-right: 5rem;
+
+                @media ($media_sm) {
+                    margin-right: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .stategyPromo-info {
+        &-score {
+            //margin-bottom: 6rem;
+
+            @media ($media_sm) {
+                margin-bottom: 1rem;
+            }
+
+            &-header {
+                margin-bottom: 7rem;
+
+                @media ($media_sm) {
+                    margin-bottom: 3rem;
+                }
+            }
+
+            &-main, &-secondary {
+                transform: scale(1.1);
+                transform-origin: center left;
+            }
+        }
+    }
+
     .header-logo {
 
         @media ($media_sm) {
@@ -630,6 +690,12 @@ body.viewProfile {
 
         &.active, &.person {
             display: none;
+        }
+
+        &.person {
+            @media ($media_sm) {
+                display: block;
+            }
         }
 
         &.registration {

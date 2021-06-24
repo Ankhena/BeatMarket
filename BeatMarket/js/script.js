@@ -1282,7 +1282,7 @@ initTicketSelect();
         });
     });
 
-    document.querySelectorAll(".myStrategy-header").forEach(item => {
+    document.querySelectorAll(".myStrategy-items-item").forEach(item => {
         let indicatorTable = document.querySelector(".myStrategy-indicators-container .table-scroll");
         if (indicatorTable != null) {
             indicatorTable.style.width = `${item.offsetWidth-2}px`
