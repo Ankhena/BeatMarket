@@ -2538,8 +2538,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .section-footer {
-  background-color: #fff;
+  position: relative;
   padding: 2.7rem 0;
+  background-color: #fff;
+  z-index: 11;
 }
 
 .section-footer .footer {
