@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Приложение"
+		})
+
+	</head>
+	<body class="app">
+
+        @@include("_appHeader.html")
+
+        <section class="section-outer section-app">
+            <div class="section-app__content">
+                content
+
+                content
+    
+                content
+    
+            </div>
+        </section>
+
+        <div class="appOverlay">
+            <div class="appOverlay__item">
+                <svg class="appOverlay__icon"><use xlink:href="img/main.svg#icon-info"></use></svg>
+                <span class="appOverlay__name">FAQ</span>
+            </div>
+            <div class="appOverlay__item">
+                <svg class="appOverlay__icon"><use xlink:href="img/main.svg#icon-headset"></use></svg>
+                <span class="appOverlay__name">Поддержка</span>
+            </div>
+        </div>
+
+        @@include("_appMenu.html", {
+            "portfolio": "",
+            "advisor": "",
+            "subscribe": "",
+            "help": "appMenu__item--active",
+            "account": ""
+        })
+
+        @@include("_footer.html")
+
+	</body>
+</html>
