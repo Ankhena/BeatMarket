@@ -1,17 +1,19 @@
 // === Footer [ Стили для футера, используемые на всех страницах ] ===
 
 .section-footer {
-    background-color: $color_white;
+    position: relative;
     padding: 2.7rem 0;
+    background-color: $color_white;
+    z-index: 11;
 
     @media ($media_sm) {
         padding: 2.7rem 0 0 0;
     }
 
     .section-inner {
-    
+
     }
-    
+
     .footer {
         display: grid;
         grid-template-columns: 1fr 2.5fr;
@@ -35,7 +37,7 @@
                 text-decoration: none;
                 border-bottom: 1px solid transparent;
                 transition: 0.3s ease-in-out;
-            
+
                 &:hover, &:focus {
                     border-color: $color_blue;
                 }
@@ -79,7 +81,7 @@
             justify-content: space-between;
             height: 4rem;
 
-            
+
             @media ($media_sm) {
                 &:last-child {
                     margin-top: -1.8rem;
@@ -87,7 +89,7 @@
             }
         }
     }
-    
+
 }
 
 // === / Footer ===
