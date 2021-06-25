@@ -1717,6 +1717,110 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
           transform: translateY(50%);
 }
 
+.closePortfolio {
+  position: relative;
+  margin: 0 auto;
+  width: 40rem;
+}
+
+.closePortfolio__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.06);
+          box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.06);
+  border-radius: 1.1rem;
+  padding: 2.8rem 3.35rem;
+  position: relative;
+  z-index: 1;
+}
+
+.closePortfolio__title {
+  font-size: 2.2rem;
+  color: #3E54D8;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.closePortfolio__text {
+  font-weight: 500;
+  color: #24252E;
+  line-height: 1.6;
+  margin: 2.2rem 0 1.8rem 0;
+  border-bottom: 1px solid #D3E3FF;
+  padding-bottom: 1.8rem;
+}
+
+.closePortfolio__subtitle {
+  color: #24252E;
+  font-size: 1.22rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.closePortfolio__items {
+  margin: 1.35rem 0 2.5rem 0;
+}
+
+.closePortfolio__item {
+  position: relative;
+  line-height: 1.6;
+  padding-left: 1.2rem;
+}
+
+.closePortfolio__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #ED6373;
+}
+
+.closePortfolio__item:not(:last-child) {
+  margin-bottom: 0.6rem;
+}
+
+.closePortfolio__btn {
+  padding: 1.2rem 2.4rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.closePortfolio__icon {
+  z-index: 0;
+  position: absolute;
+  width: 8.2rem;
+  height: 8.2rem;
+  border-radius: 50%;
+}
+
+.closePortfolio__icon--red {
+  background-color: #ED6373;
+  top: 3rem;
+  left: 0;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.closePortfolio__icon--yellow {
+  background-color: #F3B63F;
+  bottom: 5rem;
+  right: 0;
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
 .overlay_burger {
   z-index: 10;
 }
@@ -9940,6 +10044,22 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-transform: translateY(70%);
         -ms-transform: translateY(70%);
             transform: translateY(70%);
+  }
+
+  .closePortfolio {
+    width: 100%;
+  }
+
+  .closePortfolio__content {
+    padding: 2rem 1.1rem;
+  }
+
+  .closePortfolio__title {
+    font-size: 1.75rem;
+  }
+
+  .closePortfolio__icons {
+    display: none;
   }
 
   .burger {
