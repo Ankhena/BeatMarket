@@ -187,7 +187,8 @@ input[type="email"], input[type="url"], input[type="password"] {
         border-radius: 0.5rem;
         padding: 1rem 1.5rem;
         cursor: pointer;
-        min-width: 12rem;
+        display: flex;
+        align-items: baseline;
 
         @media ($media_sm) {
             display: flex;
@@ -202,8 +203,10 @@ input[type="email"], input[type="url"], input[type="password"] {
         }
 
         > svg {
-            height: 10px;
-            width: 10px;
+            max-height: 10px;
+            max-width: 10px;
+            min-height: 10px;
+            min-width: 10px;
             margin-left: 0.5rem;
             fill: $color_blue;
         }
@@ -1013,6 +1016,8 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
 
     &__btn {
         margin-top: 2.5rem;
+        display: inline-block;
+        text-decoration: none;
     }
 
     // .wantThis__circle

@@ -455,11 +455,8 @@
                     margin-right: 1rem;
                     font-weight: 600;
                     color: $color_black_title;
-
-                    @media ($media_sm) {
-                        display: flex;
-                    }
-
+                    display: flex;
+                     
                     > span {
                         position: relative;
                         padding-left: 1.2rem;

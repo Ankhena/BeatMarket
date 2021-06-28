@@ -921,7 +921,12 @@ textarea.error {
   border-radius: 0.5rem;
   padding: 1rem 1.5rem;
   cursor: pointer;
-  min-width: 12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .btn_mainCash > span {
@@ -931,8 +936,10 @@ textarea.error {
 }
 
 .btn_mainCash > svg {
-  height: 10px;
-  width: 10px;
+  max-height: 10px;
+  max-width: 10px;
+  min-height: 10px;
+  min-width: 10px;
   margin-left: 0.5rem;
   fill: #3E54D8;
 }
@@ -1690,6 +1697,8 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .wantThis__btn {
   margin-top: 2.5rem;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .wantThis__circle {
@@ -2994,6 +3003,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .stategyPromo-info-score-main p {
   font-size: 2.8rem;
+  white-space: nowrap;
 }
 
 .stategyPromo-info-score-secondary-item p {
@@ -3234,6 +3244,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .stategyPromo-graph-info-btn {
   position: relative;
+}
+
+.stategyPromo-graph-info-btn > span {
+  white-space: nowrap;
 }
 
 .stategyPromo-graph-info-btn input[type="checkbox"]:checked ~ .dropdown {
@@ -3958,8 +3972,8 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .myStrategy-indicators-container .table-header h5 {
-  min-width: 8rem;
-  max-width: 8rem;
+  min-width: 11.2rem;
+  max-width: 11.2rem;
   margin-right: 2rem;
   color: #24252E;
   font-weight: 600;
@@ -3989,7 +4003,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .myStrategy-indicators-container .table-content-item-info span {
-  min-width: 8rem;
+  min-width: 11.2rem;
   margin-right: 2rem;
 }
 
@@ -4698,6 +4712,9 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   margin-right: 1rem;
   font-weight: 600;
   color: #24252E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .compare-menu-choose-item-name > span {
@@ -11060,12 +11077,6 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .compare-menu-choose-item-name {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 
   .compare-menu-choose-item-btn .dropdown {
