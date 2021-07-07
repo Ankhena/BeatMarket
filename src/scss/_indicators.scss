@@ -87,6 +87,7 @@ $indicator_item_margin-right: 2rem;
             display: flex;
             align-items: center;
             width: fit-content;
+            min-width: calc(100% + 1.5rem);
             border-right: 2px solid $color_table_header;
 
             @media ($media_sm) {
@@ -112,6 +113,7 @@ $indicator_item_margin-right: 2rem;
                 border-bottom: 1px solid $color_block_border;
                 margin-right: 0;
                 width: fit-content;
+                min-width: calc(100% + 1.5rem);
 
                 &-info {
                     display: flex;

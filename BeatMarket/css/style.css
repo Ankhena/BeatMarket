@@ -3968,6 +3968,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  min-width: calc(100% + 1.5rem);
   border-right: 2px solid #F5F6FD;
 }
 
@@ -3994,6 +3995,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  min-width: calc(100% + 1.5rem);
 }
 
 .myStrategy-indicators-container .table-content-item-info {
