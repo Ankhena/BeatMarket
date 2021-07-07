@@ -951,6 +951,34 @@ textarea.error {
   padding: 0;
 }
 
+.btn_secondary {
+  background-color: #FCFDFF;
+  border: 2px solid #D3E3FF;
+  border-radius: 0.5rem;
+  padding: 0.9rem 1.2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn_secondary span {
+  color: #373943;
+  font-weight: 500;
+}
+
+.btn_secondary svg {
+  width: 1.78rem;
+  height: 1.78rem;
+  stroke: #8C9BEA;
+  margin-right: 0.5rem;
+}
+
 .main-contentPadding {
   padding: 2.8rem var(--section_padding) 2.8rem 1.8rem;
 }
@@ -1880,6 +1908,20 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   display: none;
 }
 
+.modal-content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #a8b2ed;
+}
+
 .overlay_modal {
   z-index: 20;
 }
@@ -1916,7 +1958,6 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .modal {
-  padding: 1.8rem;
   -webkit-box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.06);
           box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.06);
   border-radius: 1.1rem;
@@ -1938,6 +1979,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 1.8rem 1.8rem 0;
 }
 
 .modal-header h2 {
@@ -1954,24 +1996,11 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   margin-left: auto;
 }
 
-.modal-content.scroll {
-  height: 30rem;
-  overflow-y: scroll;
-  padding: 0 0.5rem 0.8rem 0;
-}
-
-.modal-content.scroll::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #F5F5F5;
-}
-
-.modal-content.scroll::-webkit-scrollbar {
-  width: 6px;
-  background-color: #F5F5F5;
-}
-
-.modal-content.scroll::-webkit-scrollbar-thumb {
-  background-color: #a8b2ed;
+.modal-content {
+  max-height: 38rem;
+  overflow-y: auto;
+  padding: 0 1.8rem;
+  margin-bottom: 1.8rem;
 }
 
 .modal-content-img {
@@ -1983,7 +2012,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-transform: scale(1.3);
       -ms-transform: scale(1.3);
           transform: scale(1.3);
-  margin-top: -3rem;
+  margin-top: -2rem;
 }
 
 .modal-content-header {
@@ -2142,25 +2171,36 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
+.modal-content-papers-cost input,
+.modal-content-papers-count input {
+  padding: 16px;
+}
+
 .modal-content-papers-cost {
-  margin-right: 0.5rem;
+  -ms-flex-preferred-size: 49%;
+      flex-basis: 49%;
+}
+
+.modal-content-papers-count,
+.modal-content-papers-date {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
 }
 
 .modal-content-papers-count {
   position: relative;
-  -ms-flex-preferred-size: 24%;
-      flex-basis: 24%;
-  margin-right: .5rem;
 }
 
 .modal-content-papers-count.crypt {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
 }
 
 .modal-content-papers-count.crypt input {
@@ -2185,7 +2225,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 8px 15px;
+  padding: 8px 0;
   border: 1px solid #D3E3FF;
   border-radius: 0.5rem;
 }
@@ -2225,12 +2265,21 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   height: 1.3rem;
 }
 
-.modal-content-papers-date {
-  width: 13rem;
-}
-
 .modal-content-papers-date input {
   text-align: center;
+  padding: 16px;
+}
+
+.modal-content-papers-delete {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-top: 1rem;
+}
+
+.modal-content-papers-delete span {
+  font-weight: 500;
+  color: #ED6373;
+  cursor: pointer;
 }
 
 .modal-content-text.regular p {
@@ -9313,15 +9362,6 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 2.4rem;
   }
 
-  .modal-content-papers-count.crypt {
-    -ms-flex-preferred-size: 37%;
-        flex-basis: 37%;
-  }
-
-  .modal-content-papers-date {
-    width: 14rem;
-  }
-
   .section-header .header-logo .logo {
     width: 11rem;
   }
@@ -10307,7 +10347,8 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .modal-content-papers-date {
-    width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     margin-top: 1rem;
   }
 
@@ -11674,16 +11715,23 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .modal.notify {
     width: 90%;
-    padding: 1.5rem;
   }
 
   .modal {
     width: 90%;
-    padding: 1.5rem;
+  }
+
+  .modal-header {
+    padding: 1.5rem 1.5rem 0;
   }
 
   .modal-header h2 {
     font-size: 1.2rem;
+  }
+
+  .modal-content {
+    padding: 0 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .buy-stocks__btns {

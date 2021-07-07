@@ -223,6 +223,29 @@ input[type="email"], input[type="url"], input[type="password"] {
             text-align: left;
         }
     }
+
+    &_secondary {
+        background-color: $color_block_bg;
+        border: 2px solid $color_block_border;
+        border-radius: 0.5rem;
+        padding: 0.9rem 1.2rem;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            color: $color_black_main;
+            font-weight: 500;
+        }
+
+        svg {
+            width: 1.78rem;
+            height: 1.78rem;
+            stroke: $breadcrumb_border;
+            margin-right: 0.5rem;
+        }
+    }
 }
 
 .main-contentPadding {
