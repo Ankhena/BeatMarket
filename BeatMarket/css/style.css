@@ -4861,13 +4861,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-preferred-size: 8.5rem;
       flex-basis: 8.5rem;
   margin-right: 1rem;
-  padding: 0.6rem 0;
+  padding: 1.2rem 0;
 }
 
 .banchGraph-descr-summary {
@@ -4877,6 +4874,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
           box-sizing: border-box;
   border-radius: 0.4rem;
   padding: 0.7rem;
+  height: 180px;
 }
 
 .banchGraph-descr-summary-title {
@@ -4911,16 +4909,8 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   content: "";
   min-width: 0.8rem;
   min-height: 0.8rem;
-  background-color: red;
   border-radius: 0.25rem;
-}
-
-.banchGraph-descr-summary-content span.green::before {
-  background-color: #199F27;
-}
-
-.banchGraph-descr-summary-content span.primary::before {
-  background-color: #687ae1;
+  background-color: var(--background_label);
 }
 
 .banchGraph-descr-summary-content span.success {
@@ -4932,7 +4922,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .banchGraph-descr-percent {
-  height: 160px;
+  height: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4966,21 +4956,19 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 3.1rem;
 }
 
 .banchGraph-descr-items-item {
+  position: relative;
+  padding-left: 1.2rem;
   color: #24252E;
   font-size: 0.9rem;
   font-weight: 500;
   white-space: nowrap;
 }
 
-.banchGraph-descr-items-item span {
-  position: relative;
-  padding-left: 1.2rem;
-}
-
-.banchGraph-descr-items-item span::before {
+.banchGraph-descr-items-item::before {
   position: absolute;
   left: 0;
   top: 50%;
@@ -4990,15 +4978,15 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   content: "";
   min-width: 0.8rem;
   min-height: 0.8rem;
-  background-color: red;
+  background-color: var(--background_label);
   border-radius: 0.25rem;
 }
 
-.banchGraph-descr-items-item span.success::before {
+.banchGraph-descr-items-item.success::before {
   background-color: #199F27;
 }
 
-.banchGraph-descr-items-item span.primary::before {
+.banchGraph-descr-items-item.primary::before {
   background-color: #687ae1;
 }
 
@@ -5009,11 +4997,31 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: auto;
+  padding: 0.6rem;
+}
+
+.banchGraph-content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.banchGraph-content::-webkit-scrollbar {
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+.banchGraph-content::-webkit-scrollbar-thumb {
+  background-color: #a8b2ed;
 }
 
 .banchGraph-content-item {
   padding: 0.6rem;
   cursor: pointer;
+  text-align: center;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .banchGraph-content-item:hover {
@@ -5023,10 +5031,19 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   border-radius: 0.25rem;
 }
 
+.banchGraph-content-item:hover .highcharts-background {
+  fill: whitesmoke;
+}
+
+.banchGraph-content-item:hover .highcharts-point {
+  -webkit-filter: drop-shadow(0px 3px 3px #acadb1);
+          filter: drop-shadow(0px 3px 3px #acadb1);
+}
+
 .banchGraph-content-item-graph {
-  height: 160px;
-  background: #fafafa;
-  border-radius: 0.33rem;
+  position: relative;
+  width: 80px;
+  height: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5039,36 +5056,31 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
           justify-content: start;
 }
 
-.banchGraph-content-item-graph-half {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  height: 50%;
-  border-bottom: 2px solid #EDEDED;
+.banchGraph-content-item-graph .highcharts-background {
+  fill: #fafafa;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.banchGraph-content-item-graph-half-item {
-  width: 1.2rem;
-  height: 50%;
-  border-radius: 3px 3px 0px 0px;
+.banchGraph-content-item-graph .highcharts-point {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-filter: drop-shadow(0px 2px 2px #acadb1);
+          filter: drop-shadow(0px 2px 2px #acadb1);
 }
 
-.banchGraph-content-item-graph-half-item.success {
-  background-color: #199F27;
-  -webkit-filter: drop-shadow(0px 1px 1px #199F27);
-          filter: drop-shadow(0px 1px 1px #199F27);
-}
-
-.banchGraph-content-item-graph-half-item.primary {
-  background-color: #687ae1;
-  -webkit-filter: drop-shadow(0px 1px 1px #687ae1);
-          filter: drop-shadow(0px 1px 1px #687ae1);
+.banchGraph-content-item-graph::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
 }
 
 .banchGraph-content-item-date {
@@ -9366,7 +9378,7 @@ body.viewProfile .header-controls-links-link.auth span {
   .banchGraph-descr {
     -ms-flex-preferred-size: 9.5rem;
         flex-basis: 9.5rem;
-    padding: 0.6rem;
+    padding: 0.9rem;
   }
 
   .banchGraph-content-item {
@@ -11140,19 +11152,6 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
             box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
     border-radius: 0px 8px 8px 0px;
-  }
-
-  .banchGraph-content {
-    overflow-x: auto;
-    padding: 0.3rem;
-  }
-
-  .banchGraph-content-item {
-    min-width: 6rem;
-  }
-
-  .banchGraph-content-item-graph-half-item {
-    width: 1.5rem;
   }
 
   .performance .card {

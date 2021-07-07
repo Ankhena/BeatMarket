@@ -11,7 +11,7 @@ $(document).ready(function() {
     --include("_moveStrategy.js")
     --include("_dividendsGraph.js")
     --include("_inputCounter.js")
-    --include("_banchGraph.js")
+    --include("_banchGraphModern.js")
     --include("_performance.js")
     --include("_dateRangePicker.js")
     --include("_tableMain.js")

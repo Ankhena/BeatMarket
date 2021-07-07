@@ -647,7 +647,7 @@
     }
 }
 
-$banch_info_height: 160px;
+$banch_info_height: 180px;
 $banch_items_height: 60px;
 
 .banchGraph {
@@ -660,15 +660,14 @@ $banch_items_height: 60px;
     &-descr {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
 
         flex-basis: 8.5rem;
         margin-right: 1rem;
-        padding: 0.6rem 0;
+        padding: 1.2rem 0;
 
         @media ($media_xl) {
             flex-basis: 9.5rem;
-            padding: 0.6rem;
+            padding: 0.9rem;
         }
 
         @media ($media_sm) {
@@ -683,6 +682,7 @@ $banch_items_height: 60px;
             box-sizing: border-box;
             border-radius: 0.4rem;
             padding: 0.7rem;
+            height: $banch_info_height;
 
             &-title {
                 color: $color_black_title;
@@ -713,20 +713,8 @@ $banch_items_height: 60px;
                         content: "";
                         min-width: 0.8rem;
                         min-height: 0.8rem;
-                        background-color: red;
                         border-radius: 0.25rem;
-                    }
-
-                    &.green {
-                        &::before {
-                            background-color: $color_green;
-                        }
-                    }
-
-                    &.primary {
-                        &::before {
-                            background-color: lighten($color_blue, 10%);
-                        }
+                        background-color: var(--background_label);
                     }
 
                     &.success {
@@ -759,44 +747,38 @@ $banch_items_height: 60px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
-            @media ($media_sm) {
-                //align-items: center;
-            }
+            margin-top: 3.1rem;
 
             &-item {
+                position: relative;
+                padding-left: 1.2rem;
                 color: $color_black_title;
                 font-size: 0.9rem;
                 font-weight: 500;
                 white-space: nowrap;
 
-                span {
-                    position: relative;
-                    padding-left: 1.2rem;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
 
+                    content: "";
+                    min-width: 0.8rem;
+                    min-height: 0.8rem;
+                    background-color: var(--background_label);
+                    border-radius: 0.25rem;
+                }
+
+                &.success {
                     &::before {
-                        position: absolute;
-                        left: 0;
-                        top: 50%;
-                        transform: translateY(-50%);
-
-                        content: "";
-                        min-width: 0.8rem;
-                        min-height: 0.8rem;
-                        background-color: red;
-                        border-radius: 0.25rem;
+                        background-color: $color_green;
                     }
+                }
 
-                    &.success {
-                        &::before {
-                            background-color: $color_green;
-                        }
-                    }
-
-                    &.primary {
-                        &::before {
-                            background-color: lighten($color_blue, 10%);
-                        }
+                &.primary {
+                    &::before {
+                        background-color: lighten($color_blue, 10%);
                     }
                 }
             }
@@ -806,66 +788,75 @@ $banch_items_height: 60px;
     &-content {
         flex-grow: 1;
         display: flex;
+        overflow-x: auto;
+        padding: 0.6rem;
 
-        @media ($media_sm) {
-            overflow-x: auto;
-            padding: 0.3rem;
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+        
+        &::-webkit-scrollbar {
+            height: 6px;
+            background-color: #F5F5F5;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: lighten($color_blue, 25%);
         }
 
         &-item {
             padding: 0.6rem;
             cursor: pointer;
+            text-align: center;
+            transition: 0.3s ease-in-out;
 
             @media ($media_xl) {
                 padding: 0.3rem;
-            }
-
-            @media ($media_sm) {
-                min-width: 6rem;
             }
 
             &:hover {
                 background-color: $color_block_bg;
                 box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
                 border-radius: 0.25rem;
+
+                .highcharts-background {
+                    fill: darken($color_white, 4%);
+                }
+
+                .highcharts-point {
+                    filter: drop-shadow(0px 3px 3px lighten($color_grey, 10%));
+                }
             }
 
             &-graph {
+                position: relative;
+                width: 80px;
                 height: $banch_info_height;
-                background: lighten($color_grey_counter, 0.8%);
-                border-radius: 0.33rem;
+
+                .highcharts-background {
+                    fill: darken($color_white, 2%);
+                    transition: 0.3s ease-in-out;
+                }
+
+                .highcharts-point {
+                    transition: 0.3s ease-in-out;
+                    filter: drop-shadow(0px 2px 2px lighten($color_grey, 10%));
+                }
 
                 display: flex;
                 flex-direction: column;
                 justify-content: start;
 
-                &-half {
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: flex-end;
-
-                    height: 50%;
-                    border-bottom: 2px solid $color_border_graph_banch;
-
-                    &-item {
-                        width: 1.2rem;
-                        height: 50%;
-                        border-radius: 3px 3px 0px 0px;
-
-                        @media ($media_sm) {
-                            width: 1.5rem;
-                        }
-
-                        &.success {
-                            background-color: $color_green;
-                            filter: drop-shadow(0px 1px 1px $color_green);
-                        }
-
-                        &.primary {
-                            background-color: lighten($color_blue, 10%);
-                            filter: drop-shadow(0px 1px 1px lighten($color_blue, 10%));
-                        }
-                    }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    //background-color: $color_border_graph_banch;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
                 }
             }
 
