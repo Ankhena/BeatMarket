@@ -21,7 +21,17 @@
     flex-shrink: 0;
     content: "";
     position: absolute;
-    top: 18px;
+
+    // top: 18px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media ($media_sm) {
+      top: 2.5rem;
+      transform: unset;
+    }
+
     left: 1.75rem;  // 6rem/2 - 2,5rem/2
     display: block;
     width: 2.5rem;
@@ -159,3 +169,13 @@
   }
 }
 
+.prompt.prompt--blockSetting {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+
+  @media ($media_sm) {
+    display: grid;
+  }
+}

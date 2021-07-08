@@ -1629,4 +1629,19 @@ function addAnalyticsGraph(node, id, data, isInput, size) {
         }
     }
 
+    document.querySelectorAll(".eye").forEach(item => {
+        item.addEventListener("click", () => {
+            let input = item.parentNode;
+            input.classList.toggle("visible");
+
+            let input_text = input.querySelector(".input_text");
+            if (input.classList.contains("visible")) {
+                input_text.setAttribute("type", "text");
+            }
+            else {
+                input_text.setAttribute("type", "password");
+            }
+        });
+    });
+
 });
