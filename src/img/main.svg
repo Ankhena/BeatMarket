@@ -122,6 +122,13 @@
             <path d="M16 11V21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
 
+        <symbol id="icon-PlusFile" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25 28H6.99902C6.73381 28 6.47945 27.8946 6.29192 27.7071C6.10438 27.5196 5.99902 27.2652 5.99902 27V5C5.99902 4.73478 6.10438 4.48043 6.29192 4.29289C6.47945 4.10536 6.73381 4 6.99902 4H19L26 11V27C26 27.1313 25.9741 27.2614 25.9239 27.3827C25.8736 27.504 25.8 27.6143 25.7071 27.7071C25.6143 27.8 25.504 27.8736 25.3827 27.9239C25.2614 27.9741 25.1313 28 25 28Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19 4V11H26.001" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13 19H19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 16V22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
         <symbol id="icon-ShareNetwork" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 20C10.2091 20 12 18.2091 12 16C12 13.7909 10.2091 12 8 12C5.79086 12 4 13.7909 4 16C4 18.2091 5.79086 20 8 20Z" stroke="#8C9BEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M22 29C24.2091 29 26 27.2091 26 25C26 22.7909 24.2091 21 22 21C19.7909 21 18 22.7909 18 25C18 27.2091 19.7909 29 22 29Z" stroke="#8C9BEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

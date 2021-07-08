@@ -1,4 +1,5 @@
-function initModal() {
+function initModal(DOMelem) {
+
     let overlay = document.querySelector(".overlay_modal");
     let html = document.documentElement;
     let body = document.body;
@@ -45,7 +46,14 @@ function initModal() {
         document.body.removeChild(scrollBlock);
         return scrollBarWidth;
     }
-    
+
+    if (DOMelem) { // для того, чтобы назначить обработчик на недавно созданный узел, и не вешать заново на остальные
+        DOMelem.addEventListener("click", () => {
+            showModal(DOMelem.dataset.modal)
+        });
+        return;
+    }
+
     document.querySelectorAll("[data-modal]").forEach(item => {
         item.addEventListener("click", () => {
             showModal(item.dataset.modal)

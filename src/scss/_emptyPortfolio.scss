@@ -1,5 +1,5 @@
 .myStrategy-emptyPortfolio-container {
-    padding: 4.2rem 0 11rem 0;
+    padding: 4.2rem 0;
     position: relative;
 
     &.dummy {
@@ -69,11 +69,12 @@
         &-title, &-subtitle {
             text-align: center;
             color: $color_black_title;
+            font-size: 1.15rem;
         }
 
         &-title {
             margin-bottom: 2.8rem;
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             line-height: 1.5;
 
             @media ($media_sm) {
@@ -84,12 +85,41 @@
         &-text {
             margin: 1.5rem 0;
             line-height: 1.6;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         &-button {
             text-align: center;
             margin-top: 1.5rem;
+
+            .btn_secondary {
+                margin: 0 auto;
+            }
+        }
+
+        &-divider {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2.2rem 0;
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: 1px;
+                width: 100%;
+                top: 50%;
+                left: 0;
+                background-color: $color_block_border;
+            }
+
+            span {
+                position: relative;
+                padding: 0 1rem;
+                display: inline-block;
+                background-color: $color_white;
+            }
         }
     }
 

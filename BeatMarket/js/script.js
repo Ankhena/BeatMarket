@@ -16,7 +16,8 @@ testWebP(function (support) {
 
 $(document).ready(function() {
 
-    function initModal() {
+    function initModal(DOMelem) {
+
     let overlay = document.querySelector(".overlay_modal");
     let html = document.documentElement;
     let body = document.body;
@@ -63,7 +64,14 @@ $(document).ready(function() {
         document.body.removeChild(scrollBlock);
         return scrollBarWidth;
     }
-    
+
+    if (DOMelem) { // для того, чтобы назначить обработчик на недавно созданный узел, и не вешать заново на остальные
+        DOMelem.addEventListener("click", () => {
+            showModal(DOMelem.dataset.modal)
+        });
+        return;
+    }
+
     document.querySelectorAll("[data-modal]").forEach(item => {
         item.addEventListener("click", () => {
             showModal(item.dataset.modal)
@@ -247,14 +255,39 @@ if (myRenderGraph !== null) {
     
                 breadcrumb.appendChild(breadcrumb_name);
                 breadcrumb.appendChild(breadcrumb_org);
+
+                // добавление popup
+
+                let popup = document.createElement("div");
+                popup.classList.add("breadcrumb-popup");
+
+                let popup_link = document.createElement("span");
+                popup_link.classList.add("breadcrumb-popup__link");
+                popup_link.innerHTML = "Редактирование транзакций";
+                popup_link.setAttribute("data-modal", "modal_add");
+                popup.appendChild(popup_link);
+
+                let popup_link_delete = document.createElement("span");
+                popup_link_delete.classList.add("breadcrumb-popup__link");
+                popup_link_delete.classList.add("breadcrumb-popup__link--delete");
+                popup_link_delete.innerHTML = "Удалить компанию";
+                popup.appendChild(popup_link_delete);
+
+                breadcrumb.appendChild(popup);
     
                 breadcrumbsContainer.appendChild(breadcrumb);
-    
-                breadcrumb.addEventListener("click", function(e) {
+
+                popup_link_delete.addEventListener("click", function(e) {
                     let id = breadcrumb.getAttribute("data-id"); // при клике получаем id breadcrumb
                     breadcrumbs.splice(id, 1); // удаляем из массива объект с необходимым breadcrmb
                     renderBreadcrumbs(breadcrumbs); // перерисовываем
                 });
+    
+                breadcrumb.addEventListener("click", function(e) {
+                    breadcrumb.querySelector(".breadcrumb-popup").classList.toggle("visible");
+                });
+
+                initModal(popup_link); // инициализируем модалку именно на этот узел
     
             });
         }

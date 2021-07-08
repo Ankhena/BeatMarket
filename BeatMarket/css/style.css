@@ -1299,6 +1299,8 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .breadcrumbs {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1315,6 +1317,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
           align-items: center;
   position: relative;
   margin-bottom: 0.9rem;
+  cursor: pointer;
   background-color: #F6F7FD;
   border: 1px solid #8C9BEA;
   border-radius: 0.5rem;
@@ -1328,7 +1331,6 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   background-image: url(../img/breadcrumbClose.svg);
   background-size: 100%;
   margin-left: 0.5rem;
-  cursor: pointer;
 }
 
 .breadcrumbs .breadcrumb:not(:last-child) {
@@ -1342,10 +1344,48 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   margin-right: 0.4rem;
 }
 
-.breadcrumbs .breadcrumb span {
+.breadcrumbs .breadcrumb > span {
   font-weight: 500;
   font-size: 0.8rem;
   color: #929398;
+}
+
+.breadcrumb-popup {
+  display: none;
+  position: absolute;
+  left: -1px;
+  bottom: -0.5rem;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  background: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+          box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+
+.breadcrumb-popup.visible {
+  display: block;
+}
+
+.breadcrumb-popup__link {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #24252E;
+  padding: 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.breadcrumb-popup__link:not(:last-child) {
+  border-bottom: 1px solid #D3E3FF;
+}
+
+.breadcrumb-popup__link--delete {
+  color: #ED6373;
 }
 
 .modals_preview {
@@ -2909,7 +2949,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .myStrategy-emptyPortfolio-container {
-  padding: 4.2rem 0 11rem 0;
+  padding: 4.2rem 0;
   position: relative;
 }
 
@@ -2959,23 +2999,59 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 .myStrategy-emptyPortfolio-container .info-subtitle {
   text-align: center;
   color: #24252E;
+  font-size: 1.15rem;
 }
 
 .myStrategy-emptyPortfolio-container .info-title {
   margin-bottom: 2.8rem;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   line-height: 1.5;
 }
 
 .myStrategy-emptyPortfolio-container .info-text {
   margin: 1.5rem 0;
   line-height: 1.6;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .myStrategy-emptyPortfolio-container .info-button {
   text-align: center;
   margin-top: 1.5rem;
+}
+
+.myStrategy-emptyPortfolio-container .info-button .btn_secondary {
+  margin: 0 auto;
+}
+
+.myStrategy-emptyPortfolio-container .info-divider {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2.2rem 0;
+}
+
+.myStrategy-emptyPortfolio-container .info-divider::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  background-color: #D3E3FF;
+}
+
+.myStrategy-emptyPortfolio-container .info-divider span {
+  position: relative;
+  padding: 0 1rem;
+  display: inline-block;
+  background-color: #fff;
 }
 
 .myStrategy-emptyPortfolio-container .sprites svg {
