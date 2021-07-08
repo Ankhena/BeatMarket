@@ -4665,7 +4665,58 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .statTable__value {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   white-space: nowrap;
+}
+
+.statTable__value--empty::before {
+  content: "—";
+  color: #929398;
+  margin: 2px 2px 0 0;
+}
+
+.statTable__icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  stroke: #929398;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.statTable__icon:hover {
+  stroke: #3E54D8;
+}
+
+.statTable__icon:hover ~ .statTable__popup {
+  opacity: 1;
+  visibility: visible;
+}
+
+.statTable__popup {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  background: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+          box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+  border-radius: 0.5rem;
+  padding: 1.1rem;
+  z-index: 1;
+  font-weight: 400;
+  color: #373943;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .statTable__pencil {
@@ -11539,6 +11590,11 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .statTable__description {
     display: inline-block;
+  }
+
+  .statTable__popup {
+    width: 20rem;
+    white-space: normal;
   }
 
   .statSubtable__buttons {

@@ -1026,9 +1026,16 @@ initDateRangePicker();
     let commentTableText = document.querySelectorAll(".modal-content-simpleText");
 
     document.querySelectorAll(".statTable__content").forEach(item => {
-        item.addEventListener("click", () => {
-            item.classList.toggle("statTable__content--opened");
-        });
+        if (document.body.offsetWidth <= 768) {
+            item.querySelector(".statSticker").addEventListener("click", () => {
+                item.classList.toggle("statTable__content--opened");
+            });
+        }
+        else {
+            item.addEventListener("click", () => {
+                item.classList.toggle("statTable__content--opened");
+            });
+        }
     });
 
     document.querySelectorAll(".statTable__item--comment").forEach(item => {

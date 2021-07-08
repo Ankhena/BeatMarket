@@ -210,7 +210,57 @@
     }
 
     &__value {
+        position: relative;
+        display: inline-flex;
         white-space: nowrap;
+
+        &--empty {
+            &::before {
+                content: "—";
+                color: $color_grey;
+                margin: 2px 2px 0 0;
+            }
+        }
+    }
+
+    &__icon {
+        width: 1.8rem;
+        height: 1.8rem;
+        stroke: $color_grey;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            stroke: $color_blue;
+
+            ~ .statTable__popup {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__popup {
+        transition: 0.3s ease-in-out;
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        transform: translateY(100%);
+        background: $color_block_bg;
+        border: 1px solid $color_block_border;
+        box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+        border-radius: 0.5rem;
+        padding: 1.1rem;
+        z-index: 1;
+        font-weight: 400;
+        color: $color_black_main;
+
+        visibility: hidden;
+        opacity: 0;
+
+        @media ($media_sm) {
+            width: 20rem;
+            white-space: normal;
+        }
     }
 
     &__pencil {
