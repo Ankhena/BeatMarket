@@ -9199,6 +9199,51 @@ body.viewProfile .header-controls-links-link.auth span {
   display: none;
 }
 
+.month-cash {
+  margin-top: 3.5rem;
+}
+
+.month-cash__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #24252E;
+  margin-bottom: 1rem;
+}
+
+.month-cash__date {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #3E54D8;
+}
+
+.month-cash__overlay {
+  overflow-x: auto;
+}
+
+.month-cash__overlay::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.month-cash__overlay::-webkit-scrollbar {
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+.month-cash__overlay::-webkit-scrollbar-thumb {
+  background-color: #a8b2ed;
+}
+
+.month-cash__graph {
+  margin-top: 1rem;
+  min-width: 950px;
+}
+
+.month-cash__graph .highcharts-label span {
+  left: 3px !important;
+  top: -5px !important;
+}
+
 @media (min-width: 564px) {
   .daterangepicker {
     width: auto;
