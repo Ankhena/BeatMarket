@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Аналитика"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"title": "Мой портфель"
+		})
+
+		<section class="section-outer section-main">
+			<div class="main">
+
+				@@include("_menu.html", {
+					"title": "Мой портфель"
+				})
+
+				<div class="main-content">
+                    <div class="main-content emptyPortfolio main-contentPadding">
+
+                        @@include("_strategyPromo.html")
+
+						<div class="myStrategy">
+							<div class="myStrategy-header">
+								<h2>Мои стратегии</h2>
+								<button class="btn btn_primary">
+									<svg><use xlink:href="img/main.svg#icon-ArrowsOutCardinal"></use></svg>
+									<span>Изменить порядок</span>
+								</button>
+							</div>
+							<div class="myStrategy-items">
+
+								<div class="myStrategy-items-item">
+
+									@@include("_myStrategyHeader.html", {
+										"title": "Удачливая стратегия",
+										"cashStatus": "error",
+										"cashValue": "-66%",
+										"toggleActive": "active",
+                                        "titleIcon": "icon-bitcoin"
+									})
+
+									<div class="myStrategy-items-item-content">
+                                        @@include("_myStrategyNavCrypto.html", {
+                                            "cryptMyCrypt": "",
+                                            "cryptAnalytics": "active",
+                                            "cryptAddCoin": "",
+                                            "news": "",
+                                            "cryptHistory": ""
+                                        })
+
+                                        <div class="performance">
+                                            <div class="performance-structure">
+                                                <div class="header">
+                                                    <h3>Состав портфеля</h3>
+                                                </div>
+                                                <div class="performance-structure-content">
+                                                    <div class="card">
+                                                        <div class="card-content-graph graph graph-big" id="cryptAnalyticsGraph"></div>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="content-header card-header">
+                                                            <h4>Общая сумма</h4>
+                                                        </div>
+                                                        <div class="content-data">
+                                                            <div class="content-data-cost">
+                                                                <span>33 621 234 $</span>
+                                                            </div>
+                                                            <div class="content-data-pager pagination">
+                                                                <ul>
+                                                                    <li class="prev">
+                                                                        <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
+                                                                    </li>
+                                                                    <li class="current"><a href="#">1/7</a></li>
+                                                                    <li class="next">
+                                                                        <a href="#"><svg><use xlink:href="img/main.svg#icon-caret-pagination"></use></svg></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content-graphInfo">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footer.html")
+
+	</body>
+</html>

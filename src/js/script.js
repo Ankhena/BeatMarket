@@ -19,6 +19,7 @@ $(document).ready(function() {
     --include("_onboard.js")
     --include("_ticketSelect.js")
     --include("_monthCashGraph.js")
+    --include("_cryptAnalyticsGraph.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
