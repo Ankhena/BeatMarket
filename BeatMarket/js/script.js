@@ -1587,10 +1587,10 @@ function addAnalyticsGraph(node, id, data, isInput, size) {
     });
 
     document.querySelectorAll(".myStrategy-items-item").forEach(item => {
-        let indicatorTable = document.querySelector(".myStrategy-indicators-container .table-scroll");
-        if (indicatorTable != null) {
-            indicatorTable.style.width = `${item.offsetWidth-2}px`
-        }
+        let indicatorTable = document.querySelectorAll(".myStrategy-indicators-container .table-scroll");
+        indicatorTable.forEach(elem => {
+            elem.style.width = `${item.offsetWidth-2}px`
+        });
     });
 
     $(".strategyCards-card-range").slider();

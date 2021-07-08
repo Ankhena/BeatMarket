@@ -17,6 +17,13 @@ $indicator_item_margin-right: 2rem;
 
 .myStrategy-indicators-container {
 
+    &-title {
+        font-size: 1.35rem;
+        color: $color_black_title;
+        margin-top: 2.2rem;
+        font-weight: 600;
+    }
+
     .table {
         position: relative;
         border-top: 1px solid $color_border_dop;
@@ -86,8 +93,8 @@ $indicator_item_margin-right: 2rem;
             margin-right: 0;
             display: flex;
             align-items: center;
-            width: fit-content;
             min-width: calc(100% + 1.5rem);
+            width: fit-content;
             border-right: 2px solid $color_table_header;
 
             @media ($media_sm) {
@@ -112,8 +119,9 @@ $indicator_item_margin-right: 2rem;
                 align-items: center;
                 border-bottom: 1px solid $color_block_border;
                 margin-right: 0;
-                width: fit-content;
+
                 min-width: calc(100% + 1.5rem);
+                width: fit-content;
 
                 &-info {
                     display: flex;

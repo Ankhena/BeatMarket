@@ -3932,6 +3932,13 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   background-color: #a8b2ed;
 }
 
+.myStrategy-indicators-container-title {
+  font-size: 1.35rem;
+  color: #24252E;
+  margin-top: 2.2rem;
+  font-weight: 600;
+}
+
 .myStrategy-indicators-container .table {
   position: relative;
   border-top: 1px solid #E6EEFF;
@@ -4014,10 +4021,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: calc(100% + 1.5rem);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  min-width: calc(100% + 1.5rem);
   border-right: 2px solid #F5F6FD;
 }
 
@@ -4041,10 +4048,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
           align-items: center;
   border-bottom: 1px solid #D3E3FF;
   margin-right: 0;
+  min-width: calc(100% + 1.5rem);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  min-width: calc(100% + 1.5rem);
 }
 
 .myStrategy-indicators-container .table-content-item-info {
