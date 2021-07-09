@@ -1301,3 +1301,146 @@ input[type="radio"]:checked {
         margin-left: $gapSize;
     }
 }
+
+.notify {
+    background: $color_block_bg;
+    border: 1px solid $color_block_border;
+    box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    // .notify__header
+
+    &__header {
+        padding: 1.3rem 0.9rem;
+        display: flex;
+        background-color: $color_bg_notify;
+
+        &--empty {
+            justify-content: center;
+        }
+    }
+
+    // .notify__info
+
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+
+    // .notify__title
+
+    &__title {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    // .notify__count
+
+    &__count {
+        display: inline-flex;
+        min-width: 1.4rem;
+        height: 1.4rem;
+        background-color: $color_blue;
+        color: $color_white;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        font-weight: 600;
+        border-radius: 0.7rem;
+        padding: 0 0.4rem;
+        line-height: 1;
+
+        margin-left: 0.9rem;
+    }
+
+    // .notify__clean
+
+    &__clean {
+        color: $color_blue;
+        background-color: transparent;
+        padding: 0;
+        margin-left: auto;
+        font-size: 0.9rem;
+
+        @media ($media_sm) {
+            padding: 0;
+            width: auto;
+        }
+    }
+
+    // .notify__content
+
+    &__content {
+        
+    }
+
+    // .notify__item
+
+    &__item {
+        padding: 1.3rem 0.9rem;
+        display: flex;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $color_block_border;
+        }
+    }
+
+    // .notify__icon
+
+    &__icon {
+        min-width: 2.3rem;
+        min-height: 2.3rem;
+        max-width: 2.3rem;
+        max-height: 2.3rem;
+
+        margin-right: 0.7rem;
+
+        @media ($media_sm) {
+            min-width: 2.5rem;
+            min-height: 2.5rem;
+            max-width: 2.5rem;
+            max-height: 2.5rem;
+        }
+    }
+
+    // .notify__img
+
+    &__img {
+        max-width: 100%;
+    }
+
+    // .notify__text
+
+    &__text {
+        line-height: 1.5;
+        font-size: 0.9rem;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .notify__name
+
+    &__name {
+        line-height: 1.5;
+        font-size: 0.9rem;
+
+        @media ($media_sm) {
+            font-size: 1rem;
+        }
+    }
+
+    // .notify__time
+
+    &__time {
+        font-weight: 500;
+        color: $color_grey;
+        font-size: 0.8rem;
+
+        @media ($media_sm) {
+            font-size: 0.9rem;
+        }
+    }
+}
+

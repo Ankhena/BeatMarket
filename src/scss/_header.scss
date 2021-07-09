@@ -97,19 +97,6 @@
                     display: flex;
                     align-items: center;
 
-                    picture {
-                        display: inline-flex;
-                        max-width: 1.6rem;
-
-                        @media ($media_sm) {
-                            max-width: 1.8rem;
-                        }
-
-                        img {
-                            max-width: 100%;
-                        }
-                    }
-
                     &:not(:first-child) {
                         margin-left: 1.5rem;
 
@@ -118,20 +105,56 @@
                         }
                     }
 
-                    &.active {
+                    &.bell {
                         position: relative;
 
-                        &::before {
-                            position: absolute;
-                            top: -20%;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            content: "";
-                            min-width: 0.3rem;
-                            min-height: 0.3rem;
-                            border-radius: 50%;
-                            background-color: $color_green;
+                        svg {
+                            width: 1.6rem;
+                            height: 1.6rem;
+                            stroke: $breadcrumb_border;
+                        }
 
+                        &--active {
+                            &::before {
+                                position: absolute;
+                                top: -20%;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                content: "";
+                                min-width: 0.3rem;
+                                min-height: 0.3rem;
+                                border-radius: 50%;
+                                background-color: $color_green;
+    
+                            }
+                        }
+
+                        input[type="checkbox"]:checked {
+                            ~ svg {
+                                stroke: $color_blue;
+                            }
+
+                            ~ .bell__notify {
+                                display: block;
+                            }
+                        }
+
+                        .bell__notify {
+                            display: none;
+
+                            position: absolute;
+                            right: 0;
+                            bottom: -0.5rem;
+                            transform: translateY(100%);
+                            min-width: 27rem;
+
+                            @media ($media_sm) {
+                                min-width: calc(100vw - 2rem);
+                                max-width: calc(100vw - 2rem);
+                                left: unset;
+                                right: -2.8rem;
+                                bottom: -1.5rem;
+                            }
                         }
                     }
 
@@ -304,6 +327,12 @@
                     &.person {
 
                         .dropdown {
+
+                            picture {
+                                img {
+                                    max-width: 1.8rem;
+                                }
+                            }
 
                             label {
                                 cursor: pointer;

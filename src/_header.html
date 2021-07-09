@@ -61,8 +61,59 @@
                     </div>
     
                 </div>
-                <div class="header-controls-links-link active">
-                    <img src="./img/header_bell.svg" alt="Иконка колокольчика">
+                <div class="header-controls-links-link bell bell--active">
+                    <label class="dropdown">
+                        <input type="checkbox" class="visually_hidden">
+
+                        <!-- <div class="bell__notify notify">
+                            <div class="notify__header notify__header--empty">
+                                <div class="notify__info">
+                                    <h5 class="notify__title">Уведомления отсутствуют</h5>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div class="bell__notify notify">
+                            <div class="notify__header">
+                                <div class="notify__info">
+                                    <h5 class="notify__title">Уведомления</h5>
+                                    <span class="notify__count">3</span>
+                                </div>
+                                <button class="notify__clean btn">Очистить все</button>
+                            </div>
+                            <div class="notify__content">
+                                <div class="notify__item">
+                                    <div class="notify__icon">
+                                        <img class="notify__img" src="./img/notify_primary.svg" alt="Иконка обычного уведомления">
+                                    </div>
+                                    <div class="notify__text">
+                                        <span class="notify__name">Уведомление об изменении в графиках</span>
+                                        <span class="notify__time">35 мин.</span>
+                                    </div>
+                                </div>
+                                <div class="notify__item">
+                                    <div class="notify__icon">
+                                        <img class="notify__img" src="./img/notify_warning.svg" alt="Иконка внимания уведомления">
+                                    </div>
+                                    <div class="notify__text">
+                                        <span class="notify__name">Уведомления о неподтвержденной почте</span>
+                                        <span class="notify__time">2 часа</span>
+                                    </div>
+                                </div>
+                                <div class="notify__item">
+                                    <div class="notify__icon">
+                                        <img class="notify__img" src="./img/notify_danger.svg" alt="Иконка ошибки уведомления">
+                                    </div>
+                                    <div class="notify__text">
+                                        <span class="notify__name">Уведомления об ошибке на сервере</span>
+                                        <span class="notify__time">1 день</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <svg><use xlink:href="img/main.svg#icon-bell"></use></svg>
+                    </label>
                 </div>
                 <div class="header-controls-links-link person">
                     <label class="dropdown">
