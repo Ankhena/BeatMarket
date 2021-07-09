@@ -141,6 +141,12 @@ if (myRenderGraph !== null) {
             type: 'spline',
             style: { "fontFamily": "" },
         },
+        credits: {
+            enabled: false
+        },
+        legend: {
+            enabled: false
+        },
         title: {
             text: ''
         },

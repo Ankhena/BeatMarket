@@ -249,6 +249,11 @@ input[type="password"] {
             margin-right: 0.5rem;
         }
     }
+
+    &_gray {
+        background-color: transparent;
+        color: $color_grey;
+    }
 }
 
 .main-contentPadding {
@@ -1444,3 +1449,67 @@ input[type="radio"]:checked {
     }
 }
 
+.selectDropdown {
+    display: none;
+
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    transform: translateY(100%);
+    z-index: 1;
+
+    background: $color_block_bg;
+    border: 1px solid $color_block_border;
+    box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+    border-radius: 10px;
+    padding: 1rem;
+
+    &-item {
+        display: flex;
+        width: 100%;
+        padding: 0.5rem 0;
+        cursor: pointer;
+
+        span {
+            padding-left: 2rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        &.border {
+            border-bottom: 1px solid $color_border_dop;
+            padding-bottom: 0.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        &.buttons {
+            flex-wrap: wrap;
+            padding-bottom: 0;
+
+            .btn {
+                flex-basis: 100%;
+                justify-content: center;
+                padding: .8rem 1rem;
+
+                &:not(:last-child) {
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+
+        input[type="checkbox"]:checked ~ span {
+            color: $color_blue;
+        }
+
+        button {
+            padding: 0.8rem 2rem;
+        }
+
+        &:hover {
+            span {
+                color: $color_blue;
+            }
+        }
+    }
+
+}

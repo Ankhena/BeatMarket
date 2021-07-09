@@ -604,6 +604,14 @@
                     padding: 0.5rem 0.9rem;
                     min-width: unset;
 
+                    position: relative;
+
+                    input[type="checkbox"]:checked {
+                        ~ .selectDropdown {
+                            display: block;
+                        }
+                    }
+
                     > span {
                         font-weight: 500;
                         color: $color_grey;
@@ -627,7 +635,7 @@
                         border-color: lighten($color_blue, 30%);
                     }
 
-                    .dropdown {
+                    .selectDropdown {
 
                         @media ($media_sm) {
                             width: 15rem;
@@ -658,8 +666,9 @@
                     @media ($media_sm) {
                         margin: 0 0 1rem 0;
 
-                        .dropdown {
-                            transform: translate(-50%, 100%);
+                        .selectDropdown {
+                            right: 0;
+                            left: unset;
                         }
                     }
                 }

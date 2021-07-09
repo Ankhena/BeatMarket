@@ -86,32 +86,29 @@
                 <span>Общий доход</span>
                 <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
 
-                <div class="dropdown">
-                    <label class="dropdown-item border">
+                <div class="selectDropdown">
+                    <label class="selectDropdown-item border">
                         <input type="checkbox" name="mainCashItems" class=" visually_hidden">
                         <span class="checkbox_custom">Общий доход</span>
                     </label>
-                    <label class="dropdown-item">
+                    <label class="selectDropdown-item">
                         <input type="checkbox" name="mainCashItems" class="visually_hidden">
                         <span class="checkbox_custom">Стратегия удачи</span>
                     </label>
-                    <label class="dropdown-item">
+                    <label class="selectDropdown-item">
                         <input type="checkbox" name="mainCashItems" class="visually_hidden">
                         <span class="checkbox_custom">Стратегия 2</span>
                     </label>
-                    <label class="dropdown-item">
+                    <label class="selectDropdown-item">
                         <input type="checkbox" name="mainCashItems" class="visually_hidden">
                         <span class="checkbox_custom">Максимальный выкуп по акциям</span>
                     </label>
-                    <label class="dropdown-item">
+                    <label class="selectDropdown-item">
                         <button class="btn btn_blue">Применить</button>
                     </label>
                 </div>
             </label>
             <div class="stategyPromo-graph-info-content">
-                <div class="stategyPromo-graph-info-content-date">
-                    <span id="chooseDataStrategyValue">21.11.2021 - 28.11.2021</span>
-                </div>
                 <div class="stategyPromo-graph-info-content-choose">
                     <div class="stategyPromo-graph-info-content-choose-item active">
                         <span>Неделя</span>
@@ -141,9 +138,29 @@
                 <span>ВМ советник</span>
                 <strong class="success">+8.21%</strong>
             </div>
-        </div>
-        <div class="stategyPromo-graph-chart" id="stategyPromoChart">
+
+            <label class="stategyPromo-graph-values-btn">
+                <input type="checkbox" class="visually_hidden">
+
+                <span class="btn btn_primary">
+                    <svg><use xlink:href="img/main.svg#icon-gearSix"></use></svg>
+                </span>
+
+                <div class="selectDropdown">
+                    <label class="selectDropdown-item border">
+                        <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
+                        <span class="checkbox_custom">С учетом дивидендов</span>
+                    </label>
+                    <label class="selectDropdown-item buttons">
+                        <button class="btn btn_blue">Сохранить настройки графика</button>
+                        <button class="btn btn_gray">Сбросить</button>
+                    </label>
+                </div>
+
+            </label>
 
         </div>
+        <div class="stategyPromo-graph-chart" id="stategyPromoChart"></div>
+        <span class="stategyPromo-graph-dates" id="chooseDataStrategyValue">21.11.2021 - 28.11.2021</span>
     </div>
 </div>

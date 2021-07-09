@@ -271,6 +271,7 @@ $strategy-btn-margin: 0.8rem;
     }
 
     &-graph {
+        position: relative;
         flex-basis: 70%;
 
         @media ($media_sm) {
@@ -282,7 +283,7 @@ $strategy-btn-margin: 0.8rem;
         border: 1px solid $color_block_border;
         box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
         border-radius: 1rem;
-        padding: 1.7rem 1.7rem 0;
+        padding: 1.4rem 1.7rem;
 
         &-info {
             display: flex;
@@ -294,11 +295,18 @@ $strategy-btn-margin: 0.8rem;
             &-btn {
                 position: relative;
 
-                > span {
-                    white-space: nowrap;
+                @media ($media_sm) {
+                    width: calc(100% - 4rem);
                 }
 
-                input[type="checkbox"]:checked ~ .dropdown {
+                > span {
+                    white-space: nowrap;
+                    max-width: 14rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                input[type="checkbox"]:checked ~ .selectDropdown {
                     display: block;
                 }
 
@@ -306,55 +314,6 @@ $strategy-btn-margin: 0.8rem;
                     transform: rotate(180deg);
                 }
 
-                .dropdown {
-                    display: none;
-
-                    position: absolute;
-                    left: 0;
-                    bottom: -0.5rem;
-                    transform: translateY(100%);
-                    z-index: 1;
-
-                    background: $color_block_bg;
-                    border: 1px solid $color_block_border;
-                    box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
-                    border-radius: 10px;
-                    padding: 1rem;
-
-                    &-item {
-                        display: flex;
-                        width: 100%;
-                        padding: 0.5rem 0;
-                        cursor: pointer;
-
-                        span {
-                            padding-left: 2rem;
-                            font-weight: 500;
-                            white-space: nowrap;
-                        }
-
-                        &.border {
-                            border-bottom: 1px solid $color_border_dop;
-                            padding-bottom: 0.8rem;
-                            margin-bottom: 0.3rem;
-                        }
-
-                        input[type="checkbox"]:checked ~ span {
-                            color: $color_blue;
-                        }
-
-                        button {
-                            padding: 0.8rem 2rem;
-                        }
-
-                        &:hover {
-                            span {
-                                color: $color_blue;
-                            }
-                        }
-                    }
-
-                }
             }
 
             &-content {
@@ -385,6 +344,7 @@ $strategy-btn-margin: 0.8rem;
 
                 &-choose {
                     display: flex;
+                    margin-left: auto;
 
                     @media ($media_sm) {
                         width: 100%;
@@ -445,21 +405,24 @@ $strategy-btn-margin: 0.8rem;
 
         &-values {
             display: flex;
-            padding: 1.6rem 0 1.6rem 1rem;
+            align-items: center;
+            padding: 0.7rem 0 0.7rem 1rem;
 
             @media ($media_sm) {
                 flex-direction: column;
+                align-items: flex-start;
+                padding: 1.4rem 0 1.4rem 1rem;
             }
 
             &-item {
                 position: relative;
                 font-size: 0.9rem;
 
-                &:not(:last-child) {
-                    margin-right: 2rem;
+                &:not(:first-child) {
+                    margin-left: 2rem;
 
                     @media ($media_sm) {
-                        margin: 0 0 1rem 0;
+                        margin: 1rem 0 0;
                     }
                 }
 
@@ -503,10 +466,57 @@ $strategy-btn-margin: 0.8rem;
                     }
                 }
             }
+
+            &-btn {
+                position: relative;
+                margin-left: auto;
+
+                @media ($media_sm) {
+                    position: absolute;
+                    top: 1.4rem;
+                    right: 1.7rem;
+                }
+
+                input[type="checkbox"]:checked {
+                    ~ .btn {
+                        background-color: $color_blue;
+                        border-color: $color_blue;
+
+                        svg {
+                            stroke: $color_white;
+                        }
+                    }
+
+                    ~ .selectDropdown {
+                        display: block;
+                    }
+                }
+
+                .selectDropdown {
+                    right: 0;
+                    left: unset;
+                }
+
+                .btn {
+                    padding: 0.6rem;
+                    display: flex;
+
+                    svg {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        stroke: $breadcrumb_border;
+
+                        @media ($media_sm) {
+                            width: 1.9rem;
+                            height: 1.9rem;
+                        }
+                    }
+                }
+            }
         }
 
         &-chart {
-            height: 68%;
+            height: 60%;
 
             @media ($media_sm) {
                 height: 250px;
@@ -580,6 +590,17 @@ $strategy-btn-margin: 0.8rem;
                         font-size: 1.2rem;
                     }
                 }
+            }
+        }
+
+        &-dates {
+            display: flex;
+            justify-content: center;
+            font-weight: 600;
+            margin-top: 0.7rem;
+
+            @media ($media_sm) {
+                font-size: 1.1rem;
             }
         }
 
