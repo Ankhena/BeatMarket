@@ -101,6 +101,22 @@
                 }
             }
         }
+
+        &--danger {
+            background-color: lighten($color_red, 30%);
+
+            &:hover {
+                background-color: lighten($color_red, 28%);
+            }
+
+            @media ($media_sm) {
+                background-color: lighten($color_red, 25%);
+
+                &:hover {
+                    background-color: lighten($color_red, 23%);
+                }
+            }
+        }
     }
 
     // .statTable__subtable
@@ -214,6 +230,10 @@
         display: inline-flex;
         white-space: nowrap;
 
+        &--wrap {
+            white-space: initial;
+        }
+
         &--empty {
             &::before {
                 content: "—";
@@ -282,6 +302,10 @@
     background-color: $color_table_header;
     border-bottom: 1px solid $color_border_dop;
 
+    &--noPadding {
+        padding: 0 1.5rem;
+    }
+
     // .statSubtable__buttons
 
     &__buttons {
@@ -327,7 +351,9 @@
     // .statSubtable__table
 
     &__table {
-
+        &--noMargin {
+            margin: 0 -1.5rem;
+        }
     }
 
     // .statSubtable__pagination
@@ -352,6 +378,12 @@
 .statSticker {
     display: flex;
     align-items: center;
+
+    &--import {
+        @media ($media_sm) {
+            justify-content: flex-start;
+        }
+    }
 
     // .statSticker__icon
 
@@ -424,6 +456,34 @@
 
     @media ($media_sm) {
         max-width: 10rem;
+    }
+
+    
+    &--import {
+        max-width: unset;
+
+        @media ($media_xl) {
+            max-width: unset;
+        }
+    
+        @media ($media_sm) {
+            max-width: unset;
+        }
+
+        .statStickerInfo__title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+
+        .statStickerInfo__subtitle {
+            flex-basis: auto;
+            font-size: 0.9rem;
+
+            @media ($media_sm) {
+                max-width: 12rem;
+            }
+        }
     }
 
     // .statStickerInfo__title

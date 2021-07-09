@@ -76,7 +76,8 @@ body {
     color: $color_black_title;
 }
 
-input[type="text"], textarea {
+input[type="text"],
+textarea {
     background: $color_white;
     border: 1px solid #d3e3ff;
     border-radius: 10px;
@@ -107,7 +108,9 @@ input[type="text"], textarea {
     }
 }
 
-input[type="email"], input[type="url"], input[type="password"] {
+input[type="email"],
+input[type="url"],
+input[type="password"] {
     @extend input[type="text"];
 }
 
@@ -256,8 +259,10 @@ input[type="email"], input[type="url"], input[type="password"] {
     }
 }
 
-input[type="checkbox"]:checked, input[type="radio"]:checked {
-    ~ .radio_custom, ~ .checkbox_custom {
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    ~ .radio_custom,
+    ~ .checkbox_custom {
         &::before {
             background-color: $color_blue;
             border: 2px solid $color_blue;
@@ -269,7 +274,8 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
     }
 }
 
-.radio_custom, .checkbox_custom {
+.radio_custom,
+.checkbox_custom {
     position: relative;
 
     &::before,
@@ -283,8 +289,8 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
         left: 0;
         top: 50%;
         transform: translate(0.4rem, -50%);
-        width: .5rem;
-        height: .5rem; 
+        width: 0.5rem;
+        height: 0.5rem;
     }
 
     &::before {
@@ -298,7 +304,6 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
     }
 
     &:checked {
-
         &::before {
             background-color: $color_blue;
             border: 2px solid $color_blue;
@@ -311,7 +316,6 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
 }
 
 .radio_custom {
-
     &::before,
     &::after {
         border-radius: 50%;
@@ -319,7 +323,6 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
 }
 
 .checkbox_custom {
-
     &::before {
         border-radius: 0.3rem;
     }
@@ -390,7 +393,6 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
                     width: 1.2rem;
                     height: 1.2rem;
                     stroke: lighten($color_blue, 15%);
-
                 }
             }
 
@@ -423,14 +425,12 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
                         stroke: $color_blue;
                     }
                 }
-
             }
         }
     }
 }
 
 .the_table {
-
     .table {
         font-size: 0.9rem;
         font-weight: 500;
@@ -461,7 +461,6 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
         }
 
         &-content {
-
             &-item {
                 position: relative;
                 display: flex;
@@ -487,10 +486,9 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
 }
 
 .pagination {
-
     ul {
         display: inline-flex;
-        background: $color_white;;
+        background: $color_white;
         border: 1px solid $color_border_dop;
         border-radius: 0.3rem;
 
@@ -543,8 +541,8 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
                 }
             }
 
-            &.prev, &.next {
-
+            &.prev,
+            &.next {
                 a {
                     display: flex;
                 }
@@ -566,17 +564,17 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
 }
 
 .dropdown p::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
 }
 
 .dropdown p::-webkit-scrollbar {
-	width: 6px;
-	background-color: #F5F5F5;
+    width: 6px;
+    background-color: #f5f5f5;
 }
 
 .dropdown p::-webkit-scrollbar-thumb {
-	background-color: lighten($color_blue, 25%);
+    background-color: lighten($color_blue, 25%);
 }
 
 .breadcrumbs {
@@ -609,7 +607,6 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
             // background-color: $color_white;
             // border-radius: 50%;
             // display: block;
-
         }
 
         &:not(:last-child) {
@@ -757,7 +754,6 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
         }
 
         .btn_share {
-
             .btn__icon {
                 stroke: white;
             }
@@ -765,7 +761,6 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
     }
 
     &-header {
-
         h3 {
             color: $color_black_title;
             font-size: 1.33rem;
@@ -809,13 +804,13 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
             padding: 1.5rem 3rem;
             background-color: $color_white;
             transition: 0.3s ease-in-out;
-        
+
             @media ($media_sm) {
                 padding: 1.5rem 0;
                 width: 100%;
                 text-align: center;
             }
-        
+
             &:hover {
                 box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
                 background-color: $color_blue_hover;
@@ -881,7 +876,6 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
     }
 
     &__subheader {
-
     }
 
     &__description {
@@ -932,7 +926,6 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
 }
 
 .prompt-status {
-
     &__info {
         font-size: 1.33rem;
         font-weight: 600;
@@ -964,7 +957,6 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
 }
 
 .prompt-details {
-
     @media ($media_sm) {
         display: flex;
         flex-direction: column;
@@ -987,7 +979,7 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
 
 .prompt-value {
     font-weight: 500;
-    
+
     &--success {
         font-weight: 600;
         color: $color_green;
@@ -1254,8 +1246,46 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
     }
 }
 
-// === / Mixins ===
+/* DOUBLE SPINNER */
+.double-spinner {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+}
 
+.dbl-spinner {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0.5rem solid transparent;
+    border-top: 0.5rem solid $color_block_border;
+    border-left: 0.5rem solid $color_block_border;
+    -webkit-animation: 2s spin linear infinite;
+    animation: 2s spin linear infinite;
+}
+
+.dbl-spinner--2 {
+    border: 0.5rem solid transparent;
+    border-right: 0.5rem solid $color_blue;
+    border-bottom: 0.5rem solid $color_blue;
+    -webkit-animation: 1s spin linear infinite;
+    animation: 1s spin linear infinite;
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+// === / Mixins ===
 
 // flex gap mixin
 // column-gap для флексов поддерживается современными браузерами

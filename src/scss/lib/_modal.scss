@@ -75,6 +75,14 @@
         }
     }
 
+    &.import {
+        width: 58rem;
+
+        @media ($media_xs) {
+            width: 90%;
+        }
+    }
+
     @media ($media_xs) {
         width: 90%;
     }
@@ -423,6 +431,12 @@
                 line-height: 1.6;
                 font-weight: 500;
             }
+
+            a {
+                color: $color_blue;
+                text-decoration: none;
+                font-weight: 600;
+            }
         }
 
         &-total {
@@ -461,8 +475,18 @@
                 padding: 1.2rem 0;
                 flex-basis: 50%;
 
+                &_short {
+                    padding: 1.2rem 5rem;
+                    flex-basis: auto;
+                }
+
                 &.gray, &.red {
                     background-color: unset;
+                }
+
+                &[disabled] {
+                    opacity: 0.5;
+                    pointer-events: none;
                 }
 
                 &.gray {
@@ -483,6 +507,43 @@
                     &:not(:last-child) {
                         margin: 0 0 0.5rem 0;
                     }
+                }
+            }
+        }
+
+        &-prompt {
+            &.prompt {
+                grid-template-columns: auto;
+            }
+        }
+
+        &-import {
+            background: $color_white;
+            border: 1px solid $color_block_border;
+            box-shadow: 0px 9px 16px -13px rgba(62, 84, 216, 0.22);
+            border-radius: 0.7rem;
+            overflow: hidden;
+
+            &-spinner {
+                text-align: center;
+                margin: 2rem 0;
+                padding: 0 2rem;
+
+                span {
+                    margin-top: 1.5rem;
+                    display: inline-block;
+                    font-weight: 500;
+                    line-height: 1.5;
+                }
+
+                .double-spinner {
+                    margin: 0 auto;
+                }
+            }
+
+            .statTable__content {
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color_border_dop;
                 }
             }
         }

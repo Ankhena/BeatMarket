@@ -502,4 +502,71 @@
     </div>
 </div>
 
+<div class="modal import" id="modal_import">
+    <div class="modal-header">
+        <h2>Импорт из файла</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+        <div class="modal-content-text use_mt_first">
+            <p>Для импорта компаний используйте установленный формат</p>
+            <br>
+            <a href="#">Скачать формат для импорта</a>
+        </div>
+
+        <form class="modal-content-form use_mt dropzone" action="/index.html">
+            <div class="dz-message" data-dz-message>
+                <div class="dropzone__message">
+                    <svg class="dropzone__icon"><use xlink:href="img/main.svg#icon-PlusFile"></use></svg>
+                    <span class="dropzone__text">Выберите файл <strong>или перетащите его в это окно</strong></span>
+                </div> 
+            </div>
+            <div class="fallback">
+                <input name="file" type="file" multiple />
+            </div>
+        </form>
+
+        <div class="modal-content-import use_mt">
+            <div class="modal-content-import-spinner">
+                <div class="double-spinner">
+                    <div class="dbl-spinner"></div>
+                    <div class="dbl-spinner dbl-spinner--2"></div>
+                </div>
+                <span>Осуществляется импорт компаний</span>
+            </div>
+        </div>
+        
+        <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
+            <div>Не похоже, что это формат установленного образца. Проверьте правильность заполнения данных и повторите попытку</div>
+        </div>
+        
+        <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue btn_short" disabled>Импортировать</button>
+            <button class="btn gray btn_short">Отменить</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal import" id="modal_import_table">
+    <div class="modal-header">
+        <h2>Импорт из файла</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+
+        <div class="modal-content-import use_mt_first">
+            @@include("_modalImportTable.html")
+        </div>
+
+        <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
+            <div>Компании обозначенные красным цветом не удалось импортировать. Попробуйте внести их вручную или напишите нам - <a href="#">support@beatmarket.one</a></div>
+        </div>
+        
+        <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue btn_short" disabled>Сохранить</button>
+            <button class="btn gray btn_short">Отменить</button>
+        </div>
+    </div>
+</div>
+
 <div class="overlay overlay_modal" data-closeModal></div>
