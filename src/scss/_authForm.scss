@@ -127,6 +127,23 @@
                         }
                     }
                 }
+
+                &.inline {
+                    display: flex;
+
+                    @media ($media_sm) {
+                        display: block;
+
+                        .btn {
+                            margin: 1rem 0 0 0;
+                        }
+                    }
+
+                    .btn {
+                        padding: 1.2rem 2.5rem;
+                        margin-left: 1rem;
+                    }
+                }
             }
 
             &-message {

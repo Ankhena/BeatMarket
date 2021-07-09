@@ -925,9 +925,15 @@ body.viewProfile {
         font-size: 1.1rem;
         font-weight: 600;
         color: $color_black_title;
+        line-height: 1.5;
 
         .checkbox-toggle__toggle {
             margin-right: 1rem;
+        }
+
+        &--thin {
+            font-weight: 500;
+            font-size: 1rem;
         }
 
         &--inverse {

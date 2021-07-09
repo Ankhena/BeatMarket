@@ -7644,6 +7644,17 @@ body.app .section-header {
   display: none;
 }
 
+.authForm-content-group-input.inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.authForm-content-group-input.inline .btn {
+  padding: 1.2rem 2.5rem;
+  margin-left: 1rem;
+}
+
 .authForm-content-group-message {
   display: none;
   margin-top: 0.5rem;
@@ -10275,10 +10286,16 @@ body.viewProfile .header-controls-links-link.auth span {
   font-size: 1.1rem;
   font-weight: 600;
   color: #24252E;
+  line-height: 1.5;
 }
 
 .blockSettings__checkbox .checkbox-toggle__toggle {
   margin-right: 1rem;
+}
+
+.blockSettings__checkbox--thin {
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .blockSettings__checkbox--inverse .checkbox-toggle__toggle {
@@ -12627,6 +12644,14 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .authForm-content-group-label span {
     width: 100%;
+  }
+
+  .authForm-content-group-input.inline {
+    display: block;
+  }
+
+  .authForm-content-group-input.inline .btn {
+    margin: 1rem 0 0 0;
   }
 
   .authForm-content-btn.half {
