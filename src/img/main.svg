@@ -378,6 +378,11 @@
             <path d="M10.5 21V21.875C10.5 22.8033 10.8687 23.6935 11.5251 24.3499C12.1815 25.0063 13.0717 25.375 14 25.375C14.9283 25.375 15.8185 25.0063 16.4749 24.3499C17.1313 23.6935 17.5 22.8033 17.5 21.875V21" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
 
+        <symbol id="icon-dangerCircle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#DE4355" stroke-width="1.5" stroke-miterlimit="10"/>
+            <path d="M12 7.5V12.75" stroke="#DE4355" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 17.25C12.6213 17.25 13.125 16.7463 13.125 16.125C13.125 15.5037 12.6213 15 12 15C11.3787 15 10.875 15.5037 10.875 16.125C10.875 16.7463 11.3787 17.25 12 17.25Z" fill="#DE4355"/>
+        </symbol>
 
 
         <linearGradient id="paint0_linear" x1="12.4453" y1="6.77886" x2="17.4875" y2="11.9736" gradientUnits="userSpaceOnUse">

@@ -61,6 +61,22 @@
             }
         }
 
+        &--disabled {
+            background-color: $color_border_graph_banch;
+
+            @media ($media_sm) {
+                background-color: darken($color_border_graph_banch, 5%);
+
+                &:hover {
+                    background-color: darken($color_border_graph_banch, 5%);
+                }
+            }
+
+            &:hover {
+                background-color: $color_border_graph_banch;
+            }
+        }
+
         &--opened {
 
             .statSticker__arrow {
@@ -175,7 +191,7 @@
         }
 
         &--sticker {
-            overflow: hidden;
+            //overflow: hidden;
 
             @media ($media_sm) {
                 display: flex;
@@ -251,35 +267,6 @@
 
         &:hover {
             stroke: $color_blue;
-
-            ~ .statTable__popup {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    }
-
-    &__popup {
-        transition: 0.3s ease-in-out;
-        position: absolute;
-        bottom: -0.5rem;
-        left: 0;
-        transform: translateY(100%);
-        background: $color_block_bg;
-        border: 1px solid $color_block_border;
-        box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
-        border-radius: 0.5rem;
-        padding: 1.1rem;
-        z-index: 1;
-        font-weight: 400;
-        color: $color_black_main;
-
-        visibility: hidden;
-        opacity: 0;
-
-        @media ($media_sm) {
-            width: 20rem;
-            white-space: normal;
         }
     }
 
@@ -521,9 +508,14 @@
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+
+    &__icon {
+        width: 1.3rem;
+        height: 1.3rem;
+        transform: translateY(20%);
+        margin-left: 0.2rem;
+    }
 }
-
-
 
 .compare {
     margin-top: 3.33rem;
@@ -1013,5 +1005,47 @@ $banch_items_height: 60px;
                 }
             }
         }
+    }
+}
+
+.paperDontTrade {
+    position: relative;
+    display: flex;
+
+    // .paperDontTrade__icon
+
+    &__icon {
+    
+        &:hover {
+    
+            ~ .paperDontTrade__popup {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    // .paperDontTrade__popup
+
+    &__popup {
+        transition: 0.3s ease-in-out;
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        transform: translateY(100%);
+        background: $color_block_bg;
+        border: 1px solid $color_block_border;
+        box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+        border-radius: 0.5rem;
+        padding: 1.1rem;
+        z-index: 1;
+        font-weight: 400;
+        color: $color_black_main;
+        line-height: 1.4;
+    
+        visibility: hidden;
+        opacity: 0;
+        width: 18rem;
+        white-space: normal;
     }
 }

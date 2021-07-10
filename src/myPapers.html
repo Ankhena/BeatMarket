@@ -91,9 +91,9 @@
                                                     </div>
                                                     <div class="statTable__item statTable__item--success">
                                                         <span class="statTable__description">Цена</span>
-                                                        <span class="statTable__value statTable__value--empty">
-                                                            <svg class="statTable__icon"><use xlink:href="img/main.svg#icon-info-2"></use></svg>
-                                                            <div class="statTable__popup">Котировка появится чуть позже, не беспокойтесь</div>
+                                                        <span class="statTable__value statTable__value--empty paperDontTrade">
+                                                            <svg class="paperDontTrade__icon statTable__icon"><use xlink:href="img/main.svg#icon-info-2"></use></svg>
+                                                            <div class="paperDontTrade__popup">Котировка появится чуть позже, не беспокойтесь</div>
                                                         </span>
                                                     </div>
                                                     <div class="statTable__item">
@@ -215,7 +215,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="statTable__content">
+                                            <div class="statTable__content statTable__content--disabled">
                                                 <div class="statTable__row statTable__row--content">
                                                     <div class="statTable__item statTable__item--sticker statSticker">
                                                         <div class="statSticker__icon">
@@ -224,10 +224,18 @@
                                                         <div class="statSticker__content statStickerInfo">
                                                             <h3 class="statStickerInfo__title">BAT</h3>
                                                             <span class="statStickerInfo__cost">422.21 P</span>
+
+                                                            <div class="paperDontTrade">
+                                                                <svg class="paperDontTrade__icon statStickerInfo__icon"><use xlink:href="img/main.svg#icon-dangerCircle"></use></svg>
+                                                                <div class="paperDontTrade__popup">Текст о том, что данная бумага больше не торгуется</div>
+                                                            </div>
+
                                                             <span class="statStickerInfo__subtitle">Basic Attention Token</span>
+                                                            
+
                                                         </div>
-                                                        <div class="statSticker__percent statSticker__percent--error">
-                                                            <span>+1.56%</span>
+                                                        <div class="statSticker__percent statSticker__percent--success">
+                                                            <span>+2.31%</span>
                                                         </div>
                                                     </div>
                                                     <div class="statTable__item statTable__item--shrink statTable__item--error">

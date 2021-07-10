@@ -40,7 +40,6 @@ $indicator_item_margin-right: 2rem;
             background-color: $color_white;
             box-shadow: 5px 0px 8px rgba(62, 84, 216, 0.1);
             z-index: 1;
-            padding-left: 1.5rem;
             margin-top: -1px;
 
             h5 {
@@ -54,6 +53,8 @@ $indicator_item_margin-right: 2rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
+
+                padding-left: 1.5rem;
             }
 
             &-title {
@@ -67,9 +68,13 @@ $indicator_item_margin-right: 2rem;
 
             &-item {
                 height: 3.35rem;
-                width: 9rem;
+                width: 11rem;
                 border-top: 1px solid $color_border_dop;
-                margin-right: 1rem;
+                padding-right: 1rem;
+
+                &__disabled {
+                    background-color: $color_border_graph_banch;
+                }
 
                 span {
                     font-size: 0.7rem;
@@ -82,6 +87,22 @@ $indicator_item_margin-right: 2rem;
                 h5 {
                     padding: 0;
                     font-weight: 600;
+                }
+
+                &-name {
+                    display: flex;
+                    align-items: center;
+
+                    &__icon {
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        margin-left: 0.2rem;
+                        cursor: pointer;
+
+                        @media ($media_sm) {
+                            cursor: initial;
+                        }
+                    }
                 }
             }
 
@@ -122,6 +143,14 @@ $indicator_item_margin-right: 2rem;
 
                 min-width: calc(100% + 1.5rem);
                 width: fit-content;
+
+                &__disabled {
+                    background-color: $color_border_graph_banch;
+
+                    &:hover {
+                        background-color: $color_border_graph_banch;
+                    }
+                }
 
                 &-info {
                     display: flex;
