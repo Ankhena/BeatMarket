@@ -568,6 +568,10 @@ $strategy-btn-margin: 0.8rem;
                 display: none;
             }
 
+            .highcharts-xaxis .highcharts-axis-line, .highcharts-grid-line {
+                stroke: $color_body_bg !important;
+            }
+
             .highcharts-tooltip {
                 > span {
                     background: rgba(255, 255, 255, 0.78);

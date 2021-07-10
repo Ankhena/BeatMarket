@@ -197,6 +197,7 @@ input[type="password"] {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            cursor: initial;
         }
 
         > span {
@@ -1469,6 +1470,10 @@ input[type="radio"]:checked {
         width: 100%;
         padding: 0.5rem 0;
         cursor: pointer;
+
+        @media ($media_sm) {
+            cursor: initial;
+        }
 
         span {
             padding-left: 2rem;

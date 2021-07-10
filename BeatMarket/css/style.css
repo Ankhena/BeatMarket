@@ -4384,6 +4384,11 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   display: none;
 }
 
+.stategyPromo-graph-chart .highcharts-xaxis .highcharts-axis-line,
+.stategyPromo-graph-chart .highcharts-grid-line {
+  stroke: #EAF1FE !important;
+}
+
 .stategyPromo-graph-chart .highcharts-tooltip > span {
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid #D3E3FF;
@@ -5765,6 +5770,12 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .compare-menu-choose-item-btn input[type="checkbox"]:checked ~ .selectDropdown {
   display: block;
+}
+
+.compare-menu-choose-item-btn input[type="checkbox"]:checked ~ svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .compare-menu-choose-item-btn > span {
@@ -11558,6 +11569,7 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    cursor: initial;
   }
 
   .btn_link {
@@ -11706,6 +11718,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .notify__time {
     font-size: 0.9rem;
+  }
+
+  .selectDropdown-item {
+    cursor: initial;
   }
 
   .burger {

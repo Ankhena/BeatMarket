@@ -135,6 +135,9 @@ initSelectric();
 
 initScroll();
     const myRenderGraph = document.querySelector("#stategyPromoChart");
+const myRenderGraphCategories = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+const myRenderShowYLine = true; // если нужен показ верт. линий в графе, ставим true
+
 if (myRenderGraph !== null) {
     Highcharts.chart('stategyPromoChart', {
         chart: {
@@ -151,13 +154,14 @@ if (myRenderGraph !== null) {
             text: ''
         },
         xAxis: {
-            categories: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+            categories: myRenderGraphCategories,
             labels: {
                 style: {
                     fontSize: "16px",
                     color: "#373943"
                 }
-            }
+            },
+            gridLineWidth: (myRenderShowYLine ? 1 : 0)
         },
         yAxis: {
             title: {
@@ -217,6 +221,16 @@ if (myRenderGraph !== null) {
     
         ]
     });
+
+    if (myRenderShowYLine) {
+        let renderChartWidth = +document.querySelector(".stategyPromo-graph-chart .highcharts-plot-background").getAttributeNode("width").value;
+        let renderChartOffsetX = (renderChartWidth / myRenderGraphCategories.length) / 2;
+    
+        document.querySelectorAll(".stategyPromo-graph-chart .highcharts-xaxis-grid .highcharts-grid-line").forEach(item => {
+            item.style.transform = 'translateX(' + renderChartOffsetX + 'px)';
+        });
+    }
+    
 }
     function initSearchInput() {
     document.querySelectorAll(".mySearchContainer").forEach(item => {

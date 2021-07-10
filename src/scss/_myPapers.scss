@@ -610,6 +610,10 @@
                         ~ .selectDropdown {
                             display: block;
                         }
+
+                        ~ svg {
+                            transform: rotate(180deg);
+                        }
                     }
 
                     > span {
