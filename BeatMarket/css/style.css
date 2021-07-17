@@ -2138,6 +2138,92 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   color: #3E54D8;
 }
 
+.checkbox-label {
+  display: inline-block;
+}
+
+.checkbox-label__input:checked ~ .checkbox-label__area {
+  background-color: #3E54D8;
+}
+
+.checkbox-label__input:checked ~ .checkbox-label__area .checkbox-label__name,
+.checkbox-label__input:checked ~ .checkbox-label__area .checkbox-label__descr {
+  color: #fff;
+}
+
+.checkbox-label__area {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 2.5rem;
+  padding: 0 0.9rem;
+  border: 1px solid #8C9BEA;
+  border-radius: 0.5rem;
+  background-color: #F6F7FD;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.checkbox-label__name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #3E54D8;
+}
+
+.checkbox-label__descr {
+  font-size: 0.66rem;
+  font-weight: 500;
+  margin-top: 0.1rem;
+  color: #3E54D8;
+  opacity: 0.8;
+}
+
+.label-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.8rem 0 1.8rem 0;
+}
+
+.label-fields__item:not(:last-child) {
+  margin-right: 1.35rem;
+  padding-right: 1.35rem;
+  border-right: 1px solid #D3E3FF;
+}
+
+.label-fields__title {
+  color: #929398;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.label-fields__labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.label-fields__labels--readonly {
+  pointer-events: none;
+}
+
+.label-fields__labels .checkbox-label:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
 .overlay_burger {
   z-index: 10;
 }
@@ -2583,6 +2669,36 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   color: #3E54D8;
   text-decoration: none;
   font-weight: 600;
+  line-height: 1.4;
+}
+
+.modal-content-text a span {
+  font-weight: 500;
+  color: #929398;
+}
+
+.modal-content-details .details {
+  padding-bottom: 0;
+  padding-top: 1.3rem;
+}
+
+.modal-content-details .details__title {
+  font-size: 1rem;
+  color: #3E54D8;
+  font-weight: 600;
+  border-bottom: 1px dashed;
+  padding-bottom: 0.2rem;
+}
+
+.modal-content-details .details__header {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.modal-content-details .details__btn {
+  width: 12px;
+  height: 8px;
+  top: .4em;
 }
 
 .modal-content-total {
@@ -11773,6 +11889,29 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .selectDropdown-item {
     cursor: initial;
+  }
+
+  .label-fields {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .label-fields__item:not(:last-child) {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    border: none;
+  }
+
+  .label-fields__labels {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  .label-fields__labels .checkbox-label {
+    margin-top: 0.7rem;
   }
 
   .burger {

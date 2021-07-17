@@ -1518,3 +1518,117 @@ input[type="radio"]:checked {
     }
 
 }
+
+.checkbox-label {
+    display: inline-block;
+
+    // .checkbox-label__input
+
+    &__input {
+        &:checked {
+            ~ .checkbox-label__area {
+                background-color: $color_blue;
+
+                .checkbox-label__name, .checkbox-label__descr {
+                    color: $color_white;
+                }
+            }
+
+        }
+    }
+
+    // .checkbox-label__area
+
+    &__area {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 2.5rem;
+        padding: 0 0.9rem;
+        border: 1px solid $breadcrumb_border;
+        border-radius: 0.5rem;
+        background-color: $breadcrumb_bg;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+    // .checkbox-label__name
+
+    &__name {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: $color_blue;
+    }
+
+    // .checkbox-label__descr
+
+    &__descr {
+        font-size: 0.66rem;
+        font-weight: 500;
+        margin-top: 0.1rem;
+
+        color: $color_blue;
+        opacity: 0.8;
+    }
+}
+
+.label-fields {
+    display: flex;
+    margin: 0.8rem 0 1.8rem 0;
+
+    @media ($media_sm) {
+        flex-direction: column;
+    }
+
+    // .label-fields__item
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 1.35rem;
+            padding-right: 1.35rem;
+            border-right: 1px solid $color_block_border;
+
+            @media ($media_sm) {
+                margin: 0 0 1rem 0;
+                padding: 0;
+                border: none;
+            }
+        }
+    }
+
+    // .label-fields__title
+
+    &__title {
+        color: $color_grey;
+        font-size: 0.9rem;
+        font-weight: 500 ;
+    }
+
+    // .label-fields__labels
+
+    &__labels {
+        display: flex;
+        margin-top: 0.5rem;
+
+        &--readonly {
+            pointer-events: none;
+        }
+
+        @media ($media_sm) {
+            flex-wrap: wrap;
+            margin-top: 0;
+        }
+
+        .checkbox-label {
+
+            &:not(:last-child) {
+                margin-right: 0.5rem;
+            }
+
+            @media ($media_sm) {
+                margin-top: 0.7rem;
+            }
+        }
+    }
+}
