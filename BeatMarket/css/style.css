@@ -2194,7 +2194,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0.8rem 0 1.8rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .label-fields__item:not(:last-child) {
@@ -2650,6 +2650,66 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   font-weight: 500;
   color: #ED6373;
   cursor: pointer;
+}
+
+.modal-content-addOperation .btn {
+  width: 100%;
+  padding: 1rem 6.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+          box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+}
+
+.modal-content-addOperation .btn svg {
+  min-width: 1.78rem;
+  max-width: 1.78rem;
+  height: 1.78rem;
+  stroke: #fff;
+  margin-right: .5rem;
+}
+
+.modal-content-addOperation-group {
+  background: #FCFDFF;
+  -webkit-box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+          box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+  border: 1px solid #D3E3FF;
+  border-radius: 0.5rem;
+  margin-top: 0.7rem;
+  display: none;
+}
+
+.modal-content-addOperation-group.active {
+  display: block;
+}
+
+.modal-content-addOperation-group .btn_group {
+  font-weight: 500;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1.1rem 0;
+}
+
+.modal-content-addOperation-group .btn_group:not(:last-child) {
+  border-bottom: 1px solid #D3E3FF;
+}
+
+.modal-content-addOperation-group .btn_group.success {
+  color: #199F27;
+}
+
+.modal-content-addOperation-group .btn_group.error {
+  color: #ED6373;
 }
 
 .modal-content-text.regular p {

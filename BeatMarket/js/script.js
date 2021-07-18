@@ -1704,4 +1704,8 @@ function addAnalyticsGraph(node, id, data, isInput, size) {
         });
     });
 
+    $(".btn_addOperation").click(function() {
+        $(this).next().toggleClass("active");
+    });
+
 });

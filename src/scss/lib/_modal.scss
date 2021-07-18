@@ -413,7 +413,57 @@
         }
 
         &-addOperation {
+            .btn {
+                width: 100%;
+                padding: 1rem 6.4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
 
+                svg {
+                    min-width: 1.78rem;
+                    max-width: 1.78rem;
+                    height: 1.78rem;
+                    stroke: $color_white;
+                    margin-right: .5rem;
+                }
+            }
+
+            &-group {
+                background: $color_block_bg;
+                box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+                border: 1px solid $color_block_border;
+                border-radius: 0.5rem;
+                margin-top: 0.7rem;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                .btn_group {
+                    font-weight: 500;
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    padding: 1.1rem 0;
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $color_block_border;
+                    }
+
+                    &.success {
+                        color: $color_green;
+                    }
+
+                    &.error {
+                        color: $color_red;
+                    }
+                }
+            }
         }
 
         &-text {

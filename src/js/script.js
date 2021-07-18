@@ -85,4 +85,8 @@ $(document).ready(function() {
         });
     });
 
+    $(".btn_addOperation").click(function() {
+        $(this).next().toggleClass("active");
+    });
+
 });
