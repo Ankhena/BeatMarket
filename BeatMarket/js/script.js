@@ -1259,7 +1259,7 @@ if (document.querySelector('#adv-prtf-ready__comparison-chart')) {
 
         const btn_next = onboardMain.querySelector(".onboard-content-info-buttons .next");
         const btn_prev = onboardMain.querySelector(".onboard-content-info-buttons .prev");
-        const btn_close = onboardMain.querySelector(".onboard-content-info-buttons .close");
+        const btn_close = document.querySelector(".onboard-content-info-buttons .close");
 
         const onboard_title = onboardMain.querySelector(".onboard-content-info-subtitle"); 
         const onboard_text = onboardMain.querySelector(".onboard-content-info-description"); 
