@@ -255,6 +255,12 @@ input[type="password"] {
         background-color: transparent;
         color: $color_grey;
     }
+
+    &_transparent {
+        background-color: transparent;
+        color: $color_white;
+        border: 1px solid $color_grey;
+    }
 }
 
 .main-contentPadding {

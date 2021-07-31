@@ -31,16 +31,17 @@ function initOnBoard(isOnBoard) { // isOnBoard - опция показа
     ]
 
     if (isOnBoard) {
-        const overlay = document.querySelector(".onboard");
-        const overlay_container = document.querySelector(".onboard-container");
-        const pagination = document.querySelectorAll(".onboard-content-info-pagination-item");
-        const menus = document.querySelectorAll(".onboard-items li");
+        const onboardMain = document.querySelector(".onboard");
+        const overlay_container = onboardMain.querySelector(".onboard-container");
+        const pagination = onboardMain.querySelectorAll(".onboard-content-info-pagination-item");
+        const menus = onboardMain.querySelectorAll(".onboard-items li");
 
-        const btn_next = document.querySelector(".onboard-content-info-buttons .next");
-        const btn_prev = document.querySelector(".onboard-content-info-buttons .prev");
+        const btn_next = onboardMain.querySelector(".onboard-content-info-buttons .next");
+        const btn_prev = onboardMain.querySelector(".onboard-content-info-buttons .prev");
+        const btn_close = onboardMain.querySelector(".onboard-content-info-buttons .close");
 
-        const onboard_title = document.querySelector(".onboard-content-info-subtitle"); 
-        const onboard_text = document.querySelector(".onboard-content-info-description"); 
+        const onboard_title = onboardMain.querySelector(".onboard-content-info-subtitle"); 
+        const onboard_text = onboardMain.querySelector(".onboard-content-info-description"); 
 
         let active_id = 0; // базовое значение активного пункта
 
@@ -51,8 +52,19 @@ function initOnBoard(isOnBoard) { // isOnBoard - опция показа
             });
         });
 
-        document.querySelector(".onboard .close").addEventListener("click", () => {
-            closeOnBoard(active_id + 1);
+        document.querySelectorAll("[data-onboardOpen]").forEach(item => { // ПОКАЗ ПО КЛИКУ НА НАСТРОЙКИ
+            let id = +item.dataset.onboardopen;
+            console.log(id);
+            item.addEventListener("click", (e) => {
+                e.preventDefault();
+                showOnBoardAdvisor(id);
+            });
+        });
+
+        document.querySelectorAll(".onboard .close").forEach(item => {
+            item.addEventListener("click", () => {
+                closeOnBoard(active_id + 1);
+            });
         });
 
         btn_next.addEventListener("click", (item) => {
@@ -63,6 +75,10 @@ function initOnBoard(isOnBoard) { // isOnBoard - опция показа
         btn_prev.addEventListener("click", (item) => {
             updateData(active_id - 1)
             active_id -= 1;
+        });
+
+        btn_close.addEventListener("click", (item) => {
+            closeOnBoard(active_id + 1);
         });
 
         pagination.forEach((item) => {
@@ -113,8 +129,15 @@ function initOnBoard(isOnBoard) { // isOnBoard - опция показа
                     body.classList.remove("hideScroll");
                 }
                 body.style.paddingRight = "";
-                overlay.classList.remove("visible");
+                onboardMain.classList.remove("visible");
                 overlay_container.classList.add("hidden");
+
+                let onboardAdvisor = document.querySelectorAll(".onboard--advisor");
+                onboardAdvisor.forEach(item => {
+                    item.classList.remove("visible");
+                    item.querySelector(".onboard-container").classList.add("hidden");
+                });
+
             }, 150);
 
             setTimeout(() => {
@@ -137,7 +160,16 @@ function initOnBoard(isOnBoard) { // isOnBoard - опция показа
             overlay_container.classList.remove("invisible");
             overlay_container.classList.remove("hidden");
     
-            overlay.classList.add("visible");
+            onboardMain.classList.add("visible");
+            body.classList.add("hideScroll");
+            body.style.paddingRight = `${scrollBarWidth}px`;
+        }
+
+        function showOnBoardAdvisor(id) {
+            document.querySelector(`[data-onboard="${id}"]`).querySelector(".onboard-container").classList.remove("invisible");
+            document.querySelector(`[data-onboard="${id}"]`).querySelector(".onboard-container").classList.remove("hidden");
+    
+            document.querySelector(`[data-onboard="${id}"]`).classList.add("visible");
             body.classList.add("hideScroll");
             body.style.paddingRight = `${scrollBarWidth}px`;
         }

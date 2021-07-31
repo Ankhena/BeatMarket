@@ -984,6 +984,12 @@ textarea.error {
   color: #929398;
 }
 
+.btn_transparent {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #929398;
+}
+
 .main-contentPadding {
   padding: 2.8rem var(--section_padding) 2.8rem 1.8rem;
 }
@@ -7300,6 +7306,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   font-size: 1.75rem;
 }
 
+.onboard-header .title__header {
+  font-size: 2.22rem;
+}
+
 .onboard-header .close {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -7366,7 +7376,33 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .onboard-content-info {
+  position: relative;
   color: #fff;
+}
+
+.onboard-content-info-header {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.onboard-content-info-arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate(100%, -50%);
+      -ms-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+}
+
+.onboard-content-info-btn {
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  -webkit-transform: translate(100%, -50%);
+      -ms-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
 }
 
 .onboard-content-info-title {
@@ -7378,6 +7414,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .onboard-content-info-subtitle {
   font-size: 1.33rem;
+  line-height: 1.5;
 }
 
 .onboard-content-info-description {
@@ -7409,11 +7446,25 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   background-color: #3E54D8;
 }
 
+.onboard-content-info-img {
+  margin-left: 2rem;
+}
+
 .onboard-content-info-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-top: 5.5rem;
+}
+
+.onboard-content-info-buttons-img {
+  -webkit-transform: scale(1, -1);
+      -ms-transform: scale(1, -1);
+          transform: scale(1, -1);
+  margin-right: 2rem;
 }
 
 .onboard-content-info-buttons .btn {
@@ -7427,6 +7478,19 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .onboard-content-info-buttons .btn.hidden {
   display: none;
+}
+
+.onboard-content-info-buttons .btn--share {
+  width: 56px;
+}
+
+.onboard-content-info-buttons .btn_transparent {
+  padding: 1.2rem;
+  width: auto;
+}
+
+.onboard-content-info-buttons .btn.btn_space {
+  margin-right: 5rem;
 }
 
 .onboard-content-info-buttons .btn_primary,
@@ -8377,6 +8441,14 @@ dd {
   height: 56px;
   padding: 0;
   background: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 17.5C8.933 17.5 10.5 15.933 10.5 14C10.5 12.067 8.933 10.5 7 10.5C5.067 10.5 3.5 12.067 3.5 14C3.5 15.933 5.067 17.5 7 17.5Z' stroke='%238C9BEA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.25 25.375C21.183 25.375 22.75 23.808 22.75 21.875C22.75 19.942 21.183 18.375 19.25 18.375C17.317 18.375 15.75 19.942 15.75 21.875C15.75 23.808 17.317 25.375 19.25 25.375Z' stroke='%238C9BEA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.25 9.625C21.183 9.625 22.75 8.058 22.75 6.125C22.75 4.192 21.183 2.625 19.25 2.625C17.317 2.625 15.75 4.192 15.75 6.125C15.75 8.058 17.317 9.625 19.25 9.625Z' stroke='%238C9BEA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.3058 8.01562L9.94336 12.1058' stroke='%238C9BEA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.94336 15.8906L16.3058 19.9808' stroke='%238C9BEA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center;
+}
+
+.btn--bgWhite {
+  background-color: #fff;
+}
+
+.btn--bgBlue {
+  background-color: #3E54D8;
 }
 
 .btn--edit {
@@ -11060,6 +11132,10 @@ body.viewProfile .header-controls-links-link.auth span {
     font-size: 1.5rem;
   }
 
+  .onboard-header .title__header {
+    font-size: 2.22rem;
+  }
+
   .onboard-content-menu {
     min-width: 17rem;
   }
@@ -13071,16 +13147,56 @@ body.viewProfile .header-controls-links-link.auth span {
     font-size: 1.25rem;
   }
 
+  .onboard-content-info-header {
+    position: static;
+  }
+
+  .onboard-content-info-btn {
+    bottom: 0;
+    right: 0;
+    top: unset;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
   .onboard-content-info-title {
     display: block;
   }
 
+  .onboard-content-info-title.title {
+    display: none;
+  }
+
+  .onboard-content-info-subtitle {
+    width: 90%;
+  }
+
   .onboard-content-info-description {
     min-height: 11rem;
+    width: 70%;
   }
 
   .onboard-content-info-pagination-item {
     cursor: initial;
+  }
+
+  .onboard-content-info-img {
+    position: absolute;
+    top: 0;
+    -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+
+  .onboard-content-info-buttons-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+            transform: scale(1, 1);
+    margin: 0;
   }
 
   .onboard-content-info-buttons {
@@ -13089,6 +13205,22 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .onboard-content-info-buttons .btn {
     width: 50%;
+  }
+
+  .onboard-content-info-buttons .btn--share {
+    width: 56px;
+  }
+
+  .onboard-content-info-buttons .btn_transparent {
+    border: none;
+  }
+
+  .onboard-content-info-buttons .btn.btn_space {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: auto;
+    margin-right: 0;
   }
 
   .ticketTable__row--header {

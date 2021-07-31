@@ -73,6 +73,14 @@
   }
 }
 
+.btn--bgWhite {
+  background-color: $color_white;
+}
+
+.btn--bgBlue {
+  background-color: $color_blue;
+}
+
 
 .btn--edit {
   --color: #{$color_blue};
