@@ -165,16 +165,22 @@
                 display: flex;
                 overflow: hidden;
 
-                label {
+                label, li {
                     flex-basis: 50%;
                     text-align: center;
+                    transition: 0.3s ease-in-out;
 
-                    input[type='radio']:checked ~ span {
+                    input[type='radio']:checked ~ span, &.ui-tabs-active {
                         background-color: $color_blue;
                         color: $color_white;
+
+                        a {
+                            color: $color_white;
+                        }
                     }
 
-                    span {
+                    span, a {
+                        text-decoration: none;
                         display: flex;
                         justify-content: center;
                         transition: 0.3s ease-in-out;

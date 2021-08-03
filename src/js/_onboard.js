@@ -54,7 +54,7 @@ function initOnBoard(isOnBoard) { // isOnBoard - опция показа
 
         document.querySelectorAll("[data-onboardOpen]").forEach(item => { // ПОКАЗ ПО КЛИКУ НА НАСТРОЙКИ
             let id = +item.dataset.onboardopen;
-            console.log(id);
+            //console.log(id);
             item.addEventListener("click", (e) => {
                 e.preventDefault();
                 showOnBoardAdvisor(id);

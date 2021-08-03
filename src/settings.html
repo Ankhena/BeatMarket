@@ -41,82 +41,157 @@
                                         </button>
                                     </div>
 
-									<div class="myStrategy-items-item-content blockSettings__content">
+									<div class="myStrategy-items-item-content blockSettings__content" id="tabs">
 
-                                        <div class="blockSettings__section">
-
-                                            <div class="blockSettings__elem">
-                                                <div class="modal-content-switcher-button blockSettings__switcher">
-                                                    <label>
-                                                        <input type="radio" name="switcherNotify" class="visually_hidden">
-                                                        <span>Телеграм</span>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="switcherNotify" class="visually_hidden" checked>
-                                                        <span>Email</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-
-                                            <div class="blockSettings__elem">
-                                                <label class="checkbox-toggle blockSettings__checkbox">
-                                                    <input class="checkbox-toggle__input" type="checkbox">
-                                                    <span class="checkbox-toggle__toggle"></span> Оповещения по email
+                                        <!-- <div class="blockSettings__elem">
+                                            <div class="modal-content-switcher-button blockSettings__switcher">
+                                                <label>
+                                                    <input type="radio" name="switcherNotify" class="visually_hidden">
+                                                    <span>Телеграм</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="switcherNotify" class="visually_hidden" checked>
+                                                    <span>Email</span>
                                                 </label>
                                             </div>
-                                            <div class="blockSettings__elem">
-                                                <span class="blockSettings__descr blockSettings__descr--big">Доходность стратегии, состояние активов, сводка</span>
+                                        </div> -->
+
+                                        <ul class="blockSettings__elem modal-content-switcher-button blockSettings__switcher">
+                                            <li><a href="#tab-1">Телеграм</a></li>
+                                            <li><a href="#tab-2">Email</a></li>
+                                        </ul>
+
+                                        <div id="tab-1">
+
+                                            <div class="blockSettings__section">
+
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Оповещения по email
+                                                    </label>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <span class="blockSettings__descr blockSettings__descr--big">Доходность стратегии, состояние активов, сводка</span>
+                                                </div>
+                                            </div>
+    
+                                            <div class="blockSettings__section blockSettings__section--disabled">
+                                                <div class="blockSettings__elem">
+                                                    <h4 class="blockSettings__title blockSettings__title--section">Уведомления о портфеле</h4>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox blockSettings__checkbox--inverse">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Данные о портфеле
+                                                    </label>
+                                                    <span class="blockSettings__descr">Доходность стратегии, состояние активов, сводка</span>
+                                                </div>
+                                            </div>
+    
+                                            <div class="blockSettings__section blockSettings__section--disabled">
+                                                <div class="blockSettings__elem">
+                                                    <h4 class="blockSettings__title blockSettings__title--section">Дивиденды</h4>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox blockSettings__checkbox--inverse">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Выплаты
+                                                    </label>
+                                                    <span class="blockSettings__descr">Ближайшая выплата, компания, сумма, сумма выплаченная в этом месяце, сумма ожидаемая в этом месяце</span>
+                                                    <div class="modal-content-switcher-button blockSettings__switcher blockSettings__switcher--thin">
+                                                        <label>
+                                                            <input type="radio" name="switcherPaybackTg" class="visually_hidden">
+                                                            <span>Раз в день</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="switcherPaybackTg" class="visually_hidden" checked>
+                                                            <span>Раз в неделю</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="switcherPaybackTg" class="visually_hidden">
+                                                            <span>Раз в месяц</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox blockSettings__checkbox--inverse">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Изменения
+                                                    </label>
+                                                    <span class="blockSettings__descr">Изменения в дивидендных выплатах отслеживаемых активов</span>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <button class="btn btn_blue">Сохранить</button>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="blockSettings__section blockSettings__section--disabled">
-                                            <div class="blockSettings__elem">
-                                                <h4 class="blockSettings__title blockSettings__title--section">Уведомления о портфеле</h4>
-                                            </div>
-                                            <div class="blockSettings__elem">
-                                                <label class="checkbox-toggle blockSettings__checkbox blockSettings__checkbox--inverse">
-                                                    <input class="checkbox-toggle__input" type="checkbox">
-                                                    <span class="checkbox-toggle__toggle"></span> Данные о портфеле
-                                                </label>
-                                                <span class="blockSettings__descr">Доходность стратегии, состояние активов, сводка</span>
-                                            </div>
-                                        </div>
+                                        <div id="tab-2">
+                                            
+                                            <div class="blockSettings__section">
 
-                                        <div class="blockSettings__section blockSettings__section--disabled">
-                                            <div class="blockSettings__elem">
-                                                <h4 class="blockSettings__title blockSettings__title--section">Дивиденды</h4>
-                                            </div>
-                                            <div class="blockSettings__elem">
-                                                <label class="checkbox-toggle blockSettings__checkbox blockSettings__checkbox--inverse">
-                                                    <input class="checkbox-toggle__input" type="checkbox">
-                                                    <span class="checkbox-toggle__toggle"></span> Выплаты
-                                                </label>
-                                                <span class="blockSettings__descr">Ближайшая выплата, компания, сумма, сумма выплаченная в этом месяце, сумма ожидаемая в этом месяце</span>
-                                                <div class="modal-content-switcher-button blockSettings__switcher blockSettings__switcher--thin">
-                                                    <label>
-                                                        <input type="radio" name="switcherPayback" class="visually_hidden">
-                                                        <span>Раз в день</span>
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Оповещения по email
                                                     </label>
-                                                    <label>
-                                                        <input type="radio" name="switcherPayback" class="visually_hidden" checked>
-                                                        <span>Раз в неделю</span>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="switcherPayback" class="visually_hidden">
-                                                        <span>Раз в месяц</span>
-                                                    </label>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <span class="blockSettings__descr blockSettings__descr--big">Доходность стратегии, состояние активов, сводка</span>
                                                 </div>
                                             </div>
 
-                                            <div class="blockSettings__elem">
-                                                <label class="checkbox-toggle blockSettings__checkbox blockSettings__checkbox--inverse">
-                                                    <input class="checkbox-toggle__input" type="checkbox">
-                                                    <span class="checkbox-toggle__toggle"></span> Изменения
-                                                </label>
-                                                <span class="blockSettings__descr">Изменения в дивидендных выплатах отслеживаемых активов</span>
+                                            <div class="blockSettings__section blockSettings__section--disabled">
+                                                <div class="blockSettings__elem">
+                                                    <h4 class="blockSettings__title blockSettings__title--section">Уведомления о портфеле</h4>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox blockSettings__checkbox--inverse">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Данные о портфеле
+                                                    </label>
+                                                    <span class="blockSettings__descr">Доходность стратегии, состояние активов, сводка</span>
+                                                </div>
                                             </div>
-                                            <div class="blockSettings__elem">
-                                                <button class="btn btn_blue">Сохранить</button>
+
+                                            <div class="blockSettings__section blockSettings__section--disabled">
+                                                <div class="blockSettings__elem">
+                                                    <h4 class="blockSettings__title blockSettings__title--section">Дивиденды</h4>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox blockSettings__checkbox--inverse">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Выплаты
+                                                    </label>
+                                                    <span class="blockSettings__descr">Ближайшая выплата, компания, сумма, сумма выплаченная в этом месяце, сумма ожидаемая в этом месяце</span>
+                                                    <div class="modal-content-switcher-button blockSettings__switcher blockSettings__switcher--thin">
+                                                        <label>
+                                                            <input type="radio" name="switcherPaybackMail" class="visually_hidden" checked>
+                                                            <span>Раз в день</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="switcherPaybackMail" class="visually_hidden">
+                                                            <span>Раз в неделю</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="switcherPaybackMail" class="visually_hidden">
+                                                            <span>Раз в месяц</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="blockSettings__elem">
+                                                    <label class="checkbox-toggle blockSettings__checkbox blockSettings__checkbox--inverse">
+                                                        <input class="checkbox-toggle__input" type="checkbox">
+                                                        <span class="checkbox-toggle__toggle"></span> Изменения
+                                                    </label>
+                                                    <span class="blockSettings__descr">Изменения в дивидендных выплатах отслеживаемых активов</span>
+                                                </div>
+                                                <div class="blockSettings__elem">
+                                                    <button class="btn btn_blue">Сохранить</button>
+                                                </div>
                                             </div>
                                         </div>
 

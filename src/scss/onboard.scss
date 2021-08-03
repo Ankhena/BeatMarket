@@ -1,3 +1,6 @@
+@import "./lib/colors";
+@import "./lib/grid";
+
 .onboard {
     z-index: -1;
     padding: 0 var(--section_padding);
@@ -8,7 +11,7 @@
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 20;
         //display: block;
-    }
+    } 
 
     &-container {
         transition: 0.3s ease-in-out;
@@ -239,6 +242,7 @@
                 min-height: 5rem;
 
                 @media ($media_sm) {
+                    line-height: 1.8;
                     min-height: 11rem;
                     width: 70%;
                 }
@@ -274,7 +278,8 @@
                 @media ($media_sm) {
                     position: absolute;
                     top: 0;
-                    transform: scale(1, 1);
+                    transform: scale(1, 1) translateX(1rem);
+                    right: 0;
                 }
             }
 
@@ -291,7 +296,7 @@
                         position: absolute;
                         top: 0;
                         right: 0;
-                        transform: scale(1, 1);
+                        transform: scale(1, 1) translateX(1rem);
                         margin: 0;
                     }
                 }

@@ -89,4 +89,6 @@ $(document).ready(function() {
         $(this).next().toggleClass("active");
     });
 
+    $("#tabs").tabs();
+
 });

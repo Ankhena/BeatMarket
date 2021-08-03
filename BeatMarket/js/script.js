@@ -1275,7 +1275,7 @@ if (document.querySelector('#adv-prtf-ready__comparison-chart')) {
 
         document.querySelectorAll("[data-onboardOpen]").forEach(item => { // ПОКАЗ ПО КЛИКУ НА НАСТРОЙКИ
             let id = +item.dataset.onboardopen;
-            console.log(id);
+            //console.log(id);
             item.addEventListener("click", (e) => {
                 e.preventDefault();
                 showOnBoardAdvisor(id);
@@ -1739,5 +1739,7 @@ function addAnalyticsGraph(node, id, data, isInput, size) {
     $(".btn_addOperation").click(function() {
         $(this).next().toggleClass("active");
     });
+
+    $("#tabs").tabs();
 
 });
