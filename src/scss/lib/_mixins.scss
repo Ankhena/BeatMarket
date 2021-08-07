@@ -1638,3 +1638,85 @@ input[type="radio"]:checked {
         }
     }
 }
+
+.mainGraphBlock {
+    height: 60%;
+
+    @media ($media_sm) {
+        height: 250px;
+    }
+
+    .highcharts-halo {
+        display: none;
+    }
+
+    .highcharts-point {
+        display: none;
+
+        &-hover {
+            display: block;
+        }
+    }
+
+    .highcharts-series-0 {
+        path {
+            filter: drop-shadow(0px 1px 2px rgba(62, 84, 216, 0.6));
+        }
+    }
+
+    .highcharts-series-1 {
+        path {
+            filter: drop-shadow(0px 1px 2px rgba(222, 67, 85, 0.6));
+        }
+    }
+
+    .highcharts-series-2 {
+        path {
+            filter: drop-shadow(0px 1px 2px rgba(25, 159, 39, 0.6));
+        }
+    }
+
+    .highcharts-axis-labels {
+        font-weight: 500;
+    }
+
+    .highcharts-credits {
+        display: none;
+    }
+
+    .highcharts-legend {
+        display: none;
+    }
+
+    g.highcharts-tooltip {
+        display: none;
+    }
+
+    .highcharts-xaxis .highcharts-axis-line, .highcharts-grid-line {
+        stroke: $color_body_bg !important;
+    }
+
+    .highcharts-tooltip {
+        > span {
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid $color_block_border;
+            box-shadow: 0px 12px 23px -9px rgba(152, 170, 203, 0.3);
+            backdrop-filter: blur(5px);
+            border-radius: 1.3rem;
+            padding: 1rem 1.2rem;
+            font-size: 0.9rem !important;
+            font-weight: 500;
+
+            span:first-child {
+                font-size: 0.9rem !important;
+                font-weight: 500;
+                display: inline-flex;
+                margin-bottom: .4rem;
+            }
+
+            br + span {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

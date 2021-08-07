@@ -2230,6 +2230,84 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   margin-right: 0.5rem;
 }
 
+.mainGraphBlock {
+  height: 60%;
+}
+
+.mainGraphBlock .highcharts-halo {
+  display: none;
+}
+
+.mainGraphBlock .highcharts-point {
+  display: none;
+}
+
+.mainGraphBlock .highcharts-point-hover {
+  display: block;
+}
+
+.mainGraphBlock .highcharts-series-0 path {
+  -webkit-filter: drop-shadow(0px 1px 2px rgba(62, 84, 216, 0.6));
+          filter: drop-shadow(0px 1px 2px rgba(62, 84, 216, 0.6));
+}
+
+.mainGraphBlock .highcharts-series-1 path {
+  -webkit-filter: drop-shadow(0px 1px 2px rgba(222, 67, 85, 0.6));
+          filter: drop-shadow(0px 1px 2px rgba(222, 67, 85, 0.6));
+}
+
+.mainGraphBlock .highcharts-series-2 path {
+  -webkit-filter: drop-shadow(0px 1px 2px rgba(25, 159, 39, 0.6));
+          filter: drop-shadow(0px 1px 2px rgba(25, 159, 39, 0.6));
+}
+
+.mainGraphBlock .highcharts-axis-labels {
+  font-weight: 500;
+}
+
+.mainGraphBlock .highcharts-credits {
+  display: none;
+}
+
+.mainGraphBlock .highcharts-legend {
+  display: none;
+}
+
+.mainGraphBlock g.highcharts-tooltip {
+  display: none;
+}
+
+.mainGraphBlock .highcharts-xaxis .highcharts-axis-line,
+.mainGraphBlock .highcharts-grid-line {
+  stroke: #EAF1FE !important;
+}
+
+.mainGraphBlock .highcharts-tooltip > span {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 12px 23px -9px rgba(152, 170, 203, 0.3);
+          box-shadow: 0px 12px 23px -9px rgba(152, 170, 203, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 1.3rem;
+  padding: 1rem 1.2rem;
+  font-size: 0.9rem !important;
+  font-weight: 500;
+}
+
+.mainGraphBlock .highcharts-tooltip > span span:first-child {
+  font-size: 0.9rem !important;
+  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: .4rem;
+}
+
+.mainGraphBlock .highcharts-tooltip > span br + span {
+  font-size: 1.2rem;
+}
+
 .overlay_burger {
   z-index: 10;
 }
@@ -4537,84 +4615,6 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   stroke: #8C9BEA;
 }
 
-.stategyPromo-graph-chart {
-  height: 60%;
-}
-
-.stategyPromo-graph-chart .highcharts-halo {
-  display: none;
-}
-
-.stategyPromo-graph-chart .highcharts-point {
-  display: none;
-}
-
-.stategyPromo-graph-chart .highcharts-point-hover {
-  display: block;
-}
-
-.stategyPromo-graph-chart .highcharts-series-0 path {
-  -webkit-filter: drop-shadow(0px 1px 2px rgba(62, 84, 216, 0.6));
-          filter: drop-shadow(0px 1px 2px rgba(62, 84, 216, 0.6));
-}
-
-.stategyPromo-graph-chart .highcharts-series-1 path {
-  -webkit-filter: drop-shadow(0px 1px 2px rgba(222, 67, 85, 0.6));
-          filter: drop-shadow(0px 1px 2px rgba(222, 67, 85, 0.6));
-}
-
-.stategyPromo-graph-chart .highcharts-series-2 path {
-  -webkit-filter: drop-shadow(0px 1px 2px rgba(25, 159, 39, 0.6));
-          filter: drop-shadow(0px 1px 2px rgba(25, 159, 39, 0.6));
-}
-
-.stategyPromo-graph-chart .highcharts-axis-labels {
-  font-weight: 500;
-}
-
-.stategyPromo-graph-chart .highcharts-credits {
-  display: none;
-}
-
-.stategyPromo-graph-chart .highcharts-legend {
-  display: none;
-}
-
-.stategyPromo-graph-chart g.highcharts-tooltip {
-  display: none;
-}
-
-.stategyPromo-graph-chart .highcharts-xaxis .highcharts-axis-line,
-.stategyPromo-graph-chart .highcharts-grid-line {
-  stroke: #EAF1FE !important;
-}
-
-.stategyPromo-graph-chart .highcharts-tooltip > span {
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid #D3E3FF;
-  -webkit-box-shadow: 0px 12px 23px -9px rgba(152, 170, 203, 0.3);
-          box-shadow: 0px 12px 23px -9px rgba(152, 170, 203, 0.3);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  border-radius: 1.3rem;
-  padding: 1rem 1.2rem;
-  font-size: 0.9rem !important;
-  font-weight: 500;
-}
-
-.stategyPromo-graph-chart .highcharts-tooltip > span span:first-child {
-  font-size: 0.9rem !important;
-  font-weight: 500;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-bottom: .4rem;
-}
-
-.stategyPromo-graph-chart .highcharts-tooltip > span br + span {
-  font-size: 1.2rem;
-}
-
 .stategyPromo-graph-dates {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5268,10 +5268,13 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .dividends .table-fixed-item {
-  width: 5rem;
+  width: 7.5rem;
 }
 
 .dividends .table-fixed-item.bottom h5 {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   color: #24252E;
 }
 
@@ -9368,6 +9371,7 @@ td {
 
 .adv-prtf-ready__comparison-table td {
   border: none;
+  font-weight: 500;
 }
 
 .adv-prtf-ready__btns {
@@ -9612,6 +9616,10 @@ td {
 
 .apr-share__friend b {
   font-weight: 700;
+}
+
+.adv-prtf-ready__comparison-chart {
+  margin-top: 2rem;
 }
 
 .faq {
@@ -11796,6 +11804,10 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 0.7rem;
   }
 
+  .mainGraphBlock {
+    height: 250px;
+  }
+
   .burger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -12235,10 +12247,6 @@ body.viewProfile .header-controls-links-link.auth span {
   .stategyPromo-graph-values-btn .btn svg {
     width: 1.9rem;
     height: 1.9rem;
-  }
-
-  .stategyPromo-graph-chart {
-    height: 250px;
   }
 
   .stategyPromo-graph-dates {
