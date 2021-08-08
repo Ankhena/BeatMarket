@@ -9183,7 +9183,7 @@ td {
   padding-top: 1.66667rem;
   padding-bottom: 1.66667rem;
   padding-left: 2rem;
-  padding-right: calc(56px + 1rem);
+  padding-right: 2rem;
   text-align: center;
 }
 
@@ -9250,6 +9250,7 @@ td {
   margin-top: 0.5rem;
   font-size: 0.88889rem;
   font-weight: 500;
+  line-height: 1.5;
 }
 
 .adv-prtf-ready__efficiency-text {
@@ -13079,6 +13080,11 @@ body.viewProfile .header-controls-links-link.auth span {
     display: none;
   }
 
+  .adv-prtf-ready__efficiency-pie .tooltip {
+    top: 1rem;
+    right: 1rem;
+  }
+
   .adv-prtf-ready__efficiency-text {
     grid-template-columns: 1fr;
   }
@@ -13349,6 +13355,15 @@ body.viewProfile .header-controls-links-link.auth span {
   .buy-stocks__btns {
     grid-template-columns: 1fr;
   }
+
+  .adv-prtf-ready__pie-chart svg {
+    max-width: 180px;
+    max-height: 180px;
+  }
+
+  .adv-prtf-ready__pie-chart-numbers {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -13360,17 +13375,6 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-
-@media (max-width: 360px) {
-  .adv-prtf-ready__pie-chart svg {
-    max-width: 170px;
-    max-height: 170px;
-  }
-
-  .adv-prtf-ready__pie-chart-numbers {
-    font-size: 14px;
   }
 }
 
