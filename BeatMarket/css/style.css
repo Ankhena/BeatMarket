@@ -13039,7 +13039,12 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .prompt.prompt--blockSetting::before {
     top: 1rem;
-    left: 1rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 4rem;
+    height: 4rem;
   }
 
   .prompt.prompt--blockSetting > div {
@@ -13325,6 +13330,13 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 768px) {
+  .prompt.prompt--blockSetting > div {
+    margin-top: 4.5rem;
+    margin-left: 0;
   }
 }
 

@@ -181,12 +181,20 @@
 
     &::before {
       top: 1rem;
-      left: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4rem;
+      height: 4rem;
     }
 
     > div {
       margin-left: 3.5rem;
       text-align: left;
+
+      @media ($media_sm) {
+        margin-top: 4.5rem;
+        margin-left: 0;
+      }
     }
   }
 }
