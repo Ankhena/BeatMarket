@@ -338,17 +338,35 @@
 .adv-prtf-ready__comparison-charts {
   @include block-beauty;
   padding: 1.5rem;
+  overflow: hidden;
 
   .table-wrap {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-    width: calc(100% + 3rem);
-    overflow-x: auto;
-    @media ($media_md) {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      overflow-x: scroll;
+    --td-paddind: 1em 1.33rem;
+  
+    @media ($media_sm) {
+      --td-paddind: 0.7em 0.5rem;
+    }
+
+    &__header {
+      overflow-x: auto;
+      flex-basis: 100%;
+    }
+
+    &__content {
+      display: flex;
+    }
+
+    &__names {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      span {
+        font-weight: 500;
+        padding: var(--td-paddind);
+        display: inline-block;
+        white-space: nowrap;
+      }
     }
   }
   th {
@@ -358,6 +376,11 @@
 
 .adv-prtf-ready__comparison-tabs {
   border-bottom: 1px solid $color_block_border;
+
+  @media ($media_sm) {
+    display: flex;
+    justify-content: space-between;
+  }
 
   input[type="radio"] {
     @include visually-hidden;
@@ -377,8 +400,16 @@
     display: inline-block;
     padding: 12/18*1rem 0;
     margin-right: 32/18*1rem;
-    font-size: 20/18*1rem;
+    font-size: 1rem;
     font-weight: 500;
+
+    @media ($media_sm) {
+      margin-right: 0;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
 
     &::after {
       content: "";
@@ -394,6 +425,7 @@
 }
 
 .adv-prtf-ready__comparison-table {
+  overflow-x: auto;
   margin-top: 2rem;
   //margin-left: -1.5rem;
   //margin-right: -1.5rem;
@@ -923,4 +955,9 @@
 
 .adv-prtf-ready__comparison-chart {
   margin-top: 2rem;
+  margin-bottom: -2rem;
+
+  @media ($media_md) {
+    margin-bottom: -3rem;
+  }
 }
