@@ -173,9 +173,20 @@
   display: flex;
   justify-content: space-between;
   margin-top: 0;
-  margin-bottom: 2.5rem;
 
   @media ($media_sm) {
+    padding: 1rem;
     display: grid;
+    justify-items: center;
+
+    &::before {
+      top: 1rem;
+      left: 1rem;
+    }
+
+    > div {
+      margin-left: 3.5rem;
+      text-align: left;
+    }
   }
 }

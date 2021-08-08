@@ -8588,7 +8588,6 @@ dd {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 0;
-  margin-bottom: 2.5rem;
 }
 
 .progress {
@@ -13033,7 +13032,19 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .prompt.prompt--blockSetting {
+    padding: 1rem;
     display: grid;
+    justify-items: center;
+  }
+
+  .prompt.prompt--blockSetting::before {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .prompt.prompt--blockSetting > div {
+    margin-left: 3.5rem;
+    text-align: left;
   }
 
   .progress {
