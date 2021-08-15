@@ -107,6 +107,20 @@ $strategy-btn-margin: 0.8rem;
                         padding: 1.8rem 1rem;
                         z-index: 1;
 
+                        &--fullWidth {
+                            min-width: 28rem;
+
+                            @media ($media_sm) {
+                                min-width: 90vw;
+                                max-width: 90vw;
+                            }
+                    
+
+                            .dropdown-link {
+                                margin: 0;
+                            }
+                        }
+
                         &-social {
                             display: flex;
 
@@ -285,6 +299,18 @@ $strategy-btn-margin: 0.8rem;
         border-radius: 1rem;
         padding: 1.4rem 1.7rem;
 
+        &-title {
+            font-size: 1.1rem;
+            color: $color_black_title;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: -1rem;
+
+            @media ($media_sm) {
+                margin-bottom: 0;
+            }
+        }
+
         &-info {
             display: flex;
 
@@ -294,8 +320,10 @@ $strategy-btn-margin: 0.8rem;
 
             &-btn {
                 position: relative;
+                margin-right: 0.8rem;
 
                 @media ($media_sm) {
+                    margin-right: 0;
                     width: calc(100% - 4rem);
                 }
 
@@ -319,13 +347,9 @@ $strategy-btn-margin: 0.8rem;
             &-content {
                 display: flex;
                 justify-content: space-between;
-                margin-left: 0.8rem;
                 border-bottom: 1px solid $color_block_border;
                 width: 100%;
-
-                @media ($media_sm) {
-                    margin-left: 0;
-                }
+                min-height: 3.5rem;
 
                 &-date {
                     display: flex;
@@ -407,11 +431,13 @@ $strategy-btn-margin: 0.8rem;
             display: flex;
             align-items: center;
             padding: 0.7rem 0 0.7rem 1rem;
+            min-height: 4.5rem;
 
             @media ($media_sm) {
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 1.4rem 0 1.4rem 1rem;
+                min-height: auto;
             }
 
             &-item {

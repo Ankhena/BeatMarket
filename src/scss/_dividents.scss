@@ -53,6 +53,14 @@
                 }
             }
 
+            &-checkbox {
+                font-weight: 500;
+
+                input[type="checkbox"] {
+                    margin-right: 0.3rem;
+                }
+            }
+
             span {
                 position: relative;
                 padding-left: 1rem;

@@ -20,6 +20,8 @@ $(document).ready(function() {
     --include("_ticketSelect.js")
     --include("_monthCashGraph.js")
     --include("_cryptAnalyticsGraph.js")
+    --include("_demoGraph.js")
+    --include("_mainFactorsGraph.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
@@ -90,5 +92,45 @@ $(document).ready(function() {
     });
 
     $("#tabs").tabs();
+    $(".tabs").tabs();
+
+    document.querySelectorAll("[data-contentShower]").forEach(item => {
+        function changeVisibilityElems() {
+            hiddenElems.forEach(item => {
+                if (item.style.display === "") {
+                    item.style.display = "none";
+                }
+                else {
+                    item.style.display = "";
+                }
+            });
+        }
+
+        let btn = item.querySelector(".btnShowAll");
+        let btn_text = item.querySelector(".btnShowAll__text");
+        let hiddenElems = item.querySelectorAll("[data-contentShowerHidden]");
+        changeVisibilityElems();
+
+        btn.addEventListener("click", () => {
+            btn.classList.toggle("btnShowAll--active");
+            changeVisibilityElems();
+
+            if (btn.classList.contains("btnShowAll--active")) {
+                btn_text.innerHTML = "Скрыть";
+            }
+            else {
+                btn_text.innerHTML = "Показать все";
+            }
+        });
+    });
+
+    $(".customRange .customRange__slider").each((_, elem) => {
+        $(elem).slider({
+            range: true,
+            min: 0,
+            max: 100,
+            values: [12, 88],
+        });
+    });
 
 });

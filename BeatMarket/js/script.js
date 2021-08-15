@@ -1019,11 +1019,22 @@ function addPerformanceGraphLabelsRadio(node, data, name) {
         opens: 'left'
     });
 
-    $('.inputGroup__item--date').daterangepicker({
-        locale: rusLocale,
-        opens: 'left'
-    }, function(start, end, label) {
-        $(".inputGroup__item--date .inputGroup__control").val(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
+    $('.inputGroup__item--date').each((_, elem) => {
+        $(elem).daterangepicker({
+            locale: rusLocale,
+            opens: 'left'
+        }, function(start, end, label) {
+            $(".inputGroup__item--date .inputGroup__control").val(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
+        });
+    });
+
+    $('.stategyPromo-graph').each((_, elem) => {
+        $(elem).find(".strategyViewDateChoose").daterangepicker({
+            locale: rusLocale,
+            opens: 'left'
+        }, function(start, end, label) {
+            $(elem).find(".strategyViewDate").text(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
+        });
     });
     
     $('#chooseDataStrategy').daterangepicker({
@@ -1032,12 +1043,14 @@ function addPerformanceGraphLabelsRadio(node, data, name) {
     }, function(start, end, label) {
         $("#chooseDataStrategyValue").text(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
     });
-    
-    $('.period-info-date').daterangepicker({
-        locale: rusLocale,
-        opens: 'right'
-    }, function(start, end, label) {
-        $(".period-info-date span").text(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
+
+    $('.period-info-date').each((_, elem) => {
+        $(elem).daterangepicker({
+            locale: rusLocale,
+            opens: 'left'
+        }, function(start, end, label) {
+            $(elem).find("span").text(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
+        });
     });
 }
 
@@ -1671,6 +1684,198 @@ function addAnalyticsGraph(node, id, data, isInput, size) {
         
     }
 }
+    function initDemoGraph() {
+
+    const graphs = ["demoGraph-1", "demoGraph-2", "demoGraph-3", "demoGraph-4", "demoGraph-5", "demoGraph-6"];
+
+    const myRenderGraphCategories = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+    const myRenderShowYLine = true; // если нужен показ верт. линий в графе, ставим true
+
+    graphs.forEach(item => {
+        let myRenderGraph = document.querySelector(`#${item}`);
+
+        if (myRenderGraph !== null) {
+            Highcharts.chart(item, {
+                chart: {
+                    type: "spline",
+                    style: { "fontFamily": "" },
+                },
+                credits: {
+                    enabled: false
+                },
+                legend: {
+                    enabled: false,
+    
+                    useHTML: true,
+                    align: "left",
+                    verticalAlign: "top",
+                    itemStyle: {"fontSize": "0.85rem", "fontWeight": "400", "paddingLeft": "0.5rem"},
+                    x: -8,
+                    margin: 35,
+                    symbolWidth: 0,
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: myRenderGraphCategories,
+                    labels: {
+                        style: {
+                            fontSize: "16px",
+                            color: "#373943"
+                        }
+                    },
+                    gridLineWidth: (myRenderShowYLine ? 1 : 0)
+                },
+                yAxis: {
+                    title: {
+                        text: ''
+                    },
+                    labels: {
+                        formatter: function () {
+                            return (this.value / 1000) + 'к';
+                        },
+                        style: {
+                            fontSize: "16px",
+                            color: "#373943"
+                        }
+                    },
+                },
+                tooltip: {
+                    crosshairs: true,
+                    shared: true,
+                    useHTML: true,
+                    valueSuffix: '$'
+                },
+                plotOptions: {
+                    spline: {
+                        marker: {
+                            radius: 4,
+                            lineColor: 'transparent',
+                            lineWidth: 1
+                        }
+                    }
+                },
+                series: [
+            
+                    {
+                        name: 'VIAC',
+                        marker: {
+                            symbol: 'circle'
+                        },
+                        data: [1500, 2100, 3500, 5500, 4200, 6500, 7200],
+                        color: "#3E54D8"
+                    }
+            
+                ]
+            });
+        
+            if (myRenderShowYLine) {
+                let renderChartWidth = +document.querySelector(`#${item} .highcharts-plot-background`).getAttributeNode("width").value;
+                let renderChartOffsetX = (renderChartWidth / myRenderGraphCategories.length) / 2;
+            
+                document.querySelectorAll(`#${item} .highcharts-xaxis-grid .highcharts-grid-line`).forEach(item => {
+                    item.style.transform = 'translateX(' + renderChartOffsetX + 'px)';
+                });
+            }
+            
+        }
+    });
+    
+}
+
+initDemoGraph();
+    function initMainFactorsGraph() {
+    let baseWidth = 22;
+
+    if (document.body.offsetWidth < 1500) {
+        baseWidth = 10;
+    }
+
+    if (document.querySelector("#mainFactorsGraph") === null) {
+        return false;
+    }
+
+    Highcharts.chart('mainFactorsGraph', {
+        chart: {
+            type: 'column',
+            style: { "fontFamily": "" },
+        },
+        credits: {
+            enabled: false
+        },
+        legend: {
+            enabled: false
+        },
+        title: {
+            text: ''
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: [
+                'Jan',
+                'Feb',
+                'Mar',
+                'Apr',
+                'May',
+                'Jun',
+                'Jul',
+                'Aug',
+                'Sep',
+                'Oct',
+                'Nov',
+                'Dec'
+            ],
+            crosshair: true,
+            labels: {
+                style: {
+                    fontSize: "16px",
+                    color: "#373943"
+                }
+            },
+            visible: false
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: ''
+            },
+            labels: {
+                formatter: function () {
+                    return (this.value) + '%';
+                },
+                style: {
+                    fontSize: "0.9rem",
+                    color: "#373943"
+                }
+            },
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true,
+            useHTML: true,
+            valueSuffix: ' $'
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0,
+                pointWidth: baseWidth,
+                borderRadiusTopLeft: baseWidth / 2,
+                borderRadiusTopRight: baseWidth / 2,
+            }
+        },
+        series: [{
+            name: 'Tokyo',
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+            color: "#3E54D8"
+        }]
+    });
+}
+
+initMainFactorsGraph()
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
@@ -1741,5 +1946,45 @@ function addAnalyticsGraph(node, id, data, isInput, size) {
     });
 
     $("#tabs").tabs();
+    $(".tabs").tabs();
+
+    document.querySelectorAll("[data-contentShower]").forEach(item => {
+        function changeVisibilityElems() {
+            hiddenElems.forEach(item => {
+                if (item.style.display === "") {
+                    item.style.display = "none";
+                }
+                else {
+                    item.style.display = "";
+                }
+            });
+        }
+
+        let btn = item.querySelector(".btnShowAll");
+        let btn_text = item.querySelector(".btnShowAll__text");
+        let hiddenElems = item.querySelectorAll("[data-contentShowerHidden]");
+        changeVisibilityElems();
+
+        btn.addEventListener("click", () => {
+            btn.classList.toggle("btnShowAll--active");
+            changeVisibilityElems();
+
+            if (btn.classList.contains("btnShowAll--active")) {
+                btn_text.innerHTML = "Скрыть";
+            }
+            else {
+                btn_text.innerHTML = "Показать все";
+            }
+        });
+    });
+
+    $(".customRange .customRange__slider").each((_, elem) => {
+        $(elem).slider({
+            range: true,
+            min: 0,
+            max: 100,
+            values: [12, 88],
+        });
+    });
 
 });

@@ -38,11 +38,22 @@ function initDateRangePicker() {
         opens: 'left'
     });
 
-    $('.inputGroup__item--date').daterangepicker({
-        locale: rusLocale,
-        opens: 'left'
-    }, function(start, end, label) {
-        $(".inputGroup__item--date .inputGroup__control").val(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
+    $('.inputGroup__item--date').each((_, elem) => {
+        $(elem).daterangepicker({
+            locale: rusLocale,
+            opens: 'left'
+        }, function(start, end, label) {
+            $(".inputGroup__item--date .inputGroup__control").val(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
+        });
+    });
+
+    $('.stategyPromo-graph').each((_, elem) => {
+        $(elem).find(".strategyViewDateChoose").daterangepicker({
+            locale: rusLocale,
+            opens: 'left'
+        }, function(start, end, label) {
+            $(elem).find(".strategyViewDate").text(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
+        });
     });
     
     $('#chooseDataStrategy').daterangepicker({
@@ -51,12 +62,14 @@ function initDateRangePicker() {
     }, function(start, end, label) {
         $("#chooseDataStrategyValue").text(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
     });
-    
-    $('.period-info-date').daterangepicker({
-        locale: rusLocale,
-        opens: 'right'
-    }, function(start, end, label) {
-        $(".period-info-date span").text(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
+
+    $('.period-info-date').each((_, elem) => {
+        $(elem).daterangepicker({
+            locale: rusLocale,
+            opens: 'left'
+        }, function(start, end, label) {
+            $(elem).find("span").text(start.format('DD.MM.YYYY') + " - " + end.format('DD.MM.YYYY'));
+        });
     });
 }
 
