@@ -3811,7 +3811,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .section-footer .footer {
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1fr 2fr;
   gap: 2.5rem;
 }
 
@@ -3877,10 +3877,43 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .section-footer .footer-link {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 4rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.section-footer .footer-link--inline {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.section-footer .footer-link--inline a.footer-link__social {
+  text-decoration: none;
+  border-color: transparent;
+}
+
+.section-footer .footer-link--inline a.footer-link__social:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.section-footer .footer-link--inline a.footer-link__social picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10rem;
+}
+
+.section-footer .footer-link--inline a.footer-link__social picture img {
+  max-width: 100%;
+}
+
+.section-footer .footer-link__item:not(:last-child) {
+  margin-bottom: 0.8rem;
 }
 
 .portfolio {
@@ -5191,9 +5224,12 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   color: #ED6373;
 }
 
+.dividends__item {
+  margin-top: 3.35rem;
+}
+
 .dividends .period {
   font-size: 0.9rem;
-  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6428,6 +6464,13 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   white-space: normal;
 }
 
+.paperDontTrade__popup--link {
+  color: #3E54D8;
+  width: auto;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
 .performance > div {
   margin-top: 3.33rem;
 }
@@ -6505,6 +6548,31 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
           justify-content: center;
 }
 
+.performance .card-content-info.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  grid-gap: 0.5rem 3rem;
+}
+
+.performance .card-content-info.grid .graphContent {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.performance .card-content-info.grid .graphContent:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.performance .card-content span img {
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-right: 0.2rem;
+  margin-bottom: -0.35rem;
+}
+
 .performance .card:hover {
   background: #FCFDFF;
   -webkit-box-sizing: border-box;
@@ -6535,6 +6603,12 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   color: #3E54D8;
 }
 
+.performance .card strong.secondary {
+  color: #929398;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
 .performance .card .graph {
   height: 125px;
   width: 125px;
@@ -6547,6 +6621,15 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-transform: scale(3.5) translateY(3%);
       -ms-transform: scale(3.5) translateY(3%);
           transform: scale(3.5) translateY(3%);
+}
+
+.performance .card .graph-middle {
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(1.3) translateY(2%);
+      -ms-transform: scale(1.3) translateY(2%);
+          transform: scale(1.3) translateY(2%);
 }
 
 .performance .card .graph .highcharts-root {
@@ -6683,8 +6766,8 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .performance-info-cards .card {
-  -ms-flex-preferred-size: 32%;
-      flex-basis: 32%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .performance-info-cards .card-content {
@@ -6701,6 +6784,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   margin-bottom: 1rem;
 }
 
+.performance-info-cards .card:not(:last-child) {
+  margin-right: 1rem;
+}
+
 .performance-separation .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6708,8 +6795,8 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .performance-separation .card-block {
-  -ms-flex-preferred-size: 33.3%;
-      flex-basis: 33.3%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .performance-separation .card-block:not(:last-child) {
@@ -8371,6 +8458,34 @@ body.app .section-header {
   background-color: #fff;
 }
 
+.cardAnalytic--simple {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.cardAnalytic--simple:hover,
+.cardAnalytic--simple.cardAnalytic--active {
+  -webkit-box-shadow: 0px 1rem 0.9rem -0.8rem rgba(62, 84, 216, 0.1);
+          box-shadow: 0px 1rem 0.9rem -0.8rem rgba(62, 84, 216, 0.1);
+  background-color: #FCFDFF;
+  border-color: #E6EEFF;
+}
+
+.cardAnalytic--simple:hover .cardAnalytic__title,
+.cardAnalytic--simple.cardAnalytic--active .cardAnalytic__title {
+  color: #24252E;
+}
+
+.cardAnalytic--simple:hover .cardAnalytic__value,
+.cardAnalytic--simple.cardAnalytic--active .cardAnalytic__value {
+  color: #fff;
+  background-color: #3E54D8;
+}
+
+.cardAnalytic--simple .cardAnalytic__title {
+  color: #24252E;
+}
+
 .cardAnalytic__title {
   -webkit-transition: 0.4s ease-in-out;
   -o-transition: 0.4s ease-in-out;
@@ -8574,7 +8689,8 @@ body.app .section-header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1.75rem 0;
+  padding-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
 
@@ -8767,6 +8883,10 @@ body.app .section-header {
           align-items: center;
 }
 
+.coinInfo__picture {
+  margin-right: 0.65rem;
+}
+
 .coinInfo__picture picture {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8781,7 +8901,6 @@ body.app .section-header {
 }
 
 .coinInfo__content {
-  margin-left: 0.65rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11202,6 +11321,14 @@ td {
   min-width: 0;
 }
 
+.section-main .main-content__elem:not(:last-child) {
+  margin-bottom: 1.75rem;
+}
+
+.section-main .main-content__elem--promo:not(:last-child) {
+  margin-bottom: 3.35rem;
+}
+
 .myStrategy {
   margin-top: 4rem;
 }
@@ -11370,8 +11497,8 @@ td {
   border: 1px solid #D3E3FF;
   border-radius: 1rem;
   padding: 1.35rem;
-  -ms-flex-preferred-size: 33.3%;
-      flex-basis: 33.3%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
 }
 
 .strategyCards-card:not(:last-child) {
@@ -11388,15 +11515,16 @@ td {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .strategyCards-card-header h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-right: 0.8rem;
+  line-height: 1.5;
 }
 
 .strategyCards-card-header-icon {
@@ -11612,10 +11740,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
 .page-without-menu .header-controls-links div:first-child {
   display: none;
-}
-
-.month-cash {
-  margin-top: 3.5rem;
 }
 
 .month-cash__title {
@@ -11887,6 +12011,10 @@ body.viewProfile .header-controls-links-link.auth span {
 }
 
 @media (min-width: 992px) {
+  .cardAnalytic {
+    cursor: pointer;
+  }
+
   .leastCard {
     cursor: pointer;
   }
@@ -12060,6 +12188,12 @@ body.viewProfile .header-controls-links-link.auth span {
             transform: scale(3);
   }
 
+  .performance .card .graph-middle {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+
   .coinRangs__content {
     grid-template-columns: repeat(6, 1fr);
   }
@@ -12091,16 +12225,22 @@ body.viewProfile .header-controls-links-link.auth span {
     min-width: 15rem;
   }
 
+  .strategyCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
   .strategyCards-card {
     padding: 1.2rem;
   }
 
   .strategyCards-card:not(:last-child) {
-    margin-right: 0.8rem;
+    margin-right: 0;
   }
 
   .strategyCards-card-header h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-right: 0.5rem;
   }
 }
@@ -13220,7 +13360,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .section-footer {
-    padding: 2.7rem 0 0 0;
+    padding: 2.7rem 0;
   }
 
   .section-footer .footer {
@@ -13237,8 +13377,12 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 0.2rem;
   }
 
-  .section-footer .footer-link:last-child {
-    margin-top: -1.8rem;
+  .section-footer .footer-link--inline {
+    grid-row-start: 5;
+  }
+
+  .section-footer .footer-link--inline a.footer-link__social:not(:last-child) {
+    margin-right: 1rem;
   }
 
   .portfolio {
@@ -13958,6 +14102,10 @@ body.viewProfile .header-controls-links-link.auth span {
         flex-basis: 100%;
   }
 
+  .performance .card-content-info.grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .performance .card-content-info {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -13970,6 +14118,12 @@ body.viewProfile .header-controls-links-link.auth span {
             transform: scale(2);
   }
 
+  .performance .card .graph-middle {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
+
   .performance-info-cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -13978,7 +14132,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .performance-info-cards .card:not(:last-child) {
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
   }
 
   .performance-separation .card {
@@ -14487,20 +14641,17 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .strategyCards {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .strategyCards-card:not(:last-child) {
-    margin: 0 0 1rem 0;
+    grid-template-columns: 1fr;
   }
 
   .strategyCards-card-header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+
+  .strategyCards-card-header h3 {
+    font-size: 1.1rem;
   }
 
   .strategyCards-card-header-icon .dropdown.last {

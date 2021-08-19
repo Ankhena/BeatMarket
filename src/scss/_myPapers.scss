@@ -1047,5 +1047,12 @@ $banch_items_height: 60px;
         opacity: 0;
         width: 18rem;
         white-space: normal;
+
+        &--link {
+            color: $color_blue;
+            width: auto;
+            white-space: nowrap;
+            font-weight: 500;
+        }
     }
 }

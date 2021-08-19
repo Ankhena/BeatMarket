@@ -182,6 +182,19 @@
             @media ($media_sm) {
 
             }
+
+            
+            &__elem {
+                &:not(:last-child) {
+                    margin-bottom: 1.75rem;
+                }
+
+                &--promo {
+                    &:not(:last-child) {
+                        margin-bottom: 3.35rem;
+                    }
+                }
+            }
         }
     }
 
@@ -364,8 +377,14 @@
     display: flex;
     margin-top: 3rem;
 
+    @media ($media_xl) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
     @media ($media_sm) {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     &-card {
@@ -373,7 +392,7 @@
         border: 1px solid $color_block_border;
         border-radius: 1rem;
         padding: 1.35rem;
-        flex-basis: 33.3%;
+        flex-basis: 25%;
 
         @media ($media_xl) {
             padding: 1.2rem;
@@ -383,11 +402,7 @@
             margin-right: 1rem;
 
             @media ($media_xl) {
-                margin-right: 0.8rem;
-            }
-
-            @media ($media_sm) {
-                margin: 0 0 1rem 0;
+                margin-right: 0;
             }
         }
 
@@ -398,7 +413,7 @@
 
         &-header {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
 
             @media ($media_sm) {
                 justify-content: space-between;
@@ -406,13 +421,18 @@
 
 
             h3 {
-                font-size: 1.1rem;
+                font-size: 1rem;
                 font-weight: 600;
                 margin-right: 0.8rem;
+                line-height: 1.5;
 
                 @media ($media_xl) {
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                     margin-right: 0.5rem;
+                }
+
+                @media ($media_sm) {
+                    font-size: 1.1rem; 
                 }
             }
 
@@ -790,7 +810,6 @@ body.viewProfile {
 }
 
 .month-cash {
-    margin-top: 3.5rem;
 
     // .month-cash__title
 

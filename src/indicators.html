@@ -55,10 +55,6 @@
                                             "history": ""
                                         })
 										<div class="myStrategy-indicators-container the_table">
-                                            
-                                            @@include("_tableIndicators.html")
-
-                                            @@include("_tableIndicatorsETF.html")
 
                                             <div class="strategyCards">
                                                 <div class="strategyCards-card">
@@ -147,7 +143,43 @@
                                                         <span>Рейтинг среднего значения коэффициента Шарпа <b>1.51</b></span>
                                                     </div>
                                                 </div>
+
+                                                <div class="strategyCards-card">
+                                                    <div class="strategyCards-card-header">
+                                                        <h3>Коэффициент Сортино</h3>
+                                                        <label class="strategyCards-card-header-icon">
+                                                            <svg><use xlink:href="img/main.svg#icon-info-2"></use></svg>
+                                                            <input type="checkbox" class="visually_hidden">
+                                                            <div class="dropdown last">
+                                                                <p>
+                                                                    Коэффициент Шарпа — показатель эффективности инвестиционного портфеля
+                                                                    <br>
+                                                                    <br>
+                                                                    •	«1 и выше» — оптимальное значение коэффициента, обозначающее хорошую стратегию или высокую результативность управления портфелем ценных бумаг;
+                                                                    <br>
+                                                                    •	«0-1» — нельзя сказать, что стратегия очень хорошая, поскольку завышены риски, но её применение возможно;
+                                                                    <br>
+                                                                    •	«0 и ниже» — стратегию лучше не использовать, при фондовом инвестировании целесообразнее выбрать другой портфель.
+
+                                                                </p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="strategyCards-card-coef">
+                                                        <span>0.81</span>
+                                                    </div>
+                                                    <div class="strategyCards-card-text">
+                                                        <span>Рейтинг среднего значения коэффициента Сортино <b>1.51</b></span>
+                                                    </div>
+                                                </div>
+
                                             </div>
+                                            
+                                            @@include("_tableIndicators.html")
+
+                                            @@include("_tableIndicatorsETF.html")
+
+
 										</div>
 									</div>
 

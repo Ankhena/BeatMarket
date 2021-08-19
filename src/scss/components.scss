@@ -383,8 +383,8 @@ $base_transition: 0.4s ease-in-out;
     box-shadow: $card_box_shadow;
     border-radius: 1rem;
     padding: 1.45rem;
-
     transition: $base_transition;
+    @include cursorPointer;
 
     &:hover, &--active {
         border-color: $color_blue;
@@ -397,6 +397,29 @@ $base_transition: 0.4s ease-in-out;
         .cardAnalytic__value {
             color: $color_blue;
             background-color: $color_white;
+        }
+    }
+
+    &--simple {
+        box-shadow: none;
+
+        &:hover, &.cardAnalytic--active {
+            box-shadow: $card_box_shadow;
+            background-color: $color_block_bg;
+            border-color: $color_border_dop;
+
+            .cardAnalytic__title {
+                color: $color_black_title;
+            }
+    
+            .cardAnalytic__value {
+                color: $color_white;
+                background-color: $color_blue;
+            }
+        }
+
+        .cardAnalytic__title {
+            color: $color_black_title;
         }
     }
 
@@ -606,7 +629,8 @@ $base_transition: 0.4s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.75rem 0;
+    padding-bottom: 1.75rem;
+    margin-bottom: 1.75rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 
     // .quotations__item
@@ -854,6 +878,7 @@ $base_transition: 0.4s ease-in-out;
     // .coinInfo__picture
 
     &__picture {
+        margin-right: 0.65rem;
 
         picture {
             display: flex;
@@ -872,7 +897,6 @@ $base_transition: 0.4s ease-in-out;
     // .coinInfo__content
 
     &__content {
-        margin-left: 0.65rem;
         display: flex;
         flex-direction: column;
     }

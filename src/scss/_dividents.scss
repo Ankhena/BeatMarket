@@ -1,8 +1,11 @@
 .dividends {
 
+    &__item {
+        margin-top: 3.35rem;
+    }
+
     .period {
         font-size: 0.9rem;
-        margin-top: 2rem;
         display: flex;
         justify-content: space-between;
         cursor: pointer;
