@@ -152,6 +152,16 @@
             }
         }
 
+        &-toggle {
+            .btnShowAll {
+                margin: 2px auto;
+            }
+
+            .toggleOverlay {
+                display: none;
+            }
+        }
+
         &-simpleText {
             line-height: 1.6;
         }
@@ -298,6 +308,45 @@
             @media ($media_sm) {
                 flex-wrap: wrap;
                 justify-content: space-between;
+            }
+
+            &-status {
+                line-height: 1.6;
+                flex-basis: 100%;
+                font-weight: 500;
+                margin-top: 0.8rem;
+
+                &.success {
+                    color: $color_green;
+                }
+
+                &.error {
+                    color: $color_red;
+                }
+            }
+
+            &-promo {
+                flex-basis: 66%;
+
+                @media ($media_sm) {
+                    flex-basis: 100%;
+                }
+            }
+
+            &-btn {
+                flex-basis: 33%;
+                display: flex;
+                align-items: flex-end;
+
+                @media ($media_sm) {
+                    flex-basis: 100%;
+                    margin: 0.7rem 0;
+                }
+
+                .btn {
+                    padding: 17px 0;
+                    width: 100%;
+                }
             }
 
             &-cost, &-count {

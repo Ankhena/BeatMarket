@@ -2482,6 +2482,14 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   line-height: 1.4;
 }
 
+.modal-content-toggle .btnShowAll {
+  margin: 2px auto;
+}
+
+.modal-content-toggle .toggleOverlay {
+  display: none;
+}
+
 .modal-content-simpleText {
   line-height: 1.6;
 }
@@ -2649,6 +2657,43 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.modal-content-papers-status {
+  line-height: 1.6;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-weight: 500;
+  margin-top: 0.8rem;
+}
+
+.modal-content-papers-status.success {
+  color: #199F27;
+}
+
+.modal-content-papers-status.error {
+  color: #ED6373;
+}
+
+.modal-content-papers-promo {
+  -ms-flex-preferred-size: 66%;
+      flex-basis: 66%;
+}
+
+.modal-content-papers-btn {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.modal-content-papers-btn .btn {
+  padding: 17px 0;
+  width: 100%;
 }
 
 .modal-content-papers-cost input,
@@ -13151,6 +13196,17 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+
+  .modal-content-papers-promo {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .modal-content-papers-btn {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0.7rem 0;
   }
 
   .modal-content-papers-cost,

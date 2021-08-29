@@ -1987,4 +1987,14 @@ initMainFactorsGraph()
         });
     });
 
+    $(".modal-content-toggle").each((_, elem) => {
+        let btn = $(elem).find(".btnShowAll");
+        let content = $(elem).find(".toggleOverlay");
+
+        btn.click(() => {
+            content.slideToggle();
+            btn.toggleClass("btnShowAll--active");
+        })
+    });
+
 });
