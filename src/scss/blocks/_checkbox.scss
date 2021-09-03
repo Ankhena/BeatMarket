@@ -3,7 +3,28 @@
 }
 
 .checkbox-toggle {
+  cursor: pointer;
 
+  @media ($media_sm) {
+    cursor: initial;
+  }
+
+  &__descr {
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0 1.1rem;
+
+    &--light {
+      color: $color_grey;
+    }
+  }
+
+  &__text {
+
+    &--primary {
+      color: $color_blue;
+    }
+  }
 }
 
 .checkbox-toggle__input {

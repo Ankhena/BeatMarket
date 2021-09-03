@@ -1507,15 +1507,29 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .tarrifsCard-cost {
   margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.tarrifsCard-cost strong {
+.tarrifsCard-cost.costSwitcher .btnShowAll {
+  margin-left: 1.5rem;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.tarrifsCard-cost.costSwitcher .btnShowAll--disabled {
+  visibility: hidden;
+}
+
+.tarrifsCard-cost p strong {
   color: #3E54D8;
   font-size: 1.77rem;
   margin-right: 0.3rem;
 }
 
-.tarrifsCard-cost span {
+.tarrifsCard-cost p span {
   color: #929398;
   font-size: 0.9rem;
   font-weight: 500;
@@ -9685,6 +9699,24 @@ dd {
   background: linear-gradient(to bottom, #3E54D8, #3E54D8) no-repeat center/2px 14px, linear-gradient(to right, #3E54D8, #3E54D8) no-repeat center/14px 2px;
 }
 
+.checkbox-toggle {
+  cursor: pointer;
+}
+
+.checkbox-toggle__descr {
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0 1.1rem;
+}
+
+.checkbox-toggle__descr--light {
+  color: #929398;
+}
+
+.checkbox-toggle__text--primary {
+  color: #3E54D8;
+}
+
 .checkbox-toggle__input {
   position: fixed;
   -webkit-transform: scale(0);
@@ -11979,6 +12011,17 @@ body.viewProfile .header-controls-links-link.auth span {
   padding: 0.6rem 0;
 }
 
+.subscribe-changer {
+  margin-top: 2.75rem;
+  padding: 1.75rem;
+  background: #fff;
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+          box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+  border-radius: 1rem;
+  text-align: center;
+}
+
 @media (min-width: 564px) {
   .daterangepicker {
     width: auto;
@@ -13035,6 +13078,24 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-transform: translate(50%, -50%) scale(1.3);
         -ms-transform: translate(50%, -50%) scale(1.3);
             transform: translate(50%, -50%) scale(1.3);
+  }
+
+  .tarrifsCard-cost.costSwitcher {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
+  .tarrifsCard-cost.costSwitcher .btnShowAll {
+    margin: 1rem 0 0;
+  }
+
+  .tarrifsCard-cost.costSwitcher .btnShowAll--disabled {
+    display: none;
   }
 
   .tarrifsCard-btn .btn_tarrifs {
@@ -14489,6 +14550,10 @@ body.viewProfile .header-controls-links-link.auth span {
     padding: 0;
   }
 
+  .checkbox-toggle {
+    cursor: initial;
+  }
+
   .prompt::before {
     top: 2.5rem;
     -webkit-transform: unset;
@@ -14792,6 +14857,27 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .subscribe-changer .checkbox-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .subscribe-changer .checkbox-toggle__descr {
+    padding: 0;
+  }
+
+  .subscribe-changer .checkbox-toggle__toggle {
+    margin: 0.8rem 0;
   }
 }
 

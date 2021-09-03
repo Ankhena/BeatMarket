@@ -22,6 +22,7 @@ $(document).ready(function() {
     --include("_cryptAnalyticsGraph.js")
     --include("_demoGraph.js")
     --include("_mainFactorsGraph.js")
+    --include("_subscribeChanger.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {
