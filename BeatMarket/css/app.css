@@ -1,3 +1,7 @@
+body.app.blockScroll {
+  overflow: hidden;
+}
+
 body.app .header-logo .logo {
   left: 0;
   -webkit-transform: translateX(1rem);
@@ -6,17 +10,19 @@ body.app .header-logo .logo {
 }
 
 body.app .section-app {
-  padding: 7.2rem var(--section_padding) 6.5rem var(--section_padding);
-}
-
-body.app .section-app__content {
-  overflow-y: auto;
-  max-height: calc(100vh - 13rem);
+  margin: calc(var(--header_height) + 1rem) 0 calc(4.5rem + 1rem) 0;
+  padding: 0 var(--section_padding);
 }
 
 body.app .section-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5F8FF), to(#EAF1FE));
+  background: -o-linear-gradient(top, #F5F8FF 0%, #EAF1FE 100%);
+  background: linear-gradient(180deg, #F5F8FF 0%, #EAF1FE 100%);
   position: fixed;
   width: 100%;
+  z-index: 6;
+  left: 0;
+  top: 0;
 }
 
 .appMenu {
