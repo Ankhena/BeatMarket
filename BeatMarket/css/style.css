@@ -751,8 +751,8 @@ body.hideScroll {
 
 input[type="text"],
 input[type="email"],
-input[type="url"],
 input[type="password"],
+input[type="url"],
 textarea {
   background: #fff;
   border: 1px solid #d3e3ff;
@@ -764,79 +764,79 @@ textarea {
   resize: none;
 }
 
-input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #929398;
 }
 
-input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="url"]::-moz-placeholder, input[type="password"]::-moz-placeholder, textarea::-moz-placeholder {
+input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="password"]::-moz-placeholder, input[type="url"]::-moz-placeholder, textarea::-moz-placeholder {
   color: #929398;
 }
 
-input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #929398;
 }
 
-input[type="text"]::-ms-input-placeholder, input[type="email"]::-ms-input-placeholder, input[type="url"]::-ms-input-placeholder, input[type="password"]::-ms-input-placeholder, textarea::-ms-input-placeholder {
+input[type="text"]::-ms-input-placeholder, input[type="email"]::-ms-input-placeholder, input[type="password"]::-ms-input-placeholder, input[type="url"]::-ms-input-placeholder, textarea::-ms-input-placeholder {
   color: #929398;
 }
 
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
-input[type="url"]::placeholder,
 input[type="password"]::placeholder,
+input[type="url"]::placeholder,
 textarea::placeholder {
   color: #929398;
 }
 
 input[type="text"]:hover,
-input:hover[type="email"],
-input:hover[type="url"],
-input:hover[type="password"],
 input[type="text"]:focus,
-input:focus[type="email"],
-input:focus[type="url"],
-input:focus[type="password"],
+input[type="email"]:hover,
+input[type="email"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus,
+input[type="url"]:hover,
+input[type="url"]:focus,
 textarea:hover,
 textarea:focus {
   border: 1px solid #a0c3ff;
 }
 
 input[type="text"]:disabled,
-input:disabled[type="email"],
-input:disabled[type="url"],
-input:disabled[type="password"],
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="url"]:disabled,
 textarea:disabled {
   background-color: #F8F8F8;
 }
 
-input[type="text"]:disabled::-webkit-input-placeholder, input[type="email"]:disabled::-webkit-input-placeholder, input[type="url"]:disabled::-webkit-input-placeholder, input[type="password"]:disabled::-webkit-input-placeholder, textarea:disabled::-webkit-input-placeholder {
+input[type="text"]:disabled::-webkit-input-placeholder, input[type="email"]:disabled::-webkit-input-placeholder, input[type="password"]:disabled::-webkit-input-placeholder, input[type="url"]:disabled::-webkit-input-placeholder, textarea:disabled::-webkit-input-placeholder {
   color: #373943;
 }
 
-input[type="text"]:disabled::-moz-placeholder, input[type="email"]:disabled::-moz-placeholder, input[type="url"]:disabled::-moz-placeholder, input[type="password"]:disabled::-moz-placeholder, textarea:disabled::-moz-placeholder {
+input[type="text"]:disabled::-moz-placeholder, input[type="email"]:disabled::-moz-placeholder, input[type="password"]:disabled::-moz-placeholder, input[type="url"]:disabled::-moz-placeholder, textarea:disabled::-moz-placeholder {
   color: #373943;
 }
 
-input[type="text"]:disabled:-ms-input-placeholder, input[type="email"]:disabled:-ms-input-placeholder, input[type="url"]:disabled:-ms-input-placeholder, input[type="password"]:disabled:-ms-input-placeholder, textarea:disabled:-ms-input-placeholder {
+input[type="text"]:disabled:-ms-input-placeholder, input[type="email"]:disabled:-ms-input-placeholder, input[type="password"]:disabled:-ms-input-placeholder, input[type="url"]:disabled:-ms-input-placeholder, textarea:disabled:-ms-input-placeholder {
   color: #373943;
 }
 
-input[type="text"]:disabled::-ms-input-placeholder, input[type="email"]:disabled::-ms-input-placeholder, input[type="url"]:disabled::-ms-input-placeholder, input[type="password"]:disabled::-ms-input-placeholder, textarea:disabled::-ms-input-placeholder {
+input[type="text"]:disabled::-ms-input-placeholder, input[type="email"]:disabled::-ms-input-placeholder, input[type="password"]:disabled::-ms-input-placeholder, input[type="url"]:disabled::-ms-input-placeholder, textarea:disabled::-ms-input-placeholder {
   color: #373943;
 }
 
 input[type="text"]:disabled::placeholder,
 input[type="email"]:disabled::placeholder,
-input[type="url"]:disabled::placeholder,
 input[type="password"]:disabled::placeholder,
+input[type="url"]:disabled::placeholder,
 textarea:disabled::placeholder {
   color: #373943;
 }
 
 input[type="text"].error,
-input.error[type="email"],
-input.error[type="url"],
-input.error[type="password"],
+input[type="email"].error,
+input[type="password"].error,
+input[type="url"].error,
 textarea.error {
   border-color: #E88390;
 }
@@ -2451,6 +2451,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   padding: 1.8rem 1.8rem 0;
 }
 
+.modal-header--mob h2 {
+  display: none;
+}
+
 .modal-header h2 {
   font-weight: bold;
   font-size: 1.8rem;
@@ -2470,6 +2474,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   overflow-y: auto;
   padding: 0 1.8rem;
   margin-bottom: 1.8rem;
+}
+
+.modal-content--withoutHeader {
+  margin-top: -1.4rem;
 }
 
 .modal-content-img {
@@ -8727,9 +8735,6 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   height: 3px;
   background-color: transparent;
   border-radius: 1.5px;
-  -webkit-transition: 0.4s ease-in-out;
-  -o-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
 }
 
 .tabsSwitcher__item:not(:last-child) {
@@ -8745,9 +8750,6 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   text-decoration: none;
   font-weight: 500;
   color: #373943;
-  -webkit-transition: 0.4s ease-in-out;
-  -o-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
   padding: 0.9rem 0;
 }
 
@@ -9144,6 +9146,90 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .doubleBlockMd__elem:not(:last-child) {
   margin-right: 1.75rem;
+}
+
+.broker-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 2px;
+  gap: 1.2rem 1.66rem;
+}
+
+.broker-container--long {
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.9rem;
+}
+
+.broker-container--long .broker-choose__container {
+  padding: 0.5rem;
+  min-height: 3.6rem;
+  max-height: 3.6rem;
+}
+
+.broker-container--long .broker-choose__container::after {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.broker-title {
+  margin-bottom: 1.3rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.broker-title .broker-title__primary {
+  color: #3E54D8;
+}
+
+.broker-choose__radio:checked ~ .broker-choose__container {
+  -webkit-box-shadow: 0px 0px 0px 2px #3E54D8;
+          box-shadow: 0px 0px 0px 2px #3E54D8;
+}
+
+.broker-choose__radio:checked ~ .broker-choose__container::after {
+  opacity: 1;
+}
+
+.broker-choose__container {
+  position: relative;
+  background: #FCFDFF;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-box-shadow: 0px 0px 0px 1px #E6EEFF;
+          box-shadow: 0px 0px 0px 1px #E6EEFF;
+  min-height: 7.22rem;
+  max-height: 7.22rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.broker-choose__container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 2.3rem;
+  height: 2.3rem;
+  background-image: url(../img/broker/check.svg);
+  background-size: 100%;
+  opacity: 0;
+}
+
+.broker-choose__img img {
+  max-width: 100%;
 }
 
 input[type="radio"],
@@ -11116,10 +11202,7 @@ td {
   margin-top: 2.7rem;
 }
 
-.adv-portfolio-settings__btns input[type="text"],
-.adv-portfolio-settings__btns input[type="email"],
-.adv-portfolio-settings__btns input[type="url"],
-.adv-portfolio-settings__btns input[type="password"] {
+.adv-portfolio-settings__btns input[type="text"] {
   width: 453px;
 }
 
@@ -11127,10 +11210,7 @@ td {
   margin-bottom: 2.77778rem;
 }
 
-.adv-portfolio-settings__top-up input[type="text"],
-.adv-portfolio-settings__top-up input[type="email"],
-.adv-portfolio-settings__top-up input[type="url"],
-.adv-portfolio-settings__top-up input[type="password"] {
+.adv-portfolio-settings__top-up input[type="text"] {
   width: calc(453px + 1.77778rem);
 }
 
@@ -11934,6 +12014,10 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .btnShowAll {
+    cursor: pointer;
+  }
+
+  .broker-choose__container {
     cursor: pointer;
   }
 
@@ -13071,6 +13155,18 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .modal .use_mt_first {
     margin-top: 2rem;
+  }
+
+  .modal-header--mob {
+    padding-bottom: 1.5rem;
+  }
+
+  .modal-header--mob h2 {
+    display: block;
+  }
+
+  .modal-content--withoutHeader {
+    margin-top: 1.5rem;
   }
 
   .modal-content-papers {
@@ -14309,6 +14405,11 @@ body.viewProfile .header-controls-links-link.auth span {
     grid-template-columns: 1fr;
   }
 
+  .tabsSwitcher__item {
+    width: 100%;
+    text-align: center;
+  }
+
   .coinRangs__content {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -14337,6 +14438,21 @@ body.viewProfile .header-controls-links-link.auth span {
   .mainFactorsGraph {
     height: 250px;
     margin-left: -0.5rem;
+  }
+
+  .broker-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem 0.9rem;
+  }
+
+  .broker-choose__container {
+    min-height: 6rem;
+    max-height: 6rem;
+  }
+
+  .broker-choose__container::after {
+    width: 2rem;
+    height: 2rem;
   }
 
   .btn--settings {
@@ -14507,10 +14623,7 @@ body.viewProfile .header-controls-links-link.auth span {
     grid-template-columns: 1fr;
   }
 
-  .adv-portfolio-settings__btns input[type="text"],
-  .adv-portfolio-settings__btns input[type="email"],
-  .adv-portfolio-settings__btns input[type="url"],
-  .adv-portfolio-settings__btns input[type="password"] {
+  .adv-portfolio-settings__btns input[type="text"] {
     width: 100%;
   }
 

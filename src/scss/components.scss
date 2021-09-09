@@ -832,6 +832,11 @@ $base_transition: 0.4s ease-in-out;
         position: relative;
         @include cursorPointer;
 
+        @media ($media_sm) {
+            width: 100%;
+            text-align: center;
+        }
+
         &::after {
             content: "";
             position: absolute;
@@ -841,7 +846,7 @@ $base_transition: 0.4s ease-in-out;
             height: 3px;
             background-color: transparent;
             border-radius: 1.5px;
-            transition: $base_transition;
+            //transition: $base_transition;
         }
 
         &:not(:last-child) {
@@ -862,7 +867,7 @@ $base_transition: 0.4s ease-in-out;
         text-decoration: none;
         font-weight: 500;
         color: $color_black_main;
-        transition: $base_transition;
+        //transition: $base_transition;
         padding: 0.9rem 0;
 
         &:hover {
@@ -1324,6 +1329,116 @@ $base_transition: 0.4s ease-in-out;
             @media ($media_xl) {
                 margin: 0 0 1.5rem 0;
             }
+        }
+    }
+}
+
+.broker-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 2px;
+
+    gap: 1.2rem 1.66rem;
+
+    @media ($media_sm) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.1rem 0.9rem;
+    }
+
+    &--long {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 0.9rem;
+
+        .broker-choose__container {
+            padding: 0.5rem;
+            min-height: 3.6rem;
+            max-height: 3.6rem;
+
+            &::after {
+                width: 1.7rem;
+                height: 1.7rem;
+            }
+        }
+    }
+}
+
+.broker-title {
+    margin-bottom: 1.3rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+
+    .broker-title__primary {
+        color: $color_blue;
+    }
+}
+
+.broker-choose {
+
+    // .broker-choose__radio
+
+    &__radio {
+        &:checked {
+            ~ .broker-choose__container {
+                box-shadow: 0px 0px 0px 2px $color_blue;
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    // .broker-choose__container
+
+    &__container {
+        position: relative;
+        background: $color_block_bg;
+        border-radius: 0.5rem;
+        padding: 1rem;
+
+        transition: 0.3s ease-in-out;
+        box-shadow: 0px 0px 0px 1px $color_border_dop;
+
+        @include cursorPointer();
+
+        min-height: 7.22rem;
+        max-height: 7.22rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media ($media_sm) {
+            min-height: 6rem;
+            max-height: 6rem;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 2.3rem;
+            height: 2.3rem;
+            //transition: 0.3s ease-in-out;
+
+            background-image: url(../img/broker/check.svg);
+            background-size: 100%;
+            opacity: 0;
+
+            @media ($media_sm) {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+
+    // .broker-choose__img
+
+    &__img {
+        img {
+            max-width: 100%;
         }
     }
 }

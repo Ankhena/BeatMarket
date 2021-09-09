@@ -76,8 +76,7 @@ body {
     color: $color_black_title;
 }
 
-input[type="text"],
-textarea {
+input[type="text"], input[type="email"], input[type="password"], input[type="url"], textarea {
     background: $color_white;
     border: 1px solid #d3e3ff;
     border-radius: 10px;
@@ -106,12 +105,6 @@ textarea {
     &.error {
         border-color: $color_red_border;
     }
-}
-
-input[type="email"],
-input[type="url"],
-input[type="password"] {
-    @extend input[type="text"];
 }
 
 .btn {
