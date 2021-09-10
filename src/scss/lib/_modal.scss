@@ -93,10 +93,34 @@
         justify-content: space-between;
         padding: 1.8rem 1.8rem 0;
 
+        @media ($media_sm) {
+            padding: 1.5rem 1.5rem 0;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 1.8rem;
+            color: $color_black_title;
+            opacity: 0.9;
+
+            @media ($media_xs) {
+                font-size: 1.2rem;
+            }
+        }
+
+        svg {
+            width: 1.4rem;
+            height: 1.4rem;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        
         &--mob {
+            padding: 1.8rem 1.8rem 0.5rem 0;
 
             @media ($media_sm) {
-                padding-bottom: 1.5rem;
+                padding: 1.5rem;
             }
 
             h2 {
@@ -108,30 +132,6 @@
             }
         }
 
-        @media ($media_xs) {
-            padding: 1.5rem 1.5rem 0;
-        }
-
-        h2 {
-            font-weight: bold;
-            font-size: 1.8rem;
-            color: $color_black_title;
-            opacity: 0.9;
-        }
-
-        svg {
-            width: 1.4rem;
-            height: 1.4rem;
-            cursor: pointer;
-            margin-left: auto;
-        }
-
-        @media ($media_xs) {
-
-            h2 {
-                font-size: 1.2rem;
-            }
-        }
     }
 
     &-content {

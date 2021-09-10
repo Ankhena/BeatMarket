@@ -23,6 +23,7 @@ $(document).ready(function() {
     --include("_demoGraph.js")
     --include("_mainFactorsGraph.js")
     --include("_subscribeChanger.js")
+    --include("_dopFunctional.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {

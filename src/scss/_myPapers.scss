@@ -79,6 +79,14 @@
 
         &--opened {
 
+            .statSticker__delete {
+                &:hover {
+                    .statSticker__trash {
+                        stroke: $color_white;
+                    }
+                }
+            }
+
             .statSticker__arrow {
                 transform: rotate(0deg);
                 fill: $color_blue;
@@ -376,6 +384,31 @@
 
     &__icon {
         margin-right: 0.8rem;
+    }
+
+    // .statSticker__delete
+
+    &__delete {
+        margin-left: auto;
+
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            .statSticker__trash {
+                stroke: $color_blue;
+            }
+        }
+    }
+
+    // .statSticker__trash
+
+    &__trash {
+        transition: 0.3s ease-in-out;
+        stroke: $breadcrumb_border;
+
+        width: 1.35rem;
+        height: 1.35rem;
     }
 
     // .statSticker__arrow

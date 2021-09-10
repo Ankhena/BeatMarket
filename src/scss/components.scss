@@ -1346,7 +1346,7 @@ $base_transition: 0.4s ease-in-out;
     }
 
     &--long {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(7, 1fr);
         gap: 0.9rem;
 
         .broker-choose__container {
@@ -1437,8 +1437,124 @@ $base_transition: 0.4s ease-in-out;
     // .broker-choose__img
 
     &__img {
-        img {
-            max-width: 100%;
+        max-height: inherit;
+
+        picture {
+            display: flex;
+            max-height: inherit;
+
+            img {
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.broker-whatImport {
+
+    // .broker-whatImport__items
+
+    &__items {
+        display: flex;
+
+        @media ($media_sm) {
+            flex-direction: column;
+        }
+    }
+
+    // .broker-whatImport__item
+
+    &__item {
+        flex-basis: 100%;
+
+        &:not(:last-child) {
+            margin-right: 0.9rem;
+
+            @media ($media_sm) {
+                margin: 0 0 0.9rem 0;
+            }
+        }
+    }
+
+    // .broker-whatImport__checkbox
+
+    &__checkbox {
+        &:checked {
+            ~ .broker-whatImport__choose {
+                box-shadow: 0px 0px 0px 2px $color_blue;
+
+                .broker-whatImport__text {
+                    &::before {
+                        border-color: $color_blue;
+                        background: $color_blue url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.5 4.5L6.5 11.4997L3 8' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center;
+                    }
+                }
+            }
+        }
+    }
+
+    // .broker-whatImport__choose
+
+    &__choose {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 3rem 0.5rem 3rem 2rem;
+        background: $color_block_bg;
+        box-shadow: 0px 0px 0px 1px $color_border_dop;
+        border-radius: 0.5rem;
+        @include cursorPointer();
+
+        @media ($media_sm) {
+            padding: 1rem 2rem 1rem 4rem;
+            min-height: 5rem;
+            justify-content: flex-start;
+        }
+    }
+
+    // .broker-whatImport__text
+
+    &__text {
+        position: relative;
+        display: inline-block;
+        font-weight: 500;
+        line-height: 1.5;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -0.8rem;
+            top: 50%;
+            transform: translate(-100%, -50%);
+
+            display: inline-block;
+            width: 1.33333rem;
+            height: 1.33333rem;
+            border-radius: 4px;
+            border: 1px solid $color_checkbox_border;
+            background-color: $color_white;
+        }
+    }
+
+}
+
+.contentSwitcher {
+
+    // .contentSwitcher__selector
+
+    &__selector {
+
+    }
+
+    // .contentSwitcher__container
+
+    &__container {
+        display: none;
+
+        &--visible {
+            display: block;
         }
     }
 }

@@ -830,7 +830,7 @@
                             <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
                             <div class="broker-choose__container">
                                 <div class="broker-choose__img">
-                                    <img src="./img/broker/bks.png" alt="БКС">
+                                    <img src="./img/broker/bks.svg" alt="БКС">
                                 </div>
                             </div>
                         </label>
@@ -889,6 +889,87 @@
                             </div>
                         </label>
 
+                        <label class="broker-choose">
+                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+                            <div class="broker-choose__container">
+                                <div class="broker-choose__img">
+                                    <img src="./img/broker/bks.svg" alt="БКС">
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="broker-choose">
+                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+                            <div class="broker-choose__container">
+                                <div class="broker-choose__img">
+                                    <img src="./img/broker/int_brokers.svg" alt="Interactive brokers">
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="broker-choose">
+                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+                            <div class="broker-choose__container">
+                                <div class="broker-choose__img">
+                                    <img src="./img/broker/finam.png" alt="Финам">
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="broker-choose">
+                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+                            <div class="broker-choose__container">
+                                <div class="broker-choose__img">
+                                    <img src="./img/broker/tinkoff.svg" alt="Тинькофф">
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="broker-choose">
+                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+                            <div class="broker-choose__container">
+                                <div class="broker-choose__img">
+                                    <img src="./img/broker/vtb.svg" alt="ВТБ">
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="broker-choose">
+                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+                            <div class="broker-choose__container">
+                                <div class="broker-choose__img">
+                                    <img src="./img/broker/alpha_bank.svg" alt="Альфа банк">
+                                </div>
+                            </div>
+                        </label>
+                        
+                        <label class="broker-choose">
+                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+                            <div class="broker-choose__container">
+                                <div class="broker-choose__img">
+                                    <img src="./img/broker/sber.svg" alt="Сбербанк">
+                                </div>
+                            </div>
+                        </label>
+
+                        <!-- <label class="broker-choose">
+                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+                            <div class="broker-choose__container">
+                                <div class="broker-choose__img">
+                                    <img src="./img/broker/alpha_bank.svg" alt="Альфа банк">
+                                </div>
+                            </div>
+                        </label>
+                        
+                        <label class="broker-choose">
+                            <input class="broker-choose__radio visually_hidden" type="radio" name="brokerChoose">
+                            <div class="broker-choose__container">
+                                <div class="broker-choose__img">
+                                    <img src="./img/broker/sber.svg" alt="Сбербанк">
+                                </div>
+                            </div>
+                        </label> -->
+
 
                     </div>
 
@@ -907,7 +988,93 @@
                     </form>
                     
                     <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
-                        <div>Не похоже, что это формат установленного образца. Проверьте правильность заполнения данных и повторите попытку</div>
+                        <div>Не похоже, что это формат выбранного брокера. Проверьте файл брокера и повторите попытку</div>
+                    </div>
+
+                    <div class="modal-content-buttons use_mt">
+                        <button class="btn btn_blue btn_short">Импортировать</button>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal import" id="modal_import_combo_table">
+    <div class="modal-header modal-header--mob">
+        <h2>Импорт</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+        <div class="tabs">
+            <ul class="tabs__switcher tabsSwitcher tabsSwitcher--buttons">
+                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#tabs-broker">Брокерский отчет</a></li>
+                <li class="tabsSwitcher__item"><a class="tabsSwitcher__link" href="#tabs-import">Импорт из файла</a></li>
+            </ul>
+    
+            <div class="tabs__content">
+
+                <div id="tabs-import">
+    
+                    <div class="modal-content-import use_mt_first">
+                        @@include("_modalImportTable.html")
+                    </div>
+            
+                    <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
+                        <div>Компании обозначенные красным цветом не удалось импортировать. Попробуйте внести их вручную или напишите нам - <a href="#">support@beatmarket.one</a></div>
+                    </div>
+                    
+                    <div class="modal-content-buttons use_mt">
+                        <button class="btn btn_blue btn_short" disabled>Сохранить</button>
+                        <button class="btn gray btn_short">Отменить</button>
+                    </div>
+                </div>
+
+                <div id="tabs-broker">
+
+                    <div class="broker-whatImport contentSwitcher">
+                        <h3 class="broker-title">Что импортируем</h3>
+                        <div class="broker-whatImport__items">
+                            <label class="broker-whatImport__item">
+                                <input class="contentSwitcher__selector broker-whatImport__checkbox visually_hidden" type="checkbox">
+                                <div class="broker-whatImport__choose">
+                                    <span class="broker-whatImport__text">Остаток активов на начало периода</span>
+                                </div>
+                            </label>
+                            <label class="broker-whatImport__item">
+                                <input class="contentSwitcher__selector broker-whatImport__checkbox visually_hidden" type="checkbox">
+                                <div class="broker-whatImport__choose">
+                                    <span class="broker-whatImport__text">Операции за отчетный период</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="contentSwitcher__container use_mt">
+                        <h3 class="broker-title">Остаток активов на начало периода</h3>
+                        <div class="modal-content-import">
+                            @@include("_modalImportTable.html")
+                        </div>
+                        <div class="modal-content-prompt use_mt portfolio__prompt-sticky prompt prompt--danger">
+                            <div> Найдено несколько компаний с одинаковым тикером <a href="#">AMGN</a>. Удалите часть из них, если это ошибка</div>
+                        </div>
+                        <div class="modal-content-prompt portfolio__prompt-sticky prompt prompt--danger">
+                            <div>Компании обозначенные красным цветом не удалось импортировать. Попробуйте внести их вручную или напишите нам - <a href="#">support@beatmarket.one</a></div>
+                        </div>
+                    </div>
+
+                    <div class="contentSwitcher__container use_mt">
+                        <h3 class="broker-title">Операции за отчетный период</h3>
+                        <div class="modal-content-import">
+                            @@include("_modalImportTable.html")
+                        </div>
+                    </div>
+
+                    <div class="modal-content-buttons use_mt">
+                        <button class="btn btn_blue btn_short" disabled>Сохранить</button>
+                        <button class="btn gray btn_short" disabled>Отменить</button>
                     </div>
 
                 </div>
