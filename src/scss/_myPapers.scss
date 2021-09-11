@@ -1044,18 +1044,37 @@ $banch_items_height: 60px;
 .paperDontTrade {
     position: relative;
     display: flex;
+    cursor: pointer;
 
-    // .paperDontTrade__icon
+    @media ($media_sm) {
+        cursor: initial;
+    }
 
-    &__icon {
-    
-        &:hover {
-    
+    &--space {
+        margin-right: 0.7rem;
+        align-self: flex-start;
+
+        .paperDontTrade__icon {
+            min-width: 1.75rem;
+            max-width: 1.75rem;
+            height: 1.75rem;
+        }
+    }
+
+    &:hover {
+
+        .paperDontTrade__icon {
             ~ .paperDontTrade__popup {
                 opacity: 1;
                 visibility: visible;
             }
         }
+    }
+
+    // .paperDontTrade__icon
+
+    &__icon {
+
     }
 
     // .paperDontTrade__popup
@@ -1070,15 +1089,17 @@ $banch_items_height: 60px;
         border: 1px solid $color_block_border;
         box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
         border-radius: 0.5rem;
-        padding: 1.1rem;
+        padding: 0.8rem 1.1rem;
         z-index: 1;
         font-weight: 400;
         color: $color_black_main;
         line-height: 1.4;
+        font-size: 0.9rem;
     
         visibility: hidden;
         opacity: 0;
-        width: 18rem;
+        width: max-content;
+        max-width: 20rem;
         white-space: normal;
 
         &--link {
