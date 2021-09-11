@@ -673,6 +673,9 @@ input[type="radio"]:checked {
     flex-direction: column;
 
     .btn {
+        max-width: 100%;
+        white-space: pre-wrap;
+
         &:not(:last-child) {
             margin-bottom: 1rem;
         }

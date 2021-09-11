@@ -241,6 +241,22 @@
                 display: flex;
                 flex-wrap: wrap;
 
+                &.withIcon {
+                    flex-wrap: nowrap;
+
+                    svg {
+                        width: 1.8rem;
+                        height: 1.8rem;
+
+                        @media ($media_sm) {
+                            min-width: 1.8rem;
+                            max-width: 1.8rem;
+                        }
+
+                        margin-right: 0.9rem;
+                    }
+                }
+
                 p {
                     line-height: 1.6;
     

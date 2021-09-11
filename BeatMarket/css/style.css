@@ -1409,6 +1409,11 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
           flex-direction: column;
 }
 
+.modals_preview .btn {
+  max-width: 100%;
+  white-space: pre-wrap;
+}
+
 .modals_preview .btn:not(:last-child) {
   margin-bottom: 1rem;
 }
@@ -2596,6 +2601,17 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.modal-content-banner-info.withIcon {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.modal-content-banner-info.withIcon svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 0.9rem;
 }
 
 .modal-content-banner-info p {
@@ -9349,6 +9365,29 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   display: block;
 }
 
+.settings-comission {
+  background: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  border-radius: 1rem;
+  padding: 1.35rem;
+}
+
+.settings-comission__elem:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.settings-comission__title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  padding-bottom: 0.7rem;
+}
+
+.settings-comission__text {
+  font-weight: 500;
+  color: #929398;
+  line-height: 1.6;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   vertical-align: middle;
@@ -13292,6 +13331,11 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .modal-content--withoutHeader {
     margin-top: 1.5rem;
+  }
+
+  .modal-content-banner-info.withIcon svg {
+    min-width: 1.8rem;
+    max-width: 1.8rem;
   }
 
   .modal-content-papers {

@@ -1558,3 +1558,32 @@ $base_transition: 0.4s ease-in-out;
         }
     }
 }
+
+.settings-comission {
+    background: $color_block_bg;
+    border: 1px solid $color_block_border;
+    border-radius: 1rem;
+    padding: 1.35rem;
+
+    // .settings-comission__elem
+
+    &__elem {
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    // .settings-comission__title
+
+    &__title {
+        font-size: 1.35rem;
+        font-weight: 600;
+        padding-bottom: 0.7rem;
+    }
+
+    &__text {
+        font-weight: 500;
+        color: $color_grey;
+        line-height: 1.6;
+    }
+}
