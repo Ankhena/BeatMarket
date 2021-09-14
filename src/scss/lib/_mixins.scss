@@ -1488,7 +1488,7 @@ input[type="radio"]:checked {
     left: 0;
     bottom: -0.5rem;
     transform: translateY(100%);
-    z-index: 1;
+    z-index: 12;
 
     background: $color_block_bg;
     border: 1px solid $color_block_border;
@@ -1496,10 +1496,19 @@ input[type="radio"]:checked {
     border-radius: 10px;
     padding: 1rem;
 
+    h4 {
+        &.selectDropdown-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: $color_black_title;
+            margin-bottom: 0.8rem;
+        }
+    }
+
     &-item {
         display: flex;
         width: 100%;
-        padding: 0.5rem 0;
+        padding: 0.6rem 0;
         cursor: pointer;
 
         @media ($media_sm) {
@@ -1510,6 +1519,7 @@ input[type="radio"]:checked {
             padding-left: 2rem;
             font-weight: 500;
             white-space: nowrap;
+            font-size: 0.9rem;
         }
 
         &.border {

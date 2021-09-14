@@ -17,7 +17,7 @@ function dopFunctional() {
         item.addEventListener("change", () => {
             contentSwitcherContainer[id].classList.toggle("contentSwitcher__container--visible")
         });
-    })
+    });
 }
 
 dopFunctional();
