@@ -18,6 +18,21 @@ function dopFunctional() {
             contentSwitcherContainer[id].classList.toggle("contentSwitcher__container--visible")
         });
     });
+
+    ////////// ПЕРЕКЛЮЧАТЕЛЬ ГЛАВНОГО ГРАФИКА /////////////////////////
+
+    let mainGraphSwitcherHeader = document.querySelectorAll(".mainGraphTypeChoose__item--header");
+    let mainGraphSwitcherItems = document.querySelectorAll(".mainGraphTypeChoose__content .mainGraphTypeChoose__item");
+
+    mainGraphSwitcherItems.forEach(item => {
+        item.addEventListener("click", function() {
+            mainGraphSwitcherHeader[0].innerHTML = item.innerHTML; // меняем header на нужный
+
+            mainGraphSwitcherItems.forEach(elem => {
+                elem.classList.toggle("mainGraphTypeChoose__item--active"); // переключаем активный класс
+            });
+        });
+    });
 }
 
 dopFunctional();

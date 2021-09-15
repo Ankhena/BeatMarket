@@ -411,7 +411,21 @@
             <path d="M1.11247 19.919C1.75762 19.2848 2.47127 18.8949 3.20189 18.4957C4.03615 18.0399 4.89253 17.572 5.69432 16.7145C6.16432 16.2524 6.62994 15.6293 7.10045 14.9996C8.01326 13.778 8.94449 12.5317 9.96192 12.3891C11.041 12.2379 12.2002 13.1128 13.3789 14.0024C14.0527 14.5109 14.7329 15.0243 15.4081 15.3534C17.1421 16.5083 18.8381 16.2706 19.9318 12.8559C20.4702 11.5066 20.9293 9.59126 21.381 7.70677C22.0031 5.11117 22.6112 2.57402 23.3932 1.65463C24.4192 0.732839 25.6763 1.96137 26.9607 3.21658C27.5992 3.84056 28.2445 4.47113 28.8714 4.84742C29.7224 5.31059 30.5319 5.19717 31.3414 5.08375C32.1509 4.97033 32.9603 4.85691 33.8113 5.32008C34.5929 5.70103 35.4368 6.52757 36.2672 7.34078C37.4089 8.45891 38.5249 9.55185 39.4176 9.42677C40.2656 9.30795 40.947 8.28062 41.6285 7.2533C41.706 7.13639 41.7836 7.01948 41.8614 6.90391" stroke-width="2" stroke-linecap="round"/>
         </symbol>
 
+        <symbol id="icon-graphChartBar" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.125 19.5V12.75H9.375" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21.375 19.5H2.625" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.375 19.5V8.25H14.625" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.875 3.75H14.625V19.5H19.875V3.75Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
 
+        <symbol id="icon-graphChartLine" width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.49826 14.9996L5.32347 8.86391L8.41461 12.326L11.7249 6.69622L15.8168 13.4353L22 2.00049" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+        <symbol id="icon-graphChartForecast" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.0002 19.5H3.00024V4.5" stroke="#3E54D8" stroke-width="1.45868" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21.0002 9L15.0002 14.25L9.00024 9.75L3.00024 15" stroke="#3E54D8" stroke-width="1.45868" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
 
 
         <linearGradient id="paint0_linear" x1="12.4453" y1="6.77886" x2="17.4875" y2="11.9736" gradientUnits="userSpaceOnUse">

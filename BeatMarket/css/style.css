@@ -9414,6 +9414,582 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   line-height: 1.6;
 }
 
+.moneyStat__name {
+  font-size: 0.77rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.moneyStat__value {
+  font-size: 1.33rem;
+  font-weight: 700;
+}
+
+.moneyStat__value--success {
+  color: #199F27;
+}
+
+.moneyStat__value--error {
+  color: #ED6373;
+}
+
+.moneyStat__value--xl {
+  color: #24252E;
+  font-size: 2.77rem;
+}
+
+.mainPromo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainPromo__stat {
+  position: relative;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainPromo__graphArea {
+  -ms-flex-preferred-size: 67%;
+      flex-basis: 67%;
+  margin-left: 1.77rem;
+}
+
+.mainPromo__settings {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.mainPromo__settings .stategyPromo-graph-values-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainPromo__moneyInfo {
+  margin-bottom: 1.77rem;
+}
+
+.mainPromo__moneyItem:not(:last-child) {
+  margin-bottom: 1.33rem;
+}
+
+.mainPromo__moneyItem--xl .moneyStat__value {
+  color: #24252E;
+  font-size: 2.77rem;
+}
+
+.mainPromo__moneyItem--xl:not(:last-child) {
+  margin-bottom: 1.77rem;
+}
+
+.mainPromo__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: auto;
+}
+
+.mainPromo__buttons .mainPromo__button.btnAddStrategy {
+  stroke: #8C9BEA;
+  width: 100%;
+}
+
+.mainPromo__buttons .mainPromo__button.btnAddStrategy span {
+  color: #3E54D8;
+  padding-left: 0.9rem;
+}
+
+.mainPromo__buttons .mainPromo__button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.mainPromo__button {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.9rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainPromo__button svg {
+  width: 32px;
+  height: 32px;
+}
+
+.btnShare input[type="checkbox"]:checked ~ .dropdown {
+  display: block;
+}
+
+.btnShare .dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  background: #FCFDFF;
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+          box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+  border-radius: 10px;
+  padding: 1.8rem 1rem;
+  z-index: 1;
+}
+
+.btnShare .dropdown--fullWidth {
+  min-width: 28rem;
+}
+
+.btnShare .dropdown--fullWidth .dropdown-link {
+  margin: 0;
+}
+
+.btnShare .dropdown-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btnShare .dropdown-social-icon {
+  padding: 0 1.5rem;
+}
+
+.btnShare .dropdown-social-icon:not(:last-child) {
+  border-right: 1px solid #E6EEFF;
+}
+
+.btnShare .dropdown-social-icon svg {
+  fill: #3E54D8;
+}
+
+.btnShare .dropdown-social-icon svg:hover {
+  fill: #2235a8;
+}
+
+.btnShare .dropdown-link {
+  margin: 1.5rem 0;
+}
+
+.btnShare .dropdown-link-title {
+  margin-bottom: 0.8rem;
+}
+
+.btnShare .dropdown-link-title h5 {
+  color: #929398;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.btnShare .dropdown-link-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btnShare .dropdown-link-form input {
+  color: #3E54D8;
+  padding: 16px 20px;
+}
+
+.btnShare .dropdown-link-form button {
+  padding: 0.6rem;
+  margin-left: 0.8rem;
+}
+
+.btnShare .dropdown-link-form button svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  stroke: #373943;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  fill: none;
+}
+
+.btnShare .dropdown-link-form button:hover,
+.btnShare .dropdown-link-form button:focus {
+  background-color: #3E54D8;
+  border-color: #3E54D8;
+}
+
+.btnShare .dropdown-link-form button:hover svg,
+.btnShare .dropdown-link-form button:focus svg {
+  stroke: #fff;
+}
+
+.btnShare .dropdown-share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btnShare .dropdown-share h5 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.btnShare .dropdown-share-toggle input {
+  display: none;
+}
+
+.btnShare .dropdown-share-toggle label {
+  cursor: pointer;
+  padding-right: 35px;
+  position: relative;
+  display: block;
+  font-size: 18px;
+  padding: 10px 0;
+  margin-left: 4.5rem;
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.btnShare .dropdown-share-toggle input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden !important;
+}
+
+.btnShare .dropdown-share-toggle input[type="checkbox"] + label:before,
+.btnShare .dropdown-share-toggle input[type="checkbox"] + label:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.btnShare .dropdown-share-toggle input[type="checkbox"] + label::before {
+  width: 55px;
+  height: 30px;
+  right: 0px;
+  background: #929398;
+  border: 2px solid #929398;
+  border-radius: 30px;
+}
+
+.btnShare .dropdown-share-toggle input[type="checkbox"] + label::after {
+  width: 26px;
+  height: 26px;
+  right: 27px;
+  top: 12px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.btnShare .dropdown-share-toggle input[type="checkbox"]:checked + label::after {
+  right: 2px;
+}
+
+.btnShare .dropdown-share-toggle input[type="checkbox"]:checked + label::before {
+  background: #3E54D8;
+  border: 2px solid #3E54D8;
+}
+
+.promoGraphArea {
+  overflow: initial;
+}
+
+.promoGraphArea__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.promoGraphArea__settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.promoGraphArea__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #D3E3FF;
+  width: 100%;
+}
+
+.promoGraphArea__graphParams {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.promoGraphArea__selector:not(:last-child) {
+  margin-right: 1.2rem;
+}
+
+.promoGraphArea__chooseDate {
+  height: 100%;
+  margin-left: auto;
+}
+
+.promoGraphArea__chooseDate .stategyPromo-graph-info-content-choose {
+  height: 100%;
+}
+
+.promoGraphArea__dividends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.promoGraphArea__dividends .selectDropdown-item {
+  width: auto;
+  padding: 1.2rem 0 0.2rem 0;
+}
+
+.promoGraphArea__graph {
+  height: 20rem;
+}
+
+.promoGraphArea__graph .highcharts-point {
+  opacity: 0;
+}
+
+.promoGraphArea__graph .highcharts-point-hover {
+  opacity: 1;
+}
+
+.promoGraphArea__graph .highcharts-legend-item .highcharts-point {
+  opacity: 1;
+}
+
+.promoGraphArea__graph .highcharts-legend-item span {
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  padding-left: 0.3rem;
+  -webkit-transform: translateY(-0.1rem);
+      -ms-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+  color: #24252E !important;
+}
+
+.promoGraphArea__graph .highcharts-axis-labels {
+  font-weight: 500;
+}
+
+.promoGraphArea__graph g.highcharts-tooltip {
+  display: none;
+}
+
+.promoGraphArea__graph .highcharts-xaxis .highcharts-axis-line,
+.promoGraphArea__graph .highcharts-grid-line {
+  stroke: #EAF1FE !important;
+}
+
+.promoGraphArea__graph .highcharts-tooltip > span {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 12px 23px -9px rgba(152, 170, 203, 0.3);
+          box-shadow: 0px 12px 23px -9px rgba(152, 170, 203, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 1.3rem;
+  padding: 1rem 1.2rem;
+  font-size: 0.9rem !important;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.promoGraphArea__graph .highcharts-tooltip > span span:first-child {
+  font-size: 0.9rem !important;
+  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: .4rem;
+}
+
+.promoGraphArea__graph .highcharts-tooltip > span br + span {
+  font-size: 1.2rem;
+}
+
+.mainGraphTypeChoose {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.mainGraphTypeChoose__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.7rem 0;
+}
+
+.mainGraphTypeChoose__content {
+  display: none;
+  padding: 1.3rem;
+  background-color: #FCFDFF;
+  -webkit-box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+          box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+  border-radius: 0.6rem;
+  border: 1px solid #D3E3FF;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  z-index: 1;
+}
+
+.mainGraphTypeChoose__content .mainGraphTypeChoose__item:not(:last-child) {
+  margin-bottom: 1.1rem;
+}
+
+.mainGraphTypeChoose__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainGraphTypeChoose__item--header .mainGraphTypeChoose__name,
+.mainGraphTypeChoose__item--active .mainGraphTypeChoose__name,
+.mainGraphTypeChoose__item:hover .mainGraphTypeChoose__name {
+  color: #3E54D8;
+}
+
+.mainGraphTypeChoose__item--header .mainGraphTypeChoose__icon,
+.mainGraphTypeChoose__item--active .mainGraphTypeChoose__icon,
+.mainGraphTypeChoose__item:hover .mainGraphTypeChoose__icon {
+  stroke: #3E54D8;
+}
+
+.mainGraphTypeChoose__switcher:checked ~ .mainGraphTypeChoose__content {
+  display: block;
+}
+
+.mainGraphTypeChoose__switcher:checked ~ .mainGraphTypeChoose__header .mainGraphTypeChoose__arrow svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.mainGraphTypeChoose__icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  stroke: #929398;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.mainGraphTypeChoose__name {
+  color: #929398;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-left: 0.6rem;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.mainGraphTypeChoose__arrow {
+  margin-left: 0.5rem;
+}
+
+.mainGraphTypeChoose__arrow svg {
+  width: 0.65rem;
+  height: 0.65rem;
+  fill: #3E54D8;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.forecastGraph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.forecastGraph--disabled .forecastGraph__content {
+  opacity: 0.6;
+}
+
+.forecastGraph__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.forecastGraph__icon {
+  width: 1.33rem;
+  height: 1.33rem;
+}
+
+.forecastGraph__name {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  color: #3E54D8;
+}
+
+.forecastGraph__question {
+  margin-left: 0.5rem;
+}
+
+.forecastGraph__question .paperDontTrade__icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  stroke: #929398;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   vertical-align: middle;
@@ -12283,6 +12859,14 @@ body.viewProfile .header-controls-links-link.auth span {
     cursor: pointer;
   }
 
+  .mainGraphTypeChoose__header {
+    cursor: pointer;
+  }
+
+  .mainGraphTypeChoose__item {
+    cursor: pointer;
+  }
+
   body.topNav .page_title {
     display: none;
   }
@@ -12463,6 +13047,33 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .doubleBlockMd__elem:not(:last-child) {
     margin: 0 0 1.5rem 0;
+  }
+
+  .mainPromo__stat {
+    -ms-flex-preferred-size: 38%;
+        flex-basis: 38%;
+  }
+
+  .mainPromo__graphArea {
+    -ms-flex-preferred-size: 62%;
+        flex-basis: 62%;
+  }
+
+  .promoGraphArea__chooseInfo .stategyPromo-graph-info-btn {
+    padding: 1rem;
+  }
+
+  .promoGraphArea__selector .mainGraphTypeChoose__name,
+  .promoGraphArea__selector .forecastGraph__name {
+    display: none;
+  }
+
+  .promoGraphArea__dividends .selectDropdown-item {
+    padding: 1.5rem 0 0.2rem 0;
+  }
+
+  .promoGraphArea__graph {
+    height: 22rem;
   }
 
   .apr-share::before {
@@ -14747,6 +15358,91 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+
+  .mainPromo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .mainPromo__graphArea {
+    margin: 2.2rem 0 0;
+  }
+
+  .mainPromo__settings .stategyPromo-graph-values-btn {
+    -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+            transform: translateX(50%);
+    top: -5rem;
+  }
+
+  .mainPromo__button {
+    padding: 0.8rem;
+  }
+
+  .mainPromo__button .btn,
+  .mainPromo__button.btn {
+    width: auto;
+  }
+
+  .btnShare .dropdown {
+    right: 0;
+    left: unset;
+    min-width: calc(100vw - 2rem - 4px);
+    max-width: calc(100vw - 2rem - 4px);
+  }
+
+  .btnShare .dropdown--fullWidth {
+    min-width: 90vw;
+    max-width: 90vw;
+  }
+
+  .promoGraphArea__settings {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .promoGraphArea__options {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .promoGraphArea__chooseInfo .stategyPromo-graph-info-btn {
+    width: 100%;
+  }
+
+  .promoGraphArea__graphParams {
+    padding: 1rem 0 0.5rem 0;
+  }
+
+  .promoGraphArea__selector .mainGraphTypeChoose__name,
+  .promoGraphArea__selector .forecastGraph__name {
+    display: block;
+  }
+
+  .promoGraphArea__chooseDate {
+    width: 100%;
+  }
+
+  .promoGraphArea__dividends {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .promoGraphArea__graph {
+    height: 25rem;
+  }
+
+  .forecastGraph__question .paperDontTrade__popup {
+    right: 0;
+    left: unset;
   }
 
   .btn--settings {
