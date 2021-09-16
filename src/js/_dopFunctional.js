@@ -23,13 +23,15 @@ function dopFunctional() {
 
     let mainGraphSwitcherHeader = document.querySelectorAll(".mainGraphTypeChoose__item--header");
     let mainGraphSwitcherItems = document.querySelectorAll(".mainGraphTypeChoose__content .mainGraphTypeChoose__item");
+    let mainGraphContent = document.querySelectorAll(".promoGraphArea__graphContent");
 
     mainGraphSwitcherItems.forEach(item => {
         item.addEventListener("click", function() {
             mainGraphSwitcherHeader[0].innerHTML = item.innerHTML; // меняем header на нужный
 
-            mainGraphSwitcherItems.forEach(elem => {
+            mainGraphSwitcherItems.forEach((elem, i) => {
                 elem.classList.toggle("mainGraphTypeChoose__item--active"); // переключаем активный класс
+                mainGraphContent[i].classList.toggle("promoGraphArea__graphContent--disabled");
             });
         });
     });

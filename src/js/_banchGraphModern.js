@@ -1,5 +1,5 @@
 function initBanchGraphModern() {
-    let graphContent = document.querySelector(".banchGraph-content");
+    let graphContent = document.querySelector(".banchGraph .banchGraph-content");
 
     if (graphContent === null) {
         return false;
@@ -15,6 +15,9 @@ function initBanchGraphModern() {
                 name: "Мой портфель",
                 data: [32.56, 4.44, 6.18, -10.22, 10.23, 12.22, 32.56, 4.44, 6.18, -10.22, 10.23, 12.22],
                 color: 'rgba(62, 84, 216, 0.8)',
+                marker: {
+                    symbol: 'circle'
+                }
             },
             {
                 name: "S&P 500",
@@ -25,7 +28,7 @@ function initBanchGraphModern() {
     }
 
     function fillDescrItems() {
-        const items = document.querySelector(".banchGraph-descr-items");
+        const items = document.querySelector(".banchGraph .banchGraph-descr-items");
 
         banchGraphData.plots.forEach(item => {
             let elem = document.createElement("span");
@@ -37,7 +40,7 @@ function initBanchGraphModern() {
     }
 
     function fillDescrSummaryContent() {
-        const content = document.querySelector(".banchGraph-descr-summary-content");
+        const content = document.querySelector(".banchGraph .banchGraph-descr-summary-content");
 
         banchGraphData.plots.forEach(item => {
             let elem = document.createElement("span");

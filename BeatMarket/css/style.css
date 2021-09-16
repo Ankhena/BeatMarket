@@ -6351,7 +6351,6 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .banchGraph-descr-percent {
-  height: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6374,7 +6373,6 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .banchGraph-descr-items {
-  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6417,6 +6415,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .banchGraph-descr-items-item.primary::before {
   background-color: #687ae1;
+}
+
+.banchGraph-descr-items-item:not(:last-child) {
+  margin-bottom: 0.8rem;
 }
 
 .banchGraph-content {
@@ -6524,7 +6526,6 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .banchGraph-content-item-stat {
   font-size: 0.9rem;
-  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6547,6 +6548,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .banchGraph-content-item-stat span.error {
   color: #ED6373;
+}
+
+.banchGraph-content-item-stat span:not(:last-child) {
+  margin-bottom: 0.8rem;
 }
 
 .paperDontTrade {
@@ -9709,10 +9714,6 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   border: 2px solid #3E54D8;
 }
 
-.promoGraphArea {
-  overflow: initial;
-}
-
 .promoGraphArea__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9776,23 +9777,34 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   padding: 1.2rem 0 0.2rem 0;
 }
 
-.promoGraphArea__graph {
+.promoGraphArea__graphBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.promoGraphArea__graphContent--disabled {
+  display: none;
+}
+
+.promoGraphArea__graphLinear {
   height: 20rem;
 }
 
-.promoGraphArea__graph .highcharts-point {
+.promoGraphArea__graphLinear .highcharts-point {
   opacity: 0;
 }
 
-.promoGraphArea__graph .highcharts-point-hover {
+.promoGraphArea__graphLinear .highcharts-point-hover {
   opacity: 1;
 }
 
-.promoGraphArea__graph .highcharts-legend-item .highcharts-point {
+.promoGraphArea__graphLinear .highcharts-legend-item .highcharts-point {
   opacity: 1;
 }
 
-.promoGraphArea__graph .highcharts-legend-item span {
+.promoGraphArea__graphLinear .highcharts-legend-item span {
   font-size: 0.9rem !important;
   font-weight: 400 !important;
   padding-left: 0.3rem;
@@ -9802,20 +9814,32 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   color: #24252E !important;
 }
 
-.promoGraphArea__graph .highcharts-axis-labels {
+.promoGraphArea__graphLinear .highcharts-legend-item span.legendPercent {
+  font-weight: 500 !important;
+}
+
+.promoGraphArea__graphLinear .highcharts-legend-item span.legendPercent.success {
+  color: #199F27 !important;
+}
+
+.promoGraphArea__graphLinear .highcharts-legend-item span.legendPercent.error {
+  color: #ED6373 !important;
+}
+
+.promoGraphArea__graphLinear .highcharts-axis-labels {
   font-weight: 500;
 }
 
-.promoGraphArea__graph g.highcharts-tooltip {
+.promoGraphArea__graphLinear g.highcharts-tooltip {
   display: none;
 }
 
-.promoGraphArea__graph .highcharts-xaxis .highcharts-axis-line,
-.promoGraphArea__graph .highcharts-grid-line {
+.promoGraphArea__graphLinear .highcharts-xaxis .highcharts-axis-line,
+.promoGraphArea__graphLinear .highcharts-grid-line {
   stroke: #EAF1FE !important;
 }
 
-.promoGraphArea__graph .highcharts-tooltip > span {
+.promoGraphArea__graphLinear .highcharts-tooltip > span {
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid #D3E3FF;
   -webkit-box-shadow: 0px 12px 23px -9px rgba(152, 170, 203, 0.3);
@@ -9829,7 +9853,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   z-index: 10;
 }
 
-.promoGraphArea__graph .highcharts-tooltip > span span:first-child {
+.promoGraphArea__graphLinear .highcharts-tooltip > span span:first-child {
   font-size: 0.9rem !important;
   font-weight: 500;
   display: -webkit-inline-box;
@@ -9838,7 +9862,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   margin-bottom: .4rem;
 }
 
-.promoGraphArea__graph .highcharts-tooltip > span br + span {
+.promoGraphArea__graphLinear .highcharts-tooltip > span br + span {
   font-size: 1.2rem;
 }
 
@@ -13072,7 +13096,7 @@ body.viewProfile .header-controls-links-link.auth span {
     padding: 1.5rem 0 0.2rem 0;
   }
 
-  .promoGraphArea__graph {
+  .promoGraphArea__graphLinear {
     height: 22rem;
   }
 
@@ -15436,8 +15460,12 @@ body.viewProfile .header-controls-links-link.auth span {
             justify-content: flex-start;
   }
 
-  .promoGraphArea__graph {
-    height: 25rem;
+  .promoGraphArea__graphBar {
+    margin-top: 1.2rem;
+  }
+
+  .promoGraphArea__graphLinear {
+    height: auto;
   }
 
   .forecastGraph__question .paperDontTrade__popup {

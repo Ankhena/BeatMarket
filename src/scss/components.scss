@@ -1941,7 +1941,7 @@ $base_transition: 0.4s ease-in-out;
 }
 
 .promoGraphArea {
-    overflow: initial;
+    //overflow: initial;
 
     // .promoGraphArea__content
 
@@ -2052,9 +2052,35 @@ $base_transition: 0.4s ease-in-out;
         }
     }
 
-    // .promoGraphArea__graph
+    // .promoGraphArea__graphs
 
-    &__graph {
+    &__graphs {
+        
+    }
+
+    // .promoGraphArea__graphBar
+
+    &__graphBar {
+        display: flex;
+        margin-bottom: 0.5rem;
+        
+        @media ($media_sm) {
+            margin-top: 1.2rem;
+        }
+    }
+
+    // .promoGraphArea__graphContent
+
+    &__graphContent {
+
+        &--disabled {
+            display: none;
+        }
+    }
+
+    // .promoGraphArea__graphLinear
+
+    &__graphLinear {
         height: 20rem;
 
         @media ($media_xl) {
@@ -2062,7 +2088,7 @@ $base_transition: 0.4s ease-in-out;
         }
 
         @media ($media_sm) {
-            height: 25rem;
+            height: auto;
         }
     
         .highcharts-point {
@@ -2087,6 +2113,18 @@ $base_transition: 0.4s ease-in-out;
                 padding-left: 0.3rem;
                 transform: translateY(-0.1rem);
                 color: $color_black_title !important;
+
+                &.legendPercent {
+                    font-weight: 500 !important;
+
+                    &.success {
+                        color: $color_green !important;
+                    }
+
+                    &.error {
+                        color: $color_red !important;
+                    }
+                }
             }
         }
 

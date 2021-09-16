@@ -435,7 +435,7 @@ if (myGraph !== null) {
 
 initInputCounter();
     function initBanchGraphModern() {
-    let graphContent = document.querySelector(".banchGraph-content");
+    let graphContent = document.querySelector(".banchGraph .banchGraph-content");
 
     if (graphContent === null) {
         return false;
@@ -451,6 +451,9 @@ initInputCounter();
                 name: "Мой портфель",
                 data: [32.56, 4.44, 6.18, -10.22, 10.23, 12.22, 32.56, 4.44, 6.18, -10.22, 10.23, 12.22],
                 color: 'rgba(62, 84, 216, 0.8)',
+                marker: {
+                    symbol: 'circle'
+                }
             },
             {
                 name: "S&P 500",
@@ -461,7 +464,7 @@ initInputCounter();
     }
 
     function fillDescrItems() {
-        const items = document.querySelector(".banchGraph-descr-items");
+        const items = document.querySelector(".banchGraph .banchGraph-descr-items");
 
         banchGraphData.plots.forEach(item => {
             let elem = document.createElement("span");
@@ -473,7 +476,7 @@ initInputCounter();
     }
 
     function fillDescrSummaryContent() {
-        const content = document.querySelector(".banchGraph-descr-summary-content");
+        const content = document.querySelector(".banchGraph .banchGraph-descr-summary-content");
 
         banchGraphData.plots.forEach(item => {
             let elem = document.createElement("span");
@@ -1927,13 +1930,15 @@ initSubscribeChanger();
 
     let mainGraphSwitcherHeader = document.querySelectorAll(".mainGraphTypeChoose__item--header");
     let mainGraphSwitcherItems = document.querySelectorAll(".mainGraphTypeChoose__content .mainGraphTypeChoose__item");
+    let mainGraphContent = document.querySelectorAll(".promoGraphArea__graphContent");
 
     mainGraphSwitcherItems.forEach(item => {
         item.addEventListener("click", function() {
             mainGraphSwitcherHeader[0].innerHTML = item.innerHTML; // меняем header на нужный
 
-            mainGraphSwitcherItems.forEach(elem => {
+            mainGraphSwitcherItems.forEach((elem, i) => {
                 elem.classList.toggle("mainGraphTypeChoose__item--active"); // переключаем активный класс
+                mainGraphContent[i].classList.toggle("promoGraphArea__graphContent--disabled");
             });
         });
     });
@@ -1941,118 +1946,302 @@ initSubscribeChanger();
 
 dopFunctional();
     function mainPromoGraph() {
-    const graphName = "mainPromoGraph";
-    const baseSeries = [
-        {
-            name: 'Портфель',
-            marker: {
-                symbol: 'circle'
-            },
-            data: [1500, 2100, 3500, 5500, 4200, 6500, 7200],
-            color: "#3E54D8"
-        },
-        {
-            name: 'S&P 500',
-            marker: {
-                symbol: 'circle'
-            },
-            data: [2200, 2300, 5200, 3700, 4000, 7800, 3800],
-            color: "#DE4355"
-        },
-        {
-            name: 'Советник',
-            marker: {
-                symbol: 'circle'
-            },
-            data: [4200, 3300, 1200, 7700, 2000, 5800, 1800],
-            color: "#199F27"
-        }
-    ];
 
-    const myRenderGraph = document.querySelector(`#${graphName}`);
-    const myRenderGraphCategories = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
-    const myRenderShowYLine = true; // если нужен показ верт. линий в графе, ставим true
+    const banchGraphData = { // общие данные для промо графика (линейного и столбчатого)
+        names: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+        plots: [
+            {
+                name: 'Портфель',
+                marker: {
+                    symbol: 'circle'
+                },
+                data: [32.56, 4.44, 6.18, -10.22, 10.23, 12.22, 32.56],
+                color: "#3E54D8"
+            },
+            {
+                name: 'S&P 500',
+                marker: {
+                    symbol: 'circle'
+                },
+                data: [-12.22, 5.12, -5.22, -7.22, 16.23, -12.22, 18.56],
+                color: "#DE4355"
+            },
+            {
+                name: 'Советник',
+                marker: {
+                    symbol: 'circle'
+                },
+                data: [5.12, -7.22, -12.22, -5.15, 2.77, 4.18, 15.22],
+                color: "#199F27"
+            }
+        ]
+    }
+
+    // ЛИНЕЙНЫЙ ГРАФИК
+
+    function fillLinearGraphInfo(name, id) {
+        let sum = banchGraphData.plots[id].data.reduce((item, accum) => item + accum).toFixed(2);
+        let className = sum > 0 ? "success" : "error";
+        return `${name} <span class="legendPercent ${className}">${sum}%</span>`
+    }
+
+    function renderLinearGraph(graphName, renderShowYLine) { // params: [string: id графика линейного, boolean: рисовать верт. линии]
+        let myRenderGraph = document.querySelector(`#${graphName}`);
+
+        if (myRenderGraph !== null) {
+            Highcharts.chart(graphName, {
+                chart: {
+                    type: 'spline',
+                    style: { "fontFamily": "Montserrat" },
+                },
+                credits: {
+                    enabled: false
+                },
+                legend: {
+                    enabled: true,
+                    verticalAlign: 'top',
+                    align: 'left',
+                    useHTML: true,
+                    symbolWidth: 6,
+                    itemDistance: 35,
+                    itemMarginBottom: 20,
+                    itemMarginTop: 10,
+                    width: "80%",
+                    labelFormatter: function () {
+                        console.log(this);
+                        return fillLinearGraphInfo(this.name, this.index);
+                        //return `<div class="asdsad">${this.name} ${this.index} (click to hide)</div>`;
+                    }
+                },
+                title: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: banchGraphData.names,
+                    labels: {
+                        style: {
+                            fontSize: "16px",
+                            color: "#373943"
+                        }
+                    },
+                    gridLineWidth: (myRenderShowYLine ? 1 : 0)
+                },
+                yAxis: {
+                    title: {
+                        text: ''
+                    },
+                    labels: {
+                        formatter: function () {
+                            return (this.value / 1) + '%';
+                        },
+                        style: {
+                            fontSize: "16px",
+                            color: "#373943"
+                        }
+                    },
+                },
+                tooltip: {
+                    crosshairs: true,
+                    shared: true,
+                    useHTML: true,
+                    valueSuffix: '%'
+                },
+                plotOptions: {
+                    spline: {
+                        marker: {
+                            radius: 5,
+                            lineColor: 'transparent',
+                            lineWidth: 2
+                        }
+                    }
+                },
+                series: banchGraphData.plots
+            });
+        
+            if (renderShowYLine) {
+                let renderChartWidth = +document.querySelector(`#${graphName} .highcharts-plot-background`).getAttributeNode("width").value;
+                let renderChartOffsetX = (renderChartWidth / banchGraphData.plots.length) / 2;
+            
+                document.querySelectorAll(`#${graphName} .highcharts-xaxis-grid .highcharts-grid-line`).forEach(item => {
+                    item.style.transform = 'translateX(' + renderChartOffsetX + 'px)';
+                });
+            }
     
-    if (myRenderGraph !== null) {
-        Highcharts.chart(graphName, {
+            banchGraphData.plots.forEach((item, id) => {
+                let elem = myRenderGraph.querySelector(`.highcharts-series-${id}`);
+                elem.setAttribute("style", `-webkit-filter: drop-shadow(0px 2px 2px ${item.color});`);
+            });
+            
+        }
+    }
+
+    renderLinearGraph("mainPromoGraph", true);
+
+    ///////////////////////////////
+
+
+    // СТОЛБЧАТЫЙ ГРАФИК
+
+    let graphBarWidth = 80;
+    let graphBarSizeCoef = (graphBarWidth / (banchGraphData.plots.length * 1.6));
+    let graphBarContent = document.querySelector(".promoGraphArea__graphBar .banchGraph-content");
+
+    if (graphBarContent === null) {
+        return false;
+    }
+
+    function fillDescrItems() {
+        const items = document.querySelector(".promoGraphArea__graphBar .banchGraph-descr-items");
+
+        banchGraphData.plots.forEach(item => {
+            let elem = document.createElement("span");
+            elem.classList.add("banchGraph-descr-items-item");
+            elem.innerHTML = item.name;
+            elem.style.setProperty('--background_label', item.color);
+            items.appendChild(elem);
+        });
+    }
+
+    function fillDescrSummaryContent() {
+        const content = document.querySelector(".promoGraphArea__graphBar .banchGraph-descr-summary-content");
+
+        banchGraphData.plots.forEach(item => {
+            let elem = document.createElement("span");
+            let summary = item.data.reduce((accum, value) => accum + value).toFixed(2);
+            elem.innerHTML = summary + "%";
+            elem.classList.add(summary > 0 ? "success" : "error");
+            elem.style.setProperty('--background_label', item.color);
+            content.appendChild(elem);
+        });
+    }
+
+    function getAbsBanchData() {
+        let absValues = [];
+        banchGraphData.plots.forEach(item => {
+            absValues.push(Math.abs(...item.data));
+        });
+        return Math.max(...absValues);
+    }
+
+    function getSeries(id) {
+        let data = [];
+        banchGraphData.plots.forEach(item => {
+            data.push({
+                name: item.name,
+                data: [item.data[id]],
+                color: item.color,
+                borderRadiusTopLeft: item.data[id] > 0 ? (graphBarSizeCoef / 6) : 0,
+                borderRadiusTopRight: item.data[id] > 0 ? (graphBarSizeCoef / 6) : 0,
+                borderRadiusBottomLeft: item.data[id] < 0 ? (graphBarSizeCoef / 6) : 0,
+                borderRadiusBottomRight: item.data[id] < 0 ? (graphBarSizeCoef / 6) : 0,
+            });
+        });
+        return data;
+    }
+
+    function renderBanchHTML(id) {
+        let item = document.createElement("div");
+        item.classList.add("banchGraph-content-item");
+
+        let itemGraph = document.createElement("div");
+        itemGraph.classList.add("banchGraph-content-item-graph");
+        itemGraph.setAttribute("id", "banchGraphModernBar-" + id)
+
+        // date
+
+        let itemDate = document.createElement("div");
+        itemDate.classList.add("banchGraph-content-item-date");
+
+        let itemDateSpan = document.createElement("span");
+        itemDateSpan.innerHTML = banchGraphData.names[id];
+        itemDate.appendChild(itemDateSpan);
+
+        // /date
+
+        // stat
+
+        let itemStat = document.createElement("div");
+        itemStat.classList.add("banchGraph-content-item-stat");
+
+        banchGraphData.plots.forEach(elem => {
+            let itemStatSpan = document.createElement("span");
+            itemStatSpan.innerHTML = elem.data[id] + "%";
+
+            if (elem.data[id] > 0) {
+                itemStatSpan.classList.add("success");
+            }
+            if (elem.data[id] < 0) {
+                itemStatSpan.classList.add("error");
+            }
+
+            itemStat.appendChild(itemStatSpan);
+        });
+
+        // /stat
+
+        item.appendChild(itemGraph);
+        item.appendChild(itemDate);
+        item.appendChild(itemStat);
+
+        graphBarContent.appendChild(item);
+    }
+
+    function renderBanchGraph(id) {
+        Highcharts.chart('banchGraphModernBar-' + id, {
             chart: {
-                type: 'spline',
-                style: { "fontFamily": "Montserrat" },
-            },
-            credits: {
-                enabled: false
-            },
-            legend: {
-                enabled: true,
-                verticalAlign: 'top',
-                align: 'left',
-                useHTML: true,
-                symbolWidth: 6,
-                itemDistance: 35,
-                itemMarginBottom: 10,
-                itemMarginTop: 10,
-                width: "70%"
+                type: 'column',
+                borderRadius: 6
             },
             title: {
                 text: ''
             },
             xAxis: {
-                categories: myRenderGraphCategories,
+                categories: [banchGraphData.names[id]],
                 labels: {
-                    style: {
-                        fontSize: "16px",
-                        color: "#373943"
-                    }
+                    enabled: false
                 },
-                gridLineWidth: (myRenderShowYLine ? 1 : 0)
+                lineWidth: 0
             },
             yAxis: {
-                title: {
-                    text: ''
-                },
+                gridLineWidth: 0,
                 labels: {
-                    formatter: function () {
-                        return (this.value / 1000) + 'к';
-                    },
-                    style: {
-                        fontSize: "16px",
-                        color: "#373943"
-                    }
+                    enabled: false
                 },
+                title: {
+                    enabled: false
+                },
+                min: -1 * getAbsBanchData(),
+                max: getAbsBanchData()
+
             },
-            tooltip: {
-                crosshairs: true,
-                shared: true,
-                useHTML: true,
-                valueSuffix: '$'
+            credits: {
+                enabled: false
+            },
+            legend: {
+                enabled: false
             },
             plotOptions: {
-                spline: {
-                    marker: {
-                        radius: 5,
-                        lineColor: 'transparent',
-                        lineWidth: 2
-                    }
+                column: {
+                    pointWidth: graphBarSizeCoef,
+                    groupPadding: 0,
+                    borderWidth: 0,
+                    enableMouseTracking: false,
                 }
             },
-            series: baseSeries
+            series: getSeries(id)
         });
-    
-        if (myRenderShowYLine) {
-            let renderChartWidth = +document.querySelector(`#${graphName} .highcharts-plot-background`).getAttributeNode("width").value;
-            let renderChartOffsetX = (renderChartWidth / myRenderGraphCategories.length) / 2;
-        
-            document.querySelectorAll(`#${graphName} .highcharts-xaxis-grid .highcharts-grid-line`).forEach(item => {
-                item.style.transform = 'translateX(' + renderChartOffsetX + 'px)';
-            });
-        }
-
-        baseSeries.forEach((item, id) => {
-            let elem = myRenderGraph.querySelector(`.highcharts-series-${id}`);
-            elem.setAttribute("style", `-webkit-filter: drop-shadow(0px 2px 2px ${item.color});`);
-        });
-        
     }
+
+    fillDescrSummaryContent()
+    fillDescrItems()
+
+    banchGraphData.names.forEach((elem, i) => {
+        renderBanchHTML(i);
+        renderBanchGraph(i);
+    });
+
+    //////////////////////
+    
 }
 
 mainPromoGraph();

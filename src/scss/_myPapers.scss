@@ -795,8 +795,11 @@
     }
 }
 
+$banch_info_width: 80px;
 $banch_info_height: 180px;
 $banch_items_height: 60px;
+
+$banch_items_space: 0.8rem;
 
 .banchGraph {
     display: flex;
@@ -877,7 +880,7 @@ $banch_items_height: 60px;
         }
 
         &-percent {
-            height: $banch_info_height;
+            //height: $banch_info_height;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -891,7 +894,7 @@ $banch_items_height: 60px;
         }
 
         &-items {
-            height: $banch_items_height;
+            //height: $banch_items_height;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -928,6 +931,10 @@ $banch_items_height: 60px;
                     &::before {
                         background-color: lighten($color_blue, 10%);
                     }
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: $banch_items_space;
                 }
             }
         }
@@ -979,7 +986,7 @@ $banch_items_height: 60px;
 
             &-graph {
                 position: relative;
-                width: 80px;
+                width: $banch_info_width;
                 height: $banch_info_height;
 
                 .highcharts-background {
@@ -1020,7 +1027,7 @@ $banch_items_height: 60px;
 
             &-stat {
                 font-size: 0.9rem;
-                height: $banch_items_height;
+                //height: $banch_items_height;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -1034,6 +1041,10 @@ $banch_items_height: 60px;
 
                     &.error {
                         color: $color_red;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: $banch_items_space;
                     }
                 }
             }
