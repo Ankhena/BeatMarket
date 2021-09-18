@@ -1664,6 +1664,7 @@ $base_transition: 0.4s ease-in-out;
         position: absolute;
         right: 0;
         top: 0;
+        z-index: 1;
 
         .stategyPromo-graph-values-btn {
             display: flex;
@@ -2114,6 +2115,10 @@ $base_transition: 0.4s ease-in-out;
                 transform: translateY(-0.1rem);
                 color: $color_black_title !important;
 
+                @media ($media_xl) {
+                    transform: translateY(0);
+                }
+
                 &.legendPercent {
                     font-weight: 500 !important;
 
@@ -2336,4 +2341,95 @@ $base_transition: 0.4s ease-in-out;
             }
         }
     }
+}
+
+.selectDropdownMenu {
+
+        @media ($media_sm) {
+            min-width: calc(100vw - 2rem);
+            max-width: calc(100vw - 2rem);
+        }
+
+		// .selectDropdownMenu__content
+
+		&__content {
+
+		}
+
+		// .selectDropdownMenu__toggler
+
+		&__toggler {
+
+            &.btnShowAll {
+                margin-bottom: 1.2rem;
+                margin-top: 0;
+                width: 100%;
+                justify-content: space-between;
+                color: $color_black_title;
+                line-height: 1.6;
+
+                .btnShowAll__text {
+                    white-space: nowrap;
+                }
+
+                .btnShowAll__icon {
+                    fill: $breadcrumb_border;
+                    margin-left: 1rem;
+                }
+            }
+		}
+
+		// .selectDropdownMenu__item
+
+		&__item {
+            margin-bottom: 1.1rem;
+
+            &.selectDropdown-item {
+                padding: 0.2rem 0;
+            }
+		}
+
+		// .selectDropdownMenu__title
+
+		&__title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: $color_black_title;
+            line-height: 1.6;
+            margin-bottom: 0.65rem;
+		}
+
+		// .selectDropdownMenu__elem
+
+		&__elem {
+            &.modal-content-switcher-button {
+                span {
+                    padding: 0.7rem 0;
+                }
+            }
+
+            .selectric .label {
+                line-height: 2.77rem;
+                height: 2.77rem;
+                font-size: 0.9rem;
+                margin: 0 54px 0 20px;
+            }
+
+            .selectric .button {
+                width: 2.77rem;
+                height: 2.77rem;
+                line-height: 2.77rem;
+
+                &::after {
+                    border: 0.35rem solid transparent;
+                    border-top-color: $breadcrumb_border;
+                    border-bottom: none;
+                }
+            }
+
+            .selectric-items li {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+		}
 }

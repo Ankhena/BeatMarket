@@ -9473,6 +9473,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 1;
 }
 
 .mainPromo__settings .stategyPromo-graph-values-btn {
@@ -10012,6 +10013,70 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   width: 1.6rem;
   height: 1.6rem;
   stroke: #929398;
+}
+
+.selectDropdownMenu__toggler.btnShowAll {
+  margin-bottom: 1.2rem;
+  margin-top: 0;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #24252E;
+  line-height: 1.6;
+}
+
+.selectDropdownMenu__toggler.btnShowAll .btnShowAll__text {
+  white-space: nowrap;
+}
+
+.selectDropdownMenu__toggler.btnShowAll .btnShowAll__icon {
+  fill: #8C9BEA;
+  margin-left: 1rem;
+}
+
+.selectDropdownMenu__item {
+  margin-bottom: 1.1rem;
+}
+
+.selectDropdownMenu__item.selectDropdown-item {
+  padding: 0.2rem 0;
+}
+
+.selectDropdownMenu__title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #24252E;
+  line-height: 1.6;
+  margin-bottom: 0.65rem;
+}
+
+.selectDropdownMenu__elem.modal-content-switcher-button span {
+  padding: 0.7rem 0;
+}
+
+.selectDropdownMenu__elem .selectric .label {
+  line-height: 2.77rem;
+  height: 2.77rem;
+  font-size: 0.9rem;
+  margin: 0 54px 0 20px;
+}
+
+.selectDropdownMenu__elem .selectric .button {
+  width: 2.77rem;
+  height: 2.77rem;
+  line-height: 2.77rem;
+}
+
+.selectDropdownMenu__elem .selectric .button::after {
+  border: 0.35rem solid transparent;
+  border-top-color: #8C9BEA;
+  border-bottom: none;
+}
+
+.selectDropdownMenu__elem .selectric-items li {
+  padding: 8px 20px;
+  font-size: 0.9rem;
 }
 
 input[type="radio"],
@@ -13100,6 +13165,12 @@ body.viewProfile .header-controls-links-link.auth span {
     height: 22rem;
   }
 
+  .promoGraphArea__graphLinear .highcharts-legend-item span {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+  }
+
   .apr-share::before {
     top: -100px;
     left: -120px;
@@ -15471,6 +15542,11 @@ body.viewProfile .header-controls-links-link.auth span {
   .forecastGraph__question .paperDontTrade__popup {
     right: 0;
     left: unset;
+  }
+
+  .selectDropdownMenu {
+    min-width: calc(100vw - 2rem);
+    max-width: calc(100vw - 2rem);
   }
 
   .btn--settings {

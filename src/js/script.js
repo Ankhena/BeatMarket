@@ -143,7 +143,7 @@ $(document).ready(function() {
         btn.click(() => {
             content.slideToggle();
             btn.toggleClass("btnShowAll--active");
-        })
+        });
     });
 
 });

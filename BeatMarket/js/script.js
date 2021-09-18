@@ -2008,7 +2008,7 @@ dopFunctional();
                     itemMarginTop: 10,
                     width: "80%",
                     labelFormatter: function () {
-                        console.log(this);
+                        //console.log(this);
                         return fillLinearGraphInfo(this.name, this.index);
                         //return `<div class="asdsad">${this.name} ${this.index} (click to hide)</div>`;
                     }
@@ -2060,7 +2060,7 @@ dopFunctional();
         
             if (renderShowYLine) {
                 let renderChartWidth = +document.querySelector(`#${graphName} .highcharts-plot-background`).getAttributeNode("width").value;
-                let renderChartOffsetX = (renderChartWidth / banchGraphData.plots.length) / 2;
+                let renderChartOffsetX = (renderChartWidth / banchGraphData.names.length) / 2;
             
                 document.querySelectorAll(`#${graphName} .highcharts-xaxis-grid .highcharts-grid-line`).forEach(item => {
                     item.style.transform = 'translateX(' + renderChartOffsetX + 'px)';
@@ -2364,7 +2364,7 @@ mainPromoGraph();
         btn.click(() => {
             content.slideToggle();
             btn.toggleClass("btnShowAll--active");
-        })
+        });
     });
 
 });
