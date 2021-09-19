@@ -8227,6 +8227,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
           box-shadow: 0px 1rem 0.9rem -0.8rem rgba(62, 84, 216, 0.1);
 }
 
+.blockSection--paddingMin {
+  padding: 1.4rem;
+}
+
 .blockSection--blue {
   background-color: #3E54D8;
   border-color: #3E54D8;
@@ -9539,6 +9543,15 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   height: 32px;
 }
 
+.btnShare {
+  background-color: #3E54D8;
+  border-color: #3E54D8;
+}
+
+.btnShare:hover {
+  border-color: #3E54D8;
+}
+
 .btnShare input[type="checkbox"]:checked ~ .dropdown {
   display: block;
 }
@@ -9778,6 +9791,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   padding: 1.2rem 0 0.2rem 0;
 }
 
+.promoGraphArea__forecast {
+  margin-top: 1rem;
+}
+
 .promoGraphArea__graphBar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9982,6 +9999,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .forecastGraph--disabled .forecastGraph__content {
   opacity: 0.6;
+  pointer-events: none;
 }
 
 .forecastGraph__content {
@@ -10013,6 +10031,12 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   width: 1.6rem;
   height: 1.6rem;
   stroke: #929398;
+}
+
+.forecastGraph__question .paperDontTrade__popup {
+  -webkit-transform: translate(-50%, 100%);
+      -ms-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
 }
 
 .selectDropdownMenu__toggler.btnShowAll {
@@ -10077,6 +10101,103 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 .selectDropdownMenu__elem .selectric-items li {
   padding: 8px 20px;
   font-size: 0.9rem;
+}
+
+.forecastArea__header {
+  border-bottom: 1px solid #D3E3FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 3rem;
+  margin-top: -0.5rem;
+}
+
+.forecastArea__switcher {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.forecastArea__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.forecastArea__close svg {
+  height: 1.1rem;
+  width: 1.1rem;
+}
+
+.forecastArea__options {
+  margin: 1.2rem 0 0.6rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.forecastArea__options .selectDropdown-item {
+  width: auto;
+}
+
+.forecastArea__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.forecastArea__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.forecastArea__dateChoose {
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.forecastArea__dateChoose label {
+  width: 5.5rem;
+}
+
+.forecastArea__dateChoose label span {
+  padding: 16px 0.5rem;
+}
+
+.forecastArea__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.forecastArea__buttons .btn {
+  padding: 1rem 2.1rem;
+}
+
+.forecastArea__buttons .btn_gray {
+  padding-right: 0;
 }
 
 input[type="radio"],
@@ -12956,6 +13077,14 @@ body.viewProfile .header-controls-links-link.auth span {
     cursor: pointer;
   }
 
+  .forecastGraph__content {
+    cursor: pointer;
+  }
+
+  .forecastArea__close {
+    cursor: pointer;
+  }
+
   body.topNav .page_title {
     display: none;
   }
@@ -13169,6 +13298,41 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
+  }
+
+  .forecastArea__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .forecastArea__inputs {
+    width: 100%;
+  }
+
+  .forecastArea__input {
+    width: 50%;
+  }
+
+  .forecastArea__dateChoose {
+    width: 50%;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    margin-left: 0.5rem;
+  }
+
+  .forecastArea__buttons {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .forecastArea__buttons .btn {
+    width: 100%;
   }
 
   .apr-share::before {
@@ -15542,11 +15706,32 @@ body.viewProfile .header-controls-links-link.auth span {
   .forecastGraph__question .paperDontTrade__popup {
     right: 0;
     left: unset;
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%);
   }
 
   .selectDropdownMenu {
     min-width: calc(100vw - 2rem);
     max-width: calc(100vw - 2rem);
+  }
+
+  .forecastArea__switcher {
+    width: 70%;
+    margin-top: 0;
+  }
+
+  .forecastArea__buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .forecastArea__buttons .btn {
+    padding: 1rem 0;
+  }
+
+  .forecastArea__buttons .btn:not(:last-child) {
+    margin-bottom: 0.5rem;
   }
 
   .btn--settings {

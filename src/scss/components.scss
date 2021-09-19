@@ -152,6 +152,10 @@ $base_transition: 0.4s ease-in-out;
         }
     }
 
+    &--paddingMin {
+        padding: 1.4rem;
+    }
+
     &--blue {
         background-color: $color_blue;
         border-color: $color_blue;
@@ -1760,6 +1764,13 @@ $base_transition: 0.4s ease-in-out;
 
 .btnShare {
 
+    background-color: $color_blue;
+    border-color: $color_blue;
+
+    &:hover {
+        border-color: $color_blue;
+    }
+
     input[type="checkbox"]:checked ~ .dropdown {
         display: block;
     }
@@ -2053,6 +2064,12 @@ $base_transition: 0.4s ease-in-out;
         }
     }
 
+    // .promoGraphArea__forecast
+
+    &__forecast {
+        margin-top: 1rem;
+    }
+
     // .promoGraphArea__graphs
 
     &__graphs {
@@ -2297,6 +2314,7 @@ $base_transition: 0.4s ease-in-out;
     &--disabled {
         .forecastGraph__content {
             opacity: 0.6;
+            pointer-events: none;
         }
     }
 
@@ -2305,6 +2323,7 @@ $base_transition: 0.4s ease-in-out;
     &__content {
         display: flex;
         align-items: center;
+        @include cursorPointer();
     }
 
     // .forecastGraph__icon
@@ -2335,9 +2354,12 @@ $base_transition: 0.4s ease-in-out;
         }
         
         .paperDontTrade__popup {
+            transform: translate(-50%, 100%);
+
             @media ($media_sm) {
                 right: 0;
                 left: unset;
+                transform: translateY(100%);
             }
         }
     }
@@ -2432,4 +2454,152 @@ $base_transition: 0.4s ease-in-out;
                 font-size: 0.9rem;
             }
 		}
+}
+
+.forecastArea {
+
+    // .forecastArea__header
+
+    &__header {
+        border-bottom: 1px solid $color_block_border;
+
+        display: flex;
+        align-items: center;
+        min-height: 3rem;
+        margin-top: -0.5rem;
+    }
+
+    // .forecastArea__switcher
+
+    &__switcher {
+        align-self: stretch;
+        margin-right: auto;
+        margin-left: 0;
+
+        @media ($media_sm) {
+            width: 70%;
+            margin-top: 0;
+        }
+    }
+
+    // .forecastArea__close
+
+    &__close {
+        display: flex;
+        @include cursorPointer();
+
+        svg {
+            height: 1.1rem;
+            width: 1.1rem;
+        }
+    }
+
+    // .forecastArea__body
+
+    &__body {
+
+    }
+
+    // .forecastArea__options
+
+    &__options {
+        margin: 1.2rem 0 0.6rem 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .selectDropdown-item {
+            width: auto;
+        }
+    }
+
+    // .forecastArea__form
+
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media ($media_xl) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    // .forecastArea__inputs
+
+    &__inputs {
+        display: flex;
+        align-items: center;
+
+        @media ($media_xl) {
+            width: 100%;
+        }
+    }
+
+    // .forecastArea__input
+
+    &__input {
+        @media ($media_xl) {
+            width: 50%;
+        }
+    }
+
+    // .forecastArea__dateChoose
+
+    &__dateChoose {
+        transform: translateX(-50%);
+
+        label {
+            width: 5.5rem;
+
+            span {
+                padding: 16px 0.5rem;
+            }
+        }
+
+        @media ($media_xl) {
+            width: 50%;
+            transform: translateX(0);
+            margin-left: 0.5rem;
+        }
+    }
+
+    // .forecastArea__buttons
+
+    &__buttons {
+        display: flex;
+
+        @media ($media_xl) {
+            width: 100%;
+            margin-top: 1.5rem;
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media ($media_sm) {
+            flex-wrap: wrap;
+
+            .btn {
+                padding: 1rem 0;
+
+                &:not(:last-child) {
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+        
+        .btn {
+            padding: 1rem 2.1rem;
+
+            &_gray {
+                padding-right: 0;
+            }
+
+        }
+    }
+
 }

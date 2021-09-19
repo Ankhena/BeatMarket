@@ -118,7 +118,7 @@
             </button>
 
             <label class="mainPromo__button btn btn_primary btnShare">
-                <svg><use xlink:href="img/main.svg#icon-ShareNetwork"></use></svg>
+                <svg><use xlink:href="img/main.svg#icon-ShareNetworkWhite"></use></svg>
 
                 <input type="checkbox" class="visually_hidden">
                 <div class="dropdown">
@@ -219,7 +219,7 @@
                             </div>
                         </label>
 
-                        <div class="promoGraphArea__selector forecastGraph forecastGraph--disabled">
+                        <div class="promoGraphArea__selector forecastGraph">
                             <div class="forecastGraph__content">
                                 <svg class="forecastGraph__icon"><use xlink:href="img/main.svg#icon-graphChartForecast"></use></svg>
                                 <span class="forecastGraph__name">Прогноз</span>
@@ -248,11 +248,62 @@
                     </div>
                 </div>
             </div>
+
             <div class="promoGraphArea__dividends">
                 <label class="selectDropdown-item">
                     <input type="checkbox" name="dividendsRecord" class=" visually_hidden">
                     <span class="checkbox_custom">С учетом дивидендов</span>
                 </label>
+            </div>
+
+            <div class="promoGraphArea__forecast" style="display: none;">
+                <div class="forecastArea blockSection blockSection--card blockSection--paddingMin">
+                    <div class="forecastArea__header">
+                        <div class="forecastArea__switcher stategyPromo-graph-info-content-choose">
+                            <div class="stategyPromo-graph-info-content-choose-item active">
+                                <span>12 мес.</span>
+                            </div>
+                            <div class="stategyPromo-graph-info-content-choose-item">
+                                <span>36 мес.</span>
+                            </div>
+                            <div class="stategyPromo-graph-info-content-choose-item">
+                                <span>60 мес.</span>
+                            </div>
+                        </div>
+                        <div class="forecastArea__close">
+                            <svg><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+                        </div>
+                    </div>
+                    <div class="forecastArea__body">
+                        <div class="forecastArea__options">
+                            <label class="selectDropdown-item">
+                                <input type="checkbox" name="mainCashItems" class="visually_hidden">
+                                <span class="checkbox_custom">Сравнить с бенчмарком</span>
+                            </label>
+                        </div>
+                        <div class="forecastArea__form">
+                            <div class="forecastArea__inputs">
+                                <div class="forecastArea__input">
+                                    <input type="text" value="200$">
+                                </div>
+                                <div class="forecastArea__dateChoose modal-content-switcher-button">
+                                    <label>
+                                        <input type="radio" name="switcherPaybackWhat" class="visually_hidden" checked="">
+                                        <span>Месяц</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="switcherPaybackWhat" class="visually_hidden">
+                                        <span>Год</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="forecastArea__buttons">
+                                <button class="btn btn_blue">Применить</button>
+                                <button class="btn btn_gray">Сбросить прогноз</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="promoGraphArea__graphs">
