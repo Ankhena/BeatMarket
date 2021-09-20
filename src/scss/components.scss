@@ -190,6 +190,10 @@ $base_transition: 0.4s ease-in-out;
 
     }
 
+    .forecastArea {
+        margin-bottom: 1.5rem;
+    }
+
     // .blockSection__grid
 
     &__grid {
@@ -206,6 +210,28 @@ $base_transition: 0.4s ease-in-out;
             &:not(:last-child) {
                 margin-bottom: 0;
             }
+        }
+    }
+
+    // .blockSection__alert
+
+    &__alert {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        svg {
+            min-width: 1.77rem;
+            min-height: 1.77rem;
+            max-width: 1.77rem;
+            max-height: 1.77rem;
+            margin-right: 0.5rem;
+        }
+
+        span {
+            font-weight: 500;
+            color: $color_grey;
+            font-size: 0.9rem;
         }
     }
 
@@ -268,13 +294,22 @@ $base_transition: 0.4s ease-in-out;
     // .blockSection__title
 
     &__title {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
         color: $color_black_title;
         font-weight: 600;
         line-height: 1.6;
 
         &--primary {
             color: $color_blue;
+        }
+
+        &--flex {
+            display: flex;
+            align-items: center;
+
+            .forecastGraph {
+                margin-left: 1rem;
+            }
         }
     }
 
@@ -353,6 +388,10 @@ $base_transition: 0.4s ease-in-out;
         .cardAnalytic {
             flex-basis: 100%;
 
+            &--grow {
+                flex-basis: 200%;
+            }
+
             &:not(:last-child) {
                 margin-right: 1.5rem;
 
@@ -390,6 +429,11 @@ $base_transition: 0.4s ease-in-out;
     transition: $base_transition;
     @include cursorPointer;
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
     &:hover, &--active {
         border-color: $color_blue;
         background-color: $color_blue;
@@ -419,6 +463,14 @@ $base_transition: 0.4s ease-in-out;
             .cardAnalytic__value {
                 color: $color_white;
                 background-color: $color_blue;
+
+                &--success {
+                    background-color: darken($color_green, 5%);
+                }
+        
+                &--error {
+                    background-color: darken($color_red, 5%);
+                }
             }
         }
 
@@ -435,6 +487,14 @@ $base_transition: 0.4s ease-in-out;
         font-weight: 600;
         color: $color_blue;
         line-height: 1.4;
+
+        margin-bottom: 2rem;
+    }
+
+    &__subtitle {
+        font-size: 0.77rem;
+        font-weight: 500;
+        margin-bottom: 0.6rem;
     }
 
     // .cardAnalytic__value
@@ -449,7 +509,32 @@ $base_transition: 0.4s ease-in-out;
         border-radius: 0.5rem;
         color: $color_white;
 
-        margin-top: 2.2rem;
+        &--success {
+            background-color: $color_green;
+        }
+
+        &--error {
+            background-color: $color_red;
+        }
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+
+        @media ($media_sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        flex-basis: 100%;
+
+        @media ($media_sm) {
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+        }
     }
 }
 

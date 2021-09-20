@@ -5424,10 +5424,24 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .dividends .table-fixed-title h5 {
   font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dividends .table-fixed-title h5 svg {
+  margin-left: 0.5rem;
 }
 
 .dividends .table-fixed-item {
-  width: 7.5rem;
+  width: 11.5rem;
+}
+
+.dividends .table-fixed-item.bottom {
+  background-color: #F5F5F5;
 }
 
 .dividends .table-fixed-item.bottom h5 {
@@ -5437,8 +5451,53 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   color: #24252E;
 }
 
+.dividends .table-fixed-item.inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dividends .table-fixed-item-content {
+  max-width: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dividends .table-fixed-item-percent {
+  font-size: 0.75rem;
+  margin-left: 0.4rem;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.dividends .table-fixed-item-percent.success {
+  color: #199F27;
+}
+
+.dividends .table-fixed-item-percent.error {
+  color: #ED6373;
+}
+
 .dividends .table-header {
-  padding-left: 10.5rem;
+  padding-left: 14.5rem;
   padding-right: 0;
 }
 
@@ -5450,7 +5509,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .dividends .table-content {
-  padding-left: 8rem;
+  padding-left: 12rem;
 }
 
 .dividends .table-content-item {
@@ -8259,6 +8318,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   position: relative;
 }
 
+.blockSection .forecastArea {
+  margin-bottom: 1.5rem;
+}
+
 .blockSection__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -8268,6 +8331,30 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .blockSection__grid .lineDetails__item:not(:last-child) {
   margin-bottom: 0;
+}
+
+.blockSection__alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.blockSection__alert svg {
+  min-width: 1.77rem;
+  min-height: 1.77rem;
+  max-width: 1.77rem;
+  max-height: 1.77rem;
+  margin-right: 0.5rem;
+}
+
+.blockSection__alert span {
+  font-weight: 500;
+  color: #929398;
+  font-size: 0.9rem;
 }
 
 .blockSection__fill {
@@ -8308,7 +8395,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .blockSection__title {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: #24252E;
   font-weight: 600;
   line-height: 1.6;
@@ -8316,6 +8403,19 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .blockSection__title--primary {
   color: #3E54D8;
+}
+
+.blockSection__title--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blockSection__title--flex .forecastGraph {
+  margin-left: 1rem;
 }
 
 .blockSection__ticket {
@@ -8382,6 +8482,11 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
       flex-basis: 100%;
 }
 
+.blockSection__cardAnalytics .cardAnalytic--grow {
+  -ms-flex-preferred-size: 200%;
+      flex-basis: 200%;
+}
+
 .blockSection__cardAnalytics .cardAnalytic:not(:last-child) {
   margin-right: 1.5rem;
 }
@@ -8410,6 +8515,19 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-transition: 0.4s ease-in-out;
   -o-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .cardAnalytic:hover,
@@ -8453,6 +8571,16 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   background-color: #3E54D8;
 }
 
+.cardAnalytic--simple:hover .cardAnalytic__value--success,
+.cardAnalytic--simple.cardAnalytic--active .cardAnalytic__value--success {
+  background-color: #168922;
+}
+
+.cardAnalytic--simple:hover .cardAnalytic__value--error,
+.cardAnalytic--simple.cardAnalytic--active .cardAnalytic__value--error {
+  background-color: #ea4c5e;
+}
+
 .cardAnalytic--simple .cardAnalytic__title {
   color: #24252E;
 }
@@ -8465,6 +8593,13 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   font-weight: 600;
   color: #3E54D8;
   line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.cardAnalytic__subtitle {
+  font-size: 0.77rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
 }
 
 .cardAnalytic__value {
@@ -8478,7 +8613,26 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   background-color: #3E54D8;
   border-radius: 0.5rem;
   color: #fff;
-  margin-top: 2.2rem;
+}
+
+.cardAnalytic__value--success {
+  background-color: #199F27;
+}
+
+.cardAnalytic__value--error {
+  background-color: #ED6373;
+}
+
+.cardAnalytic__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.cardAnalytic__item {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .leastCard {
@@ -15682,6 +15836,17 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .cardAnalytic__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .cardAnalytic__item:not(:last-child) {
+    margin-bottom: 1.5rem;
   }
 
   .quotations__item {

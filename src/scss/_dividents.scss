@@ -111,13 +111,21 @@
 
                 h5 {
                     font-weight: 500;
+
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        margin-left: 0.5rem;
+                    }
                 }
             }
 
             &-item {
-                width: 7.5rem;
+                width: 11.5rem;
 
                 &.bottom {
+                    background-color: $color_light_grey;
 
                     h5 {
                         overflow: hidden;
@@ -125,11 +133,40 @@
                         color: $color_black_title;
                     }
                 }
+
+                &.inline {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+
+                &-content {
+                    max-width: 5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                &-percent {
+                    font-size: 0.75rem;
+                    margin-left: 0.4rem;
+                    display: inline-block;
+                    font-weight: 600;
+
+                    &.success {
+                        color: $color_green;
+                    }
+
+                    &.error {
+                        color: $color_red;
+                    }
+                }
             }
         }
 
         &-header {
-            padding-left: 10.5rem;
+            padding-left: 14.5rem;
             padding-right: 0;
 
             h5 {
@@ -141,7 +178,7 @@
         }
 
         &-content {
-            padding-left: 8rem;
+            padding-left: 12rem;
 
             &-item {
                 align-items: stretch;
