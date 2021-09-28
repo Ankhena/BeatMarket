@@ -4,7 +4,12 @@
         @@include('_head.html', { "title": "BeatMarket - Компании" })
     </head>
     <body>
-        @@include("_header.html", { "title": "Мой портфель" })
+
+        @@include("_header.html", {
+			"title": "Мои стратегии",
+            "searchBar": "true",
+            "searchBarClass": "headerSearchBar"
+		})
 
         <section class="section-outer section-main">
             <div class="main">

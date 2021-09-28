@@ -1,4 +1,4 @@
-<header class="section-outer section-header">
+<header class="section-outer section-header @@searchBarClass">
     <div class="section-full header">
         <div class="header-logo">
             <div class="burger" data-burger="button">
@@ -15,6 +15,12 @@
             <div class="header-controls-title">
                 <h1 class="page_title">@@title</h1>
             </div>
+            @@if (context.searchBar == "true") {
+                <div class="header-controls-search inputGroup__item">
+                    <input class="inputGroup__control inputGroup__control--padding" type="text" placeholder="AAPL или Apple ">
+                    <svg class="inputGroup__icon"><use xlink:href="img/main.svg#icon-searchTicket"></use></svg>
+                </div>
+            }
             <div class="header-controls-links">
                 <div class="header-controls-links-link withCaret lang">
                     <input type="checkbox" id="langDesktop" class="visually_hidden">

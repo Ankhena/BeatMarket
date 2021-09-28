@@ -3594,6 +3594,13 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   margin-left: 0.7rem;
 }
 
+.section-header .header-controls-search {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0 4rem;
+}
+
 .section-header .header-controls-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13544,6 +13551,10 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-left: 3.2rem;
   }
 
+  .section-header .header-controls-search {
+    margin: 0 2rem;
+  }
+
   .portfolio {
     margin: 3rem 5rem;
     padding: 3rem 12rem;
@@ -14733,6 +14744,31 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .dropzone__text strong {
     display: none;
+  }
+
+  .section-header.headerSearchBar .header {
+    height: calc(var(--header_height) * 1.8);
+  }
+
+  .section-header.headerSearchBar .header-controls-search {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    left: 0;
+    padding: 0 var(--section_padding);
+    margin-bottom: -70px;
+  }
+
+  .section-header.headerSearchBar .header-controls-search .inputGroup__icon {
+    right: 2rem;
+  }
+
+  .section-header.headerSearchBar .header-controls-links {
+    margin-top: -70px;
+  }
+
+  .section-header.headerSearchBar .header-logo {
+    margin-top: -70px;
   }
 
   .section-header .header {

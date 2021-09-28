@@ -11,6 +11,38 @@
     .section-full {
         
     }
+
+    &.headerSearchBar {
+        @media ($media_sm) {
+            .header {
+                height: calc(var(--header_height) * 1.8);
+    
+                &-controls {
+                    &-search {
+                        position: absolute;
+                        margin: 0;
+                        width: 100%;
+                        left: 0;
+                        padding: 0 var(--section_padding);
+
+                        margin-bottom: -70px;
+
+                        .inputGroup__icon {
+                            right: 2rem;
+                        }
+                    }
+    
+                    &-links {
+                        margin-top: -70px;
+                    }
+                }
+    
+                &-logo {
+                    margin-top: -70px;
+                }
+            }
+        }
+    }
     
     .header {
         display: flex;
@@ -86,6 +118,15 @@
 
                 @media ($media_sm) {
                     display: none;
+                }
+            }
+
+            &-search {
+                flex-grow: 1;
+                margin: 0 4rem;
+
+                @media ($media_xl) {
+                    margin: 0 2rem;
                 }
             }
 
