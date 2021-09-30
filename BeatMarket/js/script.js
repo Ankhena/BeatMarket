@@ -1063,9 +1063,12 @@ initDateRangePicker();
 
     document.querySelectorAll(".statTable__content").forEach(item => {
         if (document.body.offsetWidth <= 768) {
-            item.querySelector(".statSticker").addEventListener("click", () => {
-                item.classList.toggle("statTable__content--opened");
-            });
+            let statSticker = item.querySelector(".statSticker");
+            if (statSticker !== null) {
+                statSticker.addEventListener("click", () => {
+                    item.classList.toggle("statTable__content--opened");
+                });
+            }
         }
         else {
             item.addEventListener("click", () => {

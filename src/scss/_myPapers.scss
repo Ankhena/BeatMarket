@@ -2,6 +2,16 @@
     margin: 2.2rem -1.5rem;
     width: calc(100% + 3rem);
 
+    // .statTable--empty
+
+    &--empty {
+        margin: 0 -1.5rem;
+
+        @media ($media_sm) {
+            margin: -1rem -1.5rem -1.5rem -1.5rem;
+        }
+    }
+
     // .statTable__row
 
     &__row {
@@ -47,7 +57,7 @@
 
         @media ($media_sm) {
             cursor: initial;
-            background-color: $color_table_header;
+            //background-color: $color_table_header;
         }
 
         &:hover {
@@ -57,7 +67,7 @@
             background-color: $color_block_bg;
 
             @media ($media_sm) {
-                background-color: $color_table_header;
+                //background-color: $color_table_header;
             }
         }
 
@@ -78,6 +88,12 @@
         }
 
         &--opened {
+
+            .statSticker__title {
+                @media ($media_sm) {
+                    color: $color_white;
+                }
+            }
 
             .statSticker__delete {
                 &:hover {
@@ -207,6 +223,8 @@
                 padding: 1rem 1.5rem;
                 flex-direction: row;
                 flex-basis: calc(100% + 3rem);
+
+                background-color: $color_table_header;
             }
         }
 
@@ -214,6 +232,7 @@
             @media ($media_sm) {
                 font-weight: bold;
                 font-size: 1.5rem;
+                flex-basis: 100%;
             }
         }
 
@@ -378,6 +397,14 @@
         @media ($media_sm) {
             justify-content: flex-start;
         }
+    }
+
+    // .statSticker__title
+
+    &__title {
+        font-size: 0.9rem;
+        color: $color_blue;
+        font-weight: 600;
     }
 
     // .statSticker__icon

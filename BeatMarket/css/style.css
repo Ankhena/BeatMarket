@@ -5799,6 +5799,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   width: calc(100% + 3rem);
 }
 
+.statTable--empty {
+  margin: 0 -1.5rem;
+}
+
 .statTable__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6020,6 +6024,12 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.statSticker__title {
+  font-size: 0.9rem;
+  color: #3E54D8;
+  font-weight: 600;
 }
 
 .statSticker__icon {
@@ -15406,6 +15416,10 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-bottom: 1rem;
   }
 
+  .statTable--empty {
+    margin: -1rem -1.5rem -1.5rem -1.5rem;
+  }
+
   .statTable__row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -15421,11 +15435,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .statTable__content {
     cursor: initial;
-    background-color: #F5F6FD;
-  }
-
-  .statTable__content:hover {
-    background-color: #F5F6FD;
   }
 
   .statTable__content--disabled {
@@ -15434,6 +15443,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .statTable__content--disabled:hover {
     background-color: #e0e0e0;
+  }
+
+  .statTable__content--opened .statSticker__title {
+    color: #fff;
   }
 
   .statTable__content--opened .statTable__item {
@@ -15507,11 +15520,14 @@ body.viewProfile .header-controls-links-link.auth span {
             flex-direction: row;
     -ms-flex-preferred-size: calc(100% + 3rem);
         flex-basis: calc(100% + 3rem);
+    background-color: #F5F6FD;
   }
 
   .statTable__item--mobDate {
     font-weight: bold;
     font-size: 1.5rem;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 
   .statTable__item--label {
