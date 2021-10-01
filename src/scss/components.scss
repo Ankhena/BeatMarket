@@ -3141,3 +3141,81 @@ $base_transition: 0.4s ease-in-out;
             text-align: center;
 		}
 }
+
+.infoBanner {
+    display: flex;
+    align-items: center;
+
+    padding: 0.5rem 0;
+    background: $color_block_bg;
+    box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 12;
+
+    // .infoBanner__content
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        width: 100%;
+
+        @media ($media_sm) {
+            justify-content: start;
+        }
+    }
+
+    // .infoBanner__icon
+
+    &__icon {
+        height: 1.7rem;
+        width: 1.7rem;
+    }
+
+    // .infoBanner__text
+
+    &__text {
+        font-weight: 500;
+        color: $color_blue;
+        padding: 0 1.35rem 0 0.7rem;
+        line-height: 1.4;
+
+        @media ($media_sm) {
+            width: 55%;
+        }
+    }
+
+    // .infoBanner__btn
+
+    &__btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.3rem;
+
+        @media ($media_sm) {
+            padding: 0.5rem 1.3rem;
+            width: auto;
+        }
+    }
+
+    // .infoBanner__close
+
+    &__close {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include cursorPointer;
+
+        svg {
+            width: 1.35rem;
+            height: 1.35rem;
+        }
+    }
+}

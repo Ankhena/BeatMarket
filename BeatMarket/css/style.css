@@ -10685,6 +10685,69 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   text-align: center;
 }
 
+.infoBanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0;
+  background: #FCFDFF;
+  -webkit-box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+          box-shadow: 0px 0px 9px rgba(62, 84, 216, 0.18);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 12;
+}
+
+.infoBanner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.infoBanner__icon {
+  height: 1.7rem;
+  width: 1.7rem;
+}
+
+.infoBanner__text {
+  font-weight: 500;
+  color: #3E54D8;
+  padding: 0 1.35rem 0 0.7rem;
+  line-height: 1.4;
+}
+
+.infoBanner__btn {
+  font-size: 0.9rem;
+  padding: 0.5rem 1.3rem;
+}
+
+.infoBanner__close {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.infoBanner__close svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   vertical-align: middle;
@@ -13164,6 +13227,10 @@ body.viewProfile .main-contentPadding {
   padding: 2.8rem var(--section_padding);
 }
 
+body.viewProfile .infoBanner__content {
+  margin: 0 var(--section_padding);
+}
+
 body.viewProfile .wantThis {
   margin-top: 1.5rem;
 }
@@ -13567,6 +13634,10 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .forecastArea__close {
+    cursor: pointer;
+  }
+
+  .infoBanner__close {
     cursor: pointer;
   }
 
@@ -16377,6 +16448,21 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .pageGetPortfolio__text {
     font-size: 1.2rem;
+  }
+
+  .infoBanner__content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+
+  .infoBanner__text {
+    width: 55%;
+  }
+
+  .infoBanner__btn {
+    padding: 0.5rem 1.3rem;
+    width: auto;
   }
 
   .btn--settings {
