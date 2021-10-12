@@ -9388,6 +9388,17 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   height: 100%;
 }
 
+.assetsInfoPromo__graph .modal-content-switcher-button {
+  position: relative;
+  width: 55%;
+  min-height: 3rem;
+  margin-bottom: -2.8rem;
+}
+
+.assetsInfoPromo__graph .modal-content-switcher-button span {
+  padding: 0.95rem 0;
+}
+
 .assetsInfoPromo__text {
   font-size: 0.9rem;
   font-weight: 500;
@@ -10746,6 +10757,22 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 .infoBanner__close svg {
   width: 1.35rem;
   height: 1.35rem;
+}
+
+.analyticCreate__switcher {
+  width: 40%;
+  margin-bottom: 2.2rem;
+}
+
+.analyticCreate__searchText {
+  color: #24252E;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.analyticCreate__searchInput {
+  margin-top: 1.5rem;
 }
 
 input[type="radio"],
@@ -13900,6 +13927,10 @@ body.viewProfile .header-controls-links-link.auth span {
     content: none;
   }
 
+  .analyticCreate__switcher {
+    width: 50%;
+  }
+
   .apr-share::before {
     top: -100px;
     left: -120px;
@@ -16199,6 +16230,11 @@ body.viewProfile .header-controls-links-link.auth span {
     height: 250px;
   }
 
+  .assetsInfoPromo__graph .modal-content-switcher-button {
+    margin-bottom: 0;
+    width: 100%;
+  }
+
   .mainFactorsGraph {
     height: 250px;
     margin-left: -0.5rem;
@@ -16463,6 +16499,10 @@ body.viewProfile .header-controls-links-link.auth span {
   .infoBanner__btn {
     padding: 0.5rem 1.3rem;
     width: auto;
+  }
+
+  .analyticCreate__switcher {
+    width: 100%;
   }
 
   .btn--settings {

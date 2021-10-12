@@ -1408,6 +1408,22 @@ $base_transition: 0.4s ease-in-out;
         .mainGraphBlock {
             height: 100%;
         }
+
+        .modal-content-switcher-button {
+            position: relative;
+            width: 55%;
+            min-height: 3rem;
+            margin-bottom: -2.8rem;
+
+            @media ($media_sm) {
+                margin-bottom: 0;
+                width: 100%;
+            }
+
+            span {
+                padding: 0.95rem 0;
+            }
+        }
     }
 
     // .assetsInfoPromo__text
@@ -3217,5 +3233,43 @@ $base_transition: 0.4s ease-in-out;
             width: 1.35rem;
             height: 1.35rem;
         }
+    }
+}
+
+.analyticCreate {
+
+    // .analyticCreate__switcher
+
+    &__switcher {
+        width: 40%;
+        margin-bottom: 2.2rem;
+
+        @media ($media_xl) {
+            width: 50%;
+        }
+
+        @media ($media_sm) {
+            width: 100%;
+        }
+    }
+
+    // .analyticCreate__search
+
+    &__search {
+    }
+
+    // .analyticCreate__searchText
+
+    &__searchText {
+        color: $color_black_title;
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    // .analyticCreate__searchInput
+
+    &__searchInput {
+        margin-top: 1.5rem;
     }
 }

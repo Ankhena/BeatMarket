@@ -6,17 +6,42 @@
     <body>
 
         @@include("_header.html", {
-			"title": "Мои стратегии",
+			"title": "Аналитика",
             "searchBar": "true",
             "searchBarClass": "headerSearchBar"
 		})
 
         <section class="section-outer section-main">
             <div class="main">
-                @@include("_menu.html", { "title": "Мой портфель" })
+                @@include("_menu.html", { 
+                    "title": "Аналитика",
+                    "analyticMenu": "active"
+                })
 
                 <div class="main-content">
                     <div class="main-contentPadding">
+
+                        <div class="main-content__elem main-content__elem--promo analyticCreate">
+                            <div class="analyticCreate__switcher">
+                                <div class="modal-content-switcher-button">
+                                    <label>
+                                        <input type="radio" name="switcherAnalyticCreate" class="visually_hidden" checked="">
+                                        <span>Акции и ETF</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="switcherAnalyticCreate" class="visually_hidden">
+                                        <span>Криптовалюта</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="analyticCreate__search">
+                                <p class="analyticCreate__searchText">Укажите кампанию в поисковой строке, чтобы получить сводку</p>
+                                <div class="analyticCreate__searchInput inputGroup__item">
+                                    <input class="inputGroup__control inputGroup__control--padding" type="text" placeholder="AAPL или Apple ">
+                                    <svg class="inputGroup__icon"><use xlink:href="img/main.svg#icon-searchTicket"></use></svg>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="main-content__elem main-content__elem--promo">
                             <div class="assetsInfoPromo">
@@ -57,7 +82,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="assetsInfoDescr__content">
-                                                    <div class="assetsInfoDescr__label">Текующая цена</div>
+                                                    <div class="assetsInfoDescr__label">Текущая цена</div>
                                                     <span class="assetsInfoDescr__cost"
                                                         >40433.94 $
                                                         <strong class="assetsInfoDescr__percent assetsInfoDescr__percent--success">+0.61 (+7,23%)</strong>
@@ -92,7 +117,17 @@
                                     </div>
                                     <div class="assetsInfoPromo__item assetsInfoPromo__graph">
                                         <div class="stategyPromo-graph">
-                                            <h2 class="stategyPromo-graph-title">График цены</h2>
+                                            <!-- <h2 class="stategyPromo-graph-title">График цены</h2> -->
+                                            <div class="modal-content-switcher-button">
+                                                <label>
+                                                    <input type="radio" name="switcherAnalyticGraph" class="visually_hidden" checked="">
+                                                    <span>График цены</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="switcherAnalyticGraph" class="visually_hidden">
+                                                    <span>% vs SP500</span>
+                                                </label>
+                                            </div>
                                             <div class="stategyPromo-graph-info">
                                                 <div class="stategyPromo-graph-info-content">
                                                     <div class="stategyPromo-graph-info-content-choose">
