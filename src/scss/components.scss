@@ -1799,6 +1799,10 @@ $base_transition: 0.4s ease-in-out;
             color: $color_red;
         }
 
+        &--gray {
+            color: $color_table_header_title;
+        }
+
         &--xl {
             color: $color_black_title;
             font-size: 2.77rem;
@@ -3271,5 +3275,45 @@ $base_transition: 0.4s ease-in-out;
 
     &__searchInput {
         margin-top: 1.5rem;
+    }
+}
+
+.cashMoney {
+    display: flex;
+    align-items: baseline;
+
+    // .cashMoney__title
+
+    &__title {
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: $color_table_header_title;
+    }
+
+    // .cashMoney__value
+
+    &__value {
+        font-weight: 700;
+        font-size: 1.35rem;
+        color: $color_table_header_title;
+
+        display: inline-block;
+        margin: 0 0.9rem 0 0.7rem;
+    }
+
+    // .cashMoney__edit
+
+    &__edit {
+        display: flex;
+        @include cursorPointer;
+    }
+
+    // .cashMoney__icon
+
+    &__icon {
+        transform: translateY(0.1rem);
+        stroke: $breadcrumb_border;
+        width: 1.35rem;
+        height: 1.35rem;
     }
 }

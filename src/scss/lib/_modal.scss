@@ -203,6 +203,14 @@
                     text-align: center;
                     transition: 0.3s ease-in-out;
 
+                    &:not(:last-child) {
+                        border-right: 1px solid $color_block_border;
+
+                        @media ($media_sm) {
+                            border-bottom: 1px solid $color_block_border;
+                        }
+                    }
+
                     input[type='radio']:checked ~ span, &.ui-tabs-active {
                         background-color: $color_blue;
                         color: $color_white;

@@ -33,6 +33,12 @@
   }
 }
 
+.form__textTitle {
+  margin-top: 2rem;
+  color: $color_black_title;
+  line-height: 1.5;
+}
+
 .form__item--radio {
   display: flex;
 

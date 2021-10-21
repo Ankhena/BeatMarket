@@ -152,6 +152,12 @@ a.btn {
         &:hover {
             border: 2px solid darken($color_block_border, 15%);
         }
+
+        &--textBlue {
+            color: $color_blue;
+            padding: 1.2rem 1.8rem;
+            align-self: center;
+        }
     }
 
     &_blue {

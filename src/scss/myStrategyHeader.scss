@@ -48,6 +48,10 @@
             align-items: flex-end;
             justify-content: space-between;
 
+            .checkbox-label__area {
+                margin-top: 1.5rem;
+            }
+
             &-cash {
 
                 h5 {
@@ -122,6 +126,14 @@
         padding: 0 8rem 0 2rem;
         justify-content: space-between;
         align-items: center;
+
+        &.paddingBase {
+            padding: 0 2rem;
+
+            @media ($media_sm) {
+                padding: 0;
+            }
+        }
 
         @media ($media_sm) {
             padding: 0;

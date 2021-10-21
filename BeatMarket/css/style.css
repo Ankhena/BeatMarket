@@ -889,6 +889,13 @@ a.btn {
   border: 2px solid #87b2ff;
 }
 
+.btn_primary--textBlue {
+  color: #3E54D8;
+  padding: 1.2rem 1.8rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
 .btn_blue {
   background-color: #3E54D8;
   -webkit-box-shadow: 0px 18px 22px -13px rgba(62, 84, 216, 0.51);
@@ -2556,6 +2563,11 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+}
+
+.modal-content-switcher-button label:not(:last-child),
+.modal-content-switcher-button li:not(:last-child) {
+  border-right: 1px solid #D3E3FF;
 }
 
 .modal-content-switcher-button label input[type='radio']:checked ~ span,
@@ -4836,6 +4848,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
           justify-content: space-between;
 }
 
+.myStrategy-items-item-header-info-content .checkbox-label__area {
+  margin-top: 1.5rem;
+}
+
 .myStrategy-items-item-header-info-content-cash h5 {
   font-weight: 500;
   font-size: 0.77rem;
@@ -4911,6 +4927,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.myStrategy-items-item-header-stat.paddingBase {
+  padding: 0 2rem;
 }
 
 .myStrategy-items-item-header-stat-block h5 {
@@ -9693,6 +9713,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   color: #ED6373;
 }
 
+.moneyStat__value--gray {
+  color: #606371;
+}
+
 .moneyStat__value--xl {
   color: #24252E;
   font-size: 2.77rem;
@@ -10775,6 +10799,44 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   margin-top: 1.5rem;
 }
 
+.cashMoney {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.cashMoney__title {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #606371;
+}
+
+.cashMoney__value {
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: #606371;
+  display: inline-block;
+  margin: 0 0.9rem 0 0.7rem;
+}
+
+.cashMoney__edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cashMoney__icon {
+  -webkit-transform: translateY(0.1rem);
+      -ms-transform: translateY(0.1rem);
+          transform: translateY(0.1rem);
+  stroke: #8C9BEA;
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   vertical-align: middle;
@@ -11434,6 +11496,12 @@ dd {
 
 .form__item--btn {
   margin-top: 30px;
+}
+
+.form__textTitle {
+  margin-top: 2rem;
+  color: #24252E;
+  line-height: 1.5;
 }
 
 .form__item--radio {
@@ -12931,6 +12999,11 @@ td {
   margin-top: 4rem;
 }
 
+.myStrategy__btnContainer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
 .myStrategy-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13081,6 +13154,10 @@ td {
 .myStrategy-items-item-content .nav ul li a.active {
   color: #3E54D8;
   border-color: #3E54D8;
+}
+
+.myStrategy-items-item-content .cashMoney {
+  margin-top: 1.8rem;
 }
 
 .strategyCards {
@@ -13533,7 +13610,7 @@ body.viewProfile .header-controls-links-link.auth span {
 }
 
 .blockSettings__switcher--thin label span {
-  padding: 0.6rem 0;
+  padding: 0.7rem 0;
 }
 
 .subscribe-changer {
@@ -13665,6 +13742,10 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 
   .infoBanner__close {
+    cursor: pointer;
+  }
+
+  .cashMoney__edit {
     cursor: pointer;
   }
 
@@ -14901,6 +14982,11 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 1.5rem;
   }
 
+  .modal-content-switcher-button label:not(:last-child),
+  .modal-content-switcher-button li:not(:last-child) {
+    border-bottom: 1px solid #D3E3FF;
+  }
+
   .modal-content-banner-info.withIcon svg {
     min-width: 1.8rem;
     max-width: 1.8rem;
@@ -15400,6 +15486,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .myStrategy-items-item-header-info-title {
     width: 70%;
+  }
+
+  .myStrategy-items-item-header-stat.paddingBase {
+    padding: 0;
   }
 
   .myStrategy-items-item-header-stat {
@@ -16725,6 +16815,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .section-main .main-menu .nav ul li a {
     font-size: 1.25rem;
+  }
+
+  .myStrategy__btnContainer {
+    margin-bottom: 1.5rem;
   }
 
   .myStrategy-header button {

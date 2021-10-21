@@ -1310,5 +1310,41 @@
     </div>
 </div>
 
+<div class="modal" id="modal_cashMoney">
+    <div class="modal-header">
+        <h2>Введите сумму наличных</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+        <div class="modal-content-input use_mt_first">
+            <label class="label_modal">Наличные</label>
+            <input type="text" value="2321">
+        </div>
+        <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue" data-closeModal>Сохранить</button>
+            <button class="btn gray" data-closeModal>Отменить</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal notify" id="modal_advisorLimit">
+    <div class="modal-header">
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+        <div class="modal-content-img use_mt_first">
+            <svg data-closeModal><use xlink:href="img/main.svg#icon-modal-notify-check"></use></svg>
+        </div>
+        <div class="modal-content-header use_mt">
+            <h2>Вы привысили лимит доступных стратегий в советнике</h2>
+        </div>
+        <div class="modal-content-text use_mt regular">
+            <p>Оформите подписку на другой тариф для создания новых стратегий</p>
+        </div>
+        <div class="modal-content-buttons use_mt full">
+            <button class="btn btn_blue" data-closeModal>Выбрать тариф</button>
+        </div>
+    </div>
+</div>
 
 <div class="overlay overlay_modal" data-closeModal></div>
