@@ -11,17 +11,17 @@ let path = {
     },
     src: {
        html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
-       css: [source_folder + "/scss/style.scss", source_folder + "/scss/app.scss", source_folder + "/scss/onboard.scss"],
+       css: source_folder + "/scss/style.scss",
        js: source_folder + "/js/script.js",
        js_min: source_folder + "/js/scripts/**/*.min.js",
-       img: source_folder + "/img/**/*.+(png|jpg|gif|ico|svg|webp)",
+       img: source_folder + "/img/**/*.+(png|jpg|gif|ico|webp|svg)",
        fonts: source_folder + "/fonts/**/*.ttf"
     },
     watch: {
        html: source_folder + "/*.html",
        css: source_folder + "/scss/**/*.scss",
        js: source_folder + "/js/**/*.js",
-       img: source_folder + "/img/**/*.+(png|jpg|gif|ico|svg|webp)",
+       img: source_folder + "/img/**/*.+(png|jpg|gif|ico|webp|svg)"
     },
     clean: "./" + project_folder + "/"
 }
@@ -31,7 +31,7 @@ let { src, dest } = require("gulp"),
    browsersync = require("browser-sync").create();
    fileinclude = require("gulp-file-include"),
    del = require("del"),
-   scss = require("gulp-sass"),
+   scss = require('gulp-sass')(require('node-sass')),
    autoprefixer = require("gulp-autoprefixer"),
    group_media = require("gulp-group-css-media-queries"),
    clean_css = require("gulp-clean-css"),
@@ -41,7 +41,9 @@ let { src, dest } = require("gulp"),
    webp = require("gulp-webp"),
    webphtml = require("gulp-webp-html"),
    webpcss = require("gulp-webpcss"),
-   svgSprite = require("gulp-svg-sprite"),
+   svgmin = require('gulp-svgmin'),
+   cheerio = require('gulp-cheerio'),
+   replace = require('gulp-replace'),
    ttf2woff = require("gulp-ttf2woff"),
    ttf2woff2 = require("gulp-ttf2woff2");
 
@@ -119,7 +121,7 @@ function images() {
                quality: 95
            })
        )
-       .pipe(dest(path.build.img))
+      .pipe(dest(path.build.img))
        .pipe(src(path.src.img))
        .pipe(
            imagemin({
@@ -151,19 +153,6 @@ function watchFiles(params) {
 function clean(params) {
    return del(path.clean);
 }
-
-gulp.task("svgSprite", function() {
-   return gulp.src([source_folder + "/iconsprite/*.svg"])
-   .pipe(svgSprite({
-       mode: {
-           stack: {
-               sprite: "../icons/icons.svg",
-               example: true
-           }
-       }
-   }))
-   .pipe(dest(path.build.img))
-})
 
 let build = gulp.series(clean, js_min, gulp.parallel(js, css, html, images, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);

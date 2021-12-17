@@ -29,6 +29,7 @@
 @import "support";
 //@import "app";
 @import "authForm";
+@import "onboard";
 @import "components";
 
 @import "all";
@@ -609,6 +610,10 @@ body.topNav {
 
                         &:not(:last-child) {
                             margin: 0 2rem 0 0;
+                        }
+
+                        &:nth-child(2n) {
+                            display: none;
                         }
 
                         svg {

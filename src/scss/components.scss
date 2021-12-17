@@ -3317,3 +3317,26 @@ $base_transition: 0.4s ease-in-out;
         height: 1.35rem;
     }
 }
+
+.addDividendTarget {
+    padding: 0;
+    background: unset;
+    display: flex;
+    align-items: center;
+
+    // .addDividendTarget__icon
+
+    &__icon {
+        width: 1.1rem;
+        height: 1.1rem;
+    }
+
+    // .addDividendTarget__title
+
+    &__title {
+        color: $color_blue;
+        font-weight: 500;
+        font-size: 0.9rem;
+        margin-left: 0.875rem;
+    }
+}
