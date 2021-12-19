@@ -25,6 +25,7 @@ $(document).ready(function() {
     --include("_subscribeChanger.js")
     --include("_dopFunctional.js")
     --include("_mainPromoGraph.js")
+    --include("_slider.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {

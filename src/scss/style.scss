@@ -2,7 +2,7 @@
 @import "./lib/colors";
 @import "./lib/grid";
 //@import "./lib/fonts";
-//@import "./lib/lightslider";
+@import "./lib/lightslider";
 @import "./lib/selectric";
 //@import "./lib/animate";
 @import "./lib/mixins";
@@ -29,7 +29,7 @@
 @import "support";
 //@import "app";
 @import "authForm";
-@import "onboard";
+//@import "onboard";
 @import "components";
 
 @import "all";
@@ -1071,6 +1071,65 @@ body.viewProfile {
     
             &__toggle {
                 margin: 0.8rem 0;
+            }
+        }
+    }
+}
+
+.orderHistory {
+    padding: 1.9rem;
+
+    // .orderHistory__header
+
+    &__header {
+    }
+
+    // .orderHistory__title
+
+    &__title {
+        font-size: 1.34rem;
+        color: $color_blue;
+        font-weight: 500;
+    }
+
+    // .orderHistory__content
+
+    &__content {
+        border-top: 1px solid $color_block_border;
+        padding-top: 1.5rem;
+        margin-top: 1.8rem;
+    }
+
+    // .orderHistory__items
+
+    &__items {
+    }
+
+    // .orderHistory__item
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 1.55rem;
+        }
+
+        .downloadViewLink {
+            &:not(:last-child) {
+                margin-bottom: 1.4rem;
+            }
+        }
+    }
+
+    // .orderHistory__button
+
+    &__button {
+        margin-top: 2.2rem;
+
+        .btn {
+            padding: 1.2rem 3.5rem;
+
+            @media ($media_sm) {
+                padding: 1.2rem 0;
             }
         }
     }

@@ -496,6 +496,7 @@ $strategy-btn-margin: 0.8rem;
             &-btn {
                 position: relative;
                 margin-left: auto;
+                display: inline-flex;
 
                 @media ($media_sm) {
                     position: absolute;

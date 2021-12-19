@@ -1347,4 +1347,46 @@
     </div>
 </div>
 
+<div class="modal" id="modal_mailingSetting">
+    <div class="modal-header">
+        <h2>Настройки рассылки</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+
+        <div class="settings-comission__elem use_mt_first">
+            <h3 class="settings-comission__title">Рассылка оповещений</h3>
+        </div>
+
+        <div class="modal-content-switcher">
+            <div class="modal-content-switcher-button">
+                <label>
+                    <input type="radio" name="switcherMailingSetting" class="visually_hidden" checked>
+                    <span>Телеграм</span>
+                </label>
+                <label>
+                    <input type="radio" name="switcherMailingSetting" class="visually_hidden">
+                    <span>Email</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="settings-comission__elem use_mt">
+            <label class="checkbox-toggle blockSettings__checkbox">
+                <input class="checkbox-toggle__input" type="checkbox">
+                <span class="checkbox-toggle__toggle"></span> Оповещения в телеграм
+            </label>
+        </div>
+
+        <div class="modal-content-text use_mt accent_gray">
+            <p class="label_modal">При включении вы будете перенаправлены на телеграм бота</p>
+        </div>
+
+        <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue" data-closeModal>Сохранить</button>
+        </div>
+
+    </div>
+</div>
+
 <div class="overlay overlay_modal" data-closeModal></div>

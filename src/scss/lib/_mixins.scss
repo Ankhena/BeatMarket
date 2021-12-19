@@ -1065,6 +1065,23 @@ input[type="radio"]:checked {
     position: relative;
     overflow: hidden;
 
+    &--short {
+        .wantThis__header {
+            width: 70%;
+            margin: 0 auto;
+
+            @media ($media_sm) {
+                width: 100%;
+            }
+        }
+
+        .wantThis__title--mark {
+            &::before {
+                height: 0.4rem;
+            }
+        }
+    }
+
     // .wantThis__header
 
     &__header {
@@ -1074,7 +1091,20 @@ input[type="radio"]:checked {
         flex-direction: column;
 
         @media ($media_sm) {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    // .wantThis__text
+
+    &__text {
+        font-size: 1.35rem;
+        font-weight: 500;
+        line-height: 1.4;
+
+        @media ($media_sm) {
+            font-size: 1.2rem;
+            line-height: 1.6;
         }
     }
 
