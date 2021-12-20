@@ -1169,11 +1169,35 @@
             <span>Tractor Supply</span>
         </div>
 
-        <div class="modal-content-addOperation use_mt">            
-            <button class="btn btn_blue btn_addOperation">
-                <svg><use xlink:href="img/main.svg#icon-PlusCircle"></use></svg>
-                <span>Добавить операцию</span>
-            </button>
+        <div class="modal-content-addOperation use_mt"> 
+            <div class="modal-content-addOperation-langOperation">
+
+                <button class="btn btn_blue btn_addOperation">
+                    <svg><use xlink:href="img/main.svg#icon-PlusCircle"></use></svg>
+                    <span>Добавить операцию</span>
+                </button>
+                
+                <div class="section-header">
+                    <div class="header-controls-links-link withCaret currency">
+                        <input type="checkbox" id="currencyDesktopModal" class="visually_hidden">
+                    
+                        <label for="currencyDesktopModal">
+                            <span>$ USD</span>
+                            <svg><use xlink:href="img/main.svg#icon-caret-down"></use></svg>
+                        </label>
+                    
+                        <div class="dropdown">
+                            <div class="content">
+                                <span class="active">$ USD</span>
+                                <span>₽ RUB</span>
+                                <span>€ EUR</span>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+            </div>  
 
             <div class="modal-content-addOperation-group">
                 <button class="btn_group success">Покупка</button>

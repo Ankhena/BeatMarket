@@ -3658,3 +3658,48 @@ $base_transition: 0.4s ease-in-out;
         line-height: 1.4;
     }
 }
+
+.ratesOfGrowth {
+    width: 100%;
+
+    // .ratesOfGrowth__row
+
+    &__row {
+        display: flex;
+        align-items: center;
+        padding: 0.7rem 0;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $color_block_border;
+        }
+    }
+
+    // .ratesOfGrowth__col
+
+    &__col {
+        font-size: 1.11rem;
+        font-weight: 600;
+        color: $color_black_title;
+
+        flex-basis: 100%;
+
+        // .ratesOfGrowth__col--title
+
+        &--title {
+            font-size: 0.78rem;
+            color: $color_black_main;
+        }
+
+        // .ratesOfGrowth__col--success
+
+        &--success {
+            color: $color_green;
+        }
+
+        // .ratesOfGrowth__col--danger
+
+        &--danger {
+            color: $color_red;
+        }
+    }
+}

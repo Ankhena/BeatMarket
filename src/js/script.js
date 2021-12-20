@@ -25,6 +25,7 @@ $(document).ready(function() {
     --include("_subscribeChanger.js")
     --include("_dopFunctional.js")
     --include("_mainPromoGraph.js")
+    --include("_growthPaymentsGraph.js")
     --include("_slider.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
@@ -92,7 +93,7 @@ $(document).ready(function() {
     });
 
     $(".btn_addOperation").click(function() {
-        $(this).next().toggleClass("active");
+        $(this).parent().next().toggleClass("active");
     });
 
     $("#tabs").tabs();
