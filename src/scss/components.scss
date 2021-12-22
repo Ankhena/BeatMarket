@@ -3703,3 +3703,52 @@ $base_transition: 0.4s ease-in-out;
         }
     }
 }
+
+.growthDividendPayments {
+    background-color: $color_lighten_grey;
+    padding: 1.33rem 0 1.77rem 0;
+
+    .blockSection__dividendStatus {
+        margin-bottom: 0.8rem;
+    }
+
+    .blockSection__dividendStatusList {
+        flex-wrap: wrap;
+
+        @media ($media_sm) {
+            margin: 0 0 0 1.5rem;
+        }
+    }
+
+    // .growthDividendPayments__header
+
+    &__header {
+    }
+
+    // .growthDividendPayments__label
+
+    &__label {
+        width: auto;
+        padding: 0 0.67rem;
+    }
+
+    // .growthDividendPayments__text
+
+    &__text {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    // .growthDividendPayments__icon
+
+    &__icon {
+        width: 1.34rem;
+        height: 1.34rem;
+        margin-right: 0.5rem;
+    }
+
+    // .growthDividendPayments__graphContainer
+
+    &__graphContainer {
+    }
+}

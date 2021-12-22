@@ -5,14 +5,16 @@ function initTableMain() {
         if (document.body.offsetWidth <= 768) {
             let statSticker = item.querySelector(".statSticker");
             if (statSticker !== null) {
-                statSticker.addEventListener("click", () => {
+                statSticker.addEventListener("click", (e) => {
                     item.classList.toggle("statTable__content--opened");
+                    e.stopPropagation();
                 });
             }
         }
         else {
-            item.addEventListener("click", () => {
+            item.addEventListener("click", (e) => {
                 item.classList.toggle("statTable__content--opened");
+                e.stopPropagation();
             });
         }
     });

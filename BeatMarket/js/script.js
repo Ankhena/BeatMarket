@@ -1065,14 +1065,16 @@ initDateRangePicker();
         if (document.body.offsetWidth <= 768) {
             let statSticker = item.querySelector(".statSticker");
             if (statSticker !== null) {
-                statSticker.addEventListener("click", () => {
+                statSticker.addEventListener("click", (e) => {
                     item.classList.toggle("statTable__content--opened");
+                    e.stopPropagation();
                 });
             }
         }
         else {
-            item.addEventListener("click", () => {
+            item.addEventListener("click", (e) => {
                 item.classList.toggle("statTable__content--opened");
+                e.stopPropagation();
             });
         }
     });
@@ -2563,6 +2565,32 @@ initSlider();
             content.slideToggle();
             btn.toggleClass("btnShowAll--active");
         });
+    });
+
+    document.querySelectorAll(".tablePaymentSchedule").forEach(table => {
+        let tableItems = table.querySelectorAll(".table-content-item:not(.table-content-item.bottom)");
+        let tableItemsFixed = table.querySelectorAll(".table-fixed-item.inline:not(.table-fixed-item.bottom)");
+
+        tableItems.forEach((tableItem, id) => {
+            tableItem.addEventListener("click", () => {
+                clickToTableElem(id);
+            });
+        });
+
+        tableItemsFixed.forEach((tableItemFixed, id) => {
+            tableItemFixed.addEventListener("click", () => {
+                clickToTableElem(id);
+            });
+        });
+
+        function clickToTableElem(id) {
+            let growthDividendPayments = tableItems[id].querySelector(".growthDividendPayments");
+            if (growthDividendPayments !== null) {
+                tableItems[id].classList.toggle("opened");
+                tableItemsFixed[id].classList.toggle("opened");
+                //console.log(id);
+            }
+        }
     });
 
 });

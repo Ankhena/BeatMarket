@@ -1134,3 +1134,49 @@ body.viewProfile {
         }
     }
 }
+
+.tablePaymentSchedule {
+
+    .table-fixed-item {
+        height: calc(55px + 2px);
+
+        &.bottom {
+            height: calc(55px + 3px);
+        }
+        
+        &.opened {
+            height: calc(55px + 2px + 330px);
+        }
+    }
+
+    .table-content {
+        padding-left: 8rem;
+
+        &-item {
+            height: auto;
+            flex-direction: column;
+            padding: 0 0 0 3.5rem;
+    
+            &-info {
+                height: 55px;
+                padding-left: 3rem;
+            }
+
+            .growthDividendPayments {
+                display: none;
+                padding-left: 3rem;
+                height: 330px;
+            }
+
+            &.opened {
+                .growthDividendPayments {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .month-cash__graph {
+        width: 100%;
+    }
+}

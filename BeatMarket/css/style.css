@@ -6453,18 +6453,20 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   background-color: #EDEDED;
 }
 
-.statTable__content--opened .statSticker__delete:hover .statSticker__trash {
-  stroke: #fff;
-}
-
-.statTable__content--opened .statSticker__arrow {
+.statTable__content--opened > .statTable__row .statSticker__arrow {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   fill: #3E54D8;
 }
 
-.statTable__content--opened .statTable__subtable {
+.statTable__content--opened > .statTable__row .statStickerInfo__changeStock .btnShowAll__icon {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.statTable__content--opened > .statTable__subtable {
   display: block;
 }
 
@@ -6592,6 +6594,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   padding: 0 1.5rem;
 }
 
+.statSubtable--noPaddingAbsolute {
+  padding: 0;
+}
+
 .statSubtable__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6626,6 +6632,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.statSticker--import {
+  position: relative;
 }
 
 .statSticker__title {
@@ -6714,6 +6724,41 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
           align-items: baseline;
   font-weight: 500;
   max-width: 7rem;
+}
+
+.statStickerInfo--nested {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.statStickerInfo__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.statStickerInfo__changeStock {
+  font-size: 0.85rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.statStickerInfo__changeStock .btnShowAll {
+  margin-left: 0.75rem;
+  margin-bottom: -0.2rem;
+}
+
+.statStickerInfo__changeStock .btnShowAll__text {
+  font-size: 0.85rem;
 }
 
 .statStickerInfo--import {
@@ -11721,6 +11766,36 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   color: #ED6373;
 }
 
+.growthDividendPayments {
+  background-color: #F5F6FD;
+  padding: 1.33rem 0 1.77rem 0;
+}
+
+.growthDividendPayments .blockSection__dividendStatus {
+  margin-bottom: 0.8rem;
+}
+
+.growthDividendPayments .blockSection__dividendStatusList {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.growthDividendPayments__label {
+  width: auto;
+  padding: 0 0.67rem;
+}
+
+.growthDividendPayments__text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.growthDividendPayments__icon {
+  width: 1.34rem;
+  height: 1.34rem;
+  margin-right: 0.5rem;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   vertical-align: middle;
@@ -14551,6 +14626,50 @@ body.viewProfile .header-controls-links-link.auth span {
   padding: 1.2rem 3.5rem;
 }
 
+.tablePaymentSchedule .table-fixed-item {
+  height: calc(55px + 2px);
+}
+
+.tablePaymentSchedule .table-fixed-item.bottom {
+  height: calc(55px + 3px);
+}
+
+.tablePaymentSchedule .table-fixed-item.opened {
+  height: calc(55px + 2px + 330px);
+}
+
+.tablePaymentSchedule .table-content {
+  padding-left: 8rem;
+}
+
+.tablePaymentSchedule .table-content-item {
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 0 0 3.5rem;
+}
+
+.tablePaymentSchedule .table-content-item-info {
+  height: 55px;
+  padding-left: 3rem;
+}
+
+.tablePaymentSchedule .table-content-item .growthDividendPayments {
+  display: none;
+  padding-left: 3rem;
+  height: 330px;
+}
+
+.tablePaymentSchedule .table-content-item.opened .growthDividendPayments {
+  display: block;
+}
+
+.tablePaymentSchedule .month-cash__graph {
+  width: 100%;
+}
+
 @media (min-width: 564px) {
   .daterangepicker {
     width: auto;
@@ -16732,6 +16851,36 @@ body.viewProfile .header-controls-links-link.auth span {
     color: #fff;
   }
 
+  .statTable__content--opened .statSticker__delete:hover .statSticker__trash {
+    stroke: #fff;
+  }
+
+  .statTable__content--opened > .statTable__row .statTable__item--sticker {
+    background-color: #3E54D8;
+  }
+
+  .statTable__content--opened > .statTable__row .statSticker__arrow {
+    fill: #fff;
+  }
+
+  .statTable__content--opened > .statTable__row .statStickerInfo__changeStock {
+    color: #fff;
+  }
+
+  .statTable__content--opened > .statTable__row .statStickerInfo__changeStock .btnShowAll {
+    color: #fff;
+  }
+
+  .statTable__content--opened > .statTable__row .statStickerInfo__title,
+  .statTable__content--opened > .statTable__row .statStickerInfo__cost,
+  .statTable__content--opened > .statTable__row .statStickerInfo__subtitle {
+    color: #fff;
+  }
+
+  .statTable__content--opened > .statTable__row .statSticker__percent--success {
+    color: #1BD32F;
+  }
+
   .statTable__content--opened .statTable__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -16740,24 +16889,6 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .statTable__content--opened .statTable__item--label {
     display: block;
-  }
-
-  .statTable__content--opened .statTable__item--sticker {
-    background-color: #3E54D8;
-  }
-
-  .statTable__content--opened .statSticker__arrow {
-    fill: #fff;
-  }
-
-  .statTable__content--opened .statStickerInfo__title,
-  .statTable__content--opened .statStickerInfo__cost,
-  .statTable__content--opened .statStickerInfo__subtitle {
-    color: #fff;
-  }
-
-  .statTable__content--opened .statSticker__percent--success {
-    color: #1BD32F;
   }
 
   .statTable__content--danger {
@@ -16868,6 +16999,21 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .statStickerInfo {
     max-width: 10rem;
+  }
+
+  .statStickerInfo__changeStock {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .statStickerInfo__changeStock .btnShowAll {
+    margin-left: 0;
+    margin-top: 0.3rem;
   }
 
   .statStickerInfo--import {
@@ -17628,6 +17774,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .mailing__slider .btn {
     padding: 1.2rem 0;
+  }
+
+  .growthDividendPayments .blockSection__dividendStatusList {
+    margin: 0 0 0 1.5rem;
   }
 
   .btn--settings {

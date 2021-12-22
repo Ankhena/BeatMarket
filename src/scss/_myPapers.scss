@@ -89,6 +89,20 @@
 
         &--opened {
 
+            > .statTable__row {
+                .statSticker__arrow {
+                    transform: rotate(0deg);
+                    fill: $color_blue;
+                }
+
+                .statStickerInfo__changeStock {
+            
+                    .btnShowAll__icon {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
             .statSticker__title {
                 @media ($media_sm) {
                     color: $color_white;
@@ -98,21 +112,46 @@
             .statSticker__delete {
                 &:hover {
                     .statSticker__trash {
-                        stroke: $color_white;
+                        @media ($media_sm) {
+                            stroke: $color_white;
+                        }
                     }
                 }
             }
 
-            .statSticker__arrow {
-                transform: rotate(0deg);
-                fill: $color_blue;
-            }
-
-            .statTable__subtable {
+            > .statTable__subtable {
                 display: block;
             }
 
             @media ($media_sm) {
+
+                > .statTable__row {
+                    .statTable__item--sticker {
+                        background-color: $color_blue;
+                    }
+
+                    .statSticker__arrow {
+                        fill: $color_white;
+                    }
+
+                    .statStickerInfo__changeStock {
+                        color: $color_white;
+                
+                        .btnShowAll {
+                            color: $color_white;
+                        }
+                    }
+
+                    .statStickerInfo__title,
+                    .statStickerInfo__cost,
+                    .statStickerInfo__subtitle {
+                        color: $color_white;
+                    }
+    
+                    .statSticker__percent--success {
+                        color: $color_green_light_table_header;
+                    }
+                }
 
                 .statTable__item {
                     display: flex;
@@ -121,24 +160,7 @@
                 .statTable__item--label {
                     display: block;
                 }
-
-                .statTable__item--sticker {
-                    background-color: $color_blue;
-                }
-
-                .statSticker__arrow {
-                    fill: $color_white;
-                }
                 
-                .statStickerInfo__title,
-                .statStickerInfo__cost,
-                .statStickerInfo__subtitle {
-                    color: $color_white;
-                }
-
-                .statSticker__percent--success {
-                    color: $color_green_light_table_header;
-                }
             }
         }
 
@@ -320,6 +342,10 @@
         padding: 0 1.5rem;
     }
 
+    &--noPaddingAbsolute {
+        padding: 0;
+    }
+
     // .statSubtable__buttons
 
     &__buttons {
@@ -394,6 +420,8 @@
     align-items: center;
 
     &--import {
+        position: relative;
+
         @media ($media_sm) {
             justify-content: flex-start;
         }
@@ -505,6 +533,39 @@
         max-width: 10rem;
     }
 
+    &--nested {
+        flex-direction: column;
+    }
+
+    &__container {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__changeStock {
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+
+        @media ($media_sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .btnShowAll {
+            margin-left: 0.75rem;
+            margin-bottom: -0.2rem;
+
+            @media ($media_sm) {
+                margin-left: 0;
+                margin-top: 0.3rem;
+            }
+        }
+
+        .btnShowAll__text {
+            font-size: 0.85rem;
+        }
+    }
     
     &--import {
         max-width: unset;
