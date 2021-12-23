@@ -11243,8 +11243,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   margin: 0 0.9rem;
 }
 
-.dividendsTarget__progressBar::after {
-  content: "";
+.dividendsTarget__progressBarTrack {
   position: absolute;
   left: 0;
   top: 0;
@@ -11252,6 +11251,16 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   width: var(--progressLength);
   border-radius: 4px;
   background-color: #3E54D8;
+}
+
+.dividendsTarget__progressBarTrack--success {
+  background-color: #199F27;
+  left: var(--progressStart);
+}
+
+.dividendsTarget__progressBarTrack--danger {
+  background-color: #ED6373;
+  left: var(--progressStart);
 }
 
 .pageGetPortfolio__container {
@@ -17663,10 +17672,20 @@ body.viewProfile .header-controls-links-link.auth span {
     left: 4rem;
   }
 
-  .dividendsTarget__progressBar::after {
+  .dividendsTarget__progressBarTrack {
     border-radius: 8px;
     height: var(--progressLength);
     width: 15px;
+  }
+
+  .dividendsTarget__progressBarTrack--success {
+    top: var(--progressStart);
+    left: 0;
+  }
+
+  .dividendsTarget__progressBarTrack--danger {
+    left: 0;
+    top: var(--progressStart);
   }
 
   .pageGetPortfolio__info {

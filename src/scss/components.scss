@@ -2994,18 +2994,6 @@ $base_transition: 0.4s ease-in-out;
         background-color: $color_block_border;
         margin: 0 0.9rem;
 
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: var(--progressLength);
-            border-radius: 4px;
-            background-color: $color_blue;
-
-        }
-
         @media ($media_sm) {
             position: absolute;
             width: 15px;
@@ -3013,11 +3001,43 @@ $base_transition: 0.4s ease-in-out;
             margin: 0;
             border-radius: 8px;
             left: 4rem;
+        }
+    }
 
-            &::after {
-                border-radius: 8px;
-                height: var(--progressLength);
-                width: 15px;
+    // .dividendsTarget__progressBarTrack
+
+    &__progressBarTrack {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: var(--progressLength);
+        border-radius: 4px;
+        background-color: $color_blue;
+
+        @media ($media_sm) {
+            border-radius: 8px;
+            height: var(--progressLength);
+            width: 15px;
+        }
+
+        &--success {
+            background-color: $color_green;
+            left: var(--progressStart);
+
+            @media ($media_sm) {
+                top: var(--progressStart);
+                left: 0;
+            }
+        }
+
+        &--danger {
+            background-color: $color_red;
+            left: var(--progressStart);
+
+            @media ($media_sm) {
+                left: 0;
+                top: var(--progressStart);
             }
         }
     }
