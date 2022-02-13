@@ -76,6 +76,11 @@ body {
     color: $color_black_title;
 }
 
+.imgMax {
+    max-width: 100%;
+    width: 100%;
+}
+
 input[type="text"], input[type="email"], input[type="password"], input[type="url"], textarea {
     background: $color_white;
     border: 1px solid #d3e3ff;

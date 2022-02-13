@@ -1276,6 +1276,11 @@ body.hideScroll {
   color: #24252E;
 }
 
+.imgMax {
+  max-width: 100%;
+  width: 100%;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
