@@ -313,9 +313,28 @@ $strategy-btn-margin: 0.8rem;
 
         &-info {
             display: flex;
+            justify-content: space-between;
 
             @media ($media_sm) {
                 flex-direction: column;
+            }
+
+            .modal-content-switcher-button {
+                align-self: center;
+
+                @media ($media_sm) {
+                    width: 100%;
+                    margin-top: 1rem;
+                }
+
+                label {
+                    min-width: 8rem;
+
+                    span {
+                        padding: 0.875rem;
+                    }
+                }
+
             }
 
             &-btn {
@@ -350,6 +369,15 @@ $strategy-btn-margin: 0.8rem;
                 border-bottom: 1px solid $color_block_border;
                 width: 100%;
                 min-height: 3.5rem;
+
+                &.borderNone {
+                    width: unset;
+                    border: none;
+                    
+                    .stategyPromo-graph-info-content-choose {
+                        margin-left: 0;
+                    }
+                }
 
                 &-date {
                     display: flex;

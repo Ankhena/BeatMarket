@@ -225,6 +225,41 @@ a.btn {
         }
     }
 
+    &_mainCashFill {
+        border-radius: 0.3125rem;
+        padding: 0.5rem 1rem;
+        background-color: $color_blue;
+        cursor: pointer;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        align-self: center;
+        min-width: 13rem;
+
+        @media ($media_sm) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: initial;
+            width: 100% !important;
+        }
+
+        > span {
+            font-weight: 500;
+            line-height: 1.5;
+            color: $color_white;
+        }
+
+        > svg {
+            max-height: 10px;
+            max-width: 10px;
+            min-height: 10px;
+            min-width: 10px;
+            margin-left: 1rem;
+            fill: $color_white;
+        }
+    }
+
     &_link {
         color: $color_blue;
         font-weight: 600;

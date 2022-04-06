@@ -205,6 +205,16 @@
                 display: flex;
                 overflow: hidden;
 
+                &.inline {
+                    label, li {
+                        &:not(:last-child) {
+                            @media ($media_sm) {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+
                 label, li {
                     flex-basis: 50%;
                     text-align: center;
@@ -215,6 +225,10 @@
 
                         @media ($media_sm) {
                             border-bottom: 1px solid $color_block_border;
+
+                            &.inline {
+                                border-bottom: none;
+                            }
                         }
                     }
 

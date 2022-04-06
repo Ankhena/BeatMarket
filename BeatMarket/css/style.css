@@ -1488,6 +1488,40 @@ a.btn {
   fill: #3E54D8;
 }
 
+.btn_mainCashFill {
+  border-radius: 0.3125rem;
+  padding: 0.5rem 1rem;
+  background-color: #3E54D8;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+  min-width: 13rem;
+}
+
+.btn_mainCashFill > span {
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.btn_mainCashFill > svg {
+  max-height: 10px;
+  max-width: 10px;
+  min-height: 10px;
+  min-width: 10px;
+  margin-left: 1rem;
+  fill: #fff;
+}
+
 .btn_link {
   color: #3E54D8;
   font-weight: 600;
@@ -5176,6 +5210,22 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.stategyPromo-graph-info .modal-content-switcher-button {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.stategyPromo-graph-info .modal-content-switcher-button label {
+  min-width: 8rem;
+}
+
+.stategyPromo-graph-info .modal-content-switcher-button label span {
+  padding: 0.875rem;
 }
 
 .stategyPromo-graph-info-btn {
@@ -5211,6 +5261,15 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   border-bottom: 1px solid #D3E3FF;
   width: 100%;
   min-height: 3.5rem;
+}
+
+.stategyPromo-graph-info-content.borderNone {
+  width: unset;
+  border: none;
+}
+
+.stategyPromo-graph-info-content.borderNone .stategyPromo-graph-info-content-choose {
+  margin-left: 0;
 }
 
 .stategyPromo-graph-info-content-date {
@@ -15836,6 +15895,20 @@ body.viewProfile .header-controls-links-link.auth span {
     cursor: initial;
   }
 
+  .btn_mainCashFill {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: initial;
+    width: 100% !important;
+  }
+
   .btn_link {
     padding: 0;
     text-align: left;
@@ -16072,9 +16145,19 @@ body.viewProfile .header-controls-links-link.auth span {
     margin-top: 1.5rem;
   }
 
+  .modal-content-switcher-button.inline label:not(:last-child),
+  .modal-content-switcher-button.inline li:not(:last-child) {
+    border-bottom: none;
+  }
+
   .modal-content-switcher-button label:not(:last-child),
   .modal-content-switcher-button li:not(:last-child) {
     border-bottom: 1px solid #D3E3FF;
+  }
+
+  .modal-content-switcher-button label:not(:last-child).inline,
+  .modal-content-switcher-button li:not(:last-child).inline {
+    border-bottom: none;
   }
 
   .modal-content-banner-info.withIcon svg {
@@ -16522,6 +16605,11 @@ body.viewProfile .header-controls-links-link.auth span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .stategyPromo-graph-info .modal-content-switcher-button {
+    width: 100%;
+    margin-top: 1rem;
   }
 
   .stategyPromo-graph-info-btn {

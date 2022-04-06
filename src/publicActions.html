@@ -1,47 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        @@include('_head.html', { "title": "BeatMarket - Компании" })
-    </head>
-    <body>
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatMarket - Показатели"
+		})
+
+	</head>
+	<body class="viewProfile">
 
         @@include("_header.html", {
-			"title": "Аналитика",
+			"title": "Мои стратегии",
             "searchBar": "true",
             "searchBarClass": "headerSearchBar"
 		})
 
-        <section class="section-outer section-main">
-            <div class="main">
-                @@include("_menu.html", { 
-                    "title": "Аналитика",
-                    "analyticMenu": "active"
-                })
+		<section class="section-outer section-main">
+			<div class="main">
 
-                <div class="main-content">
-                    <div class="main-contentPadding">
-
-                        <div class="main-content__elem main-content__elem--promo analyticCreate">
-                            <div class="analyticCreate__switcher">
-                                <div class="modal-content-switcher-button">
-                                    <label>
-                                        <input type="radio" name="switcherAnalyticCreate" class="visually_hidden" checked="">
-                                        <span>Акции и ETF</span>
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="switcherAnalyticCreate" class="visually_hidden">
-                                        <span>Криптовалюта</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="analyticCreate__search">
-                                <p class="analyticCreate__searchText">Укажите кампанию в поисковой строке, чтобы получить сводку</p>
-                                <div class="analyticCreate__searchInput inputGroup__item">
-                                    <input class="inputGroup__control inputGroup__control--padding" type="text" placeholder="AAPL или Apple ">
-                                    <svg class="inputGroup__icon"><use xlink:href="img/main.svg#icon-searchTicket"></use></svg>
-                                </div>
-                            </div>
-                        </div>
+				<div class="main-content">
+                    <div class="main-content main-contentPadding">
 
                         <div class="main-content__elem main-content__elem--promo">
                             <div class="assetsInfoPromo">
@@ -265,23 +243,7 @@
                         <div class="main-content__elem">
                             <div class="blockSection blockSection--card">
                                 <div class="blockSection__header">
-                                    <h3 class="blockSection__title">Основные показатели 
-                                        <span class="blockSection__ticket">VIAC</span>
-                                        <div class="blockSection__dividendStatusList">
-                                            <div class="blockSection__dividendStatus paperDontTrade">
-                                                <svg class="paperDontTrade__icon blockSection__dividendStatusIcon blockSection__dividendStatusIcon--Crown"><use xlink:href="img/main.svg#icon_dividendStatus__crown"></use></svg>
-                                                <div class="paperDontTrade__popup"><b>Король</b> - дивидендное повышение выплат 50 лет подряд</div>
-                                            </div>
-                                            <div class="blockSection__dividendStatus paperDontTrade">
-                                                <svg class="paperDontTrade__icon blockSection__dividendStatusIcon blockSection__dividendStatusIcon--TopHat"><use xlink:href="img/main.svg#icon_dividendStatus__topHat"></use></svg>
-                                                <div class="paperDontTrade__popup"><b>Аристократ</b> - дивидендное повышение выплат 25 лет подряд</div>
-                                            </div>
-                                            <div class="blockSection__dividendStatus paperDontTrade">
-                                                <svg class="paperDontTrade__icon blockSection__dividendStatusIcon blockSection__dividendStatusIcon--Trophy"><use xlink:href="img/main.svg#icon_dividendStatus__trophy"></use></svg>
-                                                <div class="paperDontTrade__popup"><b>Чемпион</b> - дивидендное повышение выплат 10 лет подряд</div>
-                                            </div>
-                                        </div>
-                                    </h3>
+                                    <h3 class="blockSection__title">Основные показатели <span class="blockSection__ticket">VIAC</span></h3>
                                 </div>
                                 
                                 <div class="blockSection__content">
@@ -398,7 +360,23 @@
                         <div class="main-content__elem">
                             <div class="blockSection blockSection--card">
                                 <div class="blockSection__header">
-                                    <h3 class="blockSection__title">Дивидендная аналитика <span class="blockSection__ticket">VIAC</span></h3>
+                                    <h3 class="blockSection__title">Дивидендная аналитика 
+                                        <span class="blockSection__ticket">VIAC</span>
+                                        <div class="blockSection__dividendStatusList">
+                                            <div class="blockSection__dividendStatus paperDontTrade">
+                                                <svg class="paperDontTrade__icon blockSection__dividendStatusIcon blockSection__dividendStatusIcon--Crown"><use xlink:href="img/main.svg#icon_dividendStatus__crown"></use></svg>
+                                                <div class="paperDontTrade__popup"><b>Король</b> - дивидендное повышение выплат 50 лет подряд</div>
+                                            </div>
+                                            <div class="blockSection__dividendStatus paperDontTrade">
+                                                <svg class="paperDontTrade__icon blockSection__dividendStatusIcon blockSection__dividendStatusIcon--TopHat"><use xlink:href="img/main.svg#icon_dividendStatus__topHat"></use></svg>
+                                                <div class="paperDontTrade__popup"><b>Аристократ</b> - дивидендное повышение выплат 25 лет подряд</div>
+                                            </div>
+                                            <div class="blockSection__dividendStatus paperDontTrade">
+                                                <svg class="paperDontTrade__icon blockSection__dividendStatusIcon blockSection__dividendStatusIcon--Trophy"><use xlink:href="img/main.svg#icon_dividendStatus__trophy"></use></svg>
+                                                <div class="paperDontTrade__popup"><b>Чемпион</b> - дивидендное повышение выплат 10 лет подряд</div>
+                                            </div>
+                                        </div>
+                                    </h3>
                                 </div>
                                 <div class="blockSection__row">
                                     <div class="blockSection__cardAnalytics blockSection__fill">
@@ -421,17 +399,53 @@
                                 </div>
                                 <div class="blockSection__content dividends">
 
-                                    <div class="blockSection__period period">
-                                        <div class="period-info">
-                                            <h4>Период</h4>
-                                            <div class="period-info-date strategyViewDateChoose">
-                                                <span>21.11.2020 - 21.11.2021</span>
-                                                <svg><use xlink:href="img/main.svg#icon-CalendarBlank"></use></svg>
-                                            </div>
-                                        </div>
-                                        <div class="period-status">
-                                            <div class="period-status-checkbox">
-                                                <input id="=" type="checkbox" checked=""> Показать вложения
+                                    <div class="blockSection__fill">
+                                        <div class="stategyPromo-graph-info">
+                                            <label class="stategyPromo-graph-info-btn btn_mainCashFill" for="mainCash1">
+                                
+                                                <input id="mainCash1" type="checkbox" class="visually_hidden">
+                                
+                                                <span>Profit margin</span>
+                                                <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                
+                                                <div class="selectDropdown">
+                                                    <label class="selectDropdown-item border">
+                                                        <input type="checkbox" name="mainCashItems1" class=" visually_hidden">
+                                                        <span class="checkbox_custom">Общий доход</span>
+                                                    </label>
+                                                    <label class="selectDropdown-item">
+                                                        <input type="checkbox" name="mainCashItems1" class="visually_hidden">
+                                                        <span class="checkbox_custom">Стратегия удачи</span>
+                                                    </label>
+                                                    <label class="selectDropdown-item">
+                                                        <input type="checkbox" name="mainCashItems1" class="visually_hidden">
+                                                        <span class="checkbox_custom">Стратегия 2</span>
+                                                    </label>
+                                                    <label class="selectDropdown-item">
+                                                        <input type="checkbox" name="mainCashItems1" class="visually_hidden">
+                                                        <span class="checkbox_custom">Максимальный выкуп по акциям</span>
+                                                    </label>
+                                                    <div class="selectDropdown-item">
+                                                        <button class="btn btn_blue">Применить</button>
+                                                    </div>
+                                                </div>
+                                            </label>
+
+                                            <div class="stategyPromo-graph-info-content borderNone">
+                                                <div class="stategyPromo-graph-info-content-choose">
+                                                    <div class="stategyPromo-graph-info-content-choose-item active">
+                                                        <span>Неделя</span>
+                                                    </div>
+                                                    <div class="stategyPromo-graph-info-content-choose-item">
+                                                        <span>Месяц</span>
+                                                    </div>
+                                                    <div class="stategyPromo-graph-info-content-choose-item">
+                                                        <span>Год</span>
+                                                    </div>
+                                                    <div class="stategyPromo-graph-info-content-choose-item dotted strategyViewDateChoose">
+                                                        <svg><use xlink:href="img/main.svg#icon-dottes"></use></svg>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -445,216 +459,106 @@
                         </div>
 
                         <div class="main-content__elem">
-                            <div class="doubleBlockMd">
-                                <div class="doubleBlockMd__elem">
-                                    <div class="blockSection blockSection--card">
-                                        <div class="blockSection__header">
-                                            <h3 class="blockSection__title">Оценка акции <span class="blockSection__ticket">VIAC</span></h3>
-                                        </div>
-                                        <div class="blockSection__content">
-                                            <div class="blockSection__row">
-                                                <div class="blockSection__fill">
-                                            
-                                                    <div class="stategyPromo-graph-info">
-                                                        <label class="stategyPromo-graph-info-btn btn_mainCash" for="mainCash">
-                                    
-                                                            <input id="mainCash" type="checkbox" class="visually_hidden">
-                                            
-                                                            <span>Общий доход</span>
-                                                            <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                                            
-                                                            <div class="selectDropdown">
-                                                                <label class="selectDropdown-item border">
-                                                                    <input type="checkbox" name="mainCashItems" class=" visually_hidden">
-                                                                    <span class="checkbox_custom">Общий доход</span>
-                                                                </label>
-                                                                <label class="selectDropdown-item">
-                                                                    <input type="checkbox" name="mainCashItems" class="visually_hidden">
-                                                                    <span class="checkbox_custom">Стратегия удачи</span>
-                                                                </label>
-                                                                <label class="selectDropdown-item">
-                                                                    <input type="checkbox" name="mainCashItems" class="visually_hidden">
-                                                                    <span class="checkbox_custom">Стратегия 2</span>
-                                                                </label>
-                                                                <label class="selectDropdown-item">
-                                                                    <input type="checkbox" name="mainCashItems" class="visually_hidden">
-                                                                    <span class="checkbox_custom">Максимальный выкуп по акциям</span>
-                                                                </label>
-                                                                <div class="selectDropdown-item">
-                                                                    <button class="btn btn_blue">Применить</button>
-                                                                </div>
-                                                            </div>
-                                                        </label>
-                                                        <div class="stategyPromo-graph-info-content">
-                                                            <div class="stategyPromo-graph-info-content-choose">
-                                                                <div class="stategyPromo-graph-info-content-choose-item active">
-                                                                    <span>Неделя</span>
-                                                                </div>
-                                                                <div class="stategyPromo-graph-info-content-choose-item">
-                                                                    <span>Месяц</span>
-                                                                </div>
-                                                                <div class="stategyPromo-graph-info-content-choose-item">
-                                                                    <span>Год</span>
-                                                                </div>
-                                                                <div class="stategyPromo-graph-info-content-choose-item dotted strategyViewDateChoose">
-                                                                    <svg><use xlink:href="img/main.svg#icon-dottes"></use></svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-            
-                                                    <div class="blockSection__graph">
-                                                        <div class="stategyPromo-graph-chart mainGraphBlock" id="demoGraph-5"></div>
-                                                        <span class="stategyPromo-graph-dates strategyViewDateChoose">21.11.2021 - 28.11.2021</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-        
-                                            <div class="blockSection__row">
-                                                <div class="blockSection__fill lineDetails">
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">EBITDA</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">0</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">PE Ratio</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">12.232</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">PEG Ratio</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">3.22</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">EBITDA</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">0</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">PE Ratio</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">12.232</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">PEG Ratio</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">3.22</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">EBITDA</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">0</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">PE Ratio</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">12.232</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">PEG Ratio</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">3.22</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-        
-        
-                                        </div>
-                                    </div>
+                            <div class="blockSection blockSection--card">
+                                <div class="blockSection__header">
+                                    <h3 class="blockSection__title">Оценка акции <span class="blockSection__ticket">VIAC</span></h3>
                                 </div>
-                                <div class="doubleBlockMd__elem">
-                                    <div class="blockSection blockSection--card">
-                                        <div class="blockSection__header">
-                                            <h3 class="blockSection__title">Дивиденды <span class="blockSection__ticket">VIAC</span></h3>
-                                        </div>
-                                        <div class="blockSection__content">
-                                            <div class="blockSection__row">
-                                                <div class="blockSection__fill">
-                                            
-                                                    <div class="stategyPromo-graph-info">
-                                                        <label class="stategyPromo-graph-info-btn btn_mainCash" for="mainCash">
+                                <div class="blockSection__content">
+                                    <div class="blockSection__row">
+                                        <div class="blockSection__fill">
+                                            <div class="stategyPromo-graph-info">
+                                                <label class="stategyPromo-graph-info-btn btn_mainCashFill" for="mainCash1">
                                     
-                                                            <input id="mainCash" type="checkbox" class="visually_hidden">
-                                            
-                                                            <span>Общий доход</span>
-                                                            <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
-                                            
-                                                            <div class="selectDropdown">
-                                                                <label class="selectDropdown-item border">
-                                                                    <input type="checkbox" name="mainCashItems" class=" visually_hidden">
-                                                                    <span class="checkbox_custom">Общий доход</span>
-                                                                </label>
-                                                                <label class="selectDropdown-item">
-                                                                    <input type="checkbox" name="mainCashItems" class="visually_hidden">
-                                                                    <span class="checkbox_custom">Стратегия удачи</span>
-                                                                </label>
-                                                                <label class="selectDropdown-item">
-                                                                    <input type="checkbox" name="mainCashItems" class="visually_hidden">
-                                                                    <span class="checkbox_custom">Стратегия 2</span>
-                                                                </label>
-                                                                <label class="selectDropdown-item">
-                                                                    <input type="checkbox" name="mainCashItems" class="visually_hidden">
-                                                                    <span class="checkbox_custom">Максимальный выкуп по акциям</span>
-                                                                </label>
-                                                                <div class="selectDropdown-item">
-                                                                    <button class="btn btn_blue">Применить</button>
-                                                                </div>
-                                                            </div>
+                                                    <input id="mainCash1" type="checkbox" class="visually_hidden">
+                                    
+                                                    <span>Profit margin</span>
+                                                    <svg><use xlink:href="img/main.svg#icon-arrow-down"></use></svg>
+                                    
+                                                    <div class="selectDropdown">
+                                                        <label class="selectDropdown-item border">
+                                                            <input type="checkbox" name="mainCashItems1" class=" visually_hidden">
+                                                            <span class="checkbox_custom">Общий доход</span>
                                                         </label>
-                                                        <div class="stategyPromo-graph-info-content">
-                                                            <div class="stategyPromo-graph-info-content-choose">
-                                                                <div class="stategyPromo-graph-info-content-choose-item active">
-                                                                    <span>Неделя</span>
-                                                                </div>
-                                                                <div class="stategyPromo-graph-info-content-choose-item">
-                                                                    <span>Месяц</span>
-                                                                </div>
-                                                                <div class="stategyPromo-graph-info-content-choose-item">
-                                                                    <span>Год</span>
-                                                                </div>
-                                                                <div class="stategyPromo-graph-info-content-choose-item dotted strategyViewDateChoose">
-                                                                    <svg><use xlink:href="img/main.svg#icon-dottes"></use></svg>
-                                                                </div>
-                                                            </div>
+                                                        <label class="selectDropdown-item">
+                                                            <input type="checkbox" name="mainCashItems1" class="visually_hidden">
+                                                            <span class="checkbox_custom">Стратегия удачи</span>
+                                                        </label>
+                                                        <label class="selectDropdown-item">
+                                                            <input type="checkbox" name="mainCashItems1" class="visually_hidden">
+                                                            <span class="checkbox_custom">Стратегия 2</span>
+                                                        </label>
+                                                        <label class="selectDropdown-item">
+                                                            <input type="checkbox" name="mainCashItems1" class="visually_hidden">
+                                                            <span class="checkbox_custom">Максимальный выкуп по акциям</span>
+                                                        </label>
+                                                        <div class="selectDropdown-item">
+                                                            <button class="btn btn_blue">Применить</button>
                                                         </div>
                                                     </div>
-            
-                                                    <div class="blockSection__graph">
-                                                        <div class="stategyPromo-graph-chart mainGraphBlock" id="demoGraph-6"></div>
-                                                        <span class="stategyPromo-graph-dates strategyViewDateChoose">21.11.2021 - 28.11.2021</span>
+                                                </label>
+
+                                                <div class="stategyPromo-graph-info-content borderNone">
+                                                    <div class="stategyPromo-graph-info-content-choose">
+                                                        <div class="stategyPromo-graph-info-content-choose-item active">
+                                                            <span>Неделя</span>
+                                                        </div>
+                                                        <div class="stategyPromo-graph-info-content-choose-item">
+                                                            <span>Месяц</span>
+                                                        </div>
+                                                        <div class="stategyPromo-graph-info-content-choose-item">
+                                                            <span>Год</span>
+                                                        </div>
+                                                        <div class="stategyPromo-graph-info-content-choose-item dotted strategyViewDateChoose">
+                                                            <svg><use xlink:href="img/main.svg#icon-dottes"></use></svg>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-        
-                                            <div class="blockSection__row">
-                                                <div class="blockSection__fill lineDetails">
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">EBITDA</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">0</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">PE Ratio</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">12.232</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">PEG Ratio</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">3.22</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">EBITDA</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">0</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">PE Ratio</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">12.232</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">PEG Ratio</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">3.22</span>
-                                                    </div>
-                                                    <div class="lineDetails__item">
-                                                        <span class="lineDetails__value">EBITDA</span>
-                                                        <span class="lineDetails__value lineDetails__value--bold">0</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-        
-        
                                         </div>
                                     </div>
+
+                                    <div class="blockSection__row">
+                                        <div class="blockSection__fill lineDetails">
+                                            <div class="lineDetails__item">
+                                                <span class="lineDetails__value">EBITDA</span>
+                                                <span class="lineDetails__value lineDetails__value--bold">0</span>
+                                            </div>
+                                            <div class="lineDetails__item">
+                                                <span class="lineDetails__value">PE Ratio</span>
+                                                <span class="lineDetails__value lineDetails__value--bold">12.232</span>
+                                            </div>
+                                            <div class="lineDetails__item">
+                                                <span class="lineDetails__value">PEG Ratio</span>
+                                                <span class="lineDetails__value lineDetails__value--bold">3.22</span>
+                                            </div>
+                                            <div class="lineDetails__item">
+                                                <span class="lineDetails__value">EBITDA</span>
+                                                <span class="lineDetails__value lineDetails__value--bold">0</span>
+                                            </div>
+                                            <div class="lineDetails__item">
+                                                <span class="lineDetails__value">PE Ratio</span>
+                                                <span class="lineDetails__value lineDetails__value--bold">12.232</span>
+                                            </div>
+                                            <div class="lineDetails__item">
+                                                <span class="lineDetails__value">PEG Ratio</span>
+                                                <span class="lineDetails__value lineDetails__value--bold">3.22</span>
+                                            </div>
+                                            <div class="lineDetails__item">
+                                                <span class="lineDetails__value">EBITDA</span>
+                                                <span class="lineDetails__value lineDetails__value--bold">0</span>
+                                            </div>
+                                            <div class="lineDetails__item">
+                                                <span class="lineDetails__value">PE Ratio</span>
+                                                <span class="lineDetails__value lineDetails__value--bold">12.232</span>
+                                            </div>
+                                            <div class="lineDetails__item">
+                                                <span class="lineDetails__value">PEG Ratio</span>
+                                                <span class="lineDetails__value lineDetails__value--bold">3.22</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
@@ -729,11 +633,28 @@
                             </div>
                         </div>
 
-                    </div>
-                </div>
-            </div>
-        </section>
+                        <div class="wantThis">
+                            <h2 class="wantThis__header">
+                                <p class="wantThis__title">Инвестируй с BeatMarket</p>    
+                                <p class="wantThis__title">Присоединяйся к более чем 
+                                    <span class="wantThis__title--mark"><span>22 000 инвесторов!</span></span>
+                                </p> 
+                            </h2>
+                            <button class="wantThis__btn btn btn_blue">Попробовать</button>
 
+                            <div class="wantThis__circle wantThis__circle--red"></div>
+                            <div class="wantThis__circle wantThis__circle--yellow"></div>
+
+                        </div>
+
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+        @@include("_footerArea.html")
         @@include("_footer.html")
-    </body>
+
+	</body>
 </html>
