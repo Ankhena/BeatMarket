@@ -148,18 +148,37 @@
                     justify-content: center;
                 }
 
-                &-percent {
-                    font-size: 0.75rem;
+                &-stat {
                     margin-left: 0.4rem;
-                    display: inline-block;
-                    font-weight: 600;
+                    display: flex;
+                    flex-direction: column;
 
-                    &.success {
-                        color: $color_green;
+                    &-cost {
+                        margin-bottom: 0.2rem;
+
+                        &.accent {
+                            color: $color_blue;
+                            font-size: 12px;
+                        }
                     }
 
-                    &.error {
-                        color: $color_red;
+                    &-percent {
+                        font-size: 0.75rem;
+                        display: inline-block;
+                        font-weight: 600;
+                        line-height: 1;
+    
+                        &.success {
+                            color: $color_green;
+                        }
+    
+                        &.error {
+                            color: $color_red;
+                        }
+    
+                        .ttm {
+                            margin-left: 0.2rem;
+                        }
                     }
                 }
             }

@@ -27,6 +27,9 @@ $(document).ready(function() {
     --include("_mainPromoGraph.js")
     --include("_growthPaymentsGraph.js")
     --include("_slider.js")
+    --include("_averageGrowthGraph.js")
+    --include("_growthOfDividendsGraph.js")
+    --include("_portfolioProfitGraph.js")
 
     document.querySelectorAll(".myStrategy-news-container .table-content-item").forEach(item => {
         item.addEventListener("click", (e) => {

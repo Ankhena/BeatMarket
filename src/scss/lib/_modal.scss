@@ -152,6 +152,15 @@
             }
         }
 
+        .dividends {
+            .strategyCards-card-cash {
+                @media ($media_xs) {
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+            }
+        }
+
         &--withoutHeader {
             margin-top: -1.4rem;
 
@@ -204,6 +213,14 @@
                 border-radius: 0.5rem;
                 display: flex;
                 overflow: hidden;
+
+                &.short {
+                    width: 50%;
+                    
+                    @media ($media_sm) {
+                        width: 100%;
+                    }
+                }
 
                 &.inline {
                     label, li {
@@ -373,6 +390,13 @@
             flex-wrap: wrap;
             justify-content: space-between;
 
+            &.mobColumn {
+                @media ($media_xs) {
+                    flex-direction: column;
+                    gap: 1.5rem;
+                }
+            }
+
             @media ($media_sm) {
                 flex-wrap: wrap;
                 justify-content: space-between;
@@ -430,7 +454,16 @@
             }
 
             &-cost {
+                position: relative;
                 flex-basis: 49%;
+
+                &-calendar {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    right: 20px;
+                    bottom: 16px;
+                }
             }
 
             &-count, &-date {
@@ -555,6 +588,30 @@
 
             &-langOperation {
                 display: flex;
+
+                .modal-content-input {
+                    flex-grow: 1;
+
+                    &:not(:last-child) {
+                        margin-right: 12px;
+                    }
+
+                    &.inputCurrency {
+                        flex-basis: 100px;
+                        flex-grow: initial;
+
+                        .section-header {
+                            align-self: flex-end;
+                            margin-left: 0;
+    
+                            .currency {
+                                height: 52px;
+                                min-width: 90px;
+                                border-width: 1px;
+                            }
+                        }
+                    }
+                }
 
                 .btn {
                     @media ($media_sm) {
@@ -702,7 +759,7 @@
                 color: $color_blue;
                 font-weight: bold;
                 font-size: 2.8rem;
-                line-height: 1;
+                margin-top: -0.35rem;
             }
         }
 

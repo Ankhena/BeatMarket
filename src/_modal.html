@@ -1413,4 +1413,167 @@
     </div>
 </div>
 
+<!-- new BeatMarket 6 (09.04.2022) -->
+
+<div class="modal" id="modal_newPublicAsset">
+    <div class="modal-header">
+        <h2>Новый произвольный актив</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+
+        <div class="modal-content-input use_mt_first">
+            <label class="label_modal">Название актива</label>
+            <input type="text">
+        </div>
+
+        <div class="modal-content-addOperation use_mt"> 
+            <div class="modal-content-addOperation-langOperation">
+
+                <div class="modal-content-input">
+                    <label class="label_modal">Сумма актива</label>
+                    <input type="text">
+                </div>
+
+                <div class="modal-content-input inputCurrency">
+                    <label class="label_modal">Валюта</label>
+                    <div class="section-header">
+                        <div class="header-controls-links-link withCaret currency">
+                            <input type="checkbox" id="currencyDesktopModalOne" class="visually_hidden">
+                        
+                            <label for="currencyDesktopModalOne">
+                                <span>$ USD</span>
+                                <svg><use xlink:href="img/main.svg#icon-caret-down"></use></svg>
+                            </label>
+                        
+                            <div class="dropdown">
+                                <div class="content">
+                                    <span class="active">$ USD</span>
+                                    <span>₽ RUB</span>
+                                    <span>€ EUR</span>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                            
+            </div>  
+
+            <div class="modal-content-addOperation-group">
+                <button class="btn_group success">Покупка</button>
+                <button class="btn_group error">Продажа</button>
+            </div>
+        </div>
+
+        <div class="modal-content-input use_mt">
+            <label class="label_modal">Актив приносит доход?</label>
+            <div class="modal-content-switcher-button short">
+                <label>
+                    <input type="radio" name="hasCash" class="visually_hidden" checked>
+                    <span>Да</span>
+                </label>
+                <label>
+                    <input type="radio" name="hasCash" class="visually_hidden">
+                    <span>Нет</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="settings-comission use_mt">
+            <div class="settings-comission__elem">
+                <div class="modal-content-input">
+                    <label class="label_modal">Тип дохода</label>
+                    <div class="modal-content-switcher-button">
+                        <label>
+                            <input type="radio" name="comeCash" class="visually_hidden" checked>
+                            <span>Фиксированные выплаты</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="comeCash" class="visually_hidden">
+                            <span>% от капитала</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-comission__elem settings-comission__elem--title">
+                <div class="modal-content-input">
+                    <label class="label_modal">Размер дохода</label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="settings-comission__elem settings-comission__elem--title">
+                <div class="modal-content-input">
+                    <label class="label_modal">Периодичность начислений</label>
+                    <select>
+                        <option selected value="Раз в месяц">Раз в месяц</option>
+                        <option value="Раз в неделю">Раз в неделю</option>
+                        <option value="Раз в день">Раз в день</option>
+                    </select>
+                </div>
+            </div>
+            <div class="settings-comission__elem">
+                <div class="modal-content-papers mobColumn">
+                    <div class="modal-content-papers-cost">
+                        <label class="label_modal">Первое начисление</label>
+                        <input type="text" placeholder="24.01.2021" disabled>
+                        <svg class="modal-content-papers-cost-calendar"><use xlink:href="img/main.svg#icon-CalendarBlank"></use></svg>
+                    </div>
+                    <div class="modal-content-papers-cost">
+                        <label class="label_modal">Следующее начисление</label>
+                        <input type="text" placeholder="24.01.2021" disabled>
+                        <svg class="modal-content-papers-cost-calendar"><use xlink:href="img/main.svg#icon-CalendarBlank"></use></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-comission__elem">
+                <p class="settings-comission__text">Эти параметры будут автоматически обновляться со временем</p>
+            </div>
+        </div>
+
+        <div class="modal-content-buttons use_mt">
+            <button class="btn btn_blue" data-closeModal>Сохранить</button>
+            <button class="btn gray" data-closeModal>Отменить</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal" id="modal_paymentOfDividends">
+    <div class="modal-header">
+        <h2>Выплата дивидендов</h2>
+        <svg data-closeModal><use xlink:href="img/main.svg#icon-closeModal"></use></svg>
+    </div>
+    <div class="modal-content">
+
+        <div class="modal-content-banner use_mt">
+            <h3>TSCO</h3>
+            <span>Tractor Supply</span>
+        </div>
+
+        <div class="dividends use_mt">
+            <div class="strategyCards-card-cash">
+                <div class="strategyCards-card-cash-item">
+                    <h5>Выплата на акцию</h5>
+                    <span>0.2 $</span>
+                </div>
+                <div class="strategyCards-card-cash-item">
+                    <h5>Количество акций</h5>
+                    <span>24</span>
+                </div>
+                <div class="strategyCards-card-cash-item">
+                    <h5>Дата выплаты</h5>
+                    <span>21.11.2021</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-content-total use_mt">
+            <label class="label_modal">Итого</label>
+            <span>21.2 $</span>
+        </div>
+
+    </div>
+</div>
+
 <div class="overlay overlay_modal" data-closeModal></div>

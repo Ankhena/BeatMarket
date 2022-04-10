@@ -54,7 +54,7 @@ $indicator_item_margin-right: 2rem;
                 flex-direction: column;
                 justify-content: space-evenly;
 
-                padding-left: 1.5rem;
+                padding-left: 1.2rem;
             }
 
             &-title {
@@ -70,7 +70,7 @@ $indicator_item_margin-right: 2rem;
                 height: 3.35rem;
                 width: 11rem;
                 border-top: 1px solid $color_border_dop;
-                padding-right: 1rem;
+                padding-right: 0.5rem;
 
                 &__disabled {
                     background-color: $color_border_graph_banch;

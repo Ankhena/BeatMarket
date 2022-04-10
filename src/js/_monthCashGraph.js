@@ -15,35 +15,47 @@ function initMonthCashGraph() {
 
     // общее кол-во дивидендов
     let dataPrev = [
-        ['Янв', 19.12],
-        ['Фев', 24.12],
-        ['Мар', 38.12],
-        ['Апр', 11.12],
-        ['Май', 24.12],
-        ['Июн', 38.12],
-        ['Июл', 29.12],
-        ['Авг', 46.12],
-        ['Сен', 24.12],
-        ['Окт', 38.12],
-        ['Ноя', 29.12],
-        ['Дек', 46.12]
+        ['Янв', 19.12, "Январь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Фев', 24.12, "Февраль", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Мар', 38.12, "Март", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Апр', 11.12, "Апрель", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Май', 24.12, "Май", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Июн', 38.12, "Июнь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Июл', 29.12, "Июль", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Авг', 46.12, "Август", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Сен', 24.12, "Сентябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Окт', 38.12, "Октябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Ноя', 29.12, "Ноябрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Дек', 46.12, "Декабрь", [{name: "AMAT", payment: 20.22}, {name: "BMG", payment: 2.44}, {name: "TSLA", payment: 32.44}]]
     ];
 
     // выплаченные дивиденды
     let data = [
-        ['Янв', 15.12],
-        ['Фев', 19.12],
-        ['Мар', 26.12],
-        ['Апр', 17.12],
-        ['Май', 19.12],
-        ['Июн', 0],
-        ['Июл', 27.12],
-        ['Авг', 46.12],
-        ['Сен', 24.12],
-        ['Окт', 38.12],
-        ['Ноя', 29.12],
-        ['Дек', 46.12]
+        ['Янв', 15.12, "Январь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Фев', 19.12, "Февраль", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Мар', 26.12, "Март", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Апр', 17.12, "Апрель", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Май', 19.12, "Май", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Июн', 0, "Июнь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Июл', 27.12, "Июль", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Авг', 46.12, "Август", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Сен', 24.12, "Сентябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Окт', 38.12, "Октябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Ноя', 29.12, "Ноябрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]],
+        ['Дек', 46.12, "Декабрь", [{name: "STR", payment: 20.22}, {name: "GRT", payment: 2.44}, {name: "TSLA", payment: 32.44}]]
     ];
+
+    function generateDataObject(yearsArrayData, costArrayData, className) {
+        let innerHTML = ``;
+        yearsArrayData.forEach((data, i) => {
+            innerHTML += `
+            <div class="customTooltip__item">
+                <span class="customTooltip__key">${yearsArrayData[i]}</span>
+                <span class="customTooltip__value ${className}">${costArrayData[i]} $</span>
+            </div>`
+        });
+        return innerHTML;
+    }
 
     function getData(data) {
         return data.map(function (country, i) {
@@ -59,7 +71,8 @@ function initMonthCashGraph() {
     if (elem !== null) {
         var chart = Highcharts.chart('monthCashGraph', {
             chart: {
-                type: 'column'
+                type: 'column',
+                style: { "fontFamily": "" },
             },
             credits: {
                 enabled: false
@@ -71,7 +84,7 @@ function initMonthCashGraph() {
                 enabled: false
             },
             tooltip: {
-                enabled: false
+                // enabled: false
             },
             xAxis: {
                 type: 'category',
@@ -94,6 +107,31 @@ function initMonthCashGraph() {
                 showFirstLabel: false,
                 gridLineWidth: 0,
             }],
+            tooltip: {
+                crosshairs: true,
+                shared: true,
+                useHTML: true,
+                formatter: function() {
+                    let index = this.points[0].point.index;
+                    let yearsArrayData = data[index][3].map(item => item.name);
+                    let costArrayData = data[index][3].map(item => item.payment);
+
+                    let yearsArrayDataOld = dataPrev[index][3].map(item => item.name);
+                    let costArrayDataOld = dataPrev[index][3].map(item => item.payment);
+    
+                    return `
+                        <div class="customTooltip">
+                            <h5 class="customTooltip__title">Дивиденды, ${data[index][2]} <span class="customTooltip__label">82.12 $</span></h5>
+                            <div class="customTooltip__grid">
+                                <h6 class="customTooltip__subtitle">Выплачено:</h6>
+                                ${generateDataObject(yearsArrayData, costArrayData, "success")}
+                                <h6 class="customTooltip__subtitle">Ожидается:</h6>
+                                ${generateDataObject(yearsArrayDataOld, costArrayDataOld, "secondary")}
+                            </div>
+                        </div>
+                    `;
+                }
+            },
             plotOptions: {
                 series: {
                     grouping: false,
@@ -102,21 +140,23 @@ function initMonthCashGraph() {
                 column: {
                     borderWidth: 1,
                     pointWidth: widthGraphPoint,
-                    enableMouseTracking: false,
+                    //enableMouseTracking: false,
                     borderRadiusTopLeft: widthGraphPoint / 15,
                     borderRadiusTopRight: widthGraphPoint / 15,
                 }
             },
             series: [
             {
+                name: 'Ож.дивиденды',
+                states: { hover: { enabled: false } },
                 color: colorOverallDividends, // ожидаемые дивиденды
                 borderColor: "#D3E3FF",
                 linkedTo: 'main',
                 data: dataPrev.slice(),
-                name: 'Ож.дивиденды',
             }, 
             {
                 name: 'Выпл. дивиденды',
+                states: { hover: { enabled: false } },
                 borderColor: colorPaybackDividends,
                 id: 'main',
                 dataLabels: [{

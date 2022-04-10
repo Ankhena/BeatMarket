@@ -3136,6 +3136,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   overflow: hidden;
 }
 
+.modal-content-switcher-button.short {
+  width: 50%;
+}
+
 .modal-content-switcher-button label,
 .modal-content-switcher-button li {
   -ms-flex-preferred-size: 50%;
@@ -3350,8 +3354,17 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 }
 
 .modal-content-papers-cost {
+  position: relative;
   -ms-flex-preferred-size: 49%;
       flex-basis: 49%;
+}
+
+.modal-content-papers-cost-calendar {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 20px;
+  bottom: 16px;
 }
 
 .modal-content-papers-count,
@@ -3476,6 +3489,36 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.modal-content-addOperation-langOperation .modal-content-input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.modal-content-addOperation-langOperation .modal-content-input:not(:last-child) {
+  margin-right: 12px;
+}
+
+.modal-content-addOperation-langOperation .modal-content-input.inputCurrency {
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+  -webkit-box-flex: initial;
+      -ms-flex-positive: initial;
+          flex-grow: initial;
+}
+
+.modal-content-addOperation-langOperation .modal-content-input.inputCurrency .section-header {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-left: 0;
+}
+
+.modal-content-addOperation-langOperation .modal-content-input.inputCurrency .section-header .currency {
+  height: 52px;
+  min-width: 90px;
+  border-width: 1px;
 }
 
 .modal-content-addOperation-langOperation .section-header {
@@ -3603,7 +3646,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   color: #3E54D8;
   font-weight: bold;
   font-size: 2.8rem;
-  line-height: 1;
+  margin-top: -0.35rem;
 }
 
 .modal-content-buttons {
@@ -5870,7 +5913,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding-left: 1.5rem;
+  padding-left: 1.2rem;
 }
 
 .myStrategy-indicators-container .table-fixed-title {
@@ -5886,7 +5929,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   height: 3.35rem;
   width: 11rem;
   border-top: 1px solid #E6EEFF;
-  padding-right: 1rem;
+  padding-right: 0.5rem;
 }
 
 .myStrategy-indicators-container .table-fixed-item__disabled {
@@ -6154,19 +6197,43 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
           justify-content: center;
 }
 
-.dividends .table-fixed-item-percent {
-  font-size: 0.75rem;
+.dividends .table-fixed-item-stat {
   margin-left: 0.4rem;
-  display: inline-block;
-  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.dividends .table-fixed-item-percent.success {
+.dividends .table-fixed-item-stat-cost {
+  margin-bottom: 0.2rem;
+}
+
+.dividends .table-fixed-item-stat-cost.accent {
+  color: #3E54D8;
+  font-size: 12px;
+}
+
+.dividends .table-fixed-item-stat-percent {
+  font-size: 0.75rem;
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.dividends .table-fixed-item-stat-percent.success {
   color: #199F27;
 }
 
-.dividends .table-fixed-item-percent.error {
+.dividends .table-fixed-item-stat-percent.error {
   color: #ED6373;
+}
+
+.dividends .table-fixed-item-stat-percent .ttm {
+  margin-left: 0.2rem;
 }
 
 .dividends .table-header {
@@ -9231,6 +9298,10 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   position: relative;
 }
 
+.blockSection__content--scroll {
+  overflow-x: auto;
+}
+
 .blockSection__period {
   margin: 0;
 }
@@ -10120,8 +10191,8 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   margin-top: 2.5rem;
 }
 
-.mainFactorsGraph .highcharts-xaxis-labels {
-  display: none;
+.mainFactorsGraph--grow {
+  min-width: 950px;
 }
 
 .mainFactorsGraph .highcharts-axis-labels {
@@ -10139,10 +10210,6 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 
 .mainFactorsGraph .highcharts-xaxis-grid {
   display: none;
-}
-
-.mainFactorsGraph .highcharts-point-hover {
-  fill: #199F27;
 }
 
 .mainFactorsGraph .highcharts-tooltip > span {
@@ -11867,6 +11934,69 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   width: 1.34rem;
   height: 1.34rem;
   margin-right: 0.5rem;
+}
+
+.customTooltip__label {
+  background-color: #D3E3FF;
+  color: #3E54D8 !important;
+  border-radius: 0.5rem;
+  padding: 4px 12px;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.customTooltip__key {
+  margin-bottom: 0 !important;
+  width: 50px;
+}
+
+.customTooltip__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customTooltip__item:not(:last-child) {
+  margin-bottom: 0.4rem;
+}
+
+.customTooltip__value {
+  color: #24252E;
+  font-weight: 600;
+}
+
+.customTooltip__value.success {
+  color: #199F27;
+}
+
+.customTooltip__value.secondary {
+  color: #929398;
+}
+
+.customTooltip__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #24252E;
+}
+
+.customTooltip__title span {
+  font-size: 0.9rem;
+  color: #929398;
+  margin-left: 0.2rem;
+}
+
+.customTooltip__subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #24252E;
+  margin: 0.8rem 0;
+}
+
+.customTooltip__grid {
+  margin-top: 0.4rem;
 }
 
 input[type="radio"],
@@ -14505,6 +14635,36 @@ body.viewProfile .header-controls-links-link.auth span {
   top: -5px !important;
 }
 
+.month-cash__graph g.highcharts-tooltip {
+  display: none;
+}
+
+.month-cash__graph .highcharts-tooltip > span {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 12px 23px -9px rgba(152, 170, 203, 0.3);
+          box-shadow: 0px 12px 23px -9px rgba(152, 170, 203, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 1.3rem;
+  padding: 1rem 1.2rem;
+  font-size: 0.9rem !important;
+  font-weight: 500;
+}
+
+.month-cash__graph .highcharts-tooltip > span span:first-child {
+  font-size: 0.9rem !important;
+  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: .4rem;
+}
+
+.month-cash__graph .highcharts-tooltip > span br + span {
+  font-size: 1.2rem;
+}
+
 .cryptAnalitycsGraphTooltip {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16143,6 +16303,10 @@ body.viewProfile .header-controls-links-link.auth span {
 
   .modal-content--withoutHeader {
     margin-top: 1.5rem;
+  }
+
+  .modal-content-switcher-button.short {
+    width: 100%;
   }
 
   .modal-content-switcher-button.inline label:not(:last-child),
@@ -18319,6 +18483,22 @@ body.viewProfile .header-controls-links-link.auth span {
   .modal-content .settings-comission__title {
     font-size: 1.1rem;
     padding-bottom: 0;
+  }
+
+  .modal-content .dividends .strategyCards-card-cash {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+  }
+
+  .modal-content-papers.mobColumn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
   }
 
   .buy-stocks__btns {

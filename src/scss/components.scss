@@ -413,6 +413,10 @@ $base_transition: 0.4s ease-in-out;
 
     &__content {
         position: relative;
+
+        &--scroll {
+            overflow-x: auto;
+        }
     }
 
     // .blockSection__period
@@ -1443,13 +1447,17 @@ $base_transition: 0.4s ease-in-out;
 .mainFactorsGraph {
     margin-top: 2.5rem;
 
+    &--grow {
+        min-width: 950px;
+    }
+
     @media ($media_sm) {
         height: 250px;
         margin-left: -0.5rem;
     }
 
     .highcharts-xaxis-labels {
-        display: none;
+        // display: none;
     }
 
     .highcharts-axis-labels {
@@ -1468,9 +1476,9 @@ $base_transition: 0.4s ease-in-out;
         display: none;
     }
 
-    .highcharts-point-hover {
-        fill: $color_green;
-    }
+    // .highcharts-point-hover {
+    //     fill: $color_green;
+    // }
     
     .highcharts-tooltip {
         > span {
@@ -3771,4 +3779,68 @@ $base_transition: 0.4s ease-in-out;
 
     &__graphContainer {
     }
+}
+
+.customTooltip {
+
+    &__label {
+        background-color: $color_block_border;
+        color: $color_blue !important;
+        border-radius: 0.5rem;
+        padding: 4px 12px;
+
+        font-size: 14px !important;
+        font-weight: 600 !important;
+    }
+
+    &__key {
+        margin-bottom: 0 !important;
+        width: 50px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 0.4rem;
+        }
+    }
+
+    &__value {
+        color: $color_black_title;
+        font-weight: 600;
+
+        &.success {
+            color: $color_green;
+        }
+
+        &.secondary {
+            color: $color_grey;
+        }
+    }
+
+    &__title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $color_black_title;
+
+        span {
+            font-size: 0.9rem;
+            color: $color_grey;
+            margin-left: 0.2rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $color_black_title;
+        margin: 0.8rem 0;
+    }
+
+    &__grid {
+        margin-top: 0.4rem;
+    }
+
 }
