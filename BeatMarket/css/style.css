@@ -9474,7 +9474,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   transition: 0.4s ease-in-out;
   display: inline-block;
   padding: 0.9rem 1.55rem;
-  font-size: 1.55rem;
+  font-size: 1.2rem;
   font-weight: 600;
   background-color: #3E54D8;
   border-radius: 0.5rem;
@@ -9754,6 +9754,9 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.85rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -9762,9 +9765,8 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
 .cashChanges__value {
   font-weight: 600;
   display: inline-block;
-  margin-right: 1.2rem;
   color: var(--main_color);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .cashChanges__graph {

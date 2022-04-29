@@ -587,7 +587,7 @@ $base_transition: 0.4s ease-in-out;
         transition: $base_transition;
         display: inline-block;
         padding: 0.9rem 1.55rem;
-        font-size: 1.55rem;
+        font-size: 1.2rem;
         font-weight: 600;
         background-color: $color_blue;
         border-radius: 0.5rem;
@@ -905,6 +905,8 @@ $base_transition: 0.4s ease-in-out;
     &__content {
         margin-top: 1rem;
         display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
         align-items: center;
     }
 
@@ -913,9 +915,8 @@ $base_transition: 0.4s ease-in-out;
     &__value {
         font-weight: 600;
         display: inline-block;
-        margin-right: 1.2rem;
         color: var(--main_color);
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     // .cashChanges__graph
