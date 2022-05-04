@@ -14981,7 +14981,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1150px) {
   .cardAnalytic {
     cursor: pointer;
   }
@@ -15400,7 +15400,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1150px) {
   .section-inner {
     max-width: 90%;
   }
@@ -16011,7 +16011,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
   :root {
     --section_padding: 1rem;
   }
@@ -18438,7 +18438,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 }
 
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1050px) and (max-width: 1050px) {
   .prompt.prompt--blockSetting > div {
     margin-top: 4.5rem;
     margin-left: 0;
@@ -18535,7 +18535,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1279px) {
+@media (min-width: 1051px) and (max-width: 1279px) {
   .section-main .main-menu {
     -ms-flex-preferred-size: 6.5rem;
         flex-basis: 6.5rem;

@@ -298,13 +298,13 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1150px) {
   .section-inner {
     max-width: 90%;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
   :root {
     --section_padding: 1rem;
   }
@@ -446,7 +446,7 @@
   }
 }
 
-@media (min-width: 769px) and (max-width: 1279px) {
+@media (min-width: 1051px) and (max-width: 1279px) {
   .onboard-content-menu ul li a span {
     display: none;
   }
