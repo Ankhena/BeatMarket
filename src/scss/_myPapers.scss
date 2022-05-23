@@ -1207,5 +1207,9 @@ $banch_items_space: 0.8rem;
             white-space: nowrap;
             font-weight: 500;
         }
+
+        @media ($media_xs) {
+            max-width: 12rem;
+        }
     }
 }

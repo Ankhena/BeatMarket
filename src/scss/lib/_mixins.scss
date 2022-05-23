@@ -824,6 +824,11 @@ input[type="radio"]:checked {
             color: $color_black_title;
             font-size: 1.33rem;
             font-weight: 600;
+            line-height: 1.4;
+
+            @media ($media_xs) {
+                max-width: 12rem;
+            }
         }
     }
 

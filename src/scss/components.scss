@@ -332,6 +332,11 @@ $base_transition: 0.4s ease-in-out;
                 margin-left: 1rem;
             }
         }
+
+        @media ($media_xs) {
+            font-size: 1.15rem;
+            letter-spacing: -0.2px;
+        }
     }
 
     // .blockSection__dividendStatusList
@@ -3844,4 +3849,308 @@ $base_transition: 0.4s ease-in-out;
         margin-top: 0.4rem;
     }
 
+}
+
+.baseList {
+    li {
+        position: relative;
+        color: $color_black_title;
+        font-size: 0.88rem;
+        line-height: 1.6;
+        padding-left: 1rem;
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0.6rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $color_blue;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.advisorRateList {
+
+    //.advisorRateList__text
+
+    &__text {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-top: 1.7rem;
+    }
+
+    //.advisorRateList__block
+
+    &__block {
+        .prompt-subscribe {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .prompt {
+        border: none;
+        margin: 0;
+        padding: 0 0 0 3.5rem;
+
+        a {
+            font-weight: 600;
+            color: $color_blue;
+            text-decoration: none;
+        }
+
+        &::before {
+            left: 0;
+        }
+    }
+
+    .orderHistory__title {
+        color: $color_black_title;
+        line-height: 1.4;
+
+        @media ($media_xs) {
+            max-width: 16rem;
+        }
+    }
+
+    .tarrifsCard.softBg {
+        background-color: $color_soft_bg;
+    }
+
+    .btn_tarrifs {
+        padding: 1.65rem;
+    }
+}
+
+.premiumAccess {
+    
+    // .premiumAccess__header
+
+    &__header {
+        text-align: center;
+    }
+
+    // .premiumAccess__title
+
+    &__title {
+        line-height: 1.2;
+        font-size: 3rem;
+        color: $color_black_title;
+
+        @media ($media_sm) {
+            font-size: 1.7rem;
+        }
+    }
+
+    // .premiumAccess__body
+
+    &__body {
+
+    }
+
+    // .premiumAccess__card
+
+    &__card {
+
+    }
+
+    // .premiumAccess__footerText
+
+    &__footerText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        line-height: 1.6;
+        font-weight: 500;
+
+        span {
+            font-size: 0.89rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color_blue;
+            font-size: 1rem;
+        }
+    }
+}
+
+.premiumAccessCard {
+    position: relative;
+    overflow: hidden;
+    background-color: $color_white;
+    border: 1px solid $color_block_border;
+    box-shadow: 0px 10px 26px -3px rgba(62, 84, 216, 0.15);
+    border-radius: 0.85rem;
+    width: 61rem;
+    margin: 2.5rem auto;
+
+    @media ($media_sm) {
+        width: 100%;
+    }
+
+    // .premiumAccessCard__content
+
+    &__content {
+        padding: 4.5rem 0 4.5rem 6rem;
+
+        @media ($media_sm) {
+            position: relative;
+            z-index: 2;
+            padding: 2.3rem 1.1rem 11.5rem 1.1rem;
+            text-align: center;
+
+            .baseList {
+                text-align: left;
+                
+                li {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    // .premiumAccessCard__title
+
+    &__title {
+        color: $color_black_title;
+        font-size: 1.555rem;
+        line-height: 1.2;
+        display: inline-block;
+
+        @media ($media_sm) {
+            font-size: 1.3rem;
+            max-width: 285px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+    }
+
+    // .premiumAccessCard__subtitle
+
+    &__subtitle {
+        color: $color_blue;
+        font-size: 1.555rem;
+        line-height: 1.2;
+        margin: 0.888rem 0 2rem 0;
+
+        @media ($media_sm) {
+            font-size: 1.3rem;
+            max-width: 235px;
+            margin: 0.6rem auto 1.3rem auto;
+            line-height: 1.4;
+        }
+    }
+
+    // .premiumAccessCard__access
+
+    &__access {
+        color: $color_black_title;
+        font-weight: 600;
+        font-size: 1.333rem;
+        margin-bottom: 0.777rem;
+        display: inline-block;
+    }
+
+    // .premiumAccessCard__btn
+
+    &__btn {
+        margin-top: 2.22rem;
+    }
+
+    // .premiumAccessCard__img
+
+    &__img {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 25.5rem;
+
+        @media ($media_sm) {
+            width: auto;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // .premiumAccessCard__circles
+
+    &__circles {
+
+    }
+
+    // .premiumAccessCard__circle
+
+    &__circle {
+        border-radius: 50%;
+        position: absolute;
+        z-index: 2;
+
+        // .premiumAccessCard__circle--red
+
+        &--red {
+            width: 100px;
+            height: 100px;
+            background-color: $color_red;
+            bottom: 0;
+            right: 26rem;
+            transform: translate(50%, 50%);
+            z-index: 0;
+
+            @media ($media_sm) {
+                right: unset;
+                left: 0;
+                transform: translate(-50%, 50%);
+            }
+        }
+
+        // .premiumAccessCard__circle--yellow
+
+        &--yellow {
+            width: 185px;
+            height: 185px;
+            background-color: $color_yellow;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+
+            @media ($media_sm) {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        // .premiumAccessCard__circle--green
+
+        &--green {
+            width: 100px;
+            height: 100px;
+            background-color: $color_green;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+
+            @media ($media_sm) {
+                width: 40px;
+                height: 40px;
+                top: 120px;
+            }
+        }
+    }
 }

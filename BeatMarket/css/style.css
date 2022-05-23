@@ -2086,6 +2086,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   color: #24252E;
   font-size: 1.33rem;
   font-weight: 600;
+  line-height: 1.4;
 }
 
 .tarrifsCard-cost {
@@ -12001,6 +12002,208 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   margin-top: 0.4rem;
 }
 
+.baseList li {
+  position: relative;
+  color: #24252E;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  padding-left: 1rem;
+}
+
+.baseList li::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0.6rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #3E54D8;
+}
+
+.baseList li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.advisorRateList__text {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1.7rem;
+}
+
+.advisorRateList__block .prompt-subscribe:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.advisorRateList .prompt {
+  border: none;
+  margin: 0;
+  padding: 0 0 0 3.5rem;
+}
+
+.advisorRateList .prompt a {
+  font-weight: 600;
+  color: #3E54D8;
+  text-decoration: none;
+}
+
+.advisorRateList .prompt::before {
+  left: 0;
+}
+
+.advisorRateList .orderHistory__title {
+  color: #24252E;
+  line-height: 1.4;
+}
+
+.advisorRateList .tarrifsCard.softBg {
+  background-color: #FAFCFF;
+}
+
+.advisorRateList .btn_tarrifs {
+  padding: 1.65rem;
+}
+
+.premiumAccess__header {
+  text-align: center;
+}
+
+.premiumAccess__title {
+  line-height: 1.2;
+  font-size: 3rem;
+  color: #24252E;
+}
+
+.premiumAccess__footerText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.premiumAccess__footerText span {
+  font-size: 0.89rem;
+}
+
+.premiumAccess__footerText a {
+  text-decoration: none;
+  color: #3E54D8;
+  font-size: 1rem;
+}
+
+.premiumAccessCard {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #D3E3FF;
+  -webkit-box-shadow: 0px 10px 26px -3px rgba(62, 84, 216, 0.15);
+          box-shadow: 0px 10px 26px -3px rgba(62, 84, 216, 0.15);
+  border-radius: 0.85rem;
+  width: 61rem;
+  margin: 2.5rem auto;
+}
+
+.premiumAccessCard__content {
+  padding: 4.5rem 0 4.5rem 6rem;
+}
+
+.premiumAccessCard__title {
+  color: #24252E;
+  font-size: 1.555rem;
+  line-height: 1.2;
+  display: inline-block;
+}
+
+.premiumAccessCard__subtitle {
+  color: #3E54D8;
+  font-size: 1.555rem;
+  line-height: 1.2;
+  margin: 0.888rem 0 2rem 0;
+}
+
+.premiumAccessCard__access {
+  color: #24252E;
+  font-weight: 600;
+  font-size: 1.333rem;
+  margin-bottom: 0.777rem;
+  display: inline-block;
+}
+
+.premiumAccessCard__btn {
+  margin-top: 2.22rem;
+}
+
+.premiumAccessCard__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 25.5rem;
+}
+
+.premiumAccessCard__img img {
+  max-width: 100%;
+}
+
+.premiumAccessCard__circle {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+
+.premiumAccessCard__circle--red {
+  width: 100px;
+  height: 100px;
+  background-color: #ED6373;
+  bottom: 0;
+  right: 26rem;
+  -webkit-transform: translate(50%, 50%);
+      -ms-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  z-index: 0;
+}
+
+.premiumAccessCard__circle--yellow {
+  width: 185px;
+  height: 185px;
+  background-color: #F3B63F;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.premiumAccessCard__circle--green {
+  width: 100px;
+  height: 100px;
+  background-color: #199F27;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   vertical-align: middle;
@@ -18058,6 +18261,66 @@ body.viewProfile .header-controls-links-link.auth span {
     margin: 0 0 0 1.5rem;
   }
 
+  .premiumAccess__title {
+    font-size: 1.7rem;
+  }
+
+  .premiumAccessCard {
+    width: 100%;
+  }
+
+  .premiumAccessCard__content {
+    position: relative;
+    z-index: 2;
+    padding: 2.3rem 1.1rem 11.5rem 1.1rem;
+    text-align: center;
+  }
+
+  .premiumAccessCard__content .baseList {
+    text-align: left;
+  }
+
+  .premiumAccessCard__content .baseList li {
+    font-size: 1rem;
+  }
+
+  .premiumAccessCard__title {
+    font-size: 1.3rem;
+    max-width: 285px;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+
+  .premiumAccessCard__subtitle {
+    font-size: 1.3rem;
+    max-width: 235px;
+    margin: 0.6rem auto 1.3rem auto;
+    line-height: 1.4;
+  }
+
+  .premiumAccessCard__img {
+    width: auto;
+  }
+
+  .premiumAccessCard__circle--red {
+    right: unset;
+    left: 0;
+    -webkit-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+  }
+
+  .premiumAccessCard__circle--yellow {
+    width: 80px;
+    height: 80px;
+  }
+
+  .premiumAccessCard__circle--green {
+    width: 40px;
+    height: 40px;
+    top: 120px;
+  }
+
   .btn--settings {
     width: 56px;
     height: 56px;
@@ -18461,6 +18724,10 @@ body.viewProfile .header-controls-links-link.auth span {
     font-size: 14px;
   }
 
+  .tarrifsCard-header h3 {
+    max-width: 12rem;
+  }
+
   .modal.notify {
     width: 90%;
   }
@@ -18501,6 +18768,19 @@ body.viewProfile .header-controls-links-link.auth span {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .paperDontTrade__popup {
+    max-width: 12rem;
+  }
+
+  .blockSection__title {
+    font-size: 1.15rem;
+    letter-spacing: -0.2px;
+  }
+
+  .advisorRateList .orderHistory__title {
+    max-width: 16rem;
   }
 
   .buy-stocks__btns {
