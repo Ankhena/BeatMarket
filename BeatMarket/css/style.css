@@ -15558,7 +15558,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1289px) {
   .section-inner {
     max-width: 950px;
   }
@@ -18815,7 +18815,7 @@ body.viewProfile .header-controls-links-link.auth span {
   }
 }
 
-@media (min-width: 1051px) and (max-width: 1279px) {
+@media (min-width: 1051px) and (max-width: 1289px) {
   .section-main .main-menu {
     -ms-flex-preferred-size: 6.5rem;
         flex-basis: 6.5rem;
