@@ -2087,6 +2087,7 @@ input[type="radio"]:checked ~ .checkbox_custom::after {
   font-size: 1.33rem;
   font-weight: 600;
   line-height: 1.4;
+  max-width: 80%;
 }
 
 .tarrifsCard-cost {
@@ -18722,10 +18723,6 @@ body.viewProfile .header-controls-links-link.auth span {
   html,
   body {
     font-size: 14px;
-  }
-
-  .tarrifsCard-header h3 {
-    max-width: 12rem;
   }
 
   .modal.notify {
