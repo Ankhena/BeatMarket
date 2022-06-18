@@ -3937,6 +3937,7 @@ $base_transition: 0.4s ease-in-out;
 
     &__header {
         text-align: center;
+        margin-bottom: 2.5rem;
     }
 
     // .premiumAccess__title
@@ -3954,7 +3955,28 @@ $base_transition: 0.4s ease-in-out;
     // .premiumAccess__body
 
     &__body {
+        .tarrifsCard {
+            max-width: 1100px;
+            margin: 0 auto 2rem auto;
+        
+            .btnShowAll {
+                margin: 0 0 1rem 0;
+            }
 
+            .modal-content-papers {
+                width: 60%;
+                margin-bottom: 1.5rem;
+
+                @media ($media_sm) {
+                    width: 100%;
+                }
+            }
+
+            .label_modal {
+                display: inline-block;
+                margin-bottom: 0.7rem;
+            }
+        }
     }
 
     // .premiumAccess__card

@@ -2,6 +2,107 @@
     margin: 2.2rem -1.5rem;
     width: calc(100% + 3rem);
 
+    // .statTable--scroll
+
+    &--scroll {
+        @media ($media_full) {
+            overflow-x: auto;
+            overflow-y: hidden;
+    
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                background-color: #F5F5F5;
+            }
+            
+            &::-webkit-scrollbar {
+                height: 10px;
+                background-color: #F5F5F5;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background-color: lighten($color_blue, 25%);
+            }
+    
+            .statTable__row, .statTable__content {
+                width: fit-content;
+            }
+
+            .statTable__row {
+                .paperDontTrade__popup {
+                    transform: translateY(0%) translateX(100%);
+                    right: -10px;
+                    left: unset;
+                }
+            }
+    
+            .statTable__item {
+                min-width: 180px;
+                max-width: 180px;
+    
+                &--grow {
+                    min-width: 240px;
+                    max-width: 240px;
+                }
+    
+                &--shrink {
+                    min-width: 120px;
+                    max-width: 120px;
+                }
+            }
+        }
+
+        .statTable__item--withIcon {
+            display: flex;
+            align-items: center;
+           
+            .paperDontTrade__icon {
+                width: 1.4rem;
+                height: 1.4rem;
+                margin-left: 8px;
+                stroke: $breadcrumb_border;
+            }
+
+            .paperDontTrade__popup {
+                transform: translateY(100%) translateX(-90%);
+            }
+
+            @media ($media_sm) {
+                padding: 0;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                .paperDontTrade__popup {
+                    transform: translateY(100%) translateX(-20%);
+                }
+            }
+        }
+
+        .statTable__value {
+            white-space: initial;
+            display: inline-block;
+
+            &.paperDontTrade {
+                display: inline-flex;
+            }
+        }
+
+        .statTable__item--comment {
+            padding-right: 1rem;
+
+            .statTable__value {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                @media ($media_sm) {
+                    white-space: initial;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+
     // .statTable--empty
 
     &--empty {
@@ -91,7 +192,7 @@
 
             > .statTable__row {
                 .statSticker__arrow {
-                    transform: rotate(0deg);
+                    transform: rotate(180deg);
                     fill: $color_blue;
                 }
 
@@ -308,6 +409,19 @@
         }
     }
 
+    &__valueMin {
+        color: $color_grey;
+        font-size: 0.7rem;
+
+        &--success {
+            color: $color_green;
+        }
+
+        &--error {
+            color: $color_red;
+        }
+    }
+
     &__icon {
         width: 1.8rem;
         height: 1.8rem;
@@ -369,9 +483,10 @@
         }
 
         &--right {
-            margin-left: auto;
+            margin-left: 4rem;
 
             @media ($media_sm) {
+                margin-left: auto;
                 margin-top: 1rem;
                 flex-basis: 100%;
                 border: none;
@@ -473,7 +588,6 @@
         height: 0.8rem;
         fill: $breadcrumb_border;
         margin-top: 0.5rem;
-        transform: rotate(-90deg);
         transition: 0.2s ease-in-out;
     }
 
